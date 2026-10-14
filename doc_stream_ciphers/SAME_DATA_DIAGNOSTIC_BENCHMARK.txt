@@ -1,0 +1,58 @@
+# Fixed same-data diagnostic benchmark plan
+
+This plan was written after the results of the matched-nonce phase study were
+known, but before calculating the comparator statistics below. It is a
+**descriptive secondary analysis**, not a prospective hypothesis test. No
+new keys or IV pairs are introduced. All statistics use exactly the
+ChaCha20 and Salsa20 observed/control streams from master-key indices
+440--519, with the single-bit 64-bit-nonce masks in
+`MATCHED_NONCE_PHASE_PROTOCOL.md`, the first 4096 output bits, and the
+same 16 nonce pairs per key and configuration. Compare 2, 4, and 20 core
+rounds. Twenty is standard; 2 and 4 are research variants.
+
+## Comparators and common unit
+
+For each key, core, and round setting, regenerate the deterministic output
+pairs and graph-matched SHAKE256 control specified in the locked phase
+protocol. Verify all 16 by 32 disjoint 128-bit XOR-HW values against the
+archived raw arrays **before** computing any benchmark result. Every
+statistic is computed once per key from the same 16 paired trajectories;
+the key, not the pair or block, is the replication unit.
+
+1. `mean_hw`: mean XOR HW over all 16 by 32 blocks. The observed-minus-
+   control difference measures average avalanche deficit or excess in bits
+   per 128 output bits. It is unchanged by any permutation of blocks.
+2. `sac_rms`: for each of the 512 output-bit positions within a cipher
+   block, estimate the flip probability over 16 pairs by eight blocks
+   (128 trials). Take the root mean square deviation of those 512
+   probabilities from 1/2. This is a finite-sample strict-avalanche-style
+   deviation, **not** a formal SAC proof. Compare observed and control
+   scores per key. Store the 512 bit-flip counts for both streams, each
+   count between 0 and 128. Bit positions follow byte order with the most
+   significant bit first.
+3. `lag4`: center each 32-HW trajectory by its own mean, sum lag-four
+   cross-products over pairs and valid positions, and divide by total
+   centered energy over all pairs and all 32 positions. Compare observed
+   and control values per key. This targets the four-position periodicity.
+4. `phase_range`: range of the four position means in each 512-bit output
+   block, pooled over 16 pairs and eight blocks; compare observed and
+   control per key. This directly exposes position alignment.
+5. `hmp`, `p0`, and normalized `hnodc`: same power-averaged spectral
+   definitions as in the article, recalculated from the archived HW arrays.
+   These distinguish a full-spectrum response from DC share and AC
+   allocation. Compare observed and control per key.
+
+For each observed-minus-control metric, report the 80-key mean and
+pointwise 95% percentile intervals from 5000 whole-key bootstrap
+resamples. Reuse the same bootstrap indices across all metrics within a
+cipher and round setting. No significance tests, familywise correction,
+or ranking by p-value are claimed for this retrospective comparison.
+The 2-round rows illustrate detection and localization; 4- and 20-round
+rows check whether effects persist at greater mixing. Because metrics
+have different units, compare their behavior and information content, not
+their raw numerical magnitudes. In particular, do not claim that spectral
+entropy is more sensitive unless the results directly support that claim.
+
+The benchmark's purpose is to test whether the phase-aware spectral view
+adds an interpretable DC/AC distinction beyond simpler HW, bitwise
+avalanche, autocorrelation, and phase-range summaries on identical data.

@@ -1,0 +1,84 @@
+# Locked protocol: six-cipher ordinary-IV/nonce experiment
+
+Written before generating master-key indices 280--359 for this experiment.
+The prior 40/80-key ordinary-IV studies and the four-cipher extension informed
+endpoint selection. This is a fresh-key replication and harmonization, not a
+claim that the reduced-depth signatures were discovered prospectively here.
+The recursive A5/1 and RC4 analyzers do not enter this study or manuscript.
+
+## Common sampling unit and trajectory
+
+- Ciphers: original Grain-128, Trivium, MICKEY 2.0, HC-128, Rabbit, and IETF
+  ChaCha20. Full standard configurations must pass archived published-vector
+  checks before generation. Grain-128 also has an independent reference
+  translation; MICKEY 2.0 has an independent specification translation.
+- For each cipher use 80 new master-key indices 280--359 derived from seed
+  20260721. The same indices are used across ciphers; family-specific,
+  domain-separated BLAKE2b calls derive each cipher key, oracle secret, and
+  SHAKE256 IV/nonce material. There are four base IVs/nonces per key.
+- Use the four single-bit masks and four adjacent four-bit masks returned by
+  `standard_iv_validation._mask_sets(iv_bytes)`: positions 0, floor(n/3),
+  floor(2n/3), n-1 for single bits, and the corresponding spread starts for
+  four-bit masks. Each family gives 16 paired-IV trajectories per key.
+- For each fixed key, configuration, and IV pair, generate 4096 bits from each
+  IV and take HWs of their XOR in 32 consecutive disjoint 128-bit blocks.
+  Repeat the same IV pairs at all configurations. Analyze full 32-block and
+  final 16-block windows; the latter is secondary.
+- A SHAKE256 random-function surrogate is keyed by family, master key,
+  configuration, and unique IV. Reusing an IV within a configuration reuses
+  exactly the same stream. Check that the joint eight-mask graph has four
+  disjoint eight-edge stars with no repeated vertices. An ideal independent
+  stream model makes the forest's edge XOR streams jointly uniform. SHAKE256
+  is a computational control, not an ideal-random proof.
+- A key is the replication unit. Compute H_MP (bits), DC share p0,
+  normalized H_noDC, mean HW, mean within-trajectory variance, and pooled Q8
+  from power averaged before normalization. Report observed-minus-oracle
+  means and pointwise 95% intervals from 5000 whole-key bootstrap resamples.
+
+## Cipher-specific configuration grids
+
+| Cipher | Key/IV bytes | Grid | Standard point | Meaning |
+| --- | --- | --- | --- | --- |
+| Grain-128 | 16/12 | 0, 32, 64, 128, 192, 256 | 256 | initialization clocks |
+| Trivium | 10/10 | 0, 64, 128, 192, 384, 768, 1152 | 1152 | initialization clocks |
+| MICKEY 2.0 | 10/10 | 0, 25, 50, 75, 100 | 100 | final blank clocks after key/IV loading |
+| HC-128 | 16/16 | 0, 256, 512, 768, 1024 | 1024 | updates after key/IV expansion |
+| Rabbit | 16/8 | 0, 1, 2, 3, 4 | 4 | IV-setup iterations after key setup |
+| ChaCha20 | 32/12 | 2, 4, 6, 8, 12, 20 | 20 | core rounds, IETF nonce/counter |
+
+The internal axes are not equivalent units of cryptographic work. Zero in
+MICKEY, HC-128, and Rabbit omits only the final named phase, not key/IV
+loading or expansion. Reduced ChaCha20 changes the core round count.
+Cross-cipher inference is restricted to the standard endpoint under the
+common output experiment; transition curves are interpreted within cipher.
+
+## Fixed inference
+
+1. **Primary family:** six standard-configuration, single-bit-mask, full-32
+   observed-minus-oracle H_MP means. Use two-sided paired whole-key sign-flip
+   tests with 200000 random sign vectors each, plus-one Monte Carlo p-values,
+   and Holm correction over all six. A confidence interval containing zero
+   is not an equivalence result.
+2. **Fresh-key signature replication family:** three two-sided whole-key
+   sign-flip tests, corrected together by Holm: Trivium at 64 clocks for
+   H_noDC; ChaCha20 at two rounds for H_noDC; and the difference in the
+   within-512-bit four-position HW range for two-round ChaCha20. The latter
+   range is max-minus-min of the four mean 128-bit position HWs within each
+   key, computed over all 16 IV pairs and eight 512-bit blocks per pair.
+   These endpoints were chosen after prior cohorts and are confirmatory only
+   for this independent new cohort.
+3. All other depths, local four-bit masks, DC/AC attribution, first-block
+   and last-16 windows, and 512-bit aggregation of ChaCha20 are descriptive.
+   Attributions use the exact symmetric two-factor formula and are computed
+   per key before aggregation. The 512-bit aggregation changes T from 32 to
+   8; it is a sensitivity analysis rather than a directly comparable effect.
+
+## Publication and reproducibility
+
+The article will use this experiment as its single empirical study. It will
+include the six-cipher protocol map, primary standard endpoint table, the
+most informative reduced-configuration plots, and the exact DC/AC
+interpretation. Prior wrapper results remain in the versioned v0.5 archive
+but are not evidence for the new article. Raw arrays, per-key metrics,
+bootstrap summaries, planned tests, code, validation vectors, and a manifest
+will be retained in the new reviewer archive.

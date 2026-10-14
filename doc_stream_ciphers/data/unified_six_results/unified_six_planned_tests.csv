@@ -1,0 +1,10 @@
+test_family,cipher,configuration,metric,n_keys,mean_difference,p_sign_flip_two_sided,sign_flips,p_holm
+primary_standard_hmp,Grain-128,256,actual_minus_oracle_entropy_mean_power,80,-0.0009413561283485026,0.3350083249583752,200000,1.0
+primary_standard_hmp,Trivium,1152,actual_minus_oracle_entropy_mean_power,80,0.00046487151371660956,0.5808270958645206,200000,1.0
+primary_standard_hmp,MICKEY 2.0,100,actual_minus_oracle_entropy_mean_power,80,-0.000381392166354964,0.6995965020174899,200000,1.0
+primary_standard_hmp,HC-128,1024,actual_minus_oracle_entropy_mean_power,80,-9.38822864170491e-05,0.915520422397888,200000,1.0
+primary_standard_hmp,Rabbit,4,actual_minus_oracle_entropy_mean_power,80,-3.1630201503974294e-05,0.9744651276743617,200000,1.0
+primary_standard_hmp,ChaCha20,20,actual_minus_oracle_entropy_mean_power,80,-0.0007489816888402148,0.40665796671016646,200000,1.0
+fresh_signature_replication,Trivium,64,actual_minus_oracle_entropy_no_dc_normalized,80,-0.01072626112338161,4.9999750001249995e-06,200000,1.4999925000374999e-05
+fresh_signature_replication,ChaCha20,2,actual_minus_oracle_entropy_no_dc_normalized,80,-0.3791696648164692,4.9999750001249995e-06,200000,1.4999925000374999e-05
+fresh_signature_replication,ChaCha20,2,phase_range_difference,80,18.350390625,4.9999750001249995e-06,200000,1.4999925000374999e-05

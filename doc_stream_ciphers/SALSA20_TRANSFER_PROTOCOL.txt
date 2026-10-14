@@ -1,0 +1,70 @@
+# Locked Salsa20 transfer protocol for the seven-cipher article
+
+This addendum is fixed after inspection of the six-cipher results and before
+generating any Salsa20 research trajectories. The original six-cipher protocol
+and its test families remain unchanged. Salsa20 is a prospective *transfer*
+test of the ChaCha20 block-position interpretation, not an independent blind
+discovery of that interpretation.
+
+## Cipher and validation gate
+
+- Original Salsa20 with a 256-bit key, 64-bit nonce, 64-bit block counter from
+  zero, and even core-round grid `2, 4, 6, 8, 12, 20`. Only 20 rounds is the
+  standard full configuration. All shorter cores are research variants.
+- The standard implementation must match the archived libsodium 1.0.18
+  `crypto_stream_salsa20` vectors for zero and nonzero keys/nonces, including
+  a vector crossing a 512-bit block boundary. An independent literal
+  columnround/rowround translation must agree for every reduced round count.
+  These checks were completed before this protocol was written. Results are
+  not generated if either gate fails.
+
+## Sampling and control
+
+- Use 80 new master-key indices `360..439` with the existing master seed
+  `20260721`. These indices do not overlap the six-cipher cohort `280..359`.
+  Family-separated BLAKE2b and SHAKE256 calls in the six-cipher utilities
+  derive the key, oracle secret, and four base nonces. The Salsa20 family name
+  makes all derived material distinct from prior families.
+- Use four single-bit nonce masks and four adjacent four-bit masks at the
+  positions returned by `standard_iv_validation._mask_sets(8)`. Each family
+  gives 16 paired nonces per key; reuse the same pairs at all round counts.
+  Confirm that the joint pair graph has four disjoint eight-edge stars.
+- Generate 4096 output bits per nonce and round count. For every pair, take
+  XOR Hamming weights in 32 disjoint consecutive 128-bit blocks. Analyze the
+  full 32-block sequence and, descriptively, the last 16 blocks.
+- The control maps each unique nonce, key, family, and round count to one
+  SHAKE256 stream and reuses that stream across the pair graph. Compute all
+  spectra from power averaged over the 16 trajectories before normalization,
+  exactly as in the six-cipher protocol. The key is the sampling unit.
+- Derive pointwise 95% intervals by 5000 whole-key bootstrap resamples.
+  Use the same H_MP, DC share, normalized H_noDC, Q8, and symmetric exact
+  DC/AC attribution definitions as in the six-cipher experiment.
+
+## Planned transfer endpoints
+
+One separate three-test Salsa20 family uses only single-bit masks and the
+full 32-block window:
+
+1. At two rounds, observed-minus-control normalized H_noDC.
+2. At two rounds, observed-minus-control four-position mean-HW range within
+   a 512-bit output block. For each key, first average each position over
+   all 16 nonce pairs and eight 512-bit blocks, then subtract minimum from
+   maximum; compare that range with its matched-control range.
+3. At the standard 20 rounds, observed-minus-control full-spectrum H_MP.
+
+All three receive two-sided whole-key sign-flip tests with 200,000 random
+sign vectors each, plus-one Monte Carlo p-values, and Holm correction within
+this Salsa20 family. This family was chosen after the ChaCha20 result was
+known; its corrected p-values apply to fresh Salsa20 data only. A null
+standard-setting test cannot establish equivalence.
+
+Other round counts, the four-bit-mask family, final-16-block windows,
+first-block Hamming weight, DC/AC attribution, pooled Q8, and aggregation of
+four 128-bit HW values into each of eight 512-bit HW values are descriptive.
+The 512-bit aggregation changes trajectory length from 32 to 8, so its
+entropy contrast is a representation sensitivity check, not the same
+estimand. Comparisons of Salsa20 and ChaCha20 effect sizes are descriptive;
+their master-key cohorts differ. The extended article will preserve the
+original six planned standard tests and three fresh-key replications as
+separate prior families, rather than relabel them as a prospective seven-cipher
+family.

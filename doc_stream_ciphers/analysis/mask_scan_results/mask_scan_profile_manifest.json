@@ -1,0 +1,13 @@
+{
+  "analysis": "retrospective_mask_profile_comparisons",
+  "status": "post_hoc_descriptive_not_planned_inference",
+  "input_per_key_sha256": "cce9a0db8970c8a5b7890b003c8cf7976162f2a5d12c5e974146125bd7139e21",
+  "comparison_output_sha256": "78944e36a56ea2e2da9ea8aee54f31444b3e80385feee3ac398b8db132a6bd73",
+  "small_effect_output_sha256": "499c0f67b4284304322755c1afa7667da167c489bdd49952afad4e3da68e85a6",
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20261101,
+  "small_effect_family": "MICKEY 2.0, HC-128, Rabbit; five settings times eight masks times two metrics each",
+  "small_effect_max_t_endpoints": 240,
+  "sign_flips": 200000,
+  "sign_seed": 20261102
+}

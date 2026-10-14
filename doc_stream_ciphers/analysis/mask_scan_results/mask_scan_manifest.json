@@ -1,0 +1,34 @@
+{
+  "analysis": "exploratory_per_mask_spectral_entropy_scan",
+  "status": "post_hoc_descriptive_results_in_manuscript",
+  "input_raw_sha256": {
+    "unified_six_results/unified_six_grain_128_raw.npz": "5bb2fed4fb7eb25b7151685265a9ae8edd4e2d3f0a089616d3366e84ac996845",
+    "unified_six_results/unified_six_trivium_raw.npz": "a63219d32d592a73666a1efdf93ed1781788a7c2ad06d32bfb03e57ce8b60e9b",
+    "unified_six_results/unified_six_mickey_2.0_raw.npz": "d23dd414b23411d648ac9436b52babb7584f57574b1ef283990a5823dbf21440",
+    "unified_six_results/unified_six_hc_128_raw.npz": "fb2e359ee25ed98385e882f2a14ac436880849e1c9fafce1a96c41fdc4b51d88",
+    "unified_six_results/unified_six_rabbit_raw.npz": "cf6417d72a7cc8c2b38a97af560470fe3f6c0174a9725efef00554cb069a58fd",
+    "unified_six_results/unified_six_chacha20_raw.npz": "f3be2a5f9b12ca3ff3b503061c4ad8d949332742962682799b51532224837a68",
+    "salsa20_transfer_results/salsa20_transfer_raw.npz": "4a5333b278541f916e97a6fa47de8d98333a7d9c34ed4e6a82dc065d6c69aa3d",
+    "matched_nonce_phase_results/matched_phase_chacha20_raw.npz": "bcc3eeca35e41ccf72f9f67b4a9071a0f4091874f9ce6f8420322c1a628345c7",
+    "matched_nonce_phase_results/matched_phase_salsa20_raw.npz": "4c078b164f49cfcb17ab5cf2b6c9d5a3915de71c8a82d6b3bd0bf1412c9d4fee"
+  },
+  "cohorts": [
+    "unified_six",
+    "salsa_transfer",
+    "matched_phase"
+  ],
+  "mask_families": [
+    "single_bit",
+    "localized_four_bit"
+  ],
+  "masks_per_family": 4,
+  "pairs_per_key_per_mask": 4,
+  "blocks_per_pair": 32,
+  "spectral_estimator": "average four complete two-sided 32-point DFT power vectors before entropy normalization",
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20261029,
+  "standard_max_t_endpoints": 144,
+  "sign_flips": 20000,
+  "sign_seed": 20261030,
+  "multiple_testing": "maximum absolute studentized whole-key sign flip across 144 standard mask HMP/HnoDC endpoints; independent signs for disjoint cohorts, shared signs within cohort"
+}

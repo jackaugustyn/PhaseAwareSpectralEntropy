@@ -1,0 +1,16 @@
+family,input_state_bit,published_internal_output_bit,published_internal_round,our_nonce_bit_msb_first,our_keystream_rounds,observable,delta_hmp,delta_hnodc,delta_p0,delta_mean_hw
+ChaCha20,x_14[6],x_3[0],3.5,1,2,emitted keystream HW; not published internal-state bias,0.27204557032133553,-0.3726096505543076,-0.0342707629061262,-21.5865234375
+ChaCha20,x_14[6],x_3[0],3.5,1,4,emitted keystream HW; not published internal-state bias,-0.0012827906168655357,-0.0004826301645873193,0.00010551481917233929,-0.10244140625
+ChaCha20,x_14[6],x_3[0],3.5,1,6,emitted keystream HW; not published internal-state bias,0.002521129307110194,0.0027095189130572615,-0.00020385742727781485,-0.0248046875
+ChaCha20,x_14[6],x_3[0],3.5,1,8,emitted keystream HW; not published internal-state bias,0.0013411929418094197,-0.0007815127063677998,-0.00011822999200526845,0.0509765625
+ChaCha20,x_14[6],x_3[0],3.5,1,20,emitted keystream HW; not published internal-state bias,-0.0010079458186843995,-0.00020754803856433413,8.192968466408379e-05,0.00634765625
+ChaCha20,x_15[6],x_0[0],3.5,33,2,emitted keystream HW; not published internal-state bias,0.28250568017078204,-0.3468644166788639,-0.0348670390395515,-22.266015625
+ChaCha20,x_15[6],x_0[0],3.5,33,4,emitted keystream HW; not published internal-state bias,0.001257151514302743,-0.0021956730650137743,-0.00011361517129937631,-0.01884765625
+ChaCha20,x_15[6],x_0[0],3.5,33,6,emitted keystream HW; not published internal-state bias,0.0017697946990537748,0.0011533436540075506,-0.0001452191948039805,-0.20341796875
+ChaCha20,x_15[6],x_0[0],3.5,33,8,emitted keystream HW; not published internal-state bias,-0.0005049769310532162,-0.0007356363330125182,4.012782802058079e-05,0.13310546875
+ChaCha20,x_15[6],x_0[0],3.5,33,20,emitted keystream HW; not published internal-state bias,-0.00023164125163618825,-0.0008060594588606848,1.5847715494626823e-05,-0.05595703125
+Salsa20,x_7[0],x_1[13],4.0,39,2,emitted keystream HW; not published internal-state bias,1.6698813400302075,-0.6389549246472548,-0.46847247514421414,-44.99482421875
+Salsa20,x_7[0],x_1[13],4.0,39,4,emitted keystream HW; not published internal-state bias,0.002622869478000825,0.0007241007054828525,-0.00021878530413879242,-0.10634765625
+Salsa20,x_7[0],x_1[13],4.0,39,6,emitted keystream HW; not published internal-state bias,-0.0006880775504757684,-0.0012284504800650783,5.246298094154917e-05,-0.03955078125
+Salsa20,x_7[0],x_1[13],4.0,39,8,emitted keystream HW; not published internal-state bias,-0.0017486196013982152,-0.001220917421480898,0.0001407338574757125,0.1375
+Salsa20,x_7[0],x_1[13],4.0,39,20,emitted keystream HW; not published internal-state bias,-0.00025391590657157374,0.001607923293748019,2.7430162012714866e-05,-0.0380859375

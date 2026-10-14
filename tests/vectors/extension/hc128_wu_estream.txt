@@ -1,0 +1,19 @@
+# HC-128 published / eSTREAM reference vectors.
+# Provenance: Crypto++ TestVectors/hc128.txt (generated from the eSTREAM
+# hc-128.c reference). Vectors A and B also appear in Wu's HC-128 paper.
+# Bytes are little-endian keystream words packed in order.
+#
+# Vector A: all-zero key and IV (first 16 keystream bytes)
+Key: 00000000000000000000000000000000
+IV:  00000000000000000000000000000000
+KS:  82001573a003fd3b7fd72ffb0eaf63aa
+#
+# Vector B: key = 80..00, IV = 00..00 (first 16 keystream bytes)
+Key: 80000000000000000000000000000000
+IV:  00000000000000000000000000000000
+KS:  378602b98f32a74847515654ae0de7ed
+#
+# Vector C: key = 00..00, IV = 80..00 (first 16 keystream bytes; Wu paper set)
+Key: 00000000000000000000000000000000
+IV:  80000000000000000000000000000000
+KS:  337f8611c6ed615fc2e7d28c6daaaf1b

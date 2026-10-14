@@ -1,0 +1,22 @@
+{
+  "protocol": "doc_stream_ciphers/A51_KNOWN_WEAKNESS_PROTOCOL.txt",
+  "protocol_sha256": "2f00329bdf90452681009e848e4a1452fec84e816b1269b4caec9f8037278131",
+  "source": "experiments/stream_rounds_study/a51_frame_followup.py",
+  "master_seed": 20261013,
+  "key_indices": [
+    680,
+    759
+  ],
+  "depths": [
+    0,
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "frame_mask_bits": 22,
+  "bases_per_key": 4,
+  "output_bits": 114,
+  "raw_sha256": "a6b63e5c287be49f0cdbe7c0cb1e7f896f30ae9c63dc3cfe3f4c6475484502f8"
+}

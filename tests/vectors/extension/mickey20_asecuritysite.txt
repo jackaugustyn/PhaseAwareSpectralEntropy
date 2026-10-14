@@ -1,0 +1,18 @@
+# MICKEY 2.0 (80-bit) published example vectors.
+# Source: asecuritysite.com/encryption/mickey (Mickey V2 demo driven by the
+# eSTREAM reference API: ECRYPT_keysetup / ECRYPT_ivsetup /
+# ECRYPT_keystream_bytes). Spec tables: Babbage & Dodd, "The MICKEY stream
+# ciphers", LNCS 4986, Appendix A.
+#
+# Bits are loaded MSB-first within each key/IV byte (k0 = MSB of key[0]).
+# Standard preclock = 100 blank CLOCK_KG steps after IV and key loading.
+#
+# Vector 1: 80-bit key, 32-bit IV
+Key: 123456789abcdef01234
+IV:  21436587
+KS:  9821e10c5ed28d32bbc3d1fb15e93a15
+#
+# Vector 2: 80-bit key, 40-bit IV
+Key: 123456789abcdef01234
+IV:  2143658788
+KS:  f4eb021dab78c9da2d633161d848226b

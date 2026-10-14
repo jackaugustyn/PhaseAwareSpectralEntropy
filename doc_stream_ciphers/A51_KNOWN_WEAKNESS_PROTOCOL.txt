@@ -1,0 +1,56 @@
+# A5/1 frame-difference validation (locked before new data)
+
+This study tests whether the paper's IV-response idea flags known structural
+features of A5/1. A5/1 has a 64-bit key, a 22-bit public frame number, three
+irregularly majority-clocked registers, and 100 standard warm-up clocks.
+Published cryptanalysis includes time-memory tradeoffs and state-recovery
+attacks; a statistical frame-difference test does not reproduce those attacks
+or estimate their advantage. The earlier recursive A5/1 wrapper is not used.
+
+## Sampling and implementation
+
+- Fresh master seed `20261013`, key indices 680--759. Derive one independent
+  64-bit A5/1 key and one SHAKE256-control secret per master index.
+- Four uniformly generated 22-bit base frame numbers per key, with rejection
+  until their four 22-edge single-bit stars are disjoint. Analyze all 22
+  single-bit frame masks, using the same four bases at each warm-up depth.
+- Warm-up clocks: 0, 20, 40, 60, 80, and 100. The 100-clock setting is the
+  standard A5/1 endpoint. Retain only the first 114 emitted bits per frame,
+  corresponding to one GSM burst direction. Do not concatenate or extend
+  a frame beyond its standard burst output.
+- Generate a SHAKE256 stream for each unique `(key index, depth, frame)`
+  vertex and reuse it in all incident pairs. This preserves the frame-pair
+  graph. Verify the A5/1 published key/frame vector before generation.
+- Archive all paired XOR bit strings (observed and control), keys, bases,
+  masks, and depths. The key is the independent unit for all intervals and
+  tests; the four frames and 22 masks are repeated measurements.
+
+## Measures and fixed inference
+
+- For each key, depth and mask, average the XOR one-bit fraction over four
+  frame pairs and 114 output bits. Subtract the matched-control fraction.
+- Partition each 114-bit XOR string into 19 successive six-bit HW values.
+  Average four complete DFT power spectra before normalization and compute
+  full-spectrum entropy `H_MP`; subtract the control. This is a short-frame
+  spectral analogue, **not** the manuscript's 32-by-128-bit pooled estimator.
+  Also retain DC share, AC entropy, and first/last 16-bit flip fractions as
+  descriptive mechanistic checks.
+- Primary reduced-depth endpoint: the key-level, all-mask mean deficit in
+  XOR one-bit fraction at 20 warm-up clocks relative to the matched control.
+  Test it with 100,000 two-sided whole-key sign flips. Report a pointwise
+  95% whole-key bootstrap interval from 10,000 resamples.
+- Full-depth search: at 100 clocks, test each of 22 masks for two endpoints,
+  XOR one-bit fraction and short-frame `H_MP`, in one 44-cell family. Use
+  50,000 whole-key sign-flip max-|t| replicates for familywise adjusted p
+  values. Report the minimum adjusted p and largest absolute effects; no
+  uncorrected mask is a discovery. If a full-depth cell passes 0.05, choose
+  the lowest adjusted-p cell and validate it once on untouched indices
+  760--839 using a separately fixed follow-up protocol before generation.
+- The 0/40/60/80-clock curves, individual reduced-depth masks, output-bit
+  profiles, DC/AC decomposition, and any regular-clock ablation are
+  descriptive. A non-significant 100-clock result does not establish
+  equivalence to a random function or full-round security.
+
+We use published A5/1 weaknesses to motivate the frame and clock probes,
+not to assert that they must create an IV-response bias. The main question
+is the diagnostic's reach and limits on standard frame output.

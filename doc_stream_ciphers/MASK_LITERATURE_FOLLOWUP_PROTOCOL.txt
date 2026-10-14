@@ -1,0 +1,83 @@
+# Independent nonce-mask and literature-guided follow-up (locked before generation)
+
+This protocol was written after inspection of the seven-cipher manuscript and
+its retrospective mask scan, and before generating any of the results below.
+All numerical positions in this protocol are **MSB-first in the first byte**
+unless explicitly written as a cipher state word `x_w[b]`, where `b` is the
+word bit numbered from its least-significant bit. The study does not reproduce
+a published attack: its observable is emitted keystream, while several cited
+attacks observe an internal state bit or impose additional IV/key conditions.
+
+## A. Complete matched nonce scan (primary)
+
+- New master-key indices 520--599; master seed 20260721. Derive separate
+  256-bit ChaCha20 and Salsa20 keys and SHAKE256 oracle secrets from each
+  master key, using domains specific to this follow-up. Four common random
+  64-bit base nonces per key come from a cipher-independent SHAKE256 domain.
+- Use each of the 64 single-bit nonce masks and the same four bases for both
+  ciphers. Salsa20 takes the nonce directly; IETF ChaCha20 takes `0^32 || nonce`.
+  The 64 pairs per base form a star; abort if the four stars intersect. The
+  oracle maps each distinct nonce to one 512-byte SHAKE256 stream per cipher,
+  key and round setting and reuses it across all pair comparisons.
+- Generate 512 bytes at counters 0--7 under 2, 4, 6, 8 and 20 core rounds.
+  Twenty rounds is the standard endpoint. For each pair retain the HW of all
+  128 successive 32-bit output words and the 32 HW values obtained by summing
+  each successive group of four words. Store observed and oracle arrays.
+- Per key, cipher, round and mask, average the **four** complete two-sided DFT
+  powers of the 32-value HW trajectories before normalization. Compute
+  full-spectrum entropy `H_MP`, zero-frequency share, normalized nonzero-
+  frequency entropy `H_noDC`, and mean HW. Subtract the matched oracle values.
+  This per-mask estimator is not interchangeable with the manuscript's pooled
+  16-pair estimator.
+- For each key and cipher, define `G_r = mean_{b=0..31} [Delta H_MP(32+b) -
+  Delta H_MP(b)]`. The two planned, two-sided tests are (1) `G_2` for Salsa20,
+  and (2) `G_2(Salsa20)-G_2(ChaCha20)` for matched master-key indices. Test
+  whole-key sign flips with 100,000 Monte Carlo replicates and plus-one p
+  values; adjust these two p values by Holm. Whole-key paired bootstrap with
+  10,000 resamples gives pointwise 95% intervals. The 4/6/8/20-round curves,
+  individual masks, DC/AC, HW and 16-word profiles are descriptive.
+- Literature-guided input positions are Salsa20 `x_7[0]` (nonce mask 39) and
+  ChaCha `x_14[6]`, `x_15[6]` (shared-nonce masks 1, 33), respectively, from
+  Ghafoori et al., DOI 10.1587/transinf.2022ICP0015, Tables 9 and 17. The
+  cited outputs are *internal* bits at 4 or 3.5 rounds. Report the mask
+  responses here only as emitted-output analogues, with no attack-bias claim.
+
+## B. Trivium spaced-IV subcubes (mechanistic pilot)
+
+- New master-key indices 600--679 with separate 80-bit keys. Use degrees
+  2, 4 and 6, taking the first `d` positions from `{x_0,x_3,...,x_69}` in
+  the LSB-first IV notation of Knellwolf, Meier and Naya-Plasencia, DOI
+  10.1007/978-3-642-28496-0_12. This is a subset of their 24-dimensional
+  cube, not their distinguisher.
+- Four base IVs per key set all noncube IV bits to zero and vary only the
+  three candidate neutral positions `x_72,x_75,x_78` as `000`, `100`, `010`,
+  `001`. The published result additionally requires key conditions, which
+  random keys here do not satisfy. Do not interpret absence of the published
+  bias as a failed replication.
+- At 192, 384, 768 and 1152 initialization clocks, XOR the first 512 emitted
+  bits over all `2^d` cube vertices. A SHAKE256 stream per unique IV, key and
+  clock setting supplies the graph-matched control; reuse a stream whenever
+  cubes share a vertex. Store derivative bytes. Report observed-minus-control
+  one-bit fractions (averaged over four bases and 80 independent keys), with
+  whole-key bootstrap intervals and a max-|t| sign-flip calibration across
+  the 12 degree-by-clock cells. Also report first output-bit fractions as
+  descriptive checks. This pilot tests whether smaller cubes reveal a coarse
+  differential signature, not the 24-dimensional conditional attack.
+
+## C. Grain-128 locality check (secondary independent validation)
+
+- Use the new 600--679 master-key indices but a Grain-specific key and IV
+  derivation. Four random 96-bit base IVs per key; masks at MSB-first bit
+  positions 0, 32, 63, 64, 65 and 95. Test 0, 32, 64 and 256 initialization
+  clocks, retaining 4096 output bits as 32 successive 128-bit XOR-HW values.
+  The same unique-IV SHAKE256 oracle and four-star collision rule apply.
+- The one planned independent validation is the zero-clock, per-key
+  `Delta H_MP(bit 64)-Delta H_MP(bit 0)` contrast previously selected from
+  older keys. Use 100,000 two-sided whole-key sign flips and a 10,000-resample
+  whole-key bootstrap interval. Neighbors 63/65, other clocks, and other
+  masks are descriptive. These positions are *not* attributed to a specific
+  published Grain-128 attack.
+
+Only independent-key units support inference. The study measures statistical
+responses of particular reduced variants and does not estimate keystream
+Shannon entropy, key recovery advantage or security margins.

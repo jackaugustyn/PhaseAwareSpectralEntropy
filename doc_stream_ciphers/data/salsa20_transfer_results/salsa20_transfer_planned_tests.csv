@@ -1,0 +1,4 @@
+test_family,cipher,configuration,metric,n_keys,mean_difference,p_sign_flip_two_sided,sign_flips,p_holm
+salsa20_transfer,Salsa20,2,actual_minus_oracle_entropy_no_dc_normalized,80,-0.6638066036731171,4.9999750001249995e-06,200000,1.4999925000374999e-05
+salsa20_transfer,Salsa20,2,phase_range_difference,80,30.2306640625,4.9999750001249995e-06,200000,1.4999925000374999e-05
+salsa20_transfer,Salsa20,20,actual_minus_oracle_entropy_mean_power,80,-0.00013462414112852677,0.8841655791721041,200000,0.8841655791721041

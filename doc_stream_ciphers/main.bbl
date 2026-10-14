@@ -1,0 +1,116 @@
+\begin{thebibliography}{999}
+
+\bibitem[Nir and Langley(2018)]{nir2018}
+Nir, Y.; Langley, A.
+\newblock {ChaCha20} and {Poly1305} for {IETF} Protocols.
+\newblock RFC 8439,  2018.
+\newblock {\url{https://doi.org/10.17487/RFC8439}}.
+
+\bibitem[Bernstein(2008)]{bernstein2008salsa}
+Bernstein, D.J.
+\newblock The {Salsa20} Family of Stream Ciphers. In {\em New Stream Cipher
+  Designs}; Springer,  2008; Vol. 4986, {\em Lecture Notes in Computer
+  Science}, pp. 84--97.
+
+\bibitem[Englund et~al.(2007)Englund, Johansson, and Turan]{englund2007}
+Englund, H.; Johansson, T.; Turan, M.S.
+\newblock A Framework for Chosen {IV} Statistical Analysis of Stream Ciphers.
+\newblock In Proceedings of the Progress in Cryptology -- {INDOCRYPT} 2007.
+  Springer,  2007, Vol. 4859, {\em Lecture Notes in Computer Science}, pp.
+  268--281.
+\newblock {\url{https://doi.org/10.1007/978-3-540-77026-8_20}}.
+
+\bibitem[Fischer et~al.(2008)Fischer, Khazaei, and Meier]{fischer2008}
+Fischer, S.; Khazaei, S.; Meier, W.
+\newblock Chosen {IV} Statistical Analysis for Key Recovery Attacks on Stream
+  Ciphers.
+\newblock In Proceedings of the Progress in Cryptology -- {AFRICACRYPT} 2008.
+  Springer,  2008, Vol. 5023, {\em Lecture Notes in Computer Science}, pp.
+  236--245.
+\newblock {\url{https://doi.org/10.1007/978-3-540-68164-9_16}}.
+
+\bibitem[Hell et~al.(2006)Hell, Johansson, Maximov, and Meier]{grain2006}
+Hell, M.; Johansson, T.; Maximov, A.; Meier, W.
+\newblock A Stream Cipher Proposal: {Grain}-128.
+\newblock In Proceedings of the 2006 {IEEE} International Symposium on
+  Information Theory. IEEE,  2006, pp. 1614--1618.
+\newblock {\url{https://doi.org/10.1109/ISIT.2006.261549}}.
+
+\bibitem[De~Canni{\`e}re and Preneel(2008)]{trivium2006}
+De~Canni{\`e}re, C.; Preneel, B.
+\newblock {Trivium}.
+\newblock In Proceedings of the New Stream Cipher Designs: The {eSTREAM}
+  Finalists. Springer,  2008, Vol. 4986, {\em Lecture Notes in Computer
+  Science}, pp. 244--266.
+\newblock {\url{https://doi.org/10.1007/978-3-540-68351-3_18}}.
+
+\bibitem[Robshaw and Billet(2008)]{estream2008}
+Robshaw, M.; Billet, O., Eds.
+\newblock {\em New Stream Cipher Designs: The {eSTREAM} Finalists}; Vol. 4986,
+  {\em Lecture Notes in Computer Science}, Springer,  2008.
+\newblock {\url{https://doi.org/10.1007/978-3-540-68351-3}}.
+
+\bibitem[Biryukov et~al.(2001)Biryukov, Shamir, and Wagner]{biryukov2000}
+Biryukov, A.; Shamir, A.; Wagner, D.
+\newblock Real Time Cryptanalysis of {A5/1} on a {PC}.
+\newblock In Proceedings of the Fast Software Encryption -- {FSE} 2000.
+  Springer,  2001, Vol. 1978, {\em Lecture Notes in Computer Science}, pp.
+  1--18.
+\newblock {\url{https://doi.org/10.1007/3-540-44706-7_1}}.
+
+\bibitem[Saarinen and Aumasson(2015)]{saarinen2015}
+Saarinen, M.J.O.; Aumasson, J.P.
+\newblock The {BLAKE2} Cryptographic Hash and Message Authentication Code.
+\newblock RFC 7693,  2015.
+\newblock {\url{https://doi.org/10.17487/RFC7693}}.
+
+\bibitem[{National Institute of Standards and Technology}(2015)]{nist2015sha3}
+{National Institute of Standards and Technology}.
+\newblock {SHA-3} Standard: Permutation-Based Hash and Extendable-Output
+  Functions.
+\newblock Technical Report FIPS PUB 202, NIST,  2015.
+\newblock {\url{https://doi.org/10.6028/NIST.FIPS.202}}.
+
+\bibitem[Oppenheim and Schafer(2010)]{oppenheim2010}
+Oppenheim, A.V.; Schafer, R.W.
+\newblock {\em Discrete-Time Signal Processing}, 3 ed.; Pearson,  2010.
+
+\bibitem[Field and Welsh(2007)]{field2007}
+Field, C.A.; Welsh, A.H.
+\newblock Bootstrapping Clustered Data.
+\newblock {\em Journal of the Royal Statistical Society: Series B} {\bf 2007},
+  {\em 69},~369--390.
+\newblock {\url{https://doi.org/10.1111/j.1467-9868.2007.00593.x}}.
+
+\bibitem[Holm(1979)]{holm1979}
+Holm, S.
+\newblock A Simple Sequentially Rejective Multiple Test Procedure.
+\newblock {\em Scandinavian Journal of Statistics} {\bf 1979}, {\em 6},~65--70.
+\newblock {\url{https://doi.org/10.2307/4615733}}.
+
+\bibitem[Webster and Tavares(1986)]{webster1986}
+Webster, A.F.; Tavares, S.E.
+\newblock On the Design of {S}-Boxes.
+\newblock In Proceedings of the Advances in Cryptology---{CRYPTO} '85.
+  Springer,  1986, Vol. 218, {\em Lecture Notes in Computer Science}, pp.
+  523--534.
+\newblock {\url{https://doi.org/10.1007/3-540-39799-X_41}}.
+
+\bibitem[Ghafoori et~al.(2023)Ghafoori, Miyaji, Ito, and
+  Miyashita]{ghafoori2023}
+Ghafoori, N.; Miyaji, A.; Ito, R.; Miyashita, S.
+\newblock {PNB} Based Differential Cryptanalysis of {Salsa20} and {ChaCha}.
+\newblock {\em {IEICE} Transactions on Information and Systems} {\bf 2023},
+  {\em E106.D},~1407--1422.
+\newblock {\url{https://doi.org/10.1587/transinf.2022icp0015}}.
+
+\bibitem[Knellwolf et~al.(2011)Knellwolf, Meier, and
+  Naya-Plasencia]{knellwolf2011}
+Knellwolf, S.; Meier, W.; Naya-Plasencia, M.
+\newblock Conditional Differential Cryptanalysis of {Trivium} and {KATAN}.
+\newblock In Proceedings of the Selected Areas in Cryptography -- {SAC} 2011.
+  Springer,  2011, Vol. 7118, {\em Lecture Notes in Computer Science}, pp.
+  200--212.
+\newblock {\url{https://doi.org/10.1007/978-3-642-28496-0_12}}.
+
+\end{thebibliography}

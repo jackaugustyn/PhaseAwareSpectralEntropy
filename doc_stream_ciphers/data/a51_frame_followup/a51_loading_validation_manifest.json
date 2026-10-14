@@ -1,0 +1,11 @@
+{
+  "protocol": "doc_stream_ciphers/A51_LOADING_VALIDATION_PROTOCOL.txt",
+  "protocol_sha256": "fe157a9053944c37110991f2902a8b82cd7c856f4659d6df8494ea6c99517316",
+  "source": "experiments/stream_rounds_study/a51_loading_validation.py",
+  "indices": [
+    760,
+    839
+  ],
+  "raw_sha256": "2be727ed9ecc05140b9f5fd2c84f181c8d3a20cf9188996425c515dee1e62767",
+  "per_key_sha256": "2f5488807545491b14bd9547b100f96d78532e8b8a8d437792a7132b55b90fb2"
+}

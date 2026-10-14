@@ -1,0 +1,38 @@
+{
+  "status": "draft_for_author_review_not_publicly_deposited",
+  "target_repository": "Zenodo",
+  "version": "0.13.1",
+  "resource_type": "dataset_and_software",
+  "title": "Phase-Aware Spectral Entropy as a Diagnostic of Stream-Cipher IV Diffusion — Data and Code",
+  "creators": [
+    {
+      "name": "Augustynowicz, Paweł",
+      "affiliation": "Faculty of Cybernetics, Military University of Technology, Warsaw, Poland"
+    }
+  ],
+  "publication_date": "2026-10-13",
+  "description": "Raw arrays, per-key and summary results, fixed protocols, code, vector checks, and the twelve-page Entropy manuscript on phase-aware spectral entropy as a diagnostic of stream-cipher IV response. A common 4096-bit output protocol covers Grain-128, Trivium, MICKEY 2.0, HC-128, Rabbit, ChaCha20, and Salsa20 in separately fixed cohorts (indices 280–439). A matched-nonce phase intervention uses fresh keys 440–519 and paired rotations; a descriptive benchmark compares direct and spectral statistics on those exact streams. A separately locked all-64-mask ARX study on indices 520–599 confirms the two-round Salsa20 nonce-word contrast and resolves compensating output-word responses in ChaCha20. Fresh-key Grain and Trivium probes on indices 600–679 validate an early IV-region gradient and investigate a short-initialization higher-order subcube front. An auxiliary A5/1 frame study uses standard 114-bit frame output, all 22 frame masks, and keys 680–759; an independent validation uses keys 760–839. It confirms a zero-clock loading gradient but detects no standard 100-clock signal in a corrected 44-cell search. The A5/1 test does not reproduce known state-recovery attacks. Graph-matched SHAKE256 controls and whole-key uncertainty calculations accompany each experiment. No result estimates keystream Shannon entropy or attack advantage.",
+  "keywords": [
+    "spectral entropy",
+    "stream ciphers",
+    "Trivium",
+    "Grain-128",
+    "MICKEY 2.0",
+    "HC-128",
+    "Rabbit",
+    "ChaCha20",
+    "Hamming weight",
+    "initialization vectors",
+    "IV diffusion",
+    "statistical testing",
+    "reproducible research",
+    "Salsa20",
+    "IV mask profiles",
+    "A5/1"
+  ],
+  "archive_file": "stream_spectral_entropy_review_v0.13.1.zip",
+  "license": null,
+  "license_note": "The author must choose and approve the public data and code license before upload.",
+  "doi": null,
+  "doi_note": "Insert the actual assigned DOI in main.tex only after the public record exists."
+}

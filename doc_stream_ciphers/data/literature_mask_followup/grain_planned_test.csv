@@ -1,0 +1,2 @@
+endpoint,n_keys,estimate_bits,ci95_low,ci95_high,p_sign_flip,replicates
+Grain-128/0: bit 64 minus bit 0,80,0.09525595506533893,0.08920914664883395,0.10126159835329013,9.99990000099999e-06,100000

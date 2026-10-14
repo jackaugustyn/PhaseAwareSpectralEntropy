@@ -1,0 +1,81 @@
+# Locked matched-nonce and phase-rotation experiment
+
+This addendum was written after the seven-cipher article and its earlier data
+were inspected, and before generating master-key indices 440--519. The two
+core-round findings motivate a targeted mechanistic test. Its two primary
+endpoints are prospective only for this new cohort. The previous six-cipher
+and Salsa20 transfer protocols and data are unchanged.
+
+## Cipher interfaces and common sampling
+
+- Ciphers: IETF ChaCha20 and original Salsa20, each with 256-bit keys and
+  core-round settings 2, 4, and 20. Twenty rounds is standard; the others
+  are research variants. Generate the first 4096 keystream bits at counters
+  0--7, yielding eight 512-bit cipher blocks.
+- Use 80 new master-key indices 440--519, master seed 20260721. Derive the
+  ChaCha20 and Salsa20 keys and their oracle secrets with separate BLAKE2b
+  domains from each master key. Derive one *common* set of four 64-bit base
+  nonces per master-key index from a cipher-independent SHAKE256 domain.
+- Use the four single-bit and four adjacent four-bit masks returned by
+  `standard_iv_validation._mask_sets(8)`, giving 16 nonce pairs in each
+  family. The same nonce values and masks are used for both ciphers and
+  all round settings. Check that the joint eight-mask nonce-pair graph is
+  four disjoint eight-edge stars.
+- Salsa20 receives each 64-bit nonce directly. ChaCha20 receives a 96-bit
+  IETF nonce with its first 32 bits fixed at zero and the common 64-bit
+  nonce in the remaining positions. With counters below 2^32, this is
+  byte-for-byte the original ChaCha 64-bit-nonce/64-bit-counter state layout.
+  Before this protocol was written, the 20-round mapping was checked
+  against `cryptography`'s independent original ChaCha20 implementation for
+  three keys/nonces and 512 output bytes per case. Salsa20/20 had already
+  passed the independent libsodium vector gate.
+- The control assigns a deterministic SHAKE256 stream to each unique nonce,
+  cipher, key, and round setting. A repeated base nonce reuses the same
+  stream across masks. For each pair, take XOR HWs of 32 successive,
+  disjoint 128-bit output blocks. Power is averaged across all 16 pairs
+  before spectral normalization. One master-key index is the replication
+  unit; cipher keys are domain-separated but its base nonces are shared.
+
+## Phase intervention
+
+For each key, cipher, round setting, and mask family, take the 16 by 32
+matrix of HWs and reshape it to 16 pairs by eight 512-bit blocks by four
+128-bit positions. Make 128 independent intervention replicates. In each
+replicate, independently choose one of four cyclic rotations for every
+pair and every 512-bit block. Apply the **same** rotation schedule to the
+observed and matched-control HW matrices. This breaks alignment of the
+four positions across blocks while preserving the four-value order up to
+rotation within every block. It preserves each trajectory's multiset,
+mean, variance, total Fourier power, and DC share exactly; trajectory
+length stays T=32. Store every rotation schedule in the raw arrays.
+
+Let `Delta_original = H_noDC(observed) - H_noDC(control)` for a key and
+cell. Let `Delta_rotated` be the mean of the 128 observed-minus-control
+H_noDC differences after paired rotations. Define the signed alignment
+effect `L = Delta_original - Delta_rotated`. A negative L means coherent
+position alignment lowers the observed-minus-control AC entropy. Also
+compute full-spectrum entropy, DC share, and the four-position HW range
+before and after rotation. Report original, rotated, and L values.
+
+## Fixed inference and secondary checks
+
+1. The two primary endpoints are L at **two rounds** for ChaCha20 and L
+   at **two rounds** for Salsa20, using only single-bit masks and all 32
+   HW blocks. Each gets a two-sided whole-key sign-flip test with 200,000
+   random sign vectors and a plus-one Monte Carlo p-value. Correct the two
+   tests together by Holm. Their hypotheses were chosen after the old
+   cipher results, but before seeing any data from indices 440--519.
+2. Use 5000 paired whole-master-key-index bootstrap resamples for
+   pointwise 95% intervals of each cell's means and of Salsa20-minus-
+   ChaCha20 differences under the now-matched nonce domain. The direct
+   cross-core comparisons are descriptive, not additional confirmatory
+   tests.
+3. Four- and 20-round settings, adjacent four-bit masks, raw and rotated
+   phase ranges, full-spectrum entropy, and residual AC contrasts after
+   rotation are descriptive specificity and sensitivity checks. A
+   confidence interval covering zero is not an equivalence claim.
+
+The transformation identifies the contribution of phase alignment to this
+*statistic*. It does not alter the cipher and cannot by itself quantify
+cryptanalytic attack advantage. A residual post-rotation AC contrast would
+show that phase alignment is not the only structure measured by H_noDC.

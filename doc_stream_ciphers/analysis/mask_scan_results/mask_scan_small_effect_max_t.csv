@@ -1,0 +1,241 @@
+cohort,cipher,configuration,mask_family,mask_number,metric,n_keys,delta_mean,t_observed,p_max_t_familywise_240,sign_flips,status
+unified_six,HC-128,0,localized_four_bit,1,hmp,80,0.0012847051571346676,0.7916437565637385,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,1,hnodc,80,-0.0017064992821745895,-0.8209201136735307,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,2,hmp,80,-0.00032043445251665417,-0.17625646782429932,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,2,hnodc,80,-0.00014900768753568633,-0.0899159953399412,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,3,hmp,80,-0.0037204170219306714,-2.0085760383578384,0.999960000199999,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,3,hnodc,80,0.0029166046989504146,1.5356132944638856,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,4,hmp,80,0.0012560147670596827,0.736269192463858,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,localized_four_bit,4,hnodc,80,-0.0003281863182964667,-0.2009724376045963,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,1,hmp,80,0.0006124414021296921,0.3328972537379367,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,1,hnodc,80,-0.0024002893756267505,-1.3080439292821842,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,2,hmp,80,0.0011348439760303902,0.6620874765816398,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,2,hnodc,80,0.000756140690400721,0.4298577550638984,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,3,hmp,80,-0.0009194351876514869,-0.5800381197976888,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,3,hnodc,80,-0.00019733393704285396,-0.14083599503847505,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,4,hmp,80,0.0004197463272787383,0.20451305456050042,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,0,single_bit,4,hnodc,80,0.0025271178223345266,1.1885220302454425,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,1,hmp,80,0.002585584139844682,1.5879643025692596,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,1,hnodc,80,-0.0008349733141497923,-0.38388701464482744,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,2,hmp,80,0.0008152473909368173,0.4096464029365177,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,2,hnodc,80,0.0004802187917111067,0.26633226640764635,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,3,hmp,80,0.0009071199138315427,0.47854711848345893,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,3,hnodc,80,0.0013340391144788285,0.6702405834340883,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,4,hmp,80,-0.0031239148997147088,-1.7004815377661382,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,localized_four_bit,4,hnodc,80,0.00030372412834827613,0.16848989856710442,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,1,hmp,80,0.0005584064811194804,0.373459154319503,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,1,hnodc,80,-0.004110122607920964,-2.163651528840843,0.9989500052499738,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,2,hmp,80,0.0009463920446541374,0.5199276594369762,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,2,hnodc,80,-0.002426158721605337,-1.323518585810313,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,3,hmp,80,-0.00025695028300974155,-0.1483658336758152,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,3,hnodc,80,-0.0003718191699024681,-0.19735800835380232,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,4,hmp,80,0.001381007568168347,0.8309058222507536,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,256,single_bit,4,hnodc,80,0.002832975011327371,1.47377612314107,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,1,hmp,80,0.0008734364589826745,0.45620316717092235,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,1,hnodc,80,0.0003729743479468403,0.2258759721929418,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,2,hmp,80,-0.0061357338032376136,-3.553507990232662,0.054309728451357744,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,2,hnodc,80,-0.0002636988650015465,-0.14845573466718742,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,3,hmp,80,0.002600502377721979,1.5990504168947757,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,3,hnodc,80,-0.0006155295774611325,-0.3303223265163873,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,4,hmp,80,0.0004178255873345511,0.22807555574622845,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,localized_four_bit,4,hnodc,80,0.0005760457616172235,0.26989488577940873,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,1,hmp,80,-0.0003393539119695898,-0.25235586863103066,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,1,hnodc,80,0.0010075976608758196,0.5203989906640863,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,2,hmp,80,6.234408826120002e-05,0.03538959926070207,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,2,hnodc,80,-0.00047991149189059447,-0.2741018530976671,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,3,hmp,80,0.0007032569563232159,0.40607123644633136,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,3,hnodc,80,0.001647420474415101,1.0373705418548917,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,4,hmp,80,-0.0004682850582864405,-0.23300147968657556,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,512,single_bit,4,hnodc,80,-0.0012187262847588476,-0.6865721394336826,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,1,hmp,80,0.0028741010900195604,1.7423595856334644,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,1,hnodc,80,0.003238600762057105,1.7423537597515868,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,2,hmp,80,-0.0022418250664829865,-1.3891687260593344,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,2,hnodc,80,-0.002490541913571449,-1.627685048451612,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,3,hmp,80,0.0038119346367385997,2.2903470428639063,0.9925650371748141,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,3,hnodc,80,0.001602279283548226,0.8410502082396184,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,4,hmp,80,0.00022644872375959438,0.14627080744296359,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,localized_four_bit,4,hnodc,80,0.0022886922766987214,1.205473855663839,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,1,hmp,80,0.0016439453739620392,0.9398266514255285,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,1,hnodc,80,0.0006013066544073395,0.27903591266957084,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,2,hmp,80,-0.0031063383625275207,-1.6851684703230294,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,2,hnodc,80,0.002061138673123272,1.1442640511599014,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,3,hmp,80,-0.000596583554973641,-0.35214830456652485,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,3,hnodc,80,-0.0022080232614119025,-1.2340818086541758,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,4,hmp,80,-0.00012998740140827291,-0.06865921143813807,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,768,single_bit,4,hnodc,80,-0.0009994725673076286,-0.46606529677897834,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,1,hmp,80,0.0018373726185560574,1.0600135503664792,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,1,hnodc,80,0.0020216118310636398,1.1387623241621316,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,2,hmp,80,-0.002604151065104694,-1.4032904980615502,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,2,hnodc,80,0.001939578577618735,1.0983345678840588,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,3,hmp,80,0.002973391700644334,2.029369235585092,0.9999350003249984,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,3,hnodc,80,0.00023990402895664176,0.11982363130167954,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,4,hmp,80,0.0007877260837808465,0.46715393549038037,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,localized_four_bit,4,hnodc,80,-0.0018227155132986479,-1.0244077401945073,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,1,hmp,80,0.0005356220671638306,0.2895464521194652,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,1,hnodc,80,0.0012301127440099882,0.666772089982767,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,2,hmp,80,0.000661051119647286,0.3382027575929417,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,2,hnodc,80,-0.0007362572389718644,-0.4348943203185628,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,3,hmp,80,0.0009318317131291562,0.660680674976669,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,3,hnodc,80,-0.0015674882007053498,-0.778305427569168,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,4,hmp,80,-0.0024485591441966207,-1.318303157549195,1.0,200000,post_hoc_exploratory_family
+unified_six,HC-128,1024,single_bit,4,hnodc,80,0.005151582891662442,2.688136014406055,0.7757711211443943,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,1,hmp,80,-0.001115249106877622,-0.5976724977700688,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,1,hnodc,80,-0.00013336166675677607,-0.07894403421178671,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,2,hmp,80,0.0017086647037500673,0.9427468174815596,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,2,hnodc,80,-0.0005989979968145584,-0.29013184313492824,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,3,hmp,80,-0.0023268570606329946,-1.2063637344587705,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,3,hnodc,80,-0.0018482323750116172,-1.0475216339152482,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,4,hmp,80,-0.0005985357827490726,-0.3725115532704915,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,localized_four_bit,4,hnodc,80,-0.00021678872309814496,-0.12623418728147945,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,1,hmp,80,0.0023101562136574596,1.1660308990620822,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,1,hnodc,80,-0.003360421880118189,-1.8128136937171007,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,2,hmp,80,-0.0018024910611316868,-0.8819181720760705,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,2,hnodc,80,-3.3754822256119864e-05,-0.017523605394505478,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,3,hmp,80,-0.005308484566641488,-3.3207972733431697,0.14026929865350674,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,3,hnodc,80,-0.0024028726228780286,-1.437531592204008,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,4,hmp,80,-0.00017198475979662424,-0.09367766071842494,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,0,single_bit,4,hnodc,80,0.0002980521046777332,0.1943502394232507,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,1,hmp,80,-0.0008689630260840159,-0.45062702649887226,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,1,hnodc,80,0.0007144690907705239,0.36197603433860626,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,2,hmp,80,0.00014050809568384221,0.07453148395451586,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,2,hnodc,80,-0.0012899146944282346,-0.6978608943247872,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,3,hmp,80,0.0013309826108868917,0.7010077986098237,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,3,hnodc,80,-0.0006611749616287757,-0.37372606710930434,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,4,hmp,80,-0.0004979032790175953,-0.32543838701176797,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,localized_four_bit,4,hnodc,80,-0.00031930481672935024,-0.14289248101660706,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,1,hmp,80,-4.534022686367451e-05,-0.027860930379723092,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,1,hnodc,80,0.0033187864361890807,1.7895865215276756,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,2,hmp,80,0.0008616973597697003,0.5402720327273928,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,2,hnodc,80,-0.0008895043067821795,-0.44087883139279505,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,3,hmp,80,-0.0012521273822338032,-0.6758628531298415,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,3,hnodc,80,0.0009805123181939727,0.5684311520095111,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,4,hmp,80,0.0009226909175840349,0.5330095300339838,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,25,single_bit,4,hnodc,80,0.0013608843025868385,0.793327940479903,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,1,hmp,80,-0.000352087102281768,-0.18152352003525393,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,1,hnodc,80,-0.0011526469319353457,-0.6991705381095376,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,2,hmp,80,-0.0013484388178189644,-0.7728244324128041,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,2,hnodc,80,-0.001244041213975186,-0.5815793579198637,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,3,hmp,80,0.0004384209598061375,0.21170123663593696,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,3,hnodc,80,0.0027375855901859703,1.6120547836996837,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,4,hmp,80,0.0016307199809073025,1.0618260603260685,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,localized_four_bit,4,hnodc,80,-0.00040750703094178943,-0.21580626700418298,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,1,hmp,80,-0.002561576880767886,-1.4476179523401003,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,1,hnodc,80,-0.0018381749396785122,-0.9708236477856328,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,2,hmp,80,-0.002558253984094603,-1.4961544939589961,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,2,hnodc,80,0.0017335183586129122,0.9243270679030803,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,3,hmp,80,0.002053212449803,1.1479535515853259,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,3,hnodc,80,0.0012508568183257642,0.7155814439981126,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,4,hmp,80,0.000538696560485046,0.2953928520589906,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,50,single_bit,4,hnodc,80,0.0022924685456800114,1.2628631808999384,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,1,hmp,80,0.00032688465147487095,0.18478346193995238,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,1,hnodc,80,-0.0018421509127596297,-0.9371584110118826,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,2,hmp,80,-3.810905901831252e-05,-0.021961073588551427,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,2,hnodc,80,-0.0006596926707356912,-0.3760598782900882,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,3,hmp,80,-0.001357355162342484,-0.8653864074454962,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,3,hnodc,80,-0.0004692314891791685,-0.276386792606011,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,4,hmp,80,-0.0007691981509185151,-0.41093199143961673,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,localized_four_bit,4,hnodc,80,0.00017132149755782615,0.08197679792289661,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,1,hmp,80,0.0015600837196997634,0.7857276180203739,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,1,hnodc,80,0.0026741804728058287,1.5127689331116125,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,2,hmp,80,0.0037411660715528107,2.160071258293212,0.9990100049499753,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,2,hnodc,80,-0.0025816777898208104,-1.5616637589223732,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,3,hmp,80,0.0011019875650540986,0.6354499650922318,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,3,hnodc,80,-0.001822900303491018,-1.1482618647239822,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,4,hmp,80,-0.0007379579055654658,-0.43873605696631324,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,75,single_bit,4,hnodc,80,-3.3272915296042595e-05,-0.018187156558224456,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,1,hmp,80,0.0024515885648872396,1.3053811935012607,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,1,hnodc,80,-0.00025451091620299347,-0.13096035022596988,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,2,hmp,80,0.0008626825308547352,0.5231627994573025,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,2,hnodc,80,0.001029403629137174,0.5321479239031274,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,3,hmp,80,-0.0012966438115527689,-0.6707976253500605,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,3,hnodc,80,-0.00168375793059488,-0.9715307448967531,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,4,hmp,80,-0.001895130476371297,-1.1651595323248527,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,localized_four_bit,4,hnodc,80,-0.0006937398124667593,-0.40438102879414295,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,1,hmp,80,-0.0008520397227025932,-0.4765770914838169,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,1,hnodc,80,0.00011113318264940886,0.05175324958514155,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,2,hmp,80,0.0025168083661320463,1.3234694278398818,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,2,hnodc,80,0.0017270873588140362,0.9133435387268839,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,3,hmp,80,-0.0033210394463154477,-1.696240779936405,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,3,hnodc,80,0.0007620278141465015,0.39077143353891935,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,4,hmp,80,0.00018791198316982227,0.11267968026245316,1.0,200000,post_hoc_exploratory_family
+unified_six,MICKEY 2.0,100,single_bit,4,hnodc,80,-0.0014126819978303382,-0.6918128615904211,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,1,hmp,80,-0.0016903895014242123,-0.9210869702262265,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,1,hnodc,80,-0.0010816348515742494,-0.6470405531369543,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,2,hmp,80,-0.0007424082831790954,-0.4325515392725954,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,2,hnodc,80,-0.001240361109705715,-0.6416323873471527,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,3,hmp,80,0.0001785652605147004,0.10260017792328878,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,3,hnodc,80,-0.0006562433692648917,-0.30017565068525337,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,4,hmp,80,0.0017766453978659946,0.9828200907719676,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,localized_four_bit,4,hnodc,80,-0.0012773039351132872,-0.7476485770935296,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,1,hmp,80,-0.003930596910731074,-2.1779114773914445,0.9986350068249659,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,1,hnodc,80,-0.0002662555665706917,-0.1516349798569752,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,2,hmp,80,0.0008478723372286239,0.42780105840459676,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,2,hnodc,80,-0.0019871801813094074,-1.073308186411601,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,3,hmp,80,0.00034540285169932605,0.21143816101340396,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,3,hnodc,80,-0.00022867521678241327,-0.1401365535640057,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,4,hmp,80,-0.0019865516086509916,-1.2421996778691227,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,0,single_bit,4,hnodc,80,-0.001107064419634135,-0.5954657140557273,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,1,hmp,80,-0.0004927579611013224,-0.2949790649261149,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,1,hnodc,80,-0.0009499654372665103,-0.45870686561671103,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,2,hmp,80,-0.0007633050859828686,-0.4296754272558258,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,2,hnodc,80,0.0002732156774485142,0.1344780875249789,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,3,hmp,80,0.003282894489814562,2.0622396079998127,0.9998550007249963,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,3,hnodc,80,0.002375855035503717,1.2821055652988695,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,4,hmp,80,-0.0021229569993351854,-1.0671088894962715,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,localized_four_bit,4,hnodc,80,0.00040637916419159343,0.2756704638067185,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,1,hmp,80,-0.0009201954602197938,-0.4716182034917783,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,1,hnodc,80,0.0033018653955637954,1.9226397643091113,0.9999850000749996,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,2,hmp,80,0.0022806724363050195,1.2641013745466054,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,2,hnodc,80,-0.0001361298562699717,-0.08037788951732928,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,3,hmp,80,0.0011506619365362987,0.6247349290383826,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,3,hnodc,80,0.0002602201206142532,0.14746913871091866,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,4,hmp,80,0.00046852031918551455,0.28294879047111754,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,1,single_bit,4,hnodc,80,-0.0016656404288811545,-1.0568295180757554,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,1,hmp,80,-4.920820739140741e-05,-0.030281655917150454,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,1,hnodc,80,-0.001657647253876357,-0.9746038465780515,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,2,hmp,80,0.0004790123477030686,0.25337011055035774,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,2,hnodc,80,0.0008166225547127217,0.4050311107394985,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,3,hmp,80,0.003238512351819125,1.703293525438762,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,3,hnodc,80,-0.0008833179334140573,-0.41442028722844276,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,4,hmp,80,0.000869747213434113,0.4640629746088886,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,localized_four_bit,4,hnodc,80,0.002583678014558144,1.4293411132363307,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,1,hmp,80,-0.0035742983738232537,-1.9947704920671119,0.999960000199999,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,1,hnodc,80,-0.001328147054862401,-0.7410218602908041,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,2,hmp,80,0.003987533790007973,2.1934613440620123,0.9982050089749551,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,2,hnodc,80,-0.0011628627672634797,-0.6021432142946929,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,3,hmp,80,0.0015516779695759438,0.9535439480329013,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,3,hnodc,80,0.00013814457945745124,0.07922255673372827,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,4,hmp,80,-0.00016829463462881693,-0.10471433795033935,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,2,single_bit,4,hnodc,80,-0.0008243264818780863,-0.4862356903249413,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,1,hmp,80,-0.0012461961558204583,-0.7396782701710181,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,1,hnodc,80,-3.649705262007974e-05,-0.016719630744740498,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,2,hmp,80,0.0023205805716960217,1.2216694493765734,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,2,hnodc,80,-0.0007070863260918853,-0.3797135412122053,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,3,hmp,80,0.0022104649979784218,1.3343670938243486,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,3,hnodc,80,0.0018075901048920748,0.93711886070011,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,4,hmp,80,-0.0013833504758041777,-0.7919065865243025,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,localized_four_bit,4,hnodc,80,0.0010785376457644268,0.5569616377749014,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,1,hmp,80,-0.00037891614067733727,-0.20783775475129226,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,1,hnodc,80,-0.000367319467889092,-0.18660525061584035,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,2,hmp,80,0.0012003688065068828,0.6046766088858079,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,2,hnodc,80,-0.0018146952800574753,-1.201492993992871,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,3,hmp,80,-3.628886873273882e-05,-0.01907110115050032,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,3,hnodc,80,0.0033374125196302977,2.0540595223302787,0.999880000599997,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,4,hmp,80,-0.002060667735048995,-1.1790469975320965,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,3,single_bit,4,hnodc,80,-0.0005380406016167738,-0.3161333575096371,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,1,hmp,80,-0.0012042603495172044,-0.7609226934856227,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,1,hnodc,80,-0.0019489862726139132,-0.9588862727270071,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,2,hmp,80,-0.00013611518345977119,-0.06937225050196508,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,2,hnodc,80,0.0017354443556222413,1.1632167622697247,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,3,hmp,80,0.0032495554568272174,1.7399519549227391,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,3,hnodc,80,0.0016432750956165364,0.835824438135214,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,4,hmp,80,0.001888834458435214,1.0145951608504071,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,localized_four_bit,4,hnodc,80,0.0012694589177859427,0.6620914537946575,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,1,hmp,80,0.0002782534722078439,0.1410617393959646,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,1,hnodc,80,0.0015253278630158434,0.881663104436981,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,2,hmp,80,0.0017739499333408344,0.8925492026390548,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,2,hnodc,80,-0.00010706801100020536,-0.05252989506882285,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,3,hmp,80,-0.00032639669814244556,-0.17271787166098168,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,3,hnodc,80,-0.0013343024035892131,-0.7868763909676008,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,4,hmp,80,-0.001820097464811213,-1.1144402638199562,1.0,200000,post_hoc_exploratory_family
+unified_six,Rabbit,4,single_bit,4,hnodc,80,-0.0007184222489257138,-0.370263190691593,1.0,200000,post_hoc_exploratory_family

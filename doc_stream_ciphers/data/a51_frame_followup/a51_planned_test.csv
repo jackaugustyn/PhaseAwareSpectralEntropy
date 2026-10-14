@@ -1,0 +1,2 @@
+endpoint,mean,ci_low,ci_high,sign_flip_p_two_sided,reps,n_keys
+"20-clock all-mask mean XOR flip fraction, observed minus control",-0.00027786084529505764,-0.0017519250897129208,0.001176236044657096,0.7185328146718533,100000,80

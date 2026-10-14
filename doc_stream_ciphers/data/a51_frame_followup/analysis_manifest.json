@@ -1,0 +1,20 @@
+{
+  "inputs": [
+    "manifest.json",
+    "a51_frame_raw.npz"
+  ],
+  "seed": 20261014,
+  "file_sha256": {
+    "a51_planned_test.csv": "364dbd4f2e646df096cc9eaec101dee887f71cab549129ee23efbd4b63249555",
+    "a51_summary.csv": "171cb94bd62da45c1cd4ee852d29f62e43e9675225bd606546ac89897e33f208",
+    "analysis_summary.json": "cef5286a289eb12813537b9fc90bf457ff500f4709583f2494ade029f3876429",
+    "a51_loading_validation_per_key.csv": "2f5488807545491b14bd9547b100f96d78532e8b8a8d437792a7132b55b90fb2",
+    "a51_loading_validation_raw.npz": "2be727ed9ecc05140b9f5fd2c84f181c8d3a20cf9188996425c515dee1e62767",
+    "manifest.json": "afbb98a197cb22bd558bf22e2e48bab1b3a03528035fcd3bb16bb56aca3b629f",
+    "a51_standard_mask_scan.csv": "f907734e9da729c54199d54d4c42bcc30d11e11cc9af1b9d1b4b2a3c1c74e6a6",
+    "a51_loading_validation_manifest.json": "e77c3bf972bbc58be841a39d36ed80244ff1673c66e6f8647e990a49fa80a4e5",
+    "a51_per_key.csv": "b4530b1f6520f6cad9d62f1d2f435faa7ef2c14f33dc086b7d561f00517d147a",
+    "a51_loading_validation_summary.json": "761c1b2444ae488c0e68771d0e35abbc4b8278aaebaee6773bc7c7ef6e8db363",
+    "a51_frame_raw.npz": "a6b63e5c287be49f0cdbe7c0cb1e7f896f30ae9c63dc3cfe3f4c6475484502f8"
+  }
+}

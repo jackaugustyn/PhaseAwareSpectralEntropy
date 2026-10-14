@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    "manifest.json",
+    "arx_raw.npz",
+    "trivium_raw.npz",
+    "grain_raw.npz"
+  ],
+  "analysis_files_sha256": {
+    "doc_stream_ciphers/data/literature_mask_followup/analysis_summary.json": "21c57c10281fc2541c706fc3a43968666332b23c9b5e7e60112fffca9548b2d2",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_all_64_masks.csv": "f3ab92210e460506312a2c137fc20487bed5c4ac3bd1edca397a81c42b864f57",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_literature_input_positions.csv": "fe871e102d2d42e168734789d533071c32e49cdd298dda08375f53b36047114c",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_output_profile_magnitude.csv": "9484429f4f6b09bc01b1509887f1cd55a019772a2d19959da0b0127638853975",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_output_word_gap.csv": "5b742080b522c7ad20297d8e2b2f33184b55952bdbb6a5e0b6ed456816866e5d",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_output_word_profiles.csv": "a3e1a57b0537e4dd61d092f2b541314a4cc8455ea7c965f851b233ea187075f4",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_planned_tests.csv": "e7313d62c638cd7ba1f5533ab07f607207c6bc07799ae256b480f69328087748",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_word_gap_by_round.csv": "8ffc7350c985ded90938abe216e08a283303a41e1ab41accf76f34f56b5cb8da",
+    "doc_stream_ciphers/data/literature_mask_followup/grain_locality_masks.csv": "aaba55eb7ecf6f1375b9285ffdea4e5d7fb275eeee42957f9df9ec05bed4c649",
+    "doc_stream_ciphers/data/literature_mask_followup/grain_planned_test.csv": "6c284efb9d8628ec659f092200c90e5b972fb517a8c016d6cf53bd3c61ff6c12",
+    "doc_stream_ciphers/data/literature_mask_followup/trivium_subcube_summary.csv": "7e74e94a387cb0f15a8a9a441f8b9c43fb0a2b6cfd7c1f6645b29356f78b1e59"
+  }
+}

@@ -1,0 +1,27 @@
+# Independent validation of the A5/1 loading gradient
+
+This protocol was fixed after inspecting the 680--759 A5/1 frame study and
+before generating the new key indices 760--839. The earlier data suggested
+that changing the last-loaded frame bit (bit 21, LSB-first frame numbering)
+has a lower early output flip fraction than changing the first-loaded bit
+(bit 0) when no majority-clock warm-up is used. The selected contrast is
+post hoc in the earlier cohort and prospective only in this validation.
+
+- Reuse the deterministic master-key, key, base-frame, and SHAKE256-control
+  derivations of `a51_frame_followup.py`, with indices 760--839. For each
+  independent key generate four disjoint 22-bit base-frame stars and retain
+  only paired first-114-bit outputs for frame bits 0 and 21, at warm-up
+  depths 0 and 100 clocks. The 100-clock result is descriptive context.
+- Define the key-level score at depth zero as
+  `[observed-minus-control XOR flip fraction for bit 21] -
+  [observed-minus-control XOR flip fraction for bit 0]`, averaging four
+  frame pairs within each bit. The sole planned test is two-sided with
+  100,000 whole-key sign flips. Use 10,000 whole-key bootstrap resamples
+  for a pointwise 95% interval.
+- Archive paired XOR bits, keys, bases, masks, clock settings, per-key
+  scores, and protocol/raw hashes. The independent unit is the key.
+
+This tests an initialization-delay signature of a deliberately unprotected
+zero-clock variant. It does not establish a weakness of standard A5/1 or
+reproduce a published state-recovery attack. No other endpoint from this
+validation cohort will be designated confirmatory.

@@ -1,0 +1,55 @@
+{
+  "protocol": "doc_stream_ciphers/MASK_LITERATURE_FOLLOWUP_PROTOCOL.txt",
+  "protocol_sha256": "52b0625471ef51d49066bb0c0976d879a9afc84cdab09b0b91c4301839a9359e",
+  "source": "experiments/stream_rounds_study/literature_mask_followup.py",
+  "master_seed": 20260721,
+  "arx_key_indices": [
+    520,
+    599
+  ],
+  "secondary_key_indices": [
+    600,
+    679
+  ],
+  "arx_families": [
+    "ChaCha20",
+    "Salsa20"
+  ],
+  "arx_rounds": [
+    2,
+    4,
+    6,
+    8,
+    20
+  ],
+  "trivium_clocks": [
+    192,
+    384,
+    768,
+    1152
+  ],
+  "trivium_degrees": [
+    2,
+    4,
+    6
+  ],
+  "grain_clocks": [
+    0,
+    32,
+    64,
+    256
+  ],
+  "grain_bits_msb_first": [
+    0,
+    32,
+    63,
+    64,
+    65,
+    95
+  ],
+  "raw_sha256": {
+    "arx": "95129cc08ef61ee6272600e479542158bc40594677f222ad83b03407514877b5",
+    "trivium": "2d1e1f950f916f510f435347c9df5770e35919bc1e7383430bffd891e9fa943a",
+    "grain": "3450648453b8740cbc98e79cbc5c7b808b55ff3c60370c872d7cf6067700800f"
+  }
+}

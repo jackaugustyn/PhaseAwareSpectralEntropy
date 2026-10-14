@@ -1,0 +1,3 @@
+family,cipher,configuration,scenario,metric,n_keys,mean,p_sign_flip_two_sided,sign_flips,p_holm
+matched_nonce_phase_primary,ChaCha20,2,single_bit,alignment_loss_hnodc,80,-0.37508647754971575,4.9999750001249995e-06,200000,9.999950000249999e-06
+matched_nonce_phase_primary,Salsa20,2,single_bit,alignment_loss_hnodc,80,-0.6269091213114066,4.9999750001249995e-06,200000,9.999950000249999e-06
