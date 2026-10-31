@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT / "experiments" / "stream_rounds_study"))
 
 
 def load_module(path: Path):
-    """Load one vector-check file without requiring a pytest installation."""
+    """Load one function-based check file using the declared dependencies."""
     spec = importlib.util.spec_from_file_location(path.stem, path)
     if spec is None or spec.loader is None:
         raise ImportError(f"Cannot load {path}")

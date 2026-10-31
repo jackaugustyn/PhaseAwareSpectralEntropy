@@ -1,0 +1,9 @@
+{
+  "fingerprint": "90756840196b5306052d6fcb4feaa00751e6f056d351021844813a5ef87c9f30",
+  "key_index": 876,
+  "raw_sha256": "655153c8ec46e3c6eea7b6aa1a68b9043609aa8a0a1445ffba25663cdc806273",
+  "direct_structural_checks": {
+    "salsa2_emitted_counter_independence_violations": 0,
+    "salsa2_emitted_counter_independence_comparisons": 19500
+  }
+}

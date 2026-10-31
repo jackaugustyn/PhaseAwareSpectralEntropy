@@ -1,0 +1,53 @@
+\paragraph{Setting and claim.}
+
+For $n\geq1$, regard $n$-bit words as vectors in $\mathbb F_2^n$, with LSB-first bit positions. For fixed $C$, define
+\[
+ f_C(u)=((u\oplus C)+u)\bmod2^n,\qquad
+ L_b(C)=f_C(2^b)\oplus f_C(0).
+\]
+Let $t(C)$ count trailing ones, with $t(2^n-1)=n$. The map is affine; its linear part $A_C(u)=f_C(u)\oplus C$ satisfies
+\begin{equation}
+\begin{aligned}
+ \operatorname{rank}_{\mathbb F_2} A_C
+   &=(n-1)-\operatorname{HW}(C\bmod2^{n-1}),\\
+ \frac1n\sum_{b=0}^{n-1}\operatorname{HW}\!\left(f_C(u\oplus2^b)\oplus f_C(u)\right)
+   &=\frac{\max(n-1-t(C),0)}{n}\leq\frac{n-1}{n}.
+\end{aligned}
+\label{eq:suppaffinecorollary}
+\end{equation}
+Both identities hold for every $C,u$, without distributional assumptions.
+
+\paragraph{Proof by carry intervals.}
+
+The integer identity $a+b=(a\oplus b)+2(a\mathbin{\&}b)$ gives
+\[
+ f_C(u)=C+2(u\mathbin{\&}\neg C)\pmod{2^n},
+\]
+with $n$-bit complementation. Thus $u_b$ contributes only if $C_b=0$, adding $2^{b+1}$ for $b<n-1$. Define
+\[
+ q(b)=\min\bigl(\{j>b:C_j=0\}\cup\{n\}\bigr).
+\]
+The addition flips the ones at $b+1,\ldots,q(b)-1$ and, if $q(b)<n$, the zero at $q(b)$; overflow is discarded. Thus $L_b(C)$ has ones precisely on
+\[
+ I_b=\{b+1,\ldots,\min(q(b),n-1)\}
+ \quad\text{if }C_b=0\text{ and }b<n-1.
+\]
+For $C_b=1$ the column is zero, and $L_{n-1}(C)=0$ because the added term is a multiple of $2^n$.
+
+Successive intervals are disjoint: one ends at the next zero, and the next begins one position later. Their carries cannot interact, proving
+\[
+ f_C(u)=C\oplus\bigoplus_{b=0}^{n-1}u_bL_b(C).
+\]
+The nonzero columns have disjoint, nonempty supports and are therefore independent. One exists for each zero bit of $C$ among positions $0,\ldots,n-2$, proving the rank formula.
+
+Affinity makes each singleton response equal to $L_b(C)$ for every $u$. If $t(C)<n-1$, the intervals cover exactly $t(C)+1,\ldots,n-1$, totaling $n-1-t(C)$ positions. If the first zero is the top bit, or no zero exists, all columns vanish. Summing their HW proves the second identity and bound in Equation~\eqref{eq:suppaffinecorollary}.
+
+\paragraph{Interpretation for the two-round Salsa20 output word.}
+
+For Salsa20/2, $W_7=u\oplus C$, with $u=x_7$ and $C$ fixed by the remaining state; modular feed-forward gives the $n=32$ map. The corollary concerns one conditional output word, not the rank or security of the complete cipher. Changing the other nonce word can change $C$ and its columns, so joint affinity is not asserted.
+
+Algebraically, $C=0$ gives $f_C(u)=2u\bmod2^{32}$ and rank 31; $C=2^{32}-2$ has one active input bit, whose column has 31 ones, and rank 1. Both have mean singleton HW $31/32$. These are illustrations, not observed cipher states: equal averages can hide different input/output dependencies.
+
+\paragraph{Deterministic verification.}
+
+The script \texttt{arx\_affine\_corollary.py} exhausts all $(u,C)$ at widths 1--8, checking affine reconstruction, column elimination, and image cardinality $2^{\operatorname{rank}A_C}$. On the existing 80-key-pair cohort, it verifies input/source hashes and both formulas for every retained $C$, and eliminates the stored singleton columns in every base/nonce/block context. The uint32 differences for all 32 masks are remapped from MSB-first byte indices to LSB-first word indices. These deterministic checks generate no new observations or $p$ values; repeated contexts are not independent replicates.

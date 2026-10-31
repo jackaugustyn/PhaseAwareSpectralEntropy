@@ -1,0 +1,28 @@
+% Continued within the round-function results subsection.
+
+After inspecting the complete nonce scan, we traced word dependencies through the rounds and modular feed-forward~\citep{nir2018,bernstein2008salsa}. Missing paths prove independence; present paths specify neither HW nor differential probabilities. This descriptive analysis uses zero-based indices (Table~\ref{tab:mechanismpaths}).
+
+\begin{table}[H]
+\caption{Nonce-word dependencies after two rounds and modular feed-forward. Each absent path predicts zero HW, confirmed in all 81,920 archived observations per output word and nonce-word group.\label{tab:mechanismpaths}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{lCCC}
+\toprule
+\textbf{Core} & \textbf{Changed input} & \textbf{Reached after column round} & \textbf{Absent output paths}\\
+\midrule
+ChaCha20/2 & $x_{14}$ & $2,6,10,14$ & None\\
+ChaCha20/2 & $x_{15}$ & $3,7,11,15$ & None\\
+Salsa20/2 & $x_6$ & $2,6,10,14$ & $1$\\
+Salsa20/2 & $x_7$ & $7,11,15$ & $0,1,2,3,6$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Salsa updates quarter-round arguments in order $b,c,d,a$. Input $x_6$ enters as $d$ in $(10,14,2,6)$, with paths to all four words; $x_7$ enters as $c$ in $(15,3,7,11)$, after $x_3$ has been updated. The row round therefore starts with potentially affected inputs in four rows for $x_6$, but three for $x_7$, leaving words $0$--$3$ and $6$ independent of $x_7$. Feed-forward changes the added input only at the nonce position and preserves these zeros.
+
+Both Salsa20/2 updates of word 7 occupy role $c$ and use other operands independent of the initial $x_7$. Hence $w_7=x_7\mathbin{\oplus}C$, with $C$ independent of $x_7$, and
+\[
+ y_7=\bigl((x_7\mathbin{\oplus}C)+x_7\bigr)\bmod 2^{32}.
+\]
+Changing bit 31 alters the sum only by a multiple of $2^{32}$, giving zero HW in all 2560 archived cases. Mean HW across the 32 changed bits is 0.93418; its value depends on carry patterns determined by $C$. Words $4,5,6,7,11$ are also independent of the low counter $x_8$. With the high counter fixed, their outputs and nonce-response HW repeat exactly across blocks 0--7, as the archive confirms.
+
+Both ChaCha nonce words enter as $d$. Shifting each state row one column right maps $x_{14}$ to $x_{15}$ and commutes with the column/diagonal schedules and wordwise feed-forward. It does not preserve valid input distributions because constants, counter, and nonce locations differ. Nevertheless, shifting the first-word mean profile reduces its RMS difference from the second from 4.663 to 0.328 HW bits per word. Summing each row removes the permutation; the four 128-bit mean-HW gaps are $+0.165,-0.097,-0.137,-0.198$ bits. These elementary identities explain local compensation without establishing equal response distributions, deriving the entropy gap, or constituting an attack.

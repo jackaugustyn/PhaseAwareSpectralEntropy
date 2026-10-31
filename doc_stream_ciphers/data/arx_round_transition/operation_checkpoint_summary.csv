@@ -1,0 +1,5 @@
+checkpoint,pair_index,pair_name,n_keys,mean_hw_mean,mean_hw_ci95_low,mean_hw_ci95_high,zero_fraction_mean,zero_fraction_ci95_low,zero_fraction_ci95_high
+round3_column_qr_15_3_7_11_before_c,36,within_00_15,80,0.0,0.0,0.0,1.0,1.0,1.0
+round3_column_qr_15_3_7_11_before_c,37,within_07_30,80,0.0,0.0,0.0,1.0,1.0,1.0
+round3_column_qr_15_3_7_11_after_c,36,within_00_15,80,15.787109375,15.6908203125,15.8810546875,0.0,0.0,0.0
+round3_column_qr_15_3_7_11_after_c,37,within_07_30,80,15.8935546875,15.797265625,15.989067382812499,0.0,0.0,0.0

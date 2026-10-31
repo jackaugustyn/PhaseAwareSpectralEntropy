@@ -1,0 +1,46 @@
+{
+  "patch_format_version": "1.1",
+  "authorization_context": "review_roadmap",
+  "revision_round": 1,
+  "base_draft_hash": "9cf702dd74ac",
+  "roadmap_sha256": "629b80aeae8939560a5258440737369cad3e0e54fb9ec623dd1bf6cdb5ae79a7",
+  "author_adjudication_sha256": "f1c44983f9030df1a6e5e67a9a7c0d93aa5c94f4c9412d1e7bfe12c79f567090",
+  "author_decision_digest": "1e16efcc6725574aadfdb4f163ad1fbad6c85c02306322c2a58416ef7825a40a",
+  "claim_surface_manifest_sha256": "6ee815a5990736755dfd1e7f386691b81d1609944fd909abbc98383e640fec3b",
+  "ops": [
+    {
+      "op": "replace_block",
+      "block_id": "B0024",
+      "old_hash": "9be068e6e314",
+      "new_text": "The master key pair is the independent replicate; masks, bases, blocks, and interventions remain together in resampling. Pointwise 95\\% percentile bootstrap intervals~\\citep{field2007} use the 0.025 and 0.975 quantiles of resampled whole-key means, with 5000 resamples in the principal ARX cohorts and 10,000 in the complete scan. For a key-level endpoint $d_i$, the target null is $\\mathbb E[d_i]=0$. We compare $|\\bar d|$ with $|n^{-1}\\sum_i s_i d_i|$, using independent signs $s_i\\in\\{-1,1\\}$ per key and $p=(e+1)/(R+1)$ for $e$ simulated statistics at least as extreme as observed. Finite-sample validity requires null sign-invariance; zero mean and reference coupling alone do not guarantee it, particularly across rounds or finalizations. Reported $p$ values are therefore assumption-dependent sign-flip calibrations, interpreted with effect sizes and bootstrap intervals.",
+      "roadmap_item_ids": [
+        "REV-R1-W2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": []
+    },
+    {
+      "op": "replace_block",
+      "block_id": "B0030",
+      "old_hash": "67d6cd8f638e",
+      "new_text": "We compare $G$, $\\Delta F_{512}$, and mean AC spectra in all six cipher--width settings. For spectra, average four base powers within each key and mask, normalize over nonzero frequencies, then average the resulting vectors over masks and keys. Writing these means as $\\bar q$, their distance is $D=\\sum_{k>0}|\\bar q_k^{\\rm eval}-\\bar q_k^{\\rm model}|\\in[0,2]$, without reference subtraction; the model mean uses the 4096 simulations. Whole-evaluation-key percentile intervals use the 0.025 and 0.975 quantiles of resampled means or recomputed distances and condition on the fixed fit and Monte Carlo estimate. Separate Monte Carlo standard errors (MCSE) quantify simulation noise. Mean spectra can conceal compensating mask-level errors; these comparisons are not model-rejection tests or calibrated prediction intervals.",
+      "roadmap_item_ids": [
+        "REV-R1-W2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": []
+    },
+    {
+      "op": "replace_block",
+      "block_id": "B0043",
+      "old_hash": "32d92276f0ee",
+      "new_text": "\\begin{table}[t]\n\\caption{Planned scan, feed-forward, and round-transition endpoints. Each group uses a separate 80-key-pair cohort and Holm family. All entropy endpoints use 128-bit segments; scan outputs have 4096 bits, other outputs 8192. Brackets give pointwise 95\\% whole-key intervals. Holm-adjusted $p$ values are assumption-dependent sign-flip calibrations requiring null sign-invariance; small reported values reach the finite-simulation floor. $J$ and $T_1$ measure changed bits per 32-bit word; $T_2$ is dimensionless.\\label{tab:primary}}\n\\small\\setlength{\\tabcolsep}{3pt}\n\\begin{tabularx}{\\textwidth}{Xcc}\n\\toprule\n\\textbf{Endpoint} & \\textbf{Mean [95\\% CI]} & \\shortstack{\\textbf{Holm-adjusted}\\\\\\textbf{sign-flip $p$}}\\\\\n\\midrule\n\\multicolumn{3}{l}{\\emph{Complete scan: two tests}}\\\\\nSalsa20 $G_2$ (bits) & $0.79059\\ [0.78404,0.79729]$ & $2\\times10^{-5}$\\\\\nSalsa20 $-$ ChaCha20 $G_2$ (bits) & $0.79095\\ [0.78311,0.79886]$ & $2\\times10^{-5}$\\\\\n\\midrule\n\\multicolumn{3}{l}{\\emph{Feed-forward: four tests at two rounds}}\\\\\nSalsa20 $G_{\\rm none}$ (bits) & $0.72940\\ [0.72392,0.73493]$ & $4\\times10^{-5}$\\\\\nSalsa20 $G_{\\rm add}-G_{\\rm none}$ (bits) & $0.05865\\ [0.05535,0.06202]$ & $4\\times10^{-5}$\\\\\nChaCha20 $G_{\\rm add}-G_{\\rm none}$ (bits) & $-0.00293\\ [-0.00652,0.00068]$ & $0.108$\\\\\nSalsa20 mixed word-7 interaction $J$ & $0.70967\\ [0.68263,0.73686]$ & $4\\times10^{-5}$\\\\\n\\midrule\n\\multicolumn{3}{l}{\\emph{Round transition: two tests for Salsa20}}\\\\\n$T_1$: within-word derivative, none & $15.81934\\ [15.72011,15.92031]$ & $2\\times10^{-5}$\\\\\n$T_2$: fundamental fraction, add & $-0.52287\\ [-0.52559,-0.52020]$ & $2\\times10^{-5}$\\\\\n\\bottomrule\n\\end{tabularx}\n\\end{table}",
+      "roadmap_item_ids": [
+        "REV-R1-W1"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": []
+    }
+  ],
+  "emitted_by": "/root/bootstrap_verify; ARS revision patch writer"
+}

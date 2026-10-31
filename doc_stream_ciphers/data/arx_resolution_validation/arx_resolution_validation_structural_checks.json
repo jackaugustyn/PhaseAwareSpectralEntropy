@@ -1,0 +1,22 @@
+{
+  "salsa2_first_nonce_word_output1_zero": {
+    "comparisons": 163840,
+    "violations": 0
+  },
+  "salsa2_second_nonce_word_outputs0_1_2_3_6_zero": {
+    "comparisons": 819200,
+    "violations": 0
+  },
+  "salsa2_second_nonce_msb_mask56_output7_zero": {
+    "comparisons": 5120,
+    "violations": 0
+  },
+  "salsa2_nonce_difference_hw_counter_independence": {
+    "comparisons": 1536000,
+    "violations": 0
+  },
+  "salsa2_emitted_counter_independence": {
+    "comparisons": 1560000,
+    "violations": 0
+  }
+}

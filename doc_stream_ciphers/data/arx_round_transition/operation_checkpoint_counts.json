@@ -1,0 +1,12 @@
+{
+  "round3_column_qr_15_3_7_11_before_c": {
+    "word_comparisons": 10240,
+    "zero_words": 10240,
+    "nonzero_words": 0
+  },
+  "round3_column_qr_15_3_7_11_after_c": {
+    "word_comparisons": 10240,
+    "zero_words": 0,
+    "nonzero_words": 10240
+  }
+}

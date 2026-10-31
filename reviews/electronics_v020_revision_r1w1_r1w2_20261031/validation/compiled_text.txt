@@ -1,0 +1,1185 @@
+Received:
+Revised:
+Accepted:
+Published:
+Citation: Augustynowicz, P. IV
+Diffusion in Reduced ChaCha20 and
+Salsa20. Electronics 2026, 1, 0.
+https://doi.org/
+Copyright: © 2026 by the author.
+Submitted to Electronics for possible
+open access publication under the
+terms and conditions of the Creative
+Commons Attri- bution (CC BY)
+license (https://creativecommons.
+org/licenses/by/4.0/).
+Article
+Block-Position Structure in Reduced ChaCha20 and Salsa20:
+Experimental Diagnostics of IV Diffusion
+Paweł Augustynowicz 1,∗
+1
+Faculty of Cybernetics, Military University of Technology, ul. gen. Sylwestra Kaliskiego 2, 00-908 Warsaw,
+Poland; pawel.augustynowicz@wat.edu.pl
+Abstract
+1
+Early nonce responses reflect the round function, output finalization, and measurement.
+2
+We separate these stages in reduced ChaCha20 and Salsa20 using exact algebra and paired
+3
+experiments on independent key cohorts. Both two-round cores exhibit recurring 512-bit
+4
+structure; within-block rotations remove approximately 96% and 94% of their nonzero-
+5
+frequency entropy contrasts. An independent scan confirms a Salsa20/2 nonce-word
+6
+entropy gap of 0.79059 bits. This asymmetry precedes feed-forward, while modular addi-
+7
+tion increases it and introduces a predicted mixed nonce interaction. A conditional identity
+8
+bounds the mean singleton response of Salsa20/2 output word 7 to flips in the second nonce
+9
+word by 31/32 changed bits, with the remaining state fixed, and gives its exact local rank.
+10
+A third-round update ends the sampled conditional affinity of the unfinalized word-7 map
+11
+while substantial block-scale structure persists in standard output. Two frozen empirical
+12
+models predict entropy-gap signs on new keys; retaining conditional positional profiles
+13
+improves mean nonzero-frequency spectra at all tested resolutions, but not every entropy
+14
+gap. Spectral entropy thus interprets construction-linked responses without establishing
+15
+superior detector sensitivity, an attack, or full-round insecurity.
+16
+Keywords: experimental cryptanalysis; stream ciphers; IV diffusion; ChaCha20; Salsa20;
+17
+avalanche effect; spectral diagnostics; feed-forward
+18
+1. Introduction
+19
+Nonce diffusion measurements combine the round function, feed-forward, and output
+20
+aggregation. ChaCha20 and Salsa20 share addition, rotation, and exclusive OR (XOR),
+21
+termed ARX operations, but differ in state layout and round schedule [1,2]. Reduced
+22
+rounds allow these stages to be examined separately.
+23
+We hold the key fixed, perturb the public initialization vector (IV), here the nonce, and
+24
+measure ordered Hamming weights (HW) of output differences [3,4]. Conditional identities,
+25
+paired finalizations, and predictive controls connect local mechanisms to measured spectra.
+26
+Spectral entropy summarizes these responses rather than keystream entropy or security;
+27
+direct diagnostics provide a benchmark.
+28
+2. Literature Review
+29
+Salsa20 and ChaCha combine ARX rounds with modular feed-forward to produce
+30
+512-bit blocks [1,2,5]; ChaCha’s quarter-round was designed to improve diffusion per
+31
+round [6].
+32
+Chosen-IV methods establish the fixed-key, related-input setting [3,4,7]. Differential
+33
+cryptanalysis [8] and probabilistic neutral bits (PNBs) [9] underpin multi-bit and differential-
+34
+Version October 31, 2026 submitted to Electronics
+https://doi.org/10.3390/electronics1010000
+
+
+Version October 31, 2026 submitted to Electronics
+2 of 11
+Table 1. Principal cohorts; each row has 80 key pairs and four bases per pair. Q counts trajectories
+pooled per power estimate. Training for the prediction experiment reuses only the earlier resolution
+cohort. Round counts are single core rounds; 20 is standard.
+Experiment
+Output bits
+Q
+Rounds
+Alignment and direct benchmark
+4096
+16
+2, 4, 20
+Complete nonce scan
+4096
+4 per mask
+2, 4, 6, 8, 20
+Resolution validation / model training
+8192
+4 per mask
+2, 4
+Feed-forward interventions
+8192
+4 per mask
+2, 4
+Single-round transition
+8192
+4 per mask
+2, 3, 4
+Frozen-model evaluation
+8192
+4 per mask
+2
+linear attacks on reduced Salsa and ChaCha [10–13]. Later PNB studies refine input
+35
+differences, bias estimates, and neutral-bit selection [14–16]. Higher-order analysis [17],
+36
+two-round key–IV criteria [18], bit puncturing [19], and automated correlation search [20]
+37
+extend this line. Multiple-output-difference PNB results are also reported in a preprint [21].
+38
+Avalanche and bit-independence tests [22–24], together with NIST’s Fourier test [25],
+39
+provide established statistical baselines. Spectral entropy has long been used in time-series
+40
+analysis [26,27], with later normalized and complexity–entropy representations [28–30]. A
+41
+recent cryptographic application reports that unconditional ChaCha20 keystream meets
+42
+its spectral-entropy criterion [31]. Here spectral entropy scores ordered HW trajectories of
+43
+first-order nonce differences; mixed-derivative HW profiles separately probe finalization.
+44
+A passing unconditional test does not characterize those responses.
+45
+Our contribution connects the conditional word-7 rank and mean-singleton identities,
+46
+paired add/none/xor responses, and frozen-model spectral reconstruction on new keys.
+47
+Two-round Salsa20 criteria [18] and higher-order ChaCha analysis [17] already place low-
+48
+round structure in cryptanalysis; we claim no novelty for weak two-round diffusion or
+49
+higher-order differences themselves. Here local identities predict zeros and interactions,
+50
+interventions isolate finalization effects, and fresh keys test empirical reconstruction. This
+51
+does not derive the entire entropy gap from one word or improve attack complexity.
+52
+3. Materials and Methods
+53
+3.1. Common Inputs, References, and Independent Cohorts
+54
+Each principal cohort has 80 matched pairs of separately derived 256-bit cipher keys
+55
+and four shared 64-bit base nonces v per pair. Salsa20 uses v; ChaCha20 uses 032∥v; counters
+56
+start at zero. BLAKE2b domains separate keys and control secrets [32]; SHAKE256 derives
+57
+nonces and reference streams [33]. Each key/cipher/configuration reuses one reference
+58
+stream per nonce, with collision-checked disjoint base/variant groups. Under an ideal
+59
+random-function model, distinct variants give independent uniform differences despite
+60
+sharing a base. SHAKE256 realizes the reuse pattern computationally, without proving
+61
+ideal randomness.
+62
+Table 1 separates the cohorts. Alignment uses singleton masks at bytewise most-
+63
+significant-bit (MSB) first positions 0, 21, 42, 63; other cohorts scan all 64 singletons with
+64
+paired nonce-word offsets. State-word bits are least-significant-bit (LSB) first. Protocols
+65
+preceded generation; independent cohorts mean new keys, not another team. Standard
+66
+outputs passed vectors or independent library checks; reduced and odd-round cores were
+67
+checked against independent scalar rounds.
+68
+3.2. Direct and Spectral Measurements
+69
+For key K, nonce v, and mask δ, divide ZK(v) ⊕ZK(v ⊕δ) into consecutive s-bit
+70
+segments and take their HW, giving a trajectory ht, t = 0, . . . , T −1, with T = W/s for
+71
+
+
+Version October 31, 2026 submitted to Electronics
+3 of 11
+W output bits. The widths s = 32, 64, 128 retain 16, eight, or four samples per 512-bit
+72
+block. Coarser segments satisfy h(gs)
+j
+= ∑
+g−1
+a=0 h(s)
+gj+a: summation followed by decimation
+73
+changes the observable, while the physical frequency spacing remains 1/W. Origins remain
+74
+block-aligned; uniform differences have mean HW s/2.
+75
+Using the complete two-sided discrete Fourier transform (DFT), average powers before
+76
+normalization:
+77
+Pk = 1
+Q
+Q
+∑
+q=1
+| DFT(h(q))k|2,
+pk =
+Pk
+∑j Pj
+,
+HMP = −
+T−1
+∑
+k=0
+pk log2 pk.
+(1)
+Thus the alignment estimator pools 16 base–mask pairs, whereas complete scans pool four
+78
+bases within each mask. Width, window length, and pooling change the estimator. With
+79
+DC denoting zero-frequency power and AC the remaining power, define
+80
+epk =
+Pk
+∑j>0 Pj
+, HnoDC = −∑k>0 epk log2 epk
+log2(T −1)
+, HMP = h2(p0) + (1 −p0) log2(T −1)HnoDC,
+(2)
+where h2 is binary entropy. Parseval’s theorem [34] gives p0 = ⟨¯h2
+q⟩/(⟨¯h2
+q⟩+ ⟨Vq⟩) for
+81
+trajectory mean ¯hq and population variance Vq. Consequently, higher full-spectrum entropy
+82
+can coexist with more concentrated AC power or a weaker mean response.
+83
+For cipher–reference comparisons, compute the within-key contrast ∆S = Scipher −
+84
+Sreference. Two main summaries are the second-minus-first nonce-word entropy gap and
+85
+the 512-bit fundamental-power fraction:
+86
+G = 1
+32
+31
+∑
+b=0
+[∆HMP(32 + b) −∆HMP(b)],
+F512 = PB + PT−B
+∑k>0 Pk
+,
+B = W/512.
+(3)
+∆F512 is calculated per mask and then averaged within keys. Unlike a sum over all block
+87
+harmonics, F512 isolates one cycle per 512 bits. All analyzed trajectories have nonzero AC
+88
+power.
+89
+Descriptive diagnostics on alignment streams measure mean HW, four-position mean-
+90
+HW range, lag-four autocorrelation of centered trajectories, and root mean square (RMS)
+91
+flip-probability deviation from 1/2 [22] over 512 bit positions, 16 pairs and eight blocks per
+92
+pair. This benchmark followed the original spectral findings.
+93
+3.3. Paired Interventions and Inference
+94
+For initial state X and working state Wr(X) after r rounds, compare wordwise final-
+95
+izations
+96
+Zadd = Wr(X) + X
+(mod 232),
+Znone = Wr(X),
+Zxor = Wr(X) ⊕X.
+(4)
+Only add is standard. All interventions share Wr, keys, nonces, and counters. Applying
+97
+the same finalizations to one shared reference working stream and the actual X couples
+98
+their references. For distinct singleton masks a, b, form the second-order derivative before
+99
+taking HW:
+100
+D2
+a,bZ(v) = Z(v) ⊕Z(v ⊕a) ⊕Z(v ⊕b) ⊕Z(v ⊕a ⊕b).
+(5)
+The fixed panel contains 32 cross-word pairs at equal LSB-first offsets, four pairs linking first-
+101
+word bit 0 to second-word bits 7, 15, 30, 31, and two within-second-word pairs (0, 15), (7, 30).
+102
+Each base has 103 reused nonce vertices. Since D2X = 0, none and xor derivatives agree
+103
+exactly for either core at every round. Their first-order entropy gaps need not agree.
+104
+
+
+Version October 31, 2026 submitted to Electronics
+4 of 11
+Let Aτ average output-word-7 derivative HW over the 31 aligned cross-word pairs
+105
+with offsets 0–30, four bases, and 16 blocks. The mixed interaction is J = ∆Aadd −∆Anone;
+106
+offset 31 is descriptive because its two-round Salsa derivative cancels. For the round
+107
+transition, Awithin
+r
+instead averages the two within-word pairs under none. The endpoints
+108
+are T1 = ∆Awithin
+3
+−∆Awithin
+2
+and T2 = ∆F512,3 −∆F512,2 under add at 128-bit resolution.
+109
+Round 3 is a column round in both experimental odd-round constructions. Spectra always
+110
+use first-order HW trajectories.
+111
+The master key pair is the independent replicate; masks, bases, blocks, and interven-
+112
+tions remain together in resampling. Pointwise 95% percentile bootstrap intervals [35]
+113
+use the 0.025 and 0.975 quantiles of resampled whole-key means, with 5000 resamples in
+114
+the principal ARX cohorts and 10,000 in the complete scan. For a key-level endpoint di,
+115
+the target null is E[di] = 0. We compare | ¯d| with |n−1 ∑i sidi|, using independent signs
+116
+si ∈{−1, 1} per key and p = (e + 1)/(R + 1) for e simulated statistics at least as extreme
+117
+as observed. Finite-sample validity requires null sign-invariance; zero mean and reference
+118
+coupling alone do not guarantee it, particularly across rounds or finalizations. Reported p
+119
+values are therefore assumption-dependent sign-flip calibrations, interpreted with effect
+120
+sizes and bootstrap intervals.
+121
+There are R = 100,000 sign draws, except 200,000 for alignment. Holm adjustment [36],
+122
+conditional on valid endpoint calibration, uses separate fixed families: two scan, four
+123
+feed-forward and two transition tests (Table 2), five resolution tests (Section 4.4), and
+124
+two alignment tests (below). Other profiles are descriptive; deterministic checks are not
+125
+statistical replicates.
+126
+The alignment intervention independently rotates the four HW samples inside each
+127
+output block by a uniformly chosen offset 0–3. Each of 128 schedules is applied to cipher
+128
+and reference. Rotation preserves every trajectory’s HW multiset, mean, variance, total
+129
+power, and DC share while disrupting alignment across blocks. It changes measurement
+130
+order, not cipher operations. The planned effect is L = ∆Horig
+noDC −⟨∆Hrot
+noDC⟩for each
+131
+two-round core.
+132
+3.4. Frozen Empirical Spectrum Models
+133
+Two models test the positional explanation using only the earlier resolution cohort
+134
+for fitting. M0 pools an empirical HW32 distribution by cipher, mask, and output word,
+135
+then draws every word independently. M1 draws a complete training-key index shared
+136
+across both ciphers and all masks, retains its four base slots, and independently resamples
+137
+the 16 blocks within each key/mask/base/word layer. It preserves conditional positional
+138
+profiles while removing residual dependence across words and blocks. Those 16 blocks are
+139
+not independent training replicates. Both models preserve observed support zeros; other
+140
+fitted distributions remain empirical.
+141
+For a model layer ℓwith independent residuals,
+142
+E
+h
+| DFT(h)k|2 | ℓ
+i
+= | DFT(µℓ)k|2 + ∑
+t
+σ2
+t,ℓ.
+(6)
+M1 averages four base-conditional powers within keys before averaging keys. Entropy of
+143
+normalized expected power is not expected finite-sample entropy. We therefore simulate
+144
+4096 complete key pairs per model and apply the actual Q = 4 estimator at all three widths,
+145
+with independent Binomial(32, 1/2) reference words. Specifications, fits, and predictions
+146
+were frozen before generating the 80 evaluation key pairs.
+147
+We compare G, ∆F512, and mean AC spectra in all six cipher–width settings. For
+148
+spectra, average four base powers within each key and mask, normalize over nonzero
+149
+frequencies, then average the resulting vectors over masks and keys. Writing these means
+150
+
+
+Version October 31, 2026 submitted to Electronics
+5 of 11
+1
+2
+3
+4
+128-bit position (1–4)
+0
+16
+32
+48
+64
+Mean HW (bits)
+(a) Four-position response
+ChaCha20/2
+Salsa20/2
+Matched controls
+ChaCha20/2
+Salsa20/2
+−0.6
+−0.4
+−0.2
+0.0
+ΔHnoDC
+(b) Within-block rotation
+Aligned
+Rotated
+0
+3
+7
+11
+15
+Output word (0–15)
+−10
+−5
+0
+5
+10
+Nonce-word gap in output HW (bits)
+(c) Two-round output profile
+ChaCha20
+Salsa20
+Figure 1. Block-position and measurement controls. (a) Mean XOR HW at the four 128-bit positions.
+(b) AC contrasts before and after 128 paired within-block rotations. Both use the same 80 matched
+key pairs. (c) Second-minus-first nonce-word gap in reference-adjusted 32-bit output-word HW,
+pairing input-bit offsets in a separate 80-key-pair scan. Intervals are pointwise 95% whole-key
+bootstrap intervals (5000 resamples in a,b; 10,000 in c). Gray lines show controls. Positional profiles
+are descriptive.
+as ¯q, their distance is D = ∑k>0 | ¯qeval
+k
+−¯qmodel
+k
+| ∈[0, 2], without reference subtraction; the
+151
+model mean uses the 4096 simulations. Whole-evaluation-key percentile intervals use
+152
+the 0.025 and 0.975 quantiles of resampled means or recomputed distances and condition
+153
+on the fixed fit and Monte Carlo estimate. Separate Monte Carlo standard errors (MCSE)
+154
+quantify simulation noise. Mean spectra can conceal compensating mask-level errors; these
+155
+comparisons are not model-rejection tests or calibrated prediction intervals.
+156
+4. Results
+157
+4.1. Round Function: Recurring Structure and Conditional Rank
+158
+Both two-round cores show recurring 512-bit structure (Figure 1a). Their four-position
+159
+range exceeds the reference by 17.87 bits [17.53, 18.21] for ChaCha20 and 30.41 [30.03,
+160
+30.78] for Salsa20. Their mean HW deficits are 21.77 and 37.57 bits per 128-bit segment,
+161
+respectively. The independent 64-mask scan confirms a Salsa20 nonce-word entropy gap
+162
+of +0.79059 bits (Table 2); every key-level and every offset-averaged gap is positive. The
+163
+descriptive ChaCha20 gap is −0.00036 bits [−0.00393, 0.00307].
+164
+Tracing the round schedules [1,2] distinguishes missing dependencies from weak
+165
+responses: absent paths prove independence, whereas present paths specify neither HW
+166
+nor differential probabilities. After two Salsa rounds, changing x6 cannot affect output
+167
+word 1; changing x7 cannot affect words 0, 1, 2, 3, 6. Modular feed-forward preserves these
+168
+zeros. The asymmetry follows from quarter-round update order b, c, d, a: x6 enters the
+169
+
+
+Version October 31, 2026 submitted to Electronics
+6 of 11
+column round as d, but x7 enters as c, after the update of b. Words 4, 5, 6, 7, 11 are also
+170
+independent of the low counter x8; their outputs and nonce-response HW remain constant
+171
+as that counter varies with the high counter fixed.
+172
+Let u = x7, let y be the state after the first column round, and let ρj denote left rotation
+173
+by j bits. The two word-7 updates give W2[7] = u ⊕C, where
+174
+z6 = y6 ⊕ρ7(y5 + y4),
+C = ρ9(y3 + x15) ⊕ρ9(z6 + y5).
+Here z6 is the preceding update in row quarter round (5, 6, 7, 4); additions are modulo 232.
+175
+The first-round words y3, y4, y5, y6 are independent of u, and x15 is the initial word, so C is
+176
+independent of u with other inputs fixed. Modular feed-forward gives
+177
+fC(u) = ((u ⊕C) + u) mod 232 = C + 2(u & ¬C)
+(mod 232),
+(7)
+with 32-bit complementation. This particular addition is XOR-affine in u.
+178
+Conditional rank and response.
+179
+Let AC(u) = fC(u) ⊕C, and let t(C) count trailing ones from the least significant bit,
+180
+with t(232 −1) = 32. For every C, u,
+181
+rankF2 AC = 31 −HW(C mod 231),
+1
+32
+31
+∑
+b=0
+HW
+
+fC(u ⊕2b) ⊕fC(u)
+
+= max(31 −t(C), 0)
+32
+≤31
+32.
+(8)
+Proof. Define Lb = fC(2b) ⊕C. For Cb = 0 and b < 31, Equation (7) adds 2b+1 to C.
+182
+The carry flips consecutive ones above b and the next zero, if present; overflow is discarded.
+183
+Therefore Lb has ones precisely from b + 1 through the next zero position, or through 31
+184
+if none exists. All other columns, including L31, vanish. Successive active intervals are
+185
+disjoint: one ends at a zero, the next starts one bit above it. Their carries cannot interact, so
+186
+fC(u) = C ⊕
+31
+M
+b=0
+ubLb.
+The nonzero columns are independent and correspond exactly to zero bits of C below bit
+187
+31, proving the rank. Each singleton difference equals Lb; their supports cover the suffix
+188
+t(C) + 1, . . . , 31, proving the HW identity. If the first zero is bit 31, or C is all ones, every
+189
+column vanishes. No distributional assumption is required.
+190
+These ranks concern only the second nonce word’s conditional output-word map.
+191
+Changing another input can change C; joint affinity and full-cipher rank conclusions do
+192
+not follow. Algebraically, C = 0 and C = 232 −2 yield ranks 31 and 1 but the same mean
+193
+singleton HW 31/32; these are illustrative constants, not reported cipher states.
+194
+All ChaCha20/2 output words have nonce paths. A cyclic column shift commutes
+195
+with its round pair and feed-forward, mapping x14 to x15 and permuting output words.
+196
+It preserves row sums but not the distribution of valid initial states, so it motivates local
+197
+compensation without proving equal response distributions or an entropy gap.
+198
+4.2. Feed-Forward: Existing Asymmetry and New Interaction
+199
+The paired intervention cohort gives Salsa20/2 gaps Gnone = 0.72940, Gxor = 0.73896,
+200
+and Gadd = 0.78805 bits at 128-bit resolution. The asymmetry already exists in the working
+201
+output; modular addition increases it by 0.05865 bits (Table 2). The planned ChaCha20
+202
+add-minus-none change remains unresolved (p = 0.108). This result applies to 128-bit
+203
+
+
+Version October 31, 2026 submitted to Electronics
+7 of 11
+Table 2. Planned scan, feed-forward, and round-transition endpoints. Each group uses a separate 80-
+key-pair cohort and Holm family. All entropy endpoints use 128-bit segments; scan outputs have 4096
+bits, other outputs 8192. Brackets give pointwise 95% whole-key intervals. Holm-adjusted p values
+are assumption-dependent sign-flip calibrations requiring null sign-invariance; small reported values
+reach the finite-simulation floor. J and T1 measure changed bits per 32-bit word; T2 is dimensionless.
+Endpoint
+Mean [95% CI]
+Holm-adjusted
+sign-flip p
+Complete scan: two tests
+Salsa20 G2 (bits)
+0.79059 [0.78404, 0.79729]
+2 × 10−5
+Salsa20 −ChaCha20 G2 (bits)
+0.79095 [0.78311, 0.79886]
+2 × 10−5
+Feed-forward: four tests at two rounds
+Salsa20 Gnone (bits)
+0.72940 [0.72392, 0.73493]
+4 × 10−5
+Salsa20 Gadd −Gnone (bits)
+0.05865 [0.05535, 0.06202]
+4 × 10−5
+ChaCha20 Gadd −Gnone (bits)
+−0.00293 [−0.00652, 0.00068]
+0.108
+Salsa20 mixed word-7 interaction J
+0.70967 [0.68263, 0.73686]
+4 × 10−5
+Round transition: two tests for Salsa20
+T1: within-word derivative, none
+15.81934 [15.72011, 15.92031]
+2 × 10−5
+T2: fundamental fraction, add
+−0.52287 [−0.52559, −0.52020]
+2 × 10−5
+aggregation: descriptive changes at 32 and 64 bits are −0.02289 and −0.00772 bits, with
+204
+pointwise intervals excluding zero.
+205
+For Salsa20/2 word 7, the aligned cross-word derivative is zero under none/xor and,
+206
+under add, equals Lb(C(v ⊕a)) ⊕Lb(C(v)), where a flips the first nonce word. Its raw
+207
+mean HW rises to 0.72419; the reference-adjusted interaction is J = 0.70967. The reference
+208
+means remain close to 16, so finalization introduces a specific interaction without restoring
+209
+a reference-sized response. Conditional affinity still forces within-x7 derivatives to vanish
+210
+under every finalization. The none–xor equality, conditional derivative formulas, and bit-31
+211
+cancellations pass all retained deterministic checks. At four rounds, the largest absolute gap
+212
+across the three interventions and widths is 0.00142 bits; this does not establish equivalence.
+213
+4.3. Third Round: Affinity Loss with Persistent Block Structure
+214
+For the two within-x7 pairs, unfinalized Salsa20 word-7 derivative HW changes from
+215
+exactly zero at two rounds to a raw mean of 15.84033 bits at three rounds; the planned
+216
+adjusted increase is T1 = 15.81934 (Table 2). All 10,240 sampled derivative checkpoints
+217
+are zero before, and nonzero after, the c = w7 update in quarter round (15, 3, 7, 11) of
+218
+round 3. This is the only write to word 7 in that round; checkpoints match W2[7] and W3[7]
+219
+exactly. Nonzero witnesses refute conditional affinity of the unfinalized word-7 map for
+220
+those settings; they do not establish the same result after modular finalization or locate the
+221
+first nonlinear operation elsewhere in the state. The three-round mean remains below its
+222
+reference by 0.17061 bits (95% interval [−0.25206, −0.08750] for the signed contrast).
+223
+Meanwhile, Salsa20’s reference-adjusted fundamental fraction under add at 128-bit
+224
+resolution is 0.80054, 0.27767, and 0.00041 at two, three, and four rounds (Figure 2c,d). The
+225
+planned reduction T2 = −0.52287 leaves a substantial three-round signal, with interval
+226
+[0.27518, 0.28011]; the four-round interval is [−0.00012, 0.00094]. Local affinity of the unfi-
+227
+nalized word is therefore lost while substantial block-scale structure remains in standard
+228
+output. Neither observable defines a secure round threshold.
+229
+4.4. Measurement: Alignment, Resolution, and Prediction
+230
+Within-block rotation reduces the absolute two-round AC contrasts by approximately
+231
+96% in ChaCha20 and 94% in Salsa20 (Figure 1b). Planned alignment effects are L =
+232
+−0.37509 [−0.37978, −0.37028] and −0.62691 [−0.62843, −0.62540], respectively; both have
+233
+
+
+Version October 31, 2026 submitted to Electronics
+8 of 11
+0.0
+0.5
+1.0
+1.5
+2.0
+Frequency (cycles per 512-bit block)
+10−3
+10−2
+10−1
+100
+Mean AC power fraction (folded)
+(a) ChaCha20/2, 128-bit segments
+M0
+M1
+Observed
+0.0
+0.5
+1.0
+1.5
+2.0
+Frequency (cycles per 512-bit block)
+10−3
+10−2
+10−1
+100
+Mean AC power fraction (folded)
+(b) Salsa20/2, 128-bit segments
+M0
+M1
+Observed
+2
+3
+4
+Single core rounds
+0.0
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+Mean D2 HW in word 7 (bits)
+(c) Within-word derivative, no feed-forward
+Uniform mean: 16
+ChaCha20
+Salsa20
+2
+3
+4
+Single core rounds
+0.0
+0.2
+0.4
+0.6
+0.8
+Block-power contrast ΔF512
+(d) Block structure, modular feed-forward
+ChaCha20
+Salsa20
+Figure 2. Observed spectra and the single-round transition. (a,b) Mean AC spectra of standard
+two-round outputs, s = 128, W = 8192: 80 new key pairs versus frozen M0/M1 predictions from
+4096 simulations fitted on 80 earlier pairs. No reference is subtracted. Conjugate bins are summed,
+DC omitted, and Nyquist counted once; dotted lines mark 1/512 and 2/512 cycles per bit. Shading
+gives pointwise 95% whole-key intervals. (c,d) A separate 80-key-pair cohort: raw unfinalized
+word-7 derivative HW for the two within-word pairs, and reference-adjusted fundamental power of
+first-order HW under add at s = 128, with pointwise 95% intervals.
+Holm p = 10−5. Small residual contrasts remain. Because rotation preserves HW values
+234
+and DC share, the large reduction identifies sensitivity to ordering. These percentages are
+235
+not fractions of a security margin.
+236
+The effect persists beyond the opening output blocks. In the initial separate cohorts
+237
+(Q = 16), recomputing the last 2048 of 4096 bits changes ∆HMP only from 0.2703 to 0.2597
+238
+bits for ChaCha20/2 and from 1.2736 to 1.2725 for Salsa20/2. Full- and half-window
+239
+reanalysis at 32-, 64-, and 128-bit widths also retains positive ∆F512. The four-position
+240
+pattern is therefore the original resolution’s view of recurring 512-bit structure.
+241
+Fresh resolution validation confirms positive Salsa20 gaps at all three widths (1.09903,
+242
+0.96249, 0.79172 bits), positive ChaCha20 at 32 bits (0.03382), and negative ChaCha20 at
+243
+64 bits (−0.06129); all five planned directions have Holm p = 5 × 10−5. The descriptive
+244
+ChaCha20 128-bit gap is small but positive, 0.00596 [0.00269, 0.00927], so the original
+245
+unresolved result does not establish symmetry. Changes of sign and magnitude across
+246
+widths limit comparisons between entropy summaries. In Salsa20, second-word masks
+247
+produce about 14.5 fewer flipped bits per 128-bit segment despite their higher entropy;
+248
+Equation (2) explains why entropy does not order diffusion quality.
+249
+Figure 2a,b displays the observed and predicted AC spectra. Both models predict all six
+250
+entropy-gap signs. M1 reduces the mean AC-spectrum L1 error from 0.322–0.379 to 0.078–
+251
+0.084 for ChaCha20, and from 0.101–0.261 to 0.010–0.018 for Salsa20. Its absolute ∆F512
+252
+errors are smaller in all six cells. At 128 bits, observed/M0/M1 fundamental contrasts are
+253
+
+
+Version October 31, 2026 submitted to Electronics
+9 of 11
+0.53850/0.42303/0.55252 for ChaCha20 and 0.80082/0.76860/0.80452 for Salsa20. However,
+254
+M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps. At
+255
+128 bits, Salsa20 G = 0.80132 compares with predictions 0.85574 and 0.79465. For this M1
+256
+gap prediction, MCSE is 0.00038 bits versus an observed-minus-predicted error of 0.00667
+257
+bits. Retaining conditional profiles improves selected spectral predictions; residual errors
+258
+can include training-fit error and omitted dependence.
+259
+5. Scope and Discussion
+260
+The direct benchmark detects the same large two-round departures: mean HW,
+261
+avalanche RMS, four-position range, lag-four correlation, and both entropy summaries
+262
+have pointwise intervals excluding zero. Their four- and 20-round intervals include zero.
+263
+Thus spectral decomposition explains aspects of an already detectable response; no cali-
+264
+brated detector-power advantage was established. Small higher-round contrasts, including
+265
+occasional nonzero pointwise effects in other cohorts, establish neither simultaneous equiv-
+266
+alence nor security.
+267
+Ancillary studies delimit the diagnostic. The initial seven-cipher comparison (Grain-
+268
+128, Trivium, MICKEY 2.0, HC-128, Rabbit, ChaCha20, Salsa20; 80 keys each) used four
+269
+bases, four distributed singleton masks and 4096-bit windows (Q = 16, s = 128). All
+270
+standard-setting mean HMP contrasts were below 0.001 bits in magnitude with pointwise
+271
+intervals covering zero. Grain-128/0 and Trivium/64 instead showed transient contrasts
+272
+nearly absent from the last 16 segments; initialization counts are not comparable to ARX
+273
+rounds [5,37,38]. On 80 fresh Grain keys and four bases, the zero-clock bit-64-minus-bit-
+274
+0 gap replicated at +0.09526 bits [0.08921, 0.10126], p = 10−5, and became small after
+275
+standard initialization.
+276
+An 80-key Trivium pilot used degree-d derivatives (d = 2, 4, 6) over 512 bits: the first d
+277
+LSB-first positions of {0, 3, . . . , 69}, with bases zero outside the cube or setting one of bits
+278
+72, 75, 78. Deficits survived 12-cell max-|t| correction at 192/384 clocks but not 768/1152;
+279
+the published attack’s key conditions were not imposed [39].
+280
+A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits. The 20-clock
+281
+flip-fraction test was unresolved (p = 0.719). At 100 standard clocks, none of 44 mask-
+282
+specific flip-fraction/entropy tests (19 six-bit HW samples) survived correction (minimum
+283
+p = 0.669). Another 80 keys confirmed the zero-clock, LSB-first bit-21-minus-bit-0 gradient:
+284
+−0.04350 [−0.05433, −0.03281], p = 10−5. Grain/A5 validations used 100,000 sign flips
+285
+and 10,000 bootstrap resamples; Trivium/A5 searches used 50,000 whole-key max-|t| sign
+286
+flips. A quiet standard diagnostic thus coexists with A5/1 state-recovery weaknesses [40].
+287
+The ARX results concern the tested masks, block-aligned widths, windows up to 8192
+288
+bits, and selected rounds. Simulations and deterministic witnesses do not enlarge the key
+289
+cohorts. Nonstandard finalizations isolate construction effects, while empirical models
+290
+summarize selected observables. These measurements suggest positions and differences
+291
+for further analysis but provide no key hypothesis, attack complexity, or attack advantage.
+292
+6. Conclusions
+293
+Exact identities explain a weak Salsa20/2 output-word response and show why equal
+294
+means can conceal different conditional ranks. Paired finalizations locate the nonce-word
+295
+asymmetry before feed-forward and isolate an interaction introduced by modular addition.
+296
+Rotation, resolution, and frozen prediction controls connect these construction effects to
+297
+spectral summaries. The third-round experiment shows that conditional affinity of the
+298
+unfinalized word-7 map can end while block-scale structure persists in standard output.
+299
+These results diagnose reduced-round mechanisms without establishing superior detection
+300
+or full-round vulnerability.
+301
+
+
+Version October 31, 2026 submitted to Electronics
+10 of 11
+Author Contributions: Conceptualization, methodology, software, validation, formal analysis, inves-
+302
+tigation, data curation, visualization, writing—original draft, and writing—review and editing, P.A.
+303
+The author has read and agreed to the published version of the manuscript.
+304
+Funding: This research received no external funding.
+305
+Institutional Review Board Statement: Not applicable.
+306
+Informed Consent Statement: Not applicable.
+307
+Data Availability Statement: The reviewer data/code package is iv_diffusion_research_review_
+308
+v0.20.0.zip, version 0.20.0, with file-level hashes in SHA256SUMS.json and reproduction com-
+309
+mands in README.md. Model predictions, MCSE and errors are in doc_stream_ciphers/data/arx_
+310
+spectral_prediction/compact_summary.csv; protocols, raw observations and audits are included.
+311
+The package has not been publicly deposited and has no public DOI.
+312
+Conflicts of Interest: The author declares no conflicts of interest.
+313
+References
+314
+1.
+Nir, Y.; Langley, A. ChaCha20 and Poly1305 for IETF Protocols. RFC 8439, 2018. https://doi.org/10.17487/RFC8439.
+315
+2.
+Bernstein, D.J. The Salsa20 Family of Stream Ciphers. In New Stream Cipher Designs; Springer, 2008; Vol. 4986, Lecture Notes in
+316
+Computer Science, pp. 84–97. https://doi.org/10.1007/978-3-540-68351-3_8.
+317
+3.
+Englund, H.; Johansson, T.; Turan, M.S. A Framework for Chosen IV Statistical Analysis of Stream Ciphers. In Proceedings of the
+318
+Progress in Cryptology – INDOCRYPT 2007. Springer, 2007, Vol. 4859, Lecture Notes in Computer Science, pp. 268–281.
+319
+https://doi.org/10.1007/978-3-540-77026-8_20.
+320
+4.
+Fischer, S.; Khazaei, S.; Meier, W. Chosen IV Statistical Analysis for Key Recovery Attacks on Stream Ciphers. In Proceedings of
+321
+the Progress in Cryptology – AFRICACRYPT 2008. Springer, 2008, Vol. 5023, Lecture Notes in Computer Science, pp. 236–245.
+322
+https://doi.org/10.1007/978-3-540-68164-9_16.
+323
+5.
+Robshaw, M.; Billet, O., Eds. New Stream Cipher Designs: The eSTREAM Finalists; Vol. 4986, Lecture Notes in Computer Science,
+324
+Springer, 2008. https://doi.org/10.1007/978-3-540-68351-3.
+325
+6.
+Bernstein, D.J. ChaCha, a Variant of Salsa20. Workshop Record of SASC 2008, 2008. Document ID
+326
+4027b5256e17b9796842e6d0f68b0b5e. 28 January 2008.
+327
+7.
+Maitra, S. Chosen IV Cryptanalysis on Reduced Round ChaCha and Salsa. Discrete Applied Mathematics 2016, 208, 88–97.
+328
+https://doi.org/10.1016/j.dam.2016.02.020.
+329
+8.
+Biham, E.; Shamir, A. Differential Cryptanalysis of DES-like Cryptosystems. In Proceedings of the Advances in Cryptology –
+330
+CRYPTO’90. Springer, 1991, Vol. 537, Lecture Notes in Computer Science, pp. 2–21. https://doi.org/10.1007/3-540-38424-3_1.
+331
+9.
+Aumasson, J.P.; Fischer, S.; Khazaei, S.; Meier, W.; Rechberger, C. New Features of Latin Dances: Analysis of Salsa, ChaCha, and
+332
+Rumba. In Proceedings of the Fast Software Encryption – FSE 2008. Springer, 2008, Vol. 5086, Lecture Notes in Computer Science,
+333
+pp. 470–488. https://doi.org/10.1007/978-3-540-71039-4_30.
+334
+10.
+Choudhuri, A.R.; Maitra, S. Significantly Improved Multi-bit Differentials for Reduced Round Salsa and ChaCha. IACR
+335
+Transactions on Symmetric Cryptology 2016, 2016, 261–287. https://doi.org/10.46586/tosc.v2016.i2.261-287.
+336
+11.
+Dey, S.; Sarkar, S. Improved Analysis for Reduced Round Salsa and ChaCha. Discrete Applied Mathematics 2017, 227, 58–69.
+337
+https://doi.org/10.1016/j.dam.2017.04.034.
+338
+12.
+Beierle, C.; Leander, G.; Todo, Y. Improved Differential-Linear Attacks with Applications to ARX Ciphers. In Proceedings of the
+339
+Advances in Cryptology – CRYPTO 2020. Springer, 2020, Vol. 12172, Lecture Notes in Computer Science, pp. 329–358.
+340
+https://doi.org/10.1007/978-3-030-56877-1_12.
+341
+13.
+Coutinho, M.; Passos, I.; Grados Vásquez, J.C.; Sarkar, S.; de Mendonça, F.L.L.; de Sousa Jr., R.T.; Borges, F. Latin Dances
+342
+Reloaded: Improved Cryptanalysis against Salsa and ChaCha, and the Proposal of Forró. Journal of Cryptology 2023, 36. Article
+343
+no. 18, https://doi.org/10.1007/s00145-023-09455-5.
+344
+14.
+Ghafoori, N.; Miyaji, A.; Ito, R.; Miyashita, S. PNB Based Differential Cryptanalysis of Salsa20 and ChaCha. IEICE Transactions on
+345
+Information and Systems 2023, E106.D, 1407–1422. https://doi.org/10.1587/transinf.2022icp0015.
+346
+15.
+Dey, C.; Dey, S.; Girme, R.; Sarkar, S. Enhancing the Key Recovery Attack on Round Reduced Salsa. IEEE Access 2024,
+347
+12, 31736–31744. https://doi.org/10.1109/ACCESS.2024.3367797.
+348
+16.
+Dey, S. Advancing the Idea of Probabilistic Neutral Bits: First Key Recovery Attack on 7.5 Round ChaCha. IEEE Transactions on
+349
+Information Theory 2024, 70, 6091–6106. https://doi.org/10.1109/TIT.2024.3389874.
+350
+17.
+Ghafoori, N.; Miyaji, A. Higher-Order Differential-Linear Cryptanalysis of ChaCha Stream Cipher. IEEE Access 2024,
+351
+12, 13386–13399. https://doi.org/10.1109/ACCESS.2024.3356868.
+352
+
+
+Version October 31, 2026 submitted to Electronics
+11 of 11
+18.
+Dey, S.; Maitra, S.; Sarkar, S.; Sharma, N.K. Significantly Improved Cryptanalysis of Salsa20 with Two-Round Criteria. IACR
+353
+Transactions on Symmetric Cryptology 2025, 2025, 420–443. https://doi.org/10.46586/tosc.v2025.i1.420-443.
+354
+19.
+Flórez-Gutiérrez, A.; Todo, Y. Improved Cryptanalysis of ChaCha: Beating PNBs with Bit Puncturing. In Proceedings of the
+355
+Advances in Cryptology – EUROCRYPT 2025. Springer, 2025, Vol. 15601, Lecture Notes in Computer Science, pp. 427–457.
+356
+https://doi.org/10.1007/978-3-031-91107-1_15.
+357
+20.
+Liu, G.; Ren, G.; Sun, B.; Yu, B.; Li, C. Differential-Linear Cryptanalysis against ChaCha Based on Automated Tools. Cybersecurity
+358
+2026, 9. Article no. 228. Published 9 October 2026, https://doi.org/10.1186/s42400-026-00671-7.
+359
+21.
+Paul, G.; Kundu, A.K.; Chakrabarti, S. A New Approach to Improved PNB-Based Attacks on Reduced-Round ChaCha and Salsa.
+360
+Cryptology ePrint Archive, Paper 2025/1830, 2025. Preprint. https://eprint.iacr.org/2025/1830.
+361
+22.
+Webster, A.F.; Tavares, S.E. On the Design of S-Boxes. In Proceedings of the Advances in Cryptology—CRYPTO ’85. Springer,
+362
+1986, Vol. 218, Lecture Notes in Computer Science, pp. 523–534. https://doi.org/10.1007/3-540-39799-X_41.
+363
+23.
+Castro, J.C.H.; Sierra, J.M.; Seznec, A.; Izquierdo, A.; Ribagorda, A. The Strict Avalanche Criterion Randomness Test. Mathematics
+364
+and Computers in Simulation 2005, 68, 1–7. https://doi.org/10.1016/j.matcom.2004.09.001.
+365
+24.
+Madarro-Capó, E.J.; Ramos Piñón, E.C.; Sosa-Gómez, G.; Rojas, O. Practical Improvement in the Implementation of Two
+366
+Avalanche Tests to Measure Statistical Independence in Stream Ciphers. Computation 2024, 12. Article no. 60,
+367
+https://doi.org/10.3390/computation12030060.
+368
+25.
+National Institute of Standards and Technology. A Statistical Test Suite for Random and Pseudorandom Number Generators for
+369
+Cryptographic Applications. Technical Report SP 800-22 Rev. 1a, NIST, 2010.
+370
+26.
+Powell, G.E.; Percival, I.C. A Spectral Entropy Method for Distinguishing Regular and Irregular Motion of Hamiltonian Systems.
+371
+Journal of Physics A: Mathematical and General 1979, 12, 2053–2071. https://doi.org/10.1088/0305-4470/12/11/017.
+372
+27.
+Inouye, T.; Shinosaki, K.; Sakamoto, H.; Toi, S.; Ukai, S.; Iyama, A.; Katsuda, Y.; Hirano, M. Quantification of EEG Irregularity by
+373
+Use of the Entropy of the Power Spectrum. Electroencephalography and Clinical Neurophysiology 1991, 79, 204–210.
+374
+https://doi.org/10.1016/0013-4694(91)90138-T.
+375
+28.
+Zaccarelli, N.; Li, B.L.; Petrosillo, I.; Zurlini, G. Order and Disorder in Ecological Time-Series: Introducing Normalized Spectral
+376
+Entropy. Ecological Indicators 2013, 28, 22–30. https://doi.org/10.1016/j.ecolind.2011.07.008.
+377
+29.
+Dai, Y.; Zhang, H.; Mao, X.; Shang, P. Complexity–Entropy Causality Plane Based on Power Spectral Entropy for Complex Time
+378
+Series. Physica A: Statistical Mechanics and its Applications 2018, 509, 501–514. https://doi.org/10.1016/j.physa.2018.06.081.
+379
+30.
+Mao, X.; Shang, P.; Wang, J.; Ma, Y. Characterizing Time Series by Extended Complexity–Entropy Curves Based on Tsallis, Rényi,
+380
+and Power Spectral Entropy. Chaos: An Interdisciplinary Journal of Nonlinear Science 2018, 28, 113106.
+381
+https://doi.org/10.1063/1.5038758.
+382
+31.
+Kasyanov, A.V.; Grishencev, A.Y. Method of Evaluating the Quality of Random-Number Generators Based on Spectral Entropy
+383
+Calculation. Problems of Information Security. Computer Systems 2026, pp. 25–48. In Russian. No. 3. Published 13 October 2026,
+384
+https://doi.org/10.66424/2071-8217-2026-3-2.
+385
+32.
+Saarinen, M.J.O.; Aumasson, J.P. The BLAKE2 Cryptographic Hash and Message Authentication Code. RFC 7693, 2015.
+386
+https://doi.org/10.17487/RFC7693.
+387
+33.
+National Institute of Standards and Technology. SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions.
+388
+Technical Report FIPS PUB 202, NIST, 2015. https://doi.org/10.6028/NIST.FIPS.202.
+389
+34.
+Oppenheim, A.V.; Schafer, R.W. Discrete-Time Signal Processing, 3 ed.; Pearson, 2010.
+390
+35.
+Field, C.A.; Welsh, A.H. Bootstrapping Clustered Data. Journal of the Royal Statistical Society: Series B 2007, 69, 369–390.
+391
+https://doi.org/10.1111/j.1467-9868.2007.00593.x.
+392
+36.
+Holm, S. A Simple Sequentially Rejective Multiple Test Procedure. Scandinavian Journal of Statistics 1979, 6, 65–70.
+393
+https://doi.org/10.2307/4615733.
+394
+37.
+Hell, M.; Johansson, T.; Maximov, A.; Meier, W. A Stream Cipher Proposal: Grain-128. In Proceedings of the 2006 IEEE
+395
+International Symposium on Information Theory. IEEE, 2006, pp. 1614–1618. https://doi.org/10.1109/ISIT.2006.261549.
+396
+38.
+De Cannière, C.; Preneel, B. Trivium. In Proceedings of the New Stream Cipher Designs: The eSTREAM Finalists. Springer, 2008,
+397
+Vol. 4986, Lecture Notes in Computer Science, pp. 244–266. https://doi.org/10.1007/978-3-540-68351-3_18.
+398
+39.
+Knellwolf, S.; Meier, W.; Naya-Plasencia, M. Conditional Differential Cryptanalysis of Trivium and KATAN. In Proceedings of
+399
+the Selected Areas in Cryptography – SAC 2011. Springer, 2011, Vol. 7118, Lecture Notes in Computer Science, pp. 200–212.
+400
+https://doi.org/10.1007/978-3-642-28496-0_12.
+401
+40.
+Biryukov, A.; Shamir, A.; Wagner, D. Real Time Cryptanalysis of A5/1 on a PC. In Proceedings of the Fast Software Encryption –
+402
+FSE 2000. Springer, 2001, Vol. 1978, Lecture Notes in Computer Science, pp. 1–18. https://doi.org/10.1007/3-540-44706-7_1.
+403

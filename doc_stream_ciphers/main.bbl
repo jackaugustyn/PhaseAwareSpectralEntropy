@@ -11,6 +11,7 @@ Bernstein, D.J.
 \newblock The {Salsa20} Family of Stream Ciphers. In {\em New Stream Cipher
   Designs}; Springer,  2008; Vol. 4986, {\em Lecture Notes in Computer
   Science}, pp. 84--97.
+\newblock {\url{https://doi.org/10.1007/978-3-540-68351-3_8}}.
 
 \bibitem[Englund et~al.(2007)Englund, Johansson, and Turan]{englund2007}
 Englund, H.; Johansson, T.; Turan, M.S.
@@ -29,34 +30,216 @@ Fischer, S.; Khazaei, S.; Meier, W.
   236--245.
 \newblock {\url{https://doi.org/10.1007/978-3-540-68164-9_16}}.
 
-\bibitem[Hell et~al.(2006)Hell, Johansson, Maximov, and Meier]{grain2006}
-Hell, M.; Johansson, T.; Maximov, A.; Meier, W.
-\newblock A Stream Cipher Proposal: {Grain}-128.
-\newblock In Proceedings of the 2006 {IEEE} International Symposium on
-  Information Theory. IEEE,  2006, pp. 1614--1618.
-\newblock {\url{https://doi.org/10.1109/ISIT.2006.261549}}.
-
-\bibitem[De~Canni{\`e}re and Preneel(2008)]{trivium2006}
-De~Canni{\`e}re, C.; Preneel, B.
-\newblock {Trivium}.
-\newblock In Proceedings of the New Stream Cipher Designs: The {eSTREAM}
-  Finalists. Springer,  2008, Vol. 4986, {\em Lecture Notes in Computer
-  Science}, pp. 244--266.
-\newblock {\url{https://doi.org/10.1007/978-3-540-68351-3_18}}.
-
 \bibitem[Robshaw and Billet(2008)]{estream2008}
 Robshaw, M.; Billet, O., Eds.
 \newblock {\em New Stream Cipher Designs: The {eSTREAM} Finalists}; Vol. 4986,
   {\em Lecture Notes in Computer Science}, Springer,  2008.
 \newblock {\url{https://doi.org/10.1007/978-3-540-68351-3}}.
 
-\bibitem[Biryukov et~al.(2001)Biryukov, Shamir, and Wagner]{biryukov2000}
-Biryukov, A.; Shamir, A.; Wagner, D.
-\newblock Real Time Cryptanalysis of {A5/1} on a {PC}.
-\newblock In Proceedings of the Fast Software Encryption -- {FSE} 2000.
-  Springer,  2001, Vol. 1978, {\em Lecture Notes in Computer Science}, pp.
-  1--18.
-\newblock {\url{https://doi.org/10.1007/3-540-44706-7_1}}.
+\bibitem[Bernstein(2008)]{bernstein2008chacha}
+Bernstein, D.J.
+\newblock {ChaCha}, a Variant of {Salsa20}.
+\newblock Workshop Record of {SASC} 2008,  2008.
+\newblock Document ID 4027b5256e17b9796842e6d0f68b0b5e. 28 January 2008.
+
+\bibitem[Maitra(2016)]{maitra2016}
+Maitra, S.
+\newblock Chosen {IV} Cryptanalysis on Reduced Round {ChaCha} and {Salsa}.
+\newblock {\em Discrete Applied Mathematics} {\bf 2016}, {\em 208},~88--97.
+\newblock {\url{https://doi.org/10.1016/j.dam.2016.02.020}}.
+
+\bibitem[Biham and Shamir(1991)]{biham1991}
+Biham, E.; Shamir, A.
+\newblock Differential Cryptanalysis of {DES}-like Cryptosystems.
+\newblock In Proceedings of the Advances in Cryptology -- {CRYPTO}'90.
+  Springer,  1991, Vol. 537, {\em Lecture Notes in Computer Science}, pp.
+  2--21.
+\newblock {\url{https://doi.org/10.1007/3-540-38424-3_1}}.
+
+\bibitem[Aumasson et~al.(2008)Aumasson, Fischer, Khazaei, Meier, and
+  Rechberger]{aumasson2008}
+Aumasson, J.P.; Fischer, S.; Khazaei, S.; Meier, W.; Rechberger, C.
+\newblock New Features of {Latin} Dances: Analysis of {Salsa}, {ChaCha}, and
+  {Rumba}.
+\newblock In Proceedings of the Fast Software Encryption -- {FSE} 2008.
+  Springer,  2008, Vol. 5086, {\em Lecture Notes in Computer Science}, pp.
+  470--488.
+\newblock {\url{https://doi.org/10.1007/978-3-540-71039-4_30}}.
+
+\bibitem[Choudhuri and Maitra(2016)]{choudhuri2016}
+Choudhuri, A.R.; Maitra, S.
+\newblock Significantly Improved Multi-bit Differentials for Reduced Round
+  {Salsa} and {ChaCha}.
+\newblock {\em {IACR} Transactions on Symmetric Cryptology} {\bf 2016}, {\em
+  2016},~261--287.
+\newblock {\url{https://doi.org/10.46586/tosc.v2016.i2.261-287}}.
+
+\bibitem[Dey and Sarkar(2017)]{dey2017}
+Dey, S.; Sarkar, S.
+\newblock Improved Analysis for Reduced Round {Salsa} and {ChaCha}.
+\newblock {\em Discrete Applied Mathematics} {\bf 2017}, {\em 227},~58--69.
+\newblock {\url{https://doi.org/10.1016/j.dam.2017.04.034}}.
+
+\bibitem[Beierle et~al.(2020)Beierle, Leander, and Todo]{beierle2020}
+Beierle, C.; Leander, G.; Todo, Y.
+\newblock Improved Differential-Linear Attacks with Applications to {ARX}
+  Ciphers.
+\newblock In Proceedings of the Advances in Cryptology -- {CRYPTO} 2020.
+  Springer,  2020, Vol. 12172, {\em Lecture Notes in Computer Science}, pp.
+  329--358.
+\newblock {\url{https://doi.org/10.1007/978-3-030-56877-1_12}}.
+
+\bibitem[Coutinho et~al.(2023)Coutinho, Passos, {Grados V{\'a}squez}, Sarkar,
+  de~Mendon{\c{c}}a, {de Sousa Jr.}, and Borges]{coutinho2023}
+Coutinho, M.; Passos, I.; {Grados V{\'a}squez}, J.C.; Sarkar, S.;
+  de~Mendon{\c{c}}a, F.L.L.; {de Sousa Jr.}, R.T.; Borges, F.
+\newblock {Latin} Dances Reloaded: Improved Cryptanalysis against {Salsa} and
+  {ChaCha}, and the Proposal of {Forr{\'o}}.
+\newblock {\em Journal of Cryptology} {\bf 2023}, {\em 36}.
+\newblock Article no. 18, {\url{https://doi.org/10.1007/s00145-023-09455-5}}.
+
+\bibitem[Ghafoori et~al.(2023)Ghafoori, Miyaji, Ito, and
+  Miyashita]{ghafoori2023}
+Ghafoori, N.; Miyaji, A.; Ito, R.; Miyashita, S.
+\newblock {PNB} Based Differential Cryptanalysis of {Salsa20} and {ChaCha}.
+\newblock {\em {IEICE} Transactions on Information and Systems} {\bf 2023},
+  {\em E106.D},~1407--1422.
+\newblock {\url{https://doi.org/10.1587/transinf.2022icp0015}}.
+
+\bibitem[Dey et~al.(2024)Dey, Dey, Girme, and Sarkar]{dey2024salsa}
+Dey, C.; Dey, S.; Girme, R.; Sarkar, S.
+\newblock Enhancing the Key Recovery Attack on Round Reduced {Salsa}.
+\newblock {\em {IEEE} Access} {\bf 2024}, {\em 12},~31736--31744.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2024.3367797}}.
+
+\bibitem[Dey(2024)]{dey2024tit}
+Dey, S.
+\newblock Advancing the Idea of Probabilistic Neutral Bits: First Key Recovery
+  Attack on 7.5 Round {ChaCha}.
+\newblock {\em {IEEE} Transactions on Information Theory} {\bf 2024}, {\em
+  70},~6091--6106.
+\newblock {\url{https://doi.org/10.1109/TIT.2024.3389874}}.
+
+\bibitem[Ghafoori and Miyaji(2024)]{ghafoori2024hodl}
+Ghafoori, N.; Miyaji, A.
+\newblock Higher-Order Differential-Linear Cryptanalysis of {ChaCha} Stream
+  Cipher.
+\newblock {\em {IEEE} Access} {\bf 2024}, {\em 12},~13386--13399.
+\newblock {\url{https://doi.org/10.1109/ACCESS.2024.3356868}}.
+
+\bibitem[Dey et~al.(2025)Dey, Maitra, Sarkar, and Sharma]{dey2025tosc}
+Dey, S.; Maitra, S.; Sarkar, S.; Sharma, N.K.
+\newblock Significantly Improved Cryptanalysis of {Salsa20} with Two-Round
+  Criteria.
+\newblock {\em {IACR} Transactions on Symmetric Cryptology} {\bf 2025}, {\em
+  2025},~420--443.
+\newblock {\url{https://doi.org/10.46586/tosc.v2025.i1.420-443}}.
+
+\bibitem[Fl{\'o}rez-Guti{\'e}rrez and Todo(2025)]{florez2025}
+Fl{\'o}rez-Guti{\'e}rrez, A.; Todo, Y.
+\newblock Improved Cryptanalysis of {ChaCha}: Beating {PNBs} with Bit
+  Puncturing.
+\newblock In Proceedings of the Advances in Cryptology -- {EUROCRYPT} 2025.
+  Springer,  2025, Vol. 15601, {\em Lecture Notes in Computer Science}, pp.
+  427--457.
+\newblock {\url{https://doi.org/10.1007/978-3-031-91107-1_15}}.
+
+\bibitem[Liu et~al.(2026)Liu, Ren, Sun, Yu, and Li]{liu2026}
+Liu, G.; Ren, G.; Sun, B.; Yu, B.; Li, C.
+\newblock Differential-Linear Cryptanalysis against {ChaCha} Based on Automated
+  Tools.
+\newblock {\em Cybersecurity} {\bf 2026}, {\em 9}.
+\newblock Article no. 228. Published 9 October 2026,
+  {\url{https://doi.org/10.1186/s42400-026-00671-7}}.
+
+\bibitem[Paul et~al.(2025)Paul, Kundu, and Chakrabarti]{paul2025}
+Paul, G.; Kundu, A.K.; Chakrabarti, S.
+\newblock A New Approach to Improved {PNB}-Based Attacks on Reduced-Round
+  {ChaCha} and {Salsa}.
+\newblock Cryptology {ePrint} Archive, Paper 2025/1830,  2025.
+\newblock Preprint. \url{https://eprint.iacr.org/2025/1830}.
+
+\bibitem[Webster and Tavares(1986)]{webster1986}
+Webster, A.F.; Tavares, S.E.
+\newblock On the Design of {S}-Boxes.
+\newblock In Proceedings of the Advances in Cryptology---{CRYPTO} '85.
+  Springer,  1986, Vol. 218, {\em Lecture Notes in Computer Science}, pp.
+  523--534.
+\newblock {\url{https://doi.org/10.1007/3-540-39799-X_41}}.
+
+\bibitem[Castro et~al.(2005)Castro, Sierra, Seznec, Izquierdo, and
+  Ribagorda]{hernandez2005}
+Castro, J.C.H.; Sierra, J.M.; Seznec, A.; Izquierdo, A.; Ribagorda, A.
+\newblock The Strict Avalanche Criterion Randomness Test.
+\newblock {\em Mathematics and Computers in Simulation} {\bf 2005}, {\em
+  68},~1--7.
+\newblock {\url{https://doi.org/10.1016/j.matcom.2004.09.001}}.
+
+\bibitem[Madarro-Cap{\'o} et~al.(2024)Madarro-Cap{\'o}, {Ramos Pi{\~n}{\'o}n},
+  Sosa-G{\'o}mez, and Rojas]{madarro2024}
+Madarro-Cap{\'o}, E.J.; {Ramos Pi{\~n}{\'o}n}, E.C.; Sosa-G{\'o}mez, G.; Rojas,
+  O.
+\newblock Practical Improvement in the Implementation of Two Avalanche Tests to
+  Measure Statistical Independence in Stream Ciphers.
+\newblock {\em Computation} {\bf 2024}, {\em 12}.
+\newblock Article no. 60, {\url{https://doi.org/10.3390/computation12030060}}.
+
+\bibitem[{National Institute of Standards and Technology}(2010)]{nist2010}
+{National Institute of Standards and Technology}.
+\newblock A Statistical Test Suite for Random and Pseudorandom Number
+  Generators for Cryptographic Applications.
+\newblock Technical Report SP 800-22 Rev. 1a, NIST,  2010.
+
+\bibitem[Powell and Percival(1979)]{powell1979}
+Powell, G.E.; Percival, I.C.
+\newblock A Spectral Entropy Method for Distinguishing Regular and Irregular
+  Motion of Hamiltonian Systems.
+\newblock {\em Journal of Physics A: Mathematical and General} {\bf 1979}, {\em
+  12},~2053--2071.
+\newblock {\url{https://doi.org/10.1088/0305-4470/12/11/017}}.
+
+\bibitem[Inouye et~al.(1991)Inouye, Shinosaki, Sakamoto, Toi, Ukai, Iyama,
+  Katsuda, and Hirano]{inouye1991}
+Inouye, T.; Shinosaki, K.; Sakamoto, H.; Toi, S.; Ukai, S.; Iyama, A.; Katsuda,
+  Y.; Hirano, M.
+\newblock Quantification of {EEG} Irregularity by Use of the Entropy of the
+  Power Spectrum.
+\newblock {\em Electroencephalography and Clinical Neurophysiology} {\bf 1991},
+  {\em 79},~204--210.
+\newblock {\url{https://doi.org/10.1016/0013-4694(91)90138-T}}.
+
+\bibitem[Zaccarelli et~al.(2013)Zaccarelli, Li, Petrosillo, and
+  Zurlini]{zaccarelli2013}
+Zaccarelli, N.; Li, B.L.; Petrosillo, I.; Zurlini, G.
+\newblock Order and Disorder in Ecological Time-Series: Introducing Normalized
+  Spectral Entropy.
+\newblock {\em Ecological Indicators} {\bf 2013}, {\em 28},~22--30.
+\newblock {\url{https://doi.org/10.1016/j.ecolind.2011.07.008}}.
+
+\bibitem[Dai et~al.(2018)Dai, Zhang, Mao, and Shang]{dai2018}
+Dai, Y.; Zhang, H.; Mao, X.; Shang, P.
+\newblock Complexity--Entropy Causality Plane Based on Power Spectral Entropy
+  for Complex Time Series.
+\newblock {\em Physica A: Statistical Mechanics and its Applications} {\bf
+  2018}, {\em 509},~501--514.
+\newblock {\url{https://doi.org/10.1016/j.physa.2018.06.081}}.
+
+\bibitem[Mao et~al.(2018)Mao, Shang, Wang, and Ma]{mao2018}
+Mao, X.; Shang, P.; Wang, J.; Ma, Y.
+\newblock Characterizing Time Series by Extended Complexity--Entropy Curves
+  Based on {Tsallis}, {R{\'e}nyi}, and Power Spectral Entropy.
+\newblock {\em Chaos: An Interdisciplinary Journal of Nonlinear Science} {\bf
+  2018}, {\em 28},~113106.
+\newblock {\url{https://doi.org/10.1063/1.5038758}}.
+
+\bibitem[Kasyanov and Grishencev(2026)]{kasyanov2026}
+Kasyanov, A.V.; Grishencev, A.Y.
+\newblock Method of Evaluating the Quality of Random-Number Generators Based on
+  Spectral Entropy Calculation.
+\newblock {\em Problems of Information Security. Computer Systems} {\bf 2026},
+  pp. 25--48.
+\newblock In Russian. No. 3. Published 13 October 2026,
+  {\url{https://doi.org/10.66424/2071-8217-2026-3-2}}.
 
 \bibitem[Saarinen and Aumasson(2015)]{saarinen2015}
 Saarinen, M.J.O.; Aumasson, J.P.
@@ -88,21 +271,20 @@ Holm, S.
 \newblock {\em Scandinavian Journal of Statistics} {\bf 1979}, {\em 6},~65--70.
 \newblock {\url{https://doi.org/10.2307/4615733}}.
 
-\bibitem[Webster and Tavares(1986)]{webster1986}
-Webster, A.F.; Tavares, S.E.
-\newblock On the Design of {S}-Boxes.
-\newblock In Proceedings of the Advances in Cryptology---{CRYPTO} '85.
-  Springer,  1986, Vol. 218, {\em Lecture Notes in Computer Science}, pp.
-  523--534.
-\newblock {\url{https://doi.org/10.1007/3-540-39799-X_41}}.
+\bibitem[Hell et~al.(2006)Hell, Johansson, Maximov, and Meier]{grain2006}
+Hell, M.; Johansson, T.; Maximov, A.; Meier, W.
+\newblock A Stream Cipher Proposal: {Grain}-128.
+\newblock In Proceedings of the 2006 {IEEE} International Symposium on
+  Information Theory. IEEE,  2006, pp. 1614--1618.
+\newblock {\url{https://doi.org/10.1109/ISIT.2006.261549}}.
 
-\bibitem[Ghafoori et~al.(2023)Ghafoori, Miyaji, Ito, and
-  Miyashita]{ghafoori2023}
-Ghafoori, N.; Miyaji, A.; Ito, R.; Miyashita, S.
-\newblock {PNB} Based Differential Cryptanalysis of {Salsa20} and {ChaCha}.
-\newblock {\em {IEICE} Transactions on Information and Systems} {\bf 2023},
-  {\em E106.D},~1407--1422.
-\newblock {\url{https://doi.org/10.1587/transinf.2022icp0015}}.
+\bibitem[De~Canni{\`e}re and Preneel(2008)]{trivium2006}
+De~Canni{\`e}re, C.; Preneel, B.
+\newblock {Trivium}.
+\newblock In Proceedings of the New Stream Cipher Designs: The {eSTREAM}
+  Finalists. Springer,  2008, Vol. 4986, {\em Lecture Notes in Computer
+  Science}, pp. 244--266.
+\newblock {\url{https://doi.org/10.1007/978-3-540-68351-3_18}}.
 
 \bibitem[Knellwolf et~al.(2011)Knellwolf, Meier, and
   Naya-Plasencia]{knellwolf2011}
@@ -112,5 +294,13 @@ Knellwolf, S.; Meier, W.; Naya-Plasencia, M.
   Springer,  2011, Vol. 7118, {\em Lecture Notes in Computer Science}, pp.
   200--212.
 \newblock {\url{https://doi.org/10.1007/978-3-642-28496-0_12}}.
+
+\bibitem[Biryukov et~al.(2001)Biryukov, Shamir, and Wagner]{biryukov2000}
+Biryukov, A.; Shamir, A.; Wagner, D.
+\newblock Real Time Cryptanalysis of {A5/1} on a {PC}.
+\newblock In Proceedings of the Fast Software Encryption -- {FSE} 2000.
+  Springer,  2001, Vol. 1978, {\em Lecture Notes in Computer Science}, pp.
+  1--18.
+\newblock {\url{https://doi.org/10.1007/3-540-44706-7_1}}.
 
 \end{thebibliography}

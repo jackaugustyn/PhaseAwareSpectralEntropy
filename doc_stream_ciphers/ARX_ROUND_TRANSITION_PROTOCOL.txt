@@ -1,0 +1,140 @@
+# Single-round ARX transition: two, three, and four rounds
+
+Fixed locally on 2026-10-31 before generation of this cohort. This is a
+prospective follow-up, not a public preregistration. Record its SHA-256 and
+all evaluator/analysis source hashes before generation. Do not change this
+protocol after final-cohort generation begins.
+
+## Questions and independent cohort
+
+Identify what changes between the previously observed two- and four-round
+responses. Test a quantitative within-nonce-word derivative change and a
+block-frequency power change at the previously unmeasured third round.
+Distinguish conditional identities, implementation checks, and empirical
+responses. No attack or security ranking is inferred.
+
+- 80 new master indices 1400--1479, seed 20261031, using
+  publication_study._key_material. Separate smoke indices 1480--1481 may be
+  used only for implementation checks outside the final output directory.
+- Derive per-family 256-bit keys and reference secrets with BLAKE2b of
+  rt-single-round-key-v1:<family>: and rt-single-round-secret-v1:<family>:
+  followed by the master material. Family names are ChaCha20 and Salsa20.
+- Four shared 64-bit base nonces are SHAKE256 of
+  rt-single-round-nonces-v1: followed by master material, taking 32 bytes.
+  Salsa20 uses v; IETF ChaCha20 uses 0^32 || v.
+- Each nonce emits 8192 bits: 16 blocks with counters 0--15. Both cores
+  are evaluated at 2, 3, and 4 SINGLE rounds on the same initial state.
+  In ChaCha, rounds alternate column and diagonal. In Salsa, they
+  alternate column and row. Thus round 3 is an additional column round,
+  not a third double round, rounding down to two, or rounding up to four.
+
+## Working states, finalization, and matched reference
+
+Use a new evaluator that returns W_r after each single round, without
+modifying established cipher source files. The three outputs are wordwise
+  add: W_r + X modulo 2^32 (standard finalization),
+  none: W_r,
+  xor: W_r XOR X.
+Odd-round cores and none/xor finalizations are experimental constructions.
+Vectorized evaluation must match an independently coded scalar evaluator
+at every single-round boundary, and reproduce existing checked even-round
+outputs at 2, 4, and 20 rounds. Check known published vectors as anchors.
+
+For each family, key, round count, and nonce vertex, generate R_r(v) using
+SHAKE256 of rt-single-round-oracle-v1:<family>:, the 32-byte reference
+secret, rounds as uint16 big endian, and the shared nonce. Take 1024 bytes,
+interpreted as little-endian uint32 words. Apply the three finalizations to
+the SAME R_r(v) with the actual initial states X. Repeated vertices reuse
+their stream. Reference streams have separate domains across rounds but
+are coupled across finalizations within a round. This does not assert a
+model of the actual permutation's joint behavior across rounds.
+
+## Fixed inputs, stored observables, and named operation checkpoint
+
+Retain all 64 singleton nonce masks using existing MSB-first byte numbering.
+Word bit b is LSB-first; its global mask is
+  32*word + 8*floor(b/8) + 7 - (b mod 8).
+Retain the previous fixed panel of 38 second-order pairs:
+  32 aligned cross-word pairs ((word0,b),(word1,b)), b=0,...,31;
+  four pairs ((word0,0),(word1,b)), b=7,15,30,31;
+  two within-word controls ((word1,0),(word1,15)) and
+  ((word1,7),(word1,30)).
+Each base has 103 distinct nonce vertices (base, 64 singletons, 38 doubles).
+Verify that all four vertex sets are disjoint. D2 is the XOR of the four
+emitted vertices BEFORE HW. Store HW for every 32-bit output word, and
+uint32 D2 output-word-7 values, across keys/cores/rounds/finalizations.
+
+Additionally, in Salsa's third column round, retain word 7 immediately
+before and after the c=w7 update of QR(15,3,7,11). This names an operation,
+not an arbitrary elapsed quarter-round fraction. Store the uint32 D2
+values at these two checkpoints for the two within-second-word pairs.
+The first checkpoint equals W_2[7]; the second equals W_3[7], because
+other updates of that column round do not write word 7. Check these
+equalities exactly. Report before/after HW and zero counts. A nonzero
+after derivative is an empirical outcome, not an assumed invariant.
+
+## Two planned inferential endpoints, one Holm family
+
+For each key and r, A_r is the mean output-word-7 HW of Salsa20/none D2
+over the TWO fixed within-word pairs, four bases, and 16 blocks. Compute
+it for the cipher and reference separately. Let Delta A_r=A_r(cipher)
+-A_r(reference). Endpoint T1 is
+  Delta A_3 - Delta A_2, in changed bits per 32-bit output word.
+Report raw A_2, A_3, and their paired change as well. The two-round zeros
+follow from conditional XOR-affinity, while T1 estimates a quantitative
+change in response; its p value is not a proof of an algebraic identity.
+
+For each singleton mask at 128-bit segmentation, pool Q=4 full 8192-bit
+Fourier POWERS before normalization. There are T=64 HW samples, B=16
+output blocks, and four samples per block. Define
+  F512 = (P_B + P_(T-B)) / sum(P_k, k=1,...,T-1).
+Compute cipher-minus-reference F512 and average over all 64 singleton
+masks within each key. For Salsa20/add, endpoint T2 is
+  Delta F512(r=3) - Delta F512(r=2), dimensionless.
+No favorable mask, output word, resolution, or window may be chosen after
+observing this cohort. T1 and T2 are two-sided tests without selecting an
+observed direction. The operation checkpoint adds no hypothesis tests.
+
+Use 100000 whole-key sign flips, seed 2026103105, plus-one two-sided p
+values, and Holm correction across T1 and T2. Use 5000 whole-key percentile
+bootstrap resamples, seed 2026103106, for pointwise 95% intervals. Preserve
+the same key-index draws across cores, rounds, finalizations, and masks.
+The independent unit is the master-key pair, never the block, mask, word,
+nonce vertex, or repeated deterministic check.
+
+## Descriptive comparisons and deterministic checks
+
+- For all cores, rounds and finalizations, report singleton spectral/DC/AC
+  and block-power summaries at 32/64/128 bits over the full 8192-bit window.
+  Entropy is NOT calculated from second-order derivatives in this study.
+- Report D2 HW profiles for the four existing groups (all32 aligned,
+  non-MSB31 aligned, offset4, within2), individual word-7 pair profiles,
+  and the within-word A values and operation-checkpoint distributions.
+- Retain the earlier mixed interaction definition: for each r, average
+  word-7 D2 HW over 31 aligned cross-word pairs, four bases and 16 blocks,
+  and set J_r=(A_add(cipher)-A_none(cipher))
+              -(A_add(reference)-A_none(reference)).
+  J_3-J_2, J_4-J_3, ChaCha comparisons and all other transitions are
+  descriptive, not an enlarged inferential family.
+- For both cores at every tested round, D2_none equals D2_xor bit-for-bit
+  on all output words because D2 X=0. Check this for cipher and reference.
+- In Salsa20/2, both within-second-word control derivatives are zero in
+  word 7 for add, none and xor. Check these zeros deterministically. Do
+  NOT extend their zero prediction to the third or fourth round.
+- Check the named checkpoint equalities, including the W_2[7] zero
+  before the c update. Count after-update zeros without rejecting nonzeros.
+- Small higher-round contrasts do not establish equivalence to the
+  reference. A gap or power change is not attack advantage or cipher rank.
+
+## Archiving and execution
+
+New code: experiments/stream_rounds_study/arx_round_transition.py.
+New outputs only: doc_stream_ciphers/data/arx_round_transition/.
+Retain raw arrays, per-key summaries, two planned tests, descriptive
+tables, protocol/source/raw hashes, statistical seeds and software
+versions. Per-key checkpoints permit fingerprint-checked exact resume.
+Retain named operation witnesses and deterministic comparison counts.
+Report smoke separately from the completed 80-key follow-up. The final
+generation begins only after the prerequisite algebraic work is complete
+and the root agent has explicitly signaled that condition. An independent
+core/statistical audit is required before publication integration.

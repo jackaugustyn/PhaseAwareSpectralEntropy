@@ -1,0 +1,43 @@
+\subsection{Paired Interventions on the Output Construction}\label{sec:ffmethods}
+
+To separate round-function and feed-forward effects (Section~\ref{sec:mechanism}), we fixed a protocol before generating 80 new matched key pairs (indices 1000--1079, separate derivation domains). Each uses four shared 64-bit base nonces, the previous cipher mapping, and 8192 output bits at two and four rounds. For initial state $X$ and working state $W_r(X)$ after $r$ rounds, define wordwise
+\begin{equation}
+ Z_{\rm add}=W_r(X)+X\pmod{2^{32}},\qquad
+ Z_{\rm none}=W_r(X),\qquad Z_{\rm xor}=W_r(X)\oplus X.
+ \label{eq:ffvariants}
+\end{equation}
+Only $Z_{\rm add}$ is standard~\citep{bernstein2008salsa,bernstein2008chacha,nir2018}. The interventions share keys, nonce vertices, counters, and $W_r$, recovered by subtracting $X$ from vector-checked standard output and verified against an independently instrumented round function.
+
+For each key, cipher, and round setting, SHAKE256 assigns one working stream $R(v)$ per nonce vertex. Reusing $R(v)$ and applying Equation~\eqref{eq:ffvariants} with the same actual $X$ couples the three references. This computational random-function baseline does not assume that the cipher permutation is a random function.
+
+All 64 singletons use the per-mask $Q=4$ averaged-power estimator, aggregating 32-bit HW to 32-, 64-, or 128-bit segments. $G_\tau$ is the same-offset, second-minus-first nonce-word gap in cipher-minus-reference $H_{\rm MP}$ for intervention $\tau$ (Section~\ref{sec:nonce}). Full-spectrum, DC/AC, and block-power summaries use the full 8192-bit window; inferential endpoints are specified below.
+
+\subsection{Mixed Nonce Derivatives and Fixed Tests}\label{sec:ffmixed}
+
+Higher-order differential-linear ChaCha analysis~\citep{ghafoori2024hodl} and two-round key--IV selection criteria for Salsa20 attacks~\citep{dey2025tosc} provide context. Here we compare emitted derivatives under finalization interventions, without constructing internal trails or selecting favorable key--IV pairs. For distinct single-bit masks $a,b$, compute
+\begin{equation}
+ D^2_{a,b}Z(v)=Z(v)\oplus Z(v\oplus a)\oplus Z(v\oplus b)\oplus Z(v\oplus a\oplus b)
+ \label{eq:ffderivative}
+\end{equation}
+before taking HW. The fixed 38-pair panel has 32 cross-word pairs at matched LSB-first offsets 0--31, four linking first-word bit 0 to second-word bits $7,15,30,31$, and two second-word pairs $(0,15)$ and $(7,30)$. Each base has 103 vertices; the four sets are verified disjoint, with cipher and reference reuse at shared vertices.
+
+For either core and any round count, $X$ is XOR-affine in the nonce: $D^2X=0$ and $D^2Z_{\rm xor}=D^2Z_{\rm none}$, including for the reference. In Salsa20/2, $W_7=u\oplus C$, with $u=x_7$ and $C$ independent of $u$, so
+\begin{equation}
+ f_C(u)=((u\oplus C)+u)\bmod2^{32}
+       =C+2(u\mathbin{\&}\neg C)\pmod{2^{32}}.
+ \label{eq:ffaffine}
+\end{equation}
+When $C_b=0$, $u_b$ contributes from bit $b+1$ through the following ones in $C$, stopping at the next zero or word boundary. These intervals are disjoint for successive zeros; for fixed $C$, therefore,
+\[
+ f_C(u)=C\oplus\bigoplus_{b=0}^{31}u_b L_b(C),\qquad
+ L_b(C)=f_C(2^b)\oplus f_C(0),\quad L_{31}(C)=0.
+\]
+This affinity holds with the first nonce word fixed: within-$x_7$ second derivatives vanish in output word 7 under all interventions. A first-word mask $a$ and $x_7$ bit $b$ give mixed derivative zero for none/xor and $L_b(C(v\oplus a))\oplus L_b(C(v))$ for add. Stored $C$ and derivative words audit these identities, bit-31 cancellation, and singleton HW 1 for none and 0 for xor. No distribution for $C$ is assumed. General modular addition and other output words can remain nonlinear.
+
+At two rounds, the four planned two-sided whole-key endpoints are Salsa20 $G_{\rm none}$, Salsa20 $(G_{\rm add}-G_{\rm none})$, ChaCha20 $(G_{\rm add}-G_{\rm none})$, all at 128-bit segmentation, and Salsa20 $J$. Define $A_\tau$ as output-word-7 derivative HW averaged over 31 aligned pairs (offsets 0--30), four bases, and 16 blocks:
+\begin{equation}
+ J=(A_{\rm add}^{\rm cipher}-A_{\rm none}^{\rm cipher})
+   -(A_{\rm add}^{\rm ref}-A_{\rm none}^{\rm ref}).
+ \label{eq:ffinteraction}
+\end{equation}
+$J$ is measured in changed bits per 32-bit word and is the only endpoint with a predicted direction (positive). Offset 31 remains descriptive because its derivative cancels exactly. We use 100,000 whole-key sign flips, plus-one two-sided $p$ values, four-test Holm correction, and 5000 whole-key percentile bootstrap resamples for pointwise 95\% intervals, retaining pairing across interventions and ciphers. Other resolutions, four rounds, derivative profiles, $G_{\rm xor}$, and add-minus-xor contrasts are descriptive. Equalities are checked deterministically. The archived protocol records seeds, source hashes, and independent numerical checks.

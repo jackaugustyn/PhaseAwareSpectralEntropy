@@ -1,0 +1,15 @@
+{
+  "mode": "advisory_re_review",
+  "version": "0.20.0",
+  "target": "Electronics",
+  "formal_ars_status": "unavailable_missing_prior_contract_artifacts_and_Draft202012Validator",
+  "criteria_binding": "unavailable",
+  "calibration": "NOT_CALIBRATED",
+  "scope": "Verify inherited v0.19 findings against v0.20; source documents are read-only.",
+  "author_response_visibility": "Root knew response and revision; specialists did not open response file before report commitment. Methodology specialist incidentally saw author summary in archive metadata.",
+  "cross_model": "not_active; no manuscript transmission to external providers",
+  "pages": 11,
+  "references": 40,
+  "supplementary_manuscript": false,
+  "status": "advisory_review_complete"
+}

@@ -1,0 +1,72 @@
+{
+  "report_format_version": "1.3",
+  "mode": "patch",
+  "base_path": "reviews/electronics_v020_revision_r1w1_r1w2_20261031/base.md",
+  "output_path": "reviews/electronics_v020_revision_r1w1_r1w2_20261031/draft.rev1.md",
+  "base_draft_hash": "9cf702dd74ac",
+  "output_draft_hash": "bcd706eac27a",
+  "patch_digest": "bd1071955694cd843c4835e42f8ff1bd05ef1f9741eb899fc115971d68bc28dd",
+  "revision_round": 1,
+  "authorization_context": "review_roadmap",
+  "authorization_witness": {
+    "status": "pass",
+    "roadmap_sha256": "629b80aeae8939560a5258440737369cad3e0e54fb9ec623dd1bf6cdb5ae79a7",
+    "author_adjudication_sha256": "f1c44983f9030df1a6e5e67a9a7c0d93aa5c94f4c9412d1e7bfe12c79f567090",
+    "author_decision_digest": "1e16efcc6725574aadfdb4f163ad1fbad6c85c02306322c2a58416ef7825a40a",
+    "claim_surface_manifest_sha256": "6ee815a5990736755dfd1e7f386691b81d1609944fd909abbc98383e640fec3b",
+    "registered_claim_surfaces_checked": 0,
+    "unregistered_claim_drift_review_required": true
+  },
+  "ops_applied": [
+    {
+      "op_index": 0,
+      "op": "replace_block",
+      "block_id": "B0024",
+      "roadmap_item_ids": [
+        "REV-R1-W2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 1,
+      "op": "replace_block",
+      "block_id": "B0030",
+      "roadmap_item_ids": [
+        "REV-R1-W2"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 2,
+      "op": "replace_block",
+      "block_id": "B0043",
+      "roadmap_item_ids": [
+        "REV-R1-W1"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    }
+  ],
+  "fresh_block_ids": [],
+  "pure_move_pairs": [],
+  "structural_flags": {
+    "heading_op_indexes": [],
+    "section_count_delta": 0,
+    "touched_ratio": 0.0288,
+    "touched_ratio_threshold": 0.6,
+    "touched_ratio_exceeded": false,
+    "any": false,
+    "acknowledged": false
+  },
+  "counters": {
+    "blocks_total": 104,
+    "blocks_touched": 3,
+    "blocks_preserved_byte_identical": 101,
+    "preserved_ratio": 0.9712
+  }
+}

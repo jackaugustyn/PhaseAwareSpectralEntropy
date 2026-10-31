@@ -1,0 +1,15 @@
+{
+  "analysis_status": "Descriptive mechanism audit of archived data; no new key cohort and no inferential test.",
+  "source_sha256": {
+    "doc_stream_ciphers/data/literature_mask_followup/arx_raw.npz": "95129cc08ef61ee6272600e479542158bc40594677f222ad83b03407514877b5",
+    "experiments/stream_rounds_study/arx_mechanism_analysis.py": "6cdd3563617fcbce3aa3419d13989efef75451aa82b426aa9d9365bfef54f3fe",
+    "experiments/stream_rounds_study/extension_stream_cores.py": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5",
+    "src/spectral_crypto_analyzer/primitives.py": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+  },
+  "output_sha256": {
+    "chacha_column_shift.csv": "442b81c56a302766205c12c2b0a63d9ac3131e32bcbed1559e34c1edfc0ac410",
+    "dependency_support.csv": "04acb33ac020e56e12e64c9ff3decc4549fd0482949d01f6cdc110e77ae2252b",
+    "summary.json": "63b2ae200ba0f238d2d57eaccb882a67f7caa4955986daf364865efd465d0aa6",
+    "word_response_mechanism.csv": "7463f6ef6be632a73bf014879fdcbb985e9a075c303cedd12f012170e5a4216c"
+  }
+}

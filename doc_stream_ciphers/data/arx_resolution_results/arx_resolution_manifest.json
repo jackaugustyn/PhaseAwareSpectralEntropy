@@ -1,0 +1,101 @@
+{
+  "analysis": "ARX segment-resolution and output-window robustness",
+  "status": "completed descriptive secondary analysis of previously examined cohort",
+  "new_keys_generated": 0,
+  "source_script": "experiments/stream_rounds_study/analyze_arx_resolution.py",
+  "source_script_sha256": "348ab790ae28e553a7ca08abd814cd1ef7542687450b968cb93057227ab6244d",
+  "input_sha256": {
+    "doc_stream_ciphers/data/literature_mask_followup/arx_raw.npz": "95129cc08ef61ee6272600e479542158bc40594677f222ad83b03407514877b5",
+    "doc_stream_ciphers/data/literature_mask_followup/manifest.json": "0b1c0a536884f769ebae4dc677b9c897d3df625f92c3754ca67db964d8f3ec12",
+    "doc_stream_ciphers/data/literature_mask_followup/arx_word_gap_by_round.csv": "8ffc7350c985ded90938abe216e08a283303a41e1ab41accf76f34f56b5cb8da"
+  },
+  "raw_axes": [
+    "key",
+    "cipher",
+    "rounds",
+    "nonce_mask_msb_first",
+    "base_nonce",
+    "output_block512",
+    "word_hw32"
+  ],
+  "raw_shape": [
+    80,
+    2,
+    5,
+    64,
+    4,
+    8,
+    16
+  ],
+  "families": [
+    "ChaCha20",
+    "Salsa20"
+  ],
+  "rounds": [
+    2,
+    4,
+    6,
+    8,
+    20
+  ],
+  "key_indices_inclusive": [
+    520,
+    599
+  ],
+  "masks": "all 64 single-bit nonce changes",
+  "base_nonces_per_key": 4,
+  "power_averaging": "Q=4 within each mask before normalization",
+  "segment_bits": [
+    32,
+    64,
+    128
+  ],
+  "windows_blocks_start_stop_exclusive": {
+    "full4096": [
+      0,
+      8
+    ],
+    "first2048": [
+      0,
+      4
+    ],
+    "last2048": [
+      4,
+      8
+    ]
+  },
+  "segmentation_origin_bits": 0,
+  "normalization": {
+    "hnodc": "AC Shannon entropy divided by log2(N-1)",
+    "phase_range_fraction": "range of base/block-averaged phase HW divided by segment_bits",
+    "mean_hw_fraction": "mean HW divided by segment_bits"
+  },
+  "block_harmonic_share": "sum P[j*B], j=1..L-1, divided by sum P[1:]; L=512/segment_bits; B=window_bits/512; N=B*L",
+  "block_fundamental_share": "(P[B]+P[N-B])/sum(P[1:]); isolates the frequency 1/512 bits and excludes its higher harmonics",
+  "constant_trajectory_convention": "entropy and block harmonic share are zero when their total power is zero",
+  "aggregation": "average mask-level metrics within each key; deltas are observed minus matched control; word gap is mean delta for masks32:64 minus masks0:32",
+  "ci": {
+    "method": "percentile whole-key bootstrap; pointwise descriptive 95% intervals",
+    "replicates": 5000,
+    "seed": 20261029,
+    "paired_resampling": "same key-index draws across both ciphers, all settings and metrics",
+    "multiplicity": "no simultaneous coverage claimed; no new hypothesis tests"
+  },
+  "old_128bit_full4096_max_abs_reproduction_error": 4.553649124439119e-18,
+  "reproduction_endpoints": "word_gap_delta_hmp, word_gap_delta_hnodc, word_gap_delta_p0; both ciphers and all five rounds",
+  "output_rows": {
+    "per_key": 7200,
+    "summary": 90
+  },
+  "limitations": [
+    "same 80-key cohort; these are not independent replications",
+    "only block-aligned segmentation and complete-block windows",
+    "no measurements below 32-bit resolution can be reconstructed from word-HW data"
+  ],
+  "numpy_version": "1.22.0",
+  "output_sha256": {
+    "arx_resolution_compact.csv": "abcfdff1a27558b2bc070bcd2f91e54d392a73512d3de8b1c69914dd055acfe2",
+    "arx_resolution_per_key.csv": "ece827cdf53f883f6dc78e4d91b7f527c3651bb1ca7c6cd3722e1f638bb2d3ce",
+    "arx_resolution_summary.csv": "1ecc4a199b44508f836d1426af1c5deff1053fff74000fdcd87113b42821c774"
+  }
+}

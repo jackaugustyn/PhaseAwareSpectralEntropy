@@ -1,0 +1,38 @@
+[
+  {
+    "check": "panel_synthesis",
+    "cmd": "python3 /home/paugustynowicz/.codex/plugins/cache/ars-codex/ars-codex/3.24.0/skills/academic-research-suite/ars/scripts/check_panel_synthesis.py --contract reviews/electronics_v020_ars_full_20261031/contract.json --report reviews/electronics_v020_ars_full_20261031/phase2/eic.md --report reviews/electronics_v020_ars_full_20261031/phase2/methodology.md --report reviews/electronics_v020_ars_full_20261031/phase2/domain.md --report reviews/electronics_v020_ars_full_20261031/phase2/perspective.md --report reviews/electronics_v020_ars_full_20261031/phase2/da.md --roles eic,methodology,domain,perspective,da --synthesis reviews/electronics_v020_ars_full_20261031/synthesis.md",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "c58dd9",
+      "wall_time_seconds": 0.042813492,
+      "exit_code": 0,
+      "original_token_count": 6,
+      "output": "PANEL-SYNTHESIS: PASS\n"
+    }
+  },
+  {
+    "check": "revision_roadmap",
+    "cmd": "python3 /home/paugustynowicz/.codex/plugins/cache/ars-codex/ars-codex/3.24.0/skills/academic-research-suite/ars/scripts/revision_roadmap.py validate-roadmap reviews/electronics_v020_ars_full_20261031/revision_roadmap.json --base reviews/electronics_v020_ars_full_20261031/artifacts/review_base.md --block-manifest reviews/electronics_v020_ars_full_20261031/artifacts/block_manifest.json",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "729444",
+      "wall_time_seconds": 0.030661628,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "revision roadmap ok\n"
+    }
+  },
+  {
+    "check": "schema6_provenance",
+    "cmd": "python3 /home/paugustynowicz/.codex/plugins/cache/ars-codex/ars-codex/3.24.0/skills/academic-research-suite/ars/scripts/review_panel_provenance.py validate-schema6 reviews/electronics_v020_ars_full_20261031/review_report.json --mode reviewer_full --artifact-root reviews/electronics_v020_ars_full_20261031",
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "c311a6",
+      "wall_time_seconds": 0.130640571,
+      "exit_code": 0,
+      "original_token_count": 10,
+      "output": "review-panel provenance carrier: PASS\n"
+    }
+  }
+]

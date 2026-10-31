@@ -1,0 +1,77 @@
+{
+  "source_sha256": "92ecdc9fbcc77414622d5de1c283c5220d818e5fba13fce595f55a8d4fc1698f",
+  "pdf_sha256": "e69a757a0c642ce70e586a50f838e41f3384a23aa0e7a89c988bc81d04b4ac27",
+  "input_sha256": {
+    "doc_stream_ciphers/data/arx_spectral_prediction/spectral_summary.csv": "677f0bf87a0972d8ca69154af89683e34d99879ccc31f6968985ccb346469e29",
+    "doc_stream_ciphers/data/arx_spectral_prediction/evaluation_spectra.npz": "200e80ff04815a9398cb60e4f08e8fcde065038934697b5b43c012eaa16fe585",
+    "doc_stream_ciphers/data/arx_spectral_prediction/monte_carlo_spectra.npz": "7eb09a2c3e3fd2af0e73f9e62b4fa73519e27fe575491266434a09cfa885351a",
+    "doc_stream_ciphers/data/arx_spectral_prediction/spectral_errors.csv": "a21ccd9cbaf03a29642c45653649b204a21e6d2dc0ffc6c8c846f2836b013711",
+    "doc_stream_ciphers/data/arx_round_transition/within_word_summary.csv": "7f2a5911a0f79fa17eec1fda098b57bc77bb0fc84975359d997c3559791aeff4",
+    "doc_stream_ciphers/data/arx_round_transition/singleton_summary.csv": "762979dc9be6c912567fedefcc6f22af14ae60e89418f86400a6b67c7cdc0fae"
+  },
+  "segment_bits": 128,
+  "window_bits": 8192,
+  "dft_length": 64,
+  "spectral_observable": "q_observed: cipher AC-normalized power, no reference subtraction",
+  "averaging": "Pool four base powers per key/mask, normalize AC per key/mask, average masks, average keys; predictions average 4096 complete simulated key pairs.",
+  "folding": "k=1..31: q[k]+q[64-k]; k=32: q[32]; DC omitted. No smoothing or renormalization.",
+  "frequency_axis": "k/16 cycles per 512-bit block; k=16 is 1/512 cycles/bit and k=32 is 2/512 (Nyquist)",
+  "observed_intervals": "Pointwise 95% whole-key bootstrap intervals; conjugate symmetry permits exact pair folding of the stored endpoints.",
+  "model_intervals_shown": false,
+  "prediction_training_indices": [
+    840,
+    919
+  ],
+  "prediction_evaluation_indices": [
+    1200,
+    1279
+  ],
+  "transition_indices": [
+    1400,
+    1479
+  ],
+  "verification": {
+    "ChaCha20": {
+      "observed_ac_mass": 1.0,
+      "observed_dc": 0.0,
+      "models": {
+        "M0": {
+          "ac_mass": 1.0000000000000004,
+          "full_two_sided_l1": 0.32198880593980517,
+          "folded_l1": 0.32198880593980517,
+          "csv_npz_agreement": true
+        },
+        "M1": {
+          "ac_mass": 1.0,
+          "full_two_sided_l1": 0.08435559477678098,
+          "folded_l1": 0.08435559477678099,
+          "csv_npz_agreement": true
+        }
+      }
+    },
+    "Salsa20": {
+      "observed_ac_mass": 1.0,
+      "observed_dc": 0.0,
+      "models": {
+        "M0": {
+          "ac_mass": 0.9999999999999994,
+          "full_two_sided_l1": 0.10100110416851146,
+          "folded_l1": 0.10100110416851146,
+          "csv_npz_agreement": true
+        },
+        "M1": {
+          "ac_mass": 1.0000000000000002,
+          "full_two_sided_l1": 0.010428187541626426,
+          "folded_l1": 0.010428187541626426,
+          "csv_npz_agreement": true
+        }
+      }
+    }
+  },
+  "panels": [
+    "ChaCha20/2 folded AC spectrum: new observations and frozen M0/M1",
+    "Salsa20/2 folded AC spectrum: new observations and frozen M0/M1",
+    "Raw within-x7 D2 word7 HW, none",
+    "DeltaF512 of singleton HW, add, 128-bit segments"
+  ]
+}

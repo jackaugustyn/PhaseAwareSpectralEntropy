@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "auditor_source_sha256": "8abd5c923783d5d53de12e1baa731eb6f0324b62b411a817b4deffc8f93fb262",
+  "manifest_sha256": "798b79770d798990a0810b481059cd9d7c3e0c3fb565d090c94a7e1e858eb5aa",
+  "raw_sha256": "8a50f1d3dbe8c1ee724114815751db6ee3270b5a4bd24d8692ce4b2e01d316b7",
+  "protocol_sha256": "b416c7fb7b6697e26c4707b9e6c70981245f22eaecd243c480319ea393090ef8",
+  "keys": 80,
+  "fixtures": {
+    "exhaustive_affine_cases_word_widths_1_to_8": 87380
+  },
+  "word_regeneration": {
+    "regenerated_key_indices": [
+      1000,
+      1079
+    ],
+    "independent_cipher_streams": 3296,
+    "independent_cipher_blocks": 52736,
+    "independent_reference_streams": 3296,
+    "singleton_trajectories_all_variants_verified": 4096,
+    "d2_trajectories_all_variants_verified": 2432,
+    "direct_none_xor_d2_word_equalities_verified": 622592
+  },
+  "conditional_identities": {
+    "violations": 0,
+    "checked_values": {
+      "observed_none_xor_all_word_hw_equalities": 12451840,
+      "observed_none_xor_word7_bitwise_equalities": 778240,
+      "oracle_none_xor_all_word_hw_equalities": 12451840,
+      "oracle_none_xor_word7_bitwise_equalities": 778240,
+      "salsa2_singleton_word7_conditional_uint32_predictions": 491520,
+      "salsa2_d2_word7_conditional_uint32_predictions": 583680,
+      "salsa2_total_singleton_hw_from_trailing_ones_C": 5120
+    },
+    "scope": "All stored word7 uint32 and all-word HW arrays; other-word bitwise equality is independently regenerated on two keys and recorded for all keys in generation metadata."
+  },
+  "statistics": {
+    "max_absolute_errors": {
+      "per_key": 8.881784197001252e-16,
+      "mean": 1.4210854715202004e-14,
+      "ci": 1.5987211554602254e-14
+    },
+    "tables": {
+      "arx_feedforward_per_key.csv": {
+        "per_key_rows": 2880,
+        "summary_rows": 36
+      },
+      "arx_feedforward_paired_per_key.csv": {
+        "per_key_rows": 960,
+        "summary_rows": 12
+      },
+      "per_key_singleton_profiles.csv": {
+        "per_key_rows": 30720,
+        "summary_rows": 384
+      },
+      "per_key_d2_profiles.csv": {
+        "per_key_rows": 61440,
+        "summary_rows": 768
+      },
+      "per_key_d2_word7_pairs.csv": {
+        "per_key_rows": 36480,
+        "summary_rows": 456
+      },
+      "interaction_per_key.csv": {
+        "per_key_rows": 320,
+        "summary_rows": 4
+      }
+    },
+    "planned_means": [
+      0.7294029377108961,
+      0.05865092343899033,
+      -0.002929341457364058,
+      0.7096711189516131
+    ],
+    "planned_holm_p": [
+      3.999960000399996e-05,
+      3.999960000399996e-05,
+      0.1077689223107769,
+      3.999960000399996e-05
+    ],
+    "planned_sign_flip_extremes": [
+      0,
+      0,
+      10776,
+      0
+    ],
+    "method": "Independent strided aggregation, weighted real FFT, all per-key/mean/pointwise intervals, count-weighted bootstrap, plus-one sign flips and four-test Holm."
+  }
+}

@@ -1,0 +1,153 @@
+# Fixed empirical prediction models for the two-round ARX spectrum
+
+Written on 2026-10-31 after the earlier observational and intervention
+studies, before fitting these prediction models or generating their new
+evaluation cohort. This is a locally fixed prospective follow-up, not a
+public preregistration. Freeze this text and generator/analysis sources
+before the final run. Do not adapt a model after seeing evaluation data.
+
+## Question and scope
+
+Test whether empirical 32-bit position profiles plus independently sampled
+residuals predict the finite-sample spectrum, 512-bit fundamental fraction,
+and nonce-word entropy gap of standard additive two-round ChaCha20 and
+Salsa20. The two fixed models differ only in whether training-key and
+base-nonce profiles are retained. Neither is a purely analytic cipher model.
+No detector-power, full-round-security, or new-attack claim is sought.
+
+## Training data and fixed models
+
+- Training input is only the observed, two-round slice of
+  data/arx_resolution_validation/arx_resolution_validation_raw.npz:
+  80 key pairs, indices 840--919, both ciphers, all 64 singleton nonce masks,
+  four base nonces, 16 consecutive 512-bit blocks and 16 HW32 words per block.
+  Confirm the existing raw hash and key indices before fitting. Do not use
+  this cohort's four-round slice or any new evaluation observations.
+- M0: for each cipher, global nonce mask and output word, fit its empirical
+  HW32 distribution on all 80*4*16=5120 training observations. Draw each
+  new key/mask/base/block/word value independently from that marginal.
+- M1: for each simulated key pair draw one training-key index uniformly,
+  shared by both ciphers, every mask and all four base slots. Within that
+  selected key, retain the four original base-nonce slots. For each cipher,
+  mask, base and output word, fit the empirical distribution over its 16
+  blocks; draw every new block/word value independently from that layer.
+  This is equivalently conditional mean plus an empirical centered residual.
+- Use empirical distributions without smoothing, parametric fitting,
+  tuning or holdout corrections. Population moments of each empirical
+  distribution use its empirical denominator (5120 for M0, 16 for M1).
+  Both models preserve training-support zeros. The known Salsa20 zero-word
+  and high-bit feed-forward identities provide structural context, not a
+  derivation of the entire fitted marginal distribution.
+- M0 removes key/base random effects as well as residual word/block
+  dependence. M1 retains empirical between-key and between-base profiles,
+  including their shared pattern across masks, but removes residual
+  dependence between words and blocks. M1's conditional distributions have
+  only 16 training blocks, some repeated because of the operation graph;
+  their fitted variation is not a population estimate based on independent
+  blocks. Equal weighting of complete keys is retained in both fits.
+
+## Expected spectrum and finite Monte Carlo prediction
+
+For segment width s in {32,64,128}, let L=512/s, B=16, T=B*L. The segment
+mean is the sum of its constituent HW32 means and its model residual
+variance is the sum of their variances. Repeat the L-position mean profile
+over B output blocks. Under independent residuals, for every DFT bin k:
+  E[P_k | layer] = |DFT(mu_repeat)_k|^2 + sum_t variance_t.
+The Q=4 power average has this same expectation. For M0 there is one
+profile per mask. For M1 compute this expression separately for every
+training key and base, then average over those layers. Do not replace M1's
+mean squared Fourier magnitude by the Fourier magnitude of a pooled mean.
+Archive the expected power per mask and normalized expected-power summaries.
+Entropy of this normalized expectation is not expected finite-sample entropy.
+
+- Simulate exactly 4096 complete pseudo-key pairs per model, in batches of
+  32. Each pseudo-key contains 64 masks, Q=4 base trajectories, 16 blocks,
+  and 16 HW32 words. Generate one HW32 sample and aggregate it to all three
+  resolutions, preserving the comparison across widths.
+- Sampling RNG: NumPy default_rng(SeedSequence([2026103101, model_id,
+  family_id])), where model_id is 0/1 and family_id is 0 for ChaCha20 and
+  1 for Salsa20. M0 samples an index in the pooled 5120-value marginal;
+  M1 samples one of the 16 training-block values within its selected layer.
+  Draw the 4096 M1 training-key indices once with seed 2026103102 and retain
+  that array. Sampling is independent across new word/block residuals.
+- The finite-model reference consists of independent Binomial(32,1/2)
+  HW32 values, drawn with SeedSequence([2026103103,family_id]). Reuse the
+  same reference sequence for both models, and aggregate it to all widths.
+  This reference targets mean metrics for ideal independent differences;
+  the simulation does not emulate joint nonce-vertex or key covariance.
+- For each pseudo-key and mask, pool its four complete two-sided Fourier
+  powers before normalization. Apply the exact existing H_MP, normalized
+  AC entropy and fundamental/harmonic definitions. Average masks within
+  the pseudo-key. Compute G by subtracting model-reference H_MP for first
+  nonce-word masks 0--31 from second-word masks 32--63, pairing offsets.
+  F512 is (P[B]+P[T-B])/sum(P[1:]) for each mask before averaging; DeltaF512
+  subtracts the corresponding finite reference.
+- Archive pseudo-key scalar metrics, finite mean normalized full/AC
+  spectra and Monte Carlo standard errors, expected-power predictions,
+  fit parameters, seeds, and hashes before generating evaluation streams.
+  No comparison with heldout data may change the fit or MC budget.
+
+## Independent evaluation cohort
+
+- Use master indices 1200--1279 and seed 20261031 with the existing
+  publication_study._key_material helper. Independent per-family keys and
+  reference secrets are BLAKE2b of respectively
+  spectral-prediction-key-v1:<family>: || master and
+  spectral-prediction-secret-v1:<family>: || master (32 output bytes).
+- Four common 64-bit base nonces come from SHAKE256 of
+  spectral-prediction-nonces-v1: || master (32 output bytes). Flip all 64
+  single bits using global MSB-first byte numbering. Check that the four
+  65-vertex stars are disjoint. ChaCha20 uses 0^32 || nonce, Salsa20 the
+  shared nonce. Use standard additive output at exactly two core rounds.
+- Emit 1024 bytes per nonce, counters 0--15. For each nonce vertex, the
+  graph-matched reference emits SHAKE256 of
+  spectral-prediction-oracle-v1:<family>: || secret || uint16_be(2) || nonce,
+  taking 1024 bytes. Reuse streams at repeated vertices. Record observed
+  and reference HW32 with axes key,cipher,mask,base,block,word.
+- Smoke indices 1280--1281 may be used only under /tmp, with 32 MC
+  pseudo-keys per model. Smoke outputs cannot be used for final model fits,
+  MC summaries or evaluation. Do not select methods or endpoints using them.
+
+## Fixed reporting and uncertainty
+
+Report all six cipher-by-resolution cells for both M0 and M1. The principal
+scalar summaries are predicted and observed G, DeltaF512, their signed
+errors (observed minus prediction), and the signs of G. Report H_MP, DC
+share, normalized AC entropy and harmonic-share summaries descriptively.
+The ChaCha20 128-bit gap has no required sign. Do not choose a successful
+model or resolution after inspecting the evaluation cohort.
+
+For spectra, normalize each key/mask power vector before averaging masks
+and keys. Report full normalized spectra and separately normalized AC
+spectra for model, finite reference and evaluation data. Report the L1
+distance between predicted and observed mean AC spectra in every cell.
+Keep analytic normalized-expected-power profiles separate from finite MC
+profiles; neither may silently replace the other.
+
+Use 5000 whole-evaluation-key bootstrap resamples, seed 2026103104,
+for pointwise 95% intervals of observed means, signed errors and spectral
+L1 errors. Draw one shared key-index matrix across ciphers, widths and
+models. These intervals are conditional on the fixed 80-key training fit
+and fixed MC estimate; they do not include training uncertainty. Report
+MC standard errors separately, from the 4096 pseudo-key values (or the
+equivalent first and second moments for per-bin profiles).
+
+No p values, post-hoc success margins, equivalence claims or calibrated
+detector comparisons are planned. Compare both models with all evaluation
+results and describe failures. A difference between M0 and M1 measures the
+effect of retaining empirical conditional profiles within this model
+family; it does not isolate all real cipher dependence or establish that
+the residuals are independent.
+
+## Integrity and reproducibility
+
+Write only new files under data/arx_spectral_prediction and the new named
+study/test/manuscript files. Freeze training input, protocol and analysis
+source hashes. Final evaluation generation requires a complete frozen
+prediction manifest. Per-key checkpoints may resume only with an identical
+fingerprint; never mix cohort, source or model versions. Verify analytic
+expected power against exact small-support enumeration, marginal sampling,
+aggregation, Q-before-normalization, finite entropy conventions, and
+the separate training/evaluation paths before final generation. Independently
+audit the fitted parameters, model calculations, evaluation streams and
+reported statistics. Retain any model discrepancy in the final report.

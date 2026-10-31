@@ -1,0 +1,32 @@
+{
+  "phase1_passed": [
+    "eic",
+    "methodology",
+    "domain",
+    "perspective",
+    "da"
+  ],
+  "phase1_hashes": {
+    "eic": "da52333dc7f1b838d85ab4ceaaed24cbbd151ee8bcdbe35315df8df6bbfdb0a8",
+    "methodology": "206a89dcdebff366aa193b14a6cce8ef3443aac882b534f64a3ca8f9e1033343",
+    "domain": "7eaeb1a516f77a3fc973f792a2c7c6f9d39fd13eb26b42fccd5a1067d4f7703d",
+    "perspective": "5ba63d0936d2a401b606138ed2602317e8f4413cba13933b6539b9f9bdbfa808",
+    "da": "7d0e7b69e4ec904c327c8b99870c4c3fad794c294b7087f3f53db8000d61bb38"
+  },
+  "contract_validation": "PASS with advisory single-judge mandatory-gate warnings D1,D2,D6",
+  "prompt_sync": "PASS",
+  "phase2_passed": [
+    "eic",
+    "domain",
+    "perspective",
+    "methodology",
+    "da"
+  ],
+  "phase2_hashes": {
+    "eic": "7ee04f9c54820ed3be64d6a54b3ccaf88be735bac4b78c919e8cbf6ee0ccd468",
+    "domain": "ab38466d07fd356c6b7550441f41e79791a565dab754b3d105fb71843329871c",
+    "perspective": "8a104297c8c52bec07dfdf7a268cef1e5e4d15a00c93e02f4fb0f980370bd2ae",
+    "methodology": "30bc5558f510fcf58eb07264f3e7de7caa1159eafe8122599ef246b70c1a6897",
+    "da": "08ba7ad119841750f3a758cd00f1da52fc20701b94397b0fce6dc8e41cf7eb70"
+  }
+}

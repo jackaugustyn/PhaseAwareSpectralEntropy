@@ -1,0 +1,76 @@
+{
+  "axes": {
+    "blind_to_peer_outputs": "unknown",
+    "fresh_context": true,
+    "human_distinct": false,
+    "model_family_distinct": "unknown",
+    "provider_distinct": "unknown",
+    "role_separated": true
+  },
+  "contract_id": "reviewer/reviewer_full/v2",
+  "contract_sha256": "e9712090d2469fea15a37b8e22d4e137afbcb2bf38d5789939c5df56738ef7af",
+  "correlated_error_disclosure": {
+    "reason": "model_family_unknown",
+    "required": true,
+    "text": "Model-family provenance is incomplete; cross-family separation is unknown, so correlated-error risk cannot be ruled out."
+  },
+  "execution_topology_sha256": "6f0fb039379f2b635cf4b3036c3e5ec02fdd1b2235c546e8b27cae4ffac9b5ac",
+  "fresh_context_scope": "within_panel_attempt_only",
+  "independence_claim": "not_computed_from_personas",
+  "mode": "reviewer_full",
+  "normalized_manifest_sha256": "47d987ff83c8174c554b98cd553cb213da95dfe330d3c0568bbbb9a818be48b6",
+  "panel_id": "electronics-v020-ars-full-20261031",
+  "schema_version": "review-panel-provenance/1.0",
+  "seats": [
+    {
+      "actor_type": "model",
+      "context_id": "/root/ars020_eic",
+      "human_reviewer_id": null,
+      "model_family": null,
+      "peer_outputs_visible": null,
+      "provider": null,
+      "role_id": "eic",
+      "seat_id": "EIC"
+    },
+    {
+      "actor_type": "model",
+      "context_id": "/root/ars020_methodology",
+      "human_reviewer_id": null,
+      "model_family": null,
+      "peer_outputs_visible": null,
+      "provider": null,
+      "role_id": "methodology",
+      "seat_id": "R1"
+    },
+    {
+      "actor_type": "model",
+      "context_id": "/root/ars020_domain",
+      "human_reviewer_id": null,
+      "model_family": null,
+      "peer_outputs_visible": null,
+      "provider": null,
+      "role_id": "domain",
+      "seat_id": "R2"
+    },
+    {
+      "actor_type": "model",
+      "context_id": "/root/ars020_perspective",
+      "human_reviewer_id": null,
+      "model_family": null,
+      "peer_outputs_visible": null,
+      "provider": null,
+      "role_id": "perspective",
+      "seat_id": "R3"
+    },
+    {
+      "actor_type": "model",
+      "context_id": "/root/ars020_da",
+      "human_reviewer_id": null,
+      "model_family": null,
+      "peer_outputs_visible": null,
+      "provider": null,
+      "role_id": "da",
+      "seat_id": "DA"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "revision-roadmap/1.0",
+  "revision_round": 1,
+  "base_draft_sha256": "9cf702dd74ac412e5d2bb8fc88999960fae5087b05e072e3172e690f3bbd02e6",
+  "block_manifest_sha256": "385998f2360012cf9d212f5ed82f89cccb3fb6e74fd4cf8fb7129fde4321ddc7",
+  "items": [
+    {
+      "id": "REV-EIC-W1",
+      "source_refs": [
+        {
+          "seat": "EIC",
+          "channel": "finding",
+          "ordinal": 1,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "The six-setting model comparison is overly compressed",
+      "reviewer": "EIC",
+      "sub_claim_ids": [
+        "SC-EIC-W1"
+      ],
+      "obligation_class": "should_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "text",
+        "locator": "Section 4.4, final paragraph, \"Both models predict all six entropy-gap signs.\" and \"However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps.\"",
+        "quote": "However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps."
+      },
+      "confidence": 5,
+      "competence_basis": "direct inspection of the result paragraph and Figure 2.",
+      "cost_scope": {
+        "kind": "section",
+        "locator": "Section 4.4, final model-comparison paragraph"
+      },
+      "consequence_if_unaddressed": {
+        "code": "reader_traceability_reduced",
+        "target": {
+          "kind": "section",
+          "locator": "Section 4.4, six-setting model comparison"
+        }
+      },
+      "target_section": "Section 4.4, six-setting model comparison",
+      "suggested_action": "Replace part of the numerical paragraph with a compact cipher-by-width comparison or clearly labelled triples of the existing observed/M0/M1 entropy gaps and spectrum errors. Preserve the reported model tradeoff; use existing results without new simulation or testing. Editorial obligation basis: Suggested for inspectability of the six-setting comparison; the source finding does not undermine the stated contribution.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "All six cipher-width settings expose the existing observed and predicted entropy gaps and spectrum errors, and retain that M0 is closer for the three ChaCha20 gaps while M1 is closer for the three Salsa20 gaps.",
+      "proposed_targets": [
+        {
+          "block_id": "B0053",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV-EIC-W2",
+      "source_refs": [
+        {
+          "seat": "EIC",
+          "channel": "finding",
+          "ordinal": 2,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "Ancillary study details interrupt the focused discussion",
+      "reviewer": "EIC",
+      "sub_claim_ids": [
+        "SC-EIC-W2"
+      ],
+      "obligation_class": "should_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "text",
+        "locator": "Section 5, ancillary-study paragraphs, \"Ancillary studies delimit the diagnostic.\" and \"A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits.\"",
+        "quote": "A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits."
+      },
+      "confidence": 4,
+      "competence_basis": "editorial assessment of the discussion's sequence and information density.",
+      "cost_scope": {
+        "kind": "section",
+        "locator": "Section 5, three ancillary-study paragraphs"
+      },
+      "consequence_if_unaddressed": {
+        "code": "reader_traceability_reduced",
+        "target": {
+          "kind": "section",
+          "locator": "Scope and Discussion, ancillary studies"
+        }
+      },
+      "target_section": "Scope and Discussion, ancillary studies",
+      "suggested_action": "Condense the three ancillary-study paragraphs around initialization transients versus recurring block structure and the fact that quiet diagnostics do not establish security; retain the minimum numerical evidence and citations for those lessons. Editorial obligation basis: Suggested to improve the discussion's focus and information density; no new experiment or supplementary manuscript is required.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "The ancillary account directly supports those two stated lessons, retains their essential numerical evidence and citations, and avoids a second dense experimental narrative.",
+      "proposed_targets": [
+        {
+          "block_id": "B0056",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        },
+        {
+          "block_id": "B0057",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        },
+        {
+          "block_id": "B0058",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV-R1-W1",
+      "source_refs": [
+        {
+          "seat": "R1",
+          "channel": "finding",
+          "ordinal": 1,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "The main endpoint table should carry the calibration qualification",
+      "reviewer": "R1",
+      "sub_claim_ids": [
+        "SC-R1-W1"
+      ],
+      "obligation_class": "must_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "table",
+        "locator": "Table 2, Planned scan, feed-forward, and round-transition endpoints, Holm p column and caption."
+      },
+      "confidence": 5,
+      "competence_basis": "direct comparison of the table with the stated random-sign null assumptions.",
+      "cost_scope": {
+        "kind": "sentence",
+        "locator": "Table 2, calibration column heading and caption"
+      },
+      "consequence_if_unaddressed": {
+        "code": "interpretive_ambiguity_remains",
+        "target": {
+          "kind": "table",
+          "locator": "Table 2, Holm calibration heading and caption"
+        }
+      },
+      "target_section": "Table 2, Holm calibration heading and caption",
+      "suggested_action": "Relabel the Holm p column as Holm-adjusted sign-flip calibration and add a short caption qualification referring to null sign-invariance and its assumption-dependent interpretation. Preserve the existing endpoints and values. Editorial obligation basis: Required because the central table must communicate the assumptions needed to interpret its inferential values when read on its own.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "Table 2 identifies the values as Holm-adjusted sign-flip calibrations and explicitly states their dependence on null sign-invariance, consistently with Methods.",
+      "proposed_targets": [
+        {
+          "block_id": "B0043",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV-R1-W2",
+      "source_refs": [
+        {
+          "seat": "R1",
+          "channel": "finding",
+          "ordinal": 2,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "The bootstrap interval construction is omitted from the article",
+      "reviewer": "R1",
+      "sub_claim_ids": [
+        "SC-R1-W2"
+      ],
+      "obligation_class": "must_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "absence",
+        "locator": "Materials and Methods, Paired Interventions and Inference and Frozen Empirical Spectrum Models",
+        "absence_scope": "the bootstrap interval construction",
+        "check_performed": "Checked the complete Methods text, Table 2 caption, and both figure captions."
+      },
+      "confidence": 5,
+      "competence_basis": "the manuscript names the resampling unit and counts while the inspected code supplies the omitted interval rule.",
+      "cost_scope": {
+        "kind": "sentence",
+        "locator": "Sections 3.3 and 3.4, bootstrap interval descriptions"
+      },
+      "consequence_if_unaddressed": {
+        "code": "method_reproducibility_unresolved",
+        "target": {
+          "kind": "section",
+          "locator": "Materials and Methods, bootstrap interval construction"
+        }
+      },
+      "target_section": "Materials and Methods, bootstrap interval construction",
+      "suggested_action": "State that the bootstrap limits use the 0.025 and 0.975 percentiles of whole-key resampled means, including spectral-distance intervals. Retain the prediction intervals' conditioning on the fixed fit and Monte Carlo estimate. Editorial obligation basis: Required so the article identifies the interval construction used by the existing analysis, without requiring readers to infer it from code.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "Methods explicitly identifies percentile bootstrap limits at 0.025 and 0.975 for the reported whole-key means and spectral distances, while retaining the existing conditional-uncertainty qualification.",
+      "proposed_targets": [
+        {
+          "block_id": "B0024",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        },
+        {
+          "block_id": "B0030",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV-R1-W3",
+      "source_refs": [
+        {
+          "seat": "R1",
+          "channel": "finding",
+          "ordinal": 3,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "Durable access to the existing research package remains unresolved",
+      "reviewer": "R1",
+      "sub_claim_ids": [
+        "SC-R1-W3"
+      ],
+      "obligation_class": "must_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "text",
+        "locator": "Data Availability Statement",
+        "quote": "The package has not been publicly deposited and has no public DOI."
+      },
+      "confidence": 5,
+      "competence_basis": "explicit availability statement and successful inspection of the supplied local scientific files.",
+      "cost_scope": {
+        "kind": "other",
+        "locator": "Existing version 0.20.0 code/data package and Data Availability Statement",
+        "surface_id": "research_package_access"
+      },
+      "consequence_if_unaddressed": {
+        "code": "method_reproducibility_unresolved",
+        "target": {
+          "kind": "dataset",
+          "locator": "iv_diffusion_research_review_v0.20.0.zip"
+        }
+      },
+      "target_section": "iv_diffusion_research_review_v0.20.0.zip",
+      "suggested_action": "Before publication, deposit the existing versioned package at a stable public location or state a durable access arrangement and its terms; update only the dataavailability declaration within B0062. Preserve the version, hashes, and reproduction-command linkage. A DOI is an option, not a verified venue requirement. Editorial obligation basis: Required before publication because review-stage local access does not supply later readers with a durable route to the research package.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "The Data Availability Statement supplies a durable route and any access terms for the specific versioned code/data package, retaining its version and integrity/reproduction references; an author assertion of a deposit alone is not evidence of access.",
+      "proposed_targets": [
+        {
+          "block_id": "B0062",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV-R3-W1",
+      "source_refs": [
+        {
+          "seat": "R3",
+          "channel": "finding",
+          "ordinal": 1,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "Add a plain-language interpretation of conditional affinity and rank",
+      "reviewer": "R3",
+      "sub_claim_ids": [
+        "SC-R3-W1"
+      ],
+      "obligation_class": "should_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "equation",
+        "locator": "Section 4.1, Equations (7)–(8) and their accompanying explanation, manuscript p. 6."
+      },
+      "confidence": 4,
+      "competence_basis": "interpretation of finite-field linear maps for mathematically trained adjacent-field readers.",
+      "cost_scope": {
+        "kind": "sentence",
+        "locator": "Section 4.1, conditional rank explanation"
+      },
+      "consequence_if_unaddressed": {
+        "code": "interpretive_ambiguity_remains",
+        "target": {
+          "kind": "section",
+          "locator": "Section 4.1, conditional affinity and rank"
+        }
+      },
+      "target_section": "Section 4.1, conditional affinity and rank",
+      "suggested_action": "Insert a brief explanation after the rank/mean equations: with the other inputs fixed, XOR-affinity is a constant output offset plus a binary-linear combination, rank counts independent output-change directions generated by input bits, and mean changed-bit count measures a different property. Preserve the equations, proof, and conditional scope. Editorial obligation basis: Suggested to make the central rank-versus-mean example accessible across disciplines; the proof and central argument remain assessable in the source review.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "Adjacent-field readers are told the operational meanings of conditional XOR-affinity, rank, and mean singleton changed-bit count, including why equal means can accompany different ranks.",
+      "proposed_targets": [
+        {
+          "block_id": "B0037",
+          "allowed_operations": [
+            "insert_after"
+          ]
+        }
+      ]
+    }
+  ],
+  "total_items": 6,
+  "obligation_counts": {
+    "must_fix": 3,
+    "should_fix": 3,
+    "consider": 0
+  },
+  "editorial_decision": "Minor Revision",
+  "consensus_summary": "CONSENSUS-4 applies only to the four non-DA reviewers' agreement on the contribution's appropriately local diagnostic scope (EIC S1-S2, R1 S3-S5, R2 S1/S6, R3 S2-S3). Each of the six revision findings is separately SINGLE-VERIFIER: EIC W1-W2, R1 W1-W3, and R3 W1. Silence from another role is neither corroboration nor disagreement. No conflict in existence, remedy, or severity was identified; DA recorded no Critical or Major issue. The decision comes solely from contract condition F5, not from this descriptive consensus label.",
+  "dissenting_opinions": []
+}

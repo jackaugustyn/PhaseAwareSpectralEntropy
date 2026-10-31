@@ -1,0 +1,1082 @@
+{
+  "protocol_sha256": "88a8b1812f32af7904c6a5b656350a047bac87804ca7209a551ae99360a6f6b1",
+  "source_sha256": {
+    "experiments/stream_rounds_study/arx_round_transition.py": "961f1ff5af5be164e5e8283e5333a943b385312a625b4a16bd6608d27082367e",
+    "experiments/stream_rounds_study/arx_feedforward_study.py": "84cb7ad9d2f0ae5c5fcc81b4a5b08a51f53569c204a7d193aea67cb987cb22a2",
+    "experiments/stream_rounds_study/arx_mechanism_analysis.py": "6cdd3563617fcbce3aa3419d13989efef75451aa82b426aa9d9365bfef54f3fe",
+    "experiments/stream_rounds_study/arx_resolution_validation.py": "cc57c76ef2e61143bf230e0b6177bbec5bed3b3bfb177526b4f915191641854b",
+    "experiments/stream_rounds_study/analyze_arx_resolution.py": "348ab790ae28e553a7ca08abd814cd1ef7542687450b968cb93057227ab6244d",
+    "experiments/stream_rounds_study/publication_study.py": "f4e115a80062f419d5b988ba475ad0c5843203c58b48c265a42a71fe2b44c26b",
+    "experiments/stream_rounds_study/literature_mask_followup.py": "458507268b8b8d91bed948bef6aec54de6b3a11b5bb67c5d684995f3b906812e",
+    "experiments/stream_rounds_study/extension_stream_cores.py": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5",
+    "src/spectral_crypto_analyzer/primitives.py": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+  },
+  "key_indices": [
+    1400,
+    1401,
+    1402,
+    1403,
+    1404,
+    1405,
+    1406,
+    1407,
+    1408,
+    1409,
+    1410,
+    1411,
+    1412,
+    1413,
+    1414,
+    1415,
+    1416,
+    1417,
+    1418,
+    1419,
+    1420,
+    1421,
+    1422,
+    1423,
+    1424,
+    1425,
+    1426,
+    1427,
+    1428,
+    1429,
+    1430,
+    1431,
+    1432,
+    1433,
+    1434,
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440,
+    1441,
+    1442,
+    1443,
+    1444,
+    1445,
+    1446,
+    1447,
+    1448,
+    1449,
+    1450,
+    1451,
+    1452,
+    1453,
+    1454,
+    1455,
+    1456,
+    1457,
+    1458,
+    1459,
+    1460,
+    1461,
+    1462,
+    1463,
+    1464,
+    1465,
+    1466,
+    1467,
+    1468,
+    1469,
+    1470,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475,
+    1476,
+    1477,
+    1478,
+    1479
+  ],
+  "seed": 20261031,
+  "families": [
+    "ChaCha20",
+    "Salsa20"
+  ],
+  "rounds": [
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    "add",
+    "none",
+    "xor"
+  ],
+  "panel": [
+    {
+      "name": "aligned_00",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        39
+      ]
+    },
+    {
+      "name": "aligned_01",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "bits_msb_first": [
+        6,
+        38
+      ]
+    },
+    {
+      "name": "aligned_02",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "bits_msb_first": [
+        5,
+        37
+      ]
+    },
+    {
+      "name": "aligned_03",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "bits_msb_first": [
+        4,
+        36
+      ]
+    },
+    {
+      "name": "aligned_04",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "bits_msb_first": [
+        3,
+        35
+      ]
+    },
+    {
+      "name": "aligned_05",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "bits_msb_first": [
+        2,
+        34
+      ]
+    },
+    {
+      "name": "aligned_06",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "bits_msb_first": [
+        1,
+        33
+      ]
+    },
+    {
+      "name": "aligned_07",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "bits_msb_first": [
+        0,
+        32
+      ]
+    },
+    {
+      "name": "aligned_08",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "bits_msb_first": [
+        15,
+        47
+      ]
+    },
+    {
+      "name": "aligned_09",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "bits_msb_first": [
+        14,
+        46
+      ]
+    },
+    {
+      "name": "aligned_10",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "bits_msb_first": [
+        13,
+        45
+      ]
+    },
+    {
+      "name": "aligned_11",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "bits_msb_first": [
+        12,
+        44
+      ]
+    },
+    {
+      "name": "aligned_12",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "bits_msb_first": [
+        11,
+        43
+      ]
+    },
+    {
+      "name": "aligned_13",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "bits_msb_first": [
+        10,
+        42
+      ]
+    },
+    {
+      "name": "aligned_14",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "bits_msb_first": [
+        9,
+        41
+      ]
+    },
+    {
+      "name": "aligned_15",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          15
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        8,
+        40
+      ]
+    },
+    {
+      "name": "aligned_16",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "bits_msb_first": [
+        23,
+        55
+      ]
+    },
+    {
+      "name": "aligned_17",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "bits_msb_first": [
+        22,
+        54
+      ]
+    },
+    {
+      "name": "aligned_18",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "bits_msb_first": [
+        21,
+        53
+      ]
+    },
+    {
+      "name": "aligned_19",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          19
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "bits_msb_first": [
+        20,
+        52
+      ]
+    },
+    {
+      "name": "aligned_20",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "bits_msb_first": [
+        19,
+        51
+      ]
+    },
+    {
+      "name": "aligned_21",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          21
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "bits_msb_first": [
+        18,
+        50
+      ]
+    },
+    {
+      "name": "aligned_22",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          22
+        ],
+        [
+          1,
+          22
+        ]
+      ],
+      "bits_msb_first": [
+        17,
+        49
+      ]
+    },
+    {
+      "name": "aligned_23",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          23
+        ]
+      ],
+      "bits_msb_first": [
+        16,
+        48
+      ]
+    },
+    {
+      "name": "aligned_24",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          24
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "bits_msb_first": [
+        31,
+        63
+      ]
+    },
+    {
+      "name": "aligned_25",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          25
+        ],
+        [
+          1,
+          25
+        ]
+      ],
+      "bits_msb_first": [
+        30,
+        62
+      ]
+    },
+    {
+      "name": "aligned_26",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          26
+        ]
+      ],
+      "bits_msb_first": [
+        29,
+        61
+      ]
+    },
+    {
+      "name": "aligned_27",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "bits_msb_first": [
+        28,
+        60
+      ]
+    },
+    {
+      "name": "aligned_28",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          28
+        ],
+        [
+          1,
+          28
+        ]
+      ],
+      "bits_msb_first": [
+        27,
+        59
+      ]
+    },
+    {
+      "name": "aligned_29",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          29
+        ],
+        [
+          1,
+          29
+        ]
+      ],
+      "bits_msb_first": [
+        26,
+        58
+      ]
+    },
+    {
+      "name": "aligned_30",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          30
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        25,
+        57
+      ]
+    },
+    {
+      "name": "aligned_31",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "bits_msb_first": [
+        24,
+        56
+      ]
+    },
+    {
+      "name": "offset_00_07",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        32
+      ]
+    },
+    {
+      "name": "offset_00_15",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        40
+      ]
+    },
+    {
+      "name": "offset_00_30",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        57
+      ]
+    },
+    {
+      "name": "offset_00_31",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        56
+      ]
+    },
+    {
+      "name": "within_00_15",
+      "kind": "within",
+      "word_bits_lsb": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        39,
+        40
+      ]
+    },
+    {
+      "name": "within_07_30",
+      "kind": "within",
+      "word_bits_lsb": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        32,
+        57
+      ]
+    }
+  ],
+  "operation_checkpoints": [
+    "round3_column_qr_15_3_7_11_before_c",
+    "round3_column_qr_15_3_7_11_after_c"
+  ],
+  "raw_axes": {
+    "singleton": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "mask_msb_first",
+      "base",
+      "block512",
+      "word32"
+    ],
+    "d2": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "panel_pair",
+      "base",
+      "block512",
+      "word32"
+    ],
+    "d2_word7": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "panel_pair",
+      "base",
+      "block512"
+    ],
+    "salsa3_checkpoint_d2_word7": [
+      "key",
+      "named_operation_checkpoint",
+      "within_second_word_pair",
+      "base",
+      "block512"
+    ]
+  },
+  "raw_per_key_shapes": {
+    "observed_singleton": [
+      2,
+      3,
+      3,
+      64,
+      4,
+      16,
+      16
+    ],
+    "oracle_singleton": [
+      2,
+      3,
+      3,
+      64,
+      4,
+      16,
+      16
+    ],
+    "observed_d2": [
+      2,
+      3,
+      3,
+      38,
+      4,
+      16,
+      16
+    ],
+    "oracle_d2": [
+      2,
+      3,
+      3,
+      38,
+      4,
+      16,
+      16
+    ],
+    "observed_d2_word7": [
+      2,
+      3,
+      3,
+      38,
+      4,
+      16
+    ],
+    "oracle_d2_word7": [
+      2,
+      3,
+      3,
+      38,
+      4,
+      16
+    ],
+    "salsa3_checkpoint_d2_word7": [
+      2,
+      2,
+      4,
+      16
+    ]
+  },
+  "reference": "Separate R_r(v) by round; shared across finalizations within a round",
+  "numpy_version": "1.22.0",
+  "python_version": "3.10.12",
+  "status": "completed_independent_followup",
+  "generation_manifest_sha256": "c3097fcf6ba004927e9f45c9e60e537543ed447c22781f73acf58729c7ca8478",
+  "raw_sha256": "5e8b4ea9a39419bc8e173fc53a5291d1c0420bf65af32b0fc064e3279278de6b",
+  "power_estimator": "Q=4 full Fourier power vectors per singleton mask, then average mask-level statistics",
+  "window": "full8192",
+  "segment_bits": [
+    32,
+    64,
+    128
+  ],
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 2026103106,
+    "unit": "whole master-key pair",
+    "interval": "pointwise percentile 95%; identical draws across settings"
+  },
+  "sign_flip": {
+    "replicates": 100000,
+    "seed": 2026103105,
+    "unit": "whole master-key pair",
+    "statistic": "absolute mean",
+    "roundoff_tolerance": "1e-12 * max(1,abs(mean))",
+    "pvalue": "(extremes+1)/(replicates+1)",
+    "holm_family": [
+      "T1",
+      "T2"
+    ]
+  },
+  "planned_endpoints": [
+    "Salsa20 within-x7 word7 none DeltaA3 minus DeltaA2",
+    "Salsa20 add DeltaF512(3) minus DeltaF512(2) at 128 bits"
+  ],
+  "d2_groups": {
+    "aligned_all32": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "aligned_nonmsb31": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "offset4": [
+      32,
+      33,
+      34,
+      35
+    ],
+    "within2": [
+      36,
+      37
+    ]
+  },
+  "structural_checks": {
+    "observed_ChaCha20_d2_none_equals_xor_all_words": {
+      "comparisons": 9338880,
+      "violations": 0
+    },
+    "oracle_ChaCha20_d2_none_equals_xor_all_words": {
+      "comparisons": 9338880,
+      "violations": 0
+    },
+    "observed_Salsa20_d2_none_equals_xor_all_words": {
+      "comparisons": 9338880,
+      "violations": 0
+    },
+    "oracle_Salsa20_d2_none_equals_xor_all_words": {
+      "comparisons": 9338880,
+      "violations": 0
+    },
+    "salsa2_within_second_word_word7_zero_all_variants": {
+      "comparisons": 30720,
+      "violations": 0
+    },
+    "salsa3_checkpoint_before_c_equals_round2_word7": {
+      "comparisons": 527360,
+      "violations": 0
+    },
+    "salsa3_checkpoint_after_c_equals_round3_word7": {
+      "comparisons": 527360,
+      "violations": 0
+    },
+    "salsa3_within_second_word_d2_before_c_zero": {
+      "comparisons": 10240,
+      "violations": 0
+    }
+  },
+  "operation_checkpoint_counts": {
+    "round3_column_qr_15_3_7_11_before_c": {
+      "word_comparisons": 10240,
+      "zero_words": 10240,
+      "nonzero_words": 0
+    },
+    "round3_column_qr_15_3_7_11_after_c": {
+      "word_comparisons": 10240,
+      "zero_words": 0,
+      "nonzero_words": 10240
+    }
+  },
+  "output_rows": {
+    "singleton_per_key": 4320,
+    "transition_per_key": 4320,
+    "d2_profiles_per_key": 92160,
+    "planned": 2
+  },
+  "output_sha256": {
+    "arx_round_transition_planned_tests.csv": "91c426e20551d60dea35996510997781546e3ee431dee9d94533f59be91ca887",
+    "d2_profiles_per_key.csv": "a85f917cd12a2396d1e9984df7e2651583446d6374608abdd92b10b1f8182145",
+    "d2_profiles_summary.csv": "89f688449c31533fcfdf96b5f6a2a9cecbbe46e5cbd63e3e45649526052a74de",
+    "d2_word7_pairs_per_key.csv": "01d7a17f259ce01e23b2b49092fcd8737c22261423aa735a5d2f9a0d1b1cee21",
+    "d2_word7_pairs_summary.csv": "e1c93dadeb7ba1706f584281cd888ceecb22135ccd97609e210b8de3ee397bed",
+    "interaction_per_key.csv": "fd48d6a2ab334b3715c2f932ba5d5f4937a5037da6c32f0448a6ed4527f6ad9e",
+    "interaction_summary.csv": "ea69695b55265adb5f0799452052f2e03b1a9a1bc0ab964e30fbea9ef5a92766",
+    "operation_checkpoint_per_key.csv": "1a3d95f7f12d62812c9ab2f1d31ffb2765345f740dd7f04d990a4c29447376b9",
+    "operation_checkpoint_summary.csv": "aa3bde79626653efcbf9c17d3a6989c590ab926385a3d587073668a695f089ff",
+    "singleton_per_key.csv": "751c9f36659676f01664d46a631ce26de2e2cfd3659312bd86a70b973bc2ecfd",
+    "singleton_summary.csv": "762979dc9be6c912567fedefcc6f22af14ae60e89418f86400a6b67c7cdc0fae",
+    "transition_per_key.csv": "e25c2bd064c2b15d6a7d51ac6e3ac56f2947ea7506a253bc7b36877933da9196",
+    "transition_summary.csv": "6ab4864f9141bc3150af87f521a0415848c925520317a0cd65653ea6096a600e",
+    "within_word_per_key.csv": "1bcf9b4e1b256cac8290e7ef9dd81803c43efface31aa43468aa22bdcfe19c27",
+    "within_word_summary.csv": "7f2a5911a0f79fa17eec1fda098b57bc77bb0fc84975359d997c3559791aeff4"
+  }
+}

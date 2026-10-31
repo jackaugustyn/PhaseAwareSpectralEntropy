@@ -1,0 +1,155 @@
+# Paired feed-forward interventions and mixed nonce derivatives
+
+Fixed locally on 2026-10-30 after the earlier ARX experiments and an
+algebraic analysis, before generating any observations from this cohort.
+This is a prospective follow-up protocol, not a public preregistration.
+Record its SHA-256 before generation. Do not edit after generation starts.
+
+## Questions and cohort
+
+1. Does the Salsa20/2 nonce-word entropy gap persist without feed-forward,
+   and how does modular feed-forward change the gaps in both ARX cores?
+2. Does modular feed-forward introduce mixed nonce-word interactions in
+   Salsa20/2 output word 7 where the unfinalized and XOR-finalized core have
+   an exactly zero mixed derivative?
+
+- Use 80 new master indices 1000--1079 and seed 20261030 with
+  publication_study._key_material. Derive per-family 256-bit cipher keys and
+  reference secrets by BLAKE2b with domains ff-intervention-key-v1:<family>:
+  and ff-intervention-secret-v1:<family>:, followed by master material.
+- Derive four shared 64-bit base nonces from SHAKE256 of
+  ff-intervention-nonces-v1: followed by master material (32 output bytes).
+  Family strings are ChaCha20 and Salsa20. ChaCha uses 0^32 || nonce; Salsa
+  uses the shared nonce. Keys are independently derived across families.
+- Generate 8192 output bits (16 blocks, counters 0--15) at 2 and 4 rounds.
+  Four rounds is descriptive. Keep identical keys, nonce vertices, counters,
+  and working states across the three finalization interventions.
+- Only separate smoke indices 1080--1081 may be used for implementation
+  checks, outside the final data directory. Do not select masks or endpoints
+  using results from either smoke or final cohorts.
+
+## Interventions and matched reference
+
+Let X be the standard 16-word initial state and W_r(X) the working state
+after r core rounds, before feed-forward. Word arithmetic is modulo 2^32.
+Define three emitted states:
+  add:  W_r(X) + X    (the standard output construction),
+  none: W_r(X),
+  xor:  W_r(X) XOR X.
+The latter two are experimental interventions, not standard cipher variants.
+The generator may recover W_r by subtracting X from the existing checked
+standard output. Independently verify that recovery against a separately
+instrumented working-state implementation; do not modify old core files.
+
+For each family, key and round, generate a random-reference working stream
+R(v) with SHAKE256 using domain ff-intervention-oracle-v1:<family>: followed
+by the 32-byte reference secret, rounds as uint16 big endian, and the
+8-byte shared nonce. Take 1024 output bytes, interpreted as little-endian
+32-bit words. Reuse R(v) at every repeated vertex. Apply each finalization
+to R(v) with the SAME actual initial states X as for the cipher. Thus the
+reference reproduces coupling between interventions, not merely separate
+uniform marginals. It is a computational random-function reference for the
+working output, not a claim that the real permutation is a random function.
+
+## Singleton and second-order masks
+
+- Retain all 64 one-bit nonce changes. Stored global positions use the
+  existing MSB-first byte convention. For nonce word n in {0,1} and its
+  least-significant-bit-first bit b, global position is
+  32*n + 8*floor(b/8) + 7 - (b mod 8).
+- The fixed second-order panel contains 38 unordered mask pairs:
+  * 32 aligned cross-word pairs ((word0,b),(word1,b)), b=0,...,31;
+  * four offset cross-word pairs ((word0,0),(word1,b)), b=7,15,30,31;
+  * two within-second-word controls ((word1,0),(word1,15)) and
+    ((word1,7),(word1,30)).
+- For each pair a,b, compute the four-vertex XOR
+  D2 Z(v) = Z(v) XOR Z(v XOR a) XOR Z(v XOR b) XOR Z(v XOR a XOR b),
+  BEFORE computing Hamming weights. All shared vertices reuse their stream.
+  Each base has 1+64+38 distinct vertices; check that all four 103-vertex
+  sets are disjoint. Do not infer D2 from first-order Hamming weights.
+- Record HW per 32-bit output word for every singleton and D2 observation,
+  for both the cipher and reference, all variants and rounds. Retain the
+  actual uint32 D2 values of output word 7, and Salsa20/2 singleton uint32
+  differences of output word 7, to audit cancellations beyond summary HW.
+  Retain the Salsa20/2 C values described below for each base and its 32
+  first-word singleton variants. Other emitted-word invariants may be
+  checked during generation and recorded as deterministic violation counts.
+
+## Four planned inferential endpoints (one Holm family)
+
+Use the complete 8192-bit window and 128-bit segments at two rounds.
+For each singleton mask, pool the Q=4 base-nonce Fourier POWERS before
+normalization, exactly as in the previous complete mask scan. Let G_v be
+the second-minus-first nonce-word gap of cipher-minus-reference full-spectrum
+entropy H_MP for finalization v, averaged over 32 matched bit offsets.
+
+The four two-sided whole-key mean endpoints are:
+  E1: Salsa20 G_none;
+  E2: Salsa20 (G_add - G_none);
+  E3: ChaCha20 (G_add - G_none);
+  E4: Salsa20 mixed output-word-7 interaction contrast J.
+
+For E4, for each finalization v let A_v be the mean HW of D2 output word 7
+over the 31 aligned cross-word pairs b=0,...,30, four bases and 16 blocks.
+Define J = (A_add(cipher)-A_none(cipher))
+           - (A_add(reference)-A_none(reference)).
+Bit 31 is excluded from this mean by its exact cancellation identity, but
+is retained and reported in the fixed panel. E4 tests a quantitative paired
+intervention effect relative to the coupled reference; algebraic zeros
+themselves are not significance tests. Expect J positive, but report the
+observed sign; E1--E3 are two-sided without a prespecified effect magnitude
+or direction. Do not interpret entropy-gap signs as cipher quality.
+
+Use 100000 whole-key sign flips (seed 2026103001), plus-one two-sided p
+values, and Holm correction across E1--E4. Use 5000 whole-key percentile
+bootstrap resamples (seed 2026103002) for pointwise 95% intervals. Use the
+same resampled key indices across all paired variants, families and masks.
+The independent replication unit is the master key pair, not a nonce,
+mask, block, word, or deterministic equality check.
+
+## Descriptive results and exact checks
+
+- At both rounds and widths 32/64/128, report G, its paired add-minus-none
+  and add-minus-xor changes, and the standard DC/AC and block-power summaries.
+  Report direct 16-word mean-HW profiles by input nonce word and finalization.
+  Do not select the best resolution after observing the new data.
+- Report D2 output-word HW profiles for the aligned and offset cross-word
+  panels and within-word controls, and per-pair output-word-7 HW. These are
+  descriptive; no additional individual-mask significance tests are planned.
+  In particular G_xor, G_add-G_xor and four-round comparisons are descriptive.
+- For ANY rounds and either core, the initial state is XOR-affine in nonce,
+  hence D2 of none and xor finalizations is bit-for-bit identical. Check
+  this on all output words and also on the coupled reference during generation.
+- At two Salsa rounds, W_7 = u XOR C, u=x7, and C is independent of u.
+  Compute C from the unfinalized state for the base and first-word variants.
+  Singletons of x7 give exactly HW=1 in output 7 for none, exactly HW=0
+  for xor, and exactly HW=0 for add at b=31.
+- For fixed C, f_C(u)=((u XOR C)+u) mod2^32 equals C+2(u AND NOT C).
+  It is XOR-affine in u: f_C(u)=C XOR XOR_b[u_b L_b(C)], where
+  L_b(C)=f_C(2^b) XOR f_C(0). Carry intervals associated with different
+  zero bits of C are disjoint. Therefore the within-x7 D2 controls have
+  output7=0 under all three finalizations, including add.
+- For mixed a in x6 and bit b in x7, output7 D2 is zero for none and xor;
+  for add it equals L_b(C(v XOR a)) XOR L_b(C(v)). For b=31 it is zero.
+  Check these uint32 identities and singleton predictions on all applicable
+  observations. They predict exact derivatives conditional on the working
+  state, not a new attack or a population distribution for C.
+- Addition of a fixed initial word is not XOR-affine, so additive
+  feed-forward may alter D2 beyond the two nonce positions. Do not infer
+  that all mixed interactions are localized to output word 7.
+
+## Archiving and interpretation
+
+Write only to a new data/arx_feedforward_results directory. Save the full
+raw arrays, per-key summaries, planned test table, descriptive tables,
+structural check counts, seeds, software versions, source hashes and the
+protocol hash. Per-key checkpoints may support exact, fingerprint-checked
+resume. Audit the results with an independent core evaluator and statistical
+implementation. Preserve earlier data, protocols, source hashes and the
+user's current literature additions.
+
+The experiment follows hypotheses suggested by old data and algebra. It
+tests controlled changes to output construction and mixed nonce derivatives,
+not a full-round vulnerability, a calibrated detector advantage, or the
+novelty of second-order differential cryptanalysis itself. Relate it to the
+newly supplied literature without asserting unverified priority.

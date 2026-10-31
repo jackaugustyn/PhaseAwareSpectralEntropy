@@ -1,0 +1,119 @@
+{
+  "schema_version": "revision-roadmap/1.0",
+  "revision_round": 1,
+  "base_draft_sha256": "9cf702dd74ac412e5d2bb8fc88999960fae5087b05e072e3172e690f3bbd02e6",
+  "block_manifest_sha256": "385998f2360012cf9d212f5ed82f89cccb3fb6e74fd4cf8fb7129fde4321ddc7",
+  "items": [
+    {
+      "id": "REV-R1-W1",
+      "source_refs": [
+        {
+          "seat": "R1",
+          "channel": "finding",
+          "ordinal": 1,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "The main endpoint table should carry the calibration qualification",
+      "reviewer": "R1",
+      "sub_claim_ids": [
+        "SC-R1-W1"
+      ],
+      "obligation_class": "must_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "table",
+        "locator": "Table 2, Planned scan, feed-forward, and round-transition endpoints, Holm p column and caption."
+      },
+      "confidence": 5,
+      "competence_basis": "direct comparison of the table with the stated random-sign null assumptions.",
+      "cost_scope": {
+        "kind": "sentence",
+        "locator": "Table 2, calibration column heading and caption"
+      },
+      "consequence_if_unaddressed": {
+        "code": "interpretive_ambiguity_remains",
+        "target": {
+          "kind": "table",
+          "locator": "Table 2, Holm calibration heading and caption"
+        }
+      },
+      "target_section": "Table 2, Holm calibration heading and caption",
+      "suggested_action": "Relabel the Holm p column as Holm-adjusted sign-flip calibration and add a short caption qualification referring to null sign-invariance and its assumption-dependent interpretation. Preserve the existing endpoints and values. Editorial obligation basis: Required because the central table must communicate the assumptions needed to interpret its inferential values when read on its own.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "Table 2 identifies the values as Holm-adjusted sign-flip calibrations and explicitly states their dependence on null sign-invariance, consistently with Methods.",
+      "proposed_targets": [
+        {
+          "block_id": "B0043",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV-R1-W2",
+      "source_refs": [
+        {
+          "seat": "R1",
+          "channel": "finding",
+          "ordinal": 2,
+          "subclaim_ordinal": 0
+        }
+      ],
+      "description": "The bootstrap interval construction is omitted from the article",
+      "reviewer": "R1",
+      "sub_claim_ids": [
+        "SC-R1-W2"
+      ],
+      "obligation_class": "must_fix",
+      "severity": "minor",
+      "evidence_anchor": {
+        "anchor_type": "absence",
+        "locator": "Materials and Methods, Paired Interventions and Inference and Frozen Empirical Spectrum Models",
+        "absence_scope": "the bootstrap interval construction",
+        "check_performed": "Checked the complete Methods text, Table 2 caption, and both figure captions."
+      },
+      "confidence": 5,
+      "competence_basis": "the manuscript names the resampling unit and counts while the inspected code supplies the omitted interval rule.",
+      "cost_scope": {
+        "kind": "sentence",
+        "locator": "Sections 3.3 and 3.4, bootstrap interval descriptions"
+      },
+      "consequence_if_unaddressed": {
+        "code": "method_reproducibility_unresolved",
+        "target": {
+          "kind": "section",
+          "locator": "Materials and Methods, bootstrap interval construction"
+        }
+      },
+      "target_section": "Materials and Methods, bootstrap interval construction",
+      "suggested_action": "State that the bootstrap limits use the 0.025 and 0.975 quantiles (the 2.5th and 97.5th percentiles) of whole-key resampled means, including spectral-distance intervals. Retain the prediction intervals' conditioning on the fixed fit and Monte Carlo estimate. Editorial obligation basis: Required so the article identifies the interval construction used by the existing analysis, without requiring readers to infer it from code.",
+      "consensus_level": "SINGLE-VERIFIER",
+      "verification_criteria": "Methods explicitly identifies the 95% percentile-bootstrap limits as the 0.025 and 0.975 quantiles (the 2.5th and 97.5th percentiles) of the bootstrap distributions for the reported whole-key means and spectral distances, while retaining the existing conditional-uncertainty qualification.",
+      "proposed_targets": [
+        {
+          "block_id": "B0024",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        },
+        {
+          "block_id": "B0030",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ]
+    }
+  ],
+  "total_items": 2,
+  "obligation_counts": {
+    "must_fix": 2,
+    "should_fix": 0,
+    "consider": 0
+  },
+  "editorial_decision": "Minor Revision",
+  "consensus_summary": "Author-selected scope of the existing review: summary points 1 and 2 map to REV-R1-W1 and REV-R1-W2. Both findings remain Minor and SINGLE-VERIFIER. This subset is a revision work record, not a new editorial decision. The other four original items remain unselected and unresolved; no author rejection or future decision is inferred.",
+  "dissenting_opinions": []
+}

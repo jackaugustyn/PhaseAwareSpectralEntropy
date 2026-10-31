@@ -1,0 +1,45 @@
+### Acronym check (advisory; no reply needed)
+Coverage: body (partial)
+Not in this input: English abstract, Chinese abstract.
+Not checked:
+- Body, line 57: XOR (the initials before its parentheses do not spell it)
+- Body, line 171: MSB (the initials before its parentheses do not spell it)
+- Body, line 173: LSB (the initials before its parentheses do not spell it)
+
+| Scope | Line | Rule | Acronym | Uses |
+|---|---|---|---|---|
+| Body | 4 | Defined after first use | IV | 8 |
+| Body | 57 | Not defined | OR | 1 |
+| Body | 59 | Not defined | ARX | 6 |
+| Body | 83 | Not defined | BY | 1 |
+| Body | 83 | Not defined | CC | 1 |
+| Body | 119 | Not defined | NIST | 3 |
+| Body | 184 | Not defined | ZK | 2 |
+| Body | 208 | Not defined | HMP | 6 |
+| Body | 215 | Not defined | AC | 11 |
+| Body | 215 | Not defined | DC | 3 |
+| Body | 219 | Not defined | HnoDC | 5 |
+| Body | 237 | Not defined | PB | 1 |
+| Body | 237 | Not defined | PT | 1 |
+| Body | 815 | Not defined | HC | 1 |
+| Body | 815 | Not defined | MICKEY | 1 |
+| Body | 903 | Not defined | README | 1 |
+| Body | 915 | Not defined | IETF | 1 |
+| Body | 915 | Not defined | RFC | 2 |
+| Body | 937 | Not defined | ID | 1 |
+| Body | 937 | Not defined | SASC | 1 |
+| Body | 945 | Not defined | DES | 1 |
+| Body | 947 | Not defined | CRYPTO | 3 |
+| Body | 951 | Not defined | FSE | 2 |
+| Body | 955 | Not defined | IACR | 2 |
+| Body | 975 | Not defined | IEICE | 1 |
+| Body | 979 | Not defined | IEEE | 5 |
+| Body | 1029 | Not defined | SP | 1 |
+| Body | 1035 | Not defined | EEG | 1 |
+| Body | 1061 | Not defined | BLAKE2 | 1 |
+| Body | 1065 | Not defined | SHA | 1 |
+| Body | 1067 | Not defined | FIPS | 1 |
+| Body | 1067 | Not defined | PUB | 1 |
+| Body | 1087 | Not defined | KATAN | 1 |
+| Body | 1089 | Not defined | SAC | 1 |
+| Body | 1093 | Not defined | PC | 1 |

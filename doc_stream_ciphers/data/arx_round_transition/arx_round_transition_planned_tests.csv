@@ -1,0 +1,3 @@
+endpoint,label,family,round_before,round_after,n_keys,mean,ci95_low,ci95_high,unit,sign_flip_extremes,replicates,p_two_sided_plus_one,p_holm_two,cohort
+T1,Salsa20 within-x7 word7 none DeltaA3 minus DeltaA2,Salsa20,2,3,80,15.8193359375,15.72011474609375,15.92031494140625,changed_bits_per_output_word,0,100000,9.99990000099999e-06,1.999980000199998e-05,independent_followup
+T2,Salsa20 add DeltaF512(3) minus DeltaF512(2) at 128 bits,Salsa20,2,3,80,-0.5228689903608104,-0.5255938704600406,-0.5202001169841608,dimensionless_power_fraction,0,100000,9.99990000099999e-06,1.999980000199998e-05,independent_followup

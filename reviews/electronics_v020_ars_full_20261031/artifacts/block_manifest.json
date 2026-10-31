@@ -1,0 +1,526 @@
+{
+  "manifest_format_version": "1.0",
+  "base_draft_hash": "9cf702dd74ac",
+  "blocks": [
+    {
+      "block_id": "B0001",
+      "old_hash": "49884bcf0382",
+      "first_line_excerpt": "% LaTeX support: latex@mdpi.com"
+    },
+    {
+      "block_id": "B0002",
+      "old_hash": "8c9d1f185465",
+      "first_line_excerpt": "\\Title{Block-Position Structure in Reduced ChaCha20 and Salsa20: Experimental D\u2026"
+    },
+    {
+      "block_id": "B0003",
+      "old_hash": "4ad5e3e28998",
+      "first_line_excerpt": "\\abstract{Early nonce responses reflect the round function, output finalization\u2026"
+    },
+    {
+      "block_id": "B0004",
+      "old_hash": "59436617ae6b",
+      "first_line_excerpt": "\\begin{document}"
+    },
+    {
+      "block_id": "B0005",
+      "old_hash": "5d5010d029e3",
+      "first_line_excerpt": "Nonce diffusion measurements combine the round function, feed-forward, and outp\u2026"
+    },
+    {
+      "block_id": "B0006",
+      "old_hash": "12837f0b7d2a",
+      "first_line_excerpt": "We hold the key fixed, perturb the public initialization vector (IV), here the \u2026"
+    },
+    {
+      "block_id": "B0007",
+      "old_hash": "3e3219ab2289",
+      "first_line_excerpt": "% Condensed review; existing citation coverage retained without new source clai\u2026"
+    },
+    {
+      "block_id": "B0008",
+      "old_hash": "dfd51269f7cb",
+      "first_line_excerpt": "Salsa20 and ChaCha combine ARX rounds with modular feed-forward to produce 512-\u2026"
+    },
+    {
+      "block_id": "B0009",
+      "old_hash": "26af0847cd88",
+      "first_line_excerpt": "Chosen-IV methods establish the fixed-key, related-input setting~\\citep{englund\u2026"
+    },
+    {
+      "block_id": "B0010",
+      "old_hash": "3a922e385003",
+      "first_line_excerpt": "Avalanche and bit-independence tests~\\citep{webster1986,hernandez2005,madarro20\u2026"
+    },
+    {
+      "block_id": "B0011",
+      "old_hash": "5970599fc344",
+      "first_line_excerpt": "Our contribution connects the conditional word-7 rank and mean-singleton identi\u2026"
+    },
+    {
+      "block_id": "B0012",
+      "old_hash": "4e74146fb0f5",
+      "first_line_excerpt": "\\section{Materials and Methods}"
+    },
+    {
+      "block_id": "B0013",
+      "old_hash": "2ded14ca1a7a",
+      "first_line_excerpt": "Each principal cohort has 80 matched pairs of separately derived 256-bit cipher\u2026"
+    },
+    {
+      "block_id": "B0014",
+      "old_hash": "2ce818dbe37b",
+      "first_line_excerpt": "Table~\\ref{tab:cohorts} separates the cohorts. Alignment uses singleton masks a\u2026"
+    },
+    {
+      "block_id": "B0015",
+      "old_hash": "ce4098454351",
+      "first_line_excerpt": "\\begin{table}[t]"
+    },
+    {
+      "block_id": "B0016",
+      "old_hash": "4549414010ca",
+      "first_line_excerpt": "\\subsection{Direct and Spectral Measurements}\\label{sec:spectral}"
+    },
+    {
+      "block_id": "B0017",
+      "old_hash": "47a1f02fd1cf",
+      "first_line_excerpt": "For key $K$, nonce $v$, and mask $\\delta$, divide $Z_K(v)\\oplus Z_K(v\\oplus\\del\u2026"
+    },
+    {
+      "block_id": "B0018",
+      "old_hash": "d8f5c7862628",
+      "first_line_excerpt": "Using the complete two-sided discrete Fourier transform (DFT), average powers b\u2026"
+    },
+    {
+      "block_id": "B0019",
+      "old_hash": "44fbf3c2070d",
+      "first_line_excerpt": "For cipher--reference comparisons, compute the within-key contrast $\\Delta S=S_\u2026"
+    },
+    {
+      "block_id": "B0020",
+      "old_hash": "3f9f10e27dfa",
+      "first_line_excerpt": "Descriptive diagnostics on alignment streams measure mean HW, four-position mea\u2026"
+    },
+    {
+      "block_id": "B0021",
+      "old_hash": "53143dd902e4",
+      "first_line_excerpt": "\\subsection{Paired Interventions and Inference}\\label{sec:interventions}"
+    },
+    {
+      "block_id": "B0022",
+      "old_hash": "75ba7f7aec44",
+      "first_line_excerpt": "For initial state $X$ and working state $W_r(X)$ after $r$ rounds, compare word\u2026"
+    },
+    {
+      "block_id": "B0023",
+      "old_hash": "152eb62ec2d7",
+      "first_line_excerpt": "Let $A_\\tau$ average output-word-7 derivative HW over the 31 aligned cross-word\u2026"
+    },
+    {
+      "block_id": "B0024",
+      "old_hash": "9be068e6e314",
+      "first_line_excerpt": "The master key pair is the independent replicate; masks, bases, blocks, and int\u2026"
+    },
+    {
+      "block_id": "B0025",
+      "old_hash": "a7e6d15eb116",
+      "first_line_excerpt": "There are $R=100{,}000$ sign draws, except 200,000 for alignment. Holm adjustme\u2026"
+    },
+    {
+      "block_id": "B0026",
+      "old_hash": "0bbce44e0ee2",
+      "first_line_excerpt": "The alignment intervention independently rotates the four HW samples inside eac\u2026"
+    },
+    {
+      "block_id": "B0027",
+      "old_hash": "b021202808e4",
+      "first_line_excerpt": "\\subsection{Frozen Empirical Spectrum Models}\\label{sec:models}"
+    },
+    {
+      "block_id": "B0028",
+      "old_hash": "3304fb7f2354",
+      "first_line_excerpt": "Two models test the positional explanation using only the earlier resolution co\u2026"
+    },
+    {
+      "block_id": "B0029",
+      "old_hash": "b418e75c406f",
+      "first_line_excerpt": "For a model layer $\\ell$ with independent residuals,"
+    },
+    {
+      "block_id": "B0030",
+      "old_hash": "67d6cd8f638e",
+      "first_line_excerpt": "We compare $G$, $\\Delta F_{512}$, and mean AC spectra in all six cipher--width \u2026"
+    },
+    {
+      "block_id": "B0031",
+      "old_hash": "2fd515c7b3c4",
+      "first_line_excerpt": "\\section{Results}"
+    },
+    {
+      "block_id": "B0032",
+      "old_hash": "ec6e33ef5eb4",
+      "first_line_excerpt": "Both two-round cores show recurring 512-bit structure (Figure~\\ref{fig:unified}\u2026"
+    },
+    {
+      "block_id": "B0033",
+      "old_hash": "07a539ed3238",
+      "first_line_excerpt": "\\begin{figure}[t]"
+    },
+    {
+      "block_id": "B0034",
+      "old_hash": "02d6ff71d074",
+      "first_line_excerpt": "% Self-contained replacement for the mechanism and conditional-affinity texts."
+    },
+    {
+      "block_id": "B0035",
+      "old_hash": "e6a4784e5644",
+      "first_line_excerpt": "Tracing the round schedules~\\citep{nir2018,bernstein2008salsa} distinguishes mi\u2026"
+    },
+    {
+      "block_id": "B0036",
+      "old_hash": "322f22436afc",
+      "first_line_excerpt": "Let $u=x_7$, let $y$ be the state after the first column round, and let $\\rho_j\u2026"
+    },
+    {
+      "block_id": "B0037",
+      "old_hash": "91af6feb28f9",
+      "first_line_excerpt": "\\paragraph{Conditional rank and response.}"
+    },
+    {
+      "block_id": "B0038",
+      "old_hash": "17772795bf35",
+      "first_line_excerpt": "\\emph{Proof.} Define $L_b=f_C(2^b)\\oplus C$. For $C_b=0$ and $b<31$, Equation~\\\u2026"
+    },
+    {
+      "block_id": "B0039",
+      "old_hash": "530ff813d463",
+      "first_line_excerpt": "These ranks concern only the second nonce word's conditional output-word map. C\u2026"
+    },
+    {
+      "block_id": "B0040",
+      "old_hash": "9731308e2610",
+      "first_line_excerpt": "All ChaCha20/2 output words have nonce paths. A cyclic column shift commutes wi\u2026"
+    },
+    {
+      "block_id": "B0041",
+      "old_hash": "dba4d86bbd61",
+      "first_line_excerpt": "\\subsection{Feed-Forward: Existing Asymmetry and New Interaction}\\label{sec:ffr\u2026"
+    },
+    {
+      "block_id": "B0042",
+      "old_hash": "c69c8487b138",
+      "first_line_excerpt": "The paired intervention cohort gives Salsa20/2 gaps $G_{\\rm none}=0.72940$, $G_\u2026"
+    },
+    {
+      "block_id": "B0043",
+      "old_hash": "32d92276f0ee",
+      "first_line_excerpt": "\\begin{table}[t]"
+    },
+    {
+      "block_id": "B0044",
+      "old_hash": "0f456700fdaf",
+      "first_line_excerpt": "For Salsa20/2 word 7, the aligned cross-word derivative is zero under none/xor \u2026"
+    },
+    {
+      "block_id": "B0045",
+      "old_hash": "5428d0aa998f",
+      "first_line_excerpt": "\\subsection{Third Round: Affinity Loss with Persistent Block Structure}\\label{s\u2026"
+    },
+    {
+      "block_id": "B0046",
+      "old_hash": "322e8e6b20f9",
+      "first_line_excerpt": "For the two within-$x_7$ pairs, unfinalized Salsa20 word-7 derivative HW change\u2026"
+    },
+    {
+      "block_id": "B0047",
+      "old_hash": "154493662126",
+      "first_line_excerpt": "Meanwhile, Salsa20's reference-adjusted fundamental fraction under add at 128-b\u2026"
+    },
+    {
+      "block_id": "B0048",
+      "old_hash": "e5cbae5c441a",
+      "first_line_excerpt": "\\subsection{Measurement: Alignment, Resolution, and Prediction}\\label{sec:measu\u2026"
+    },
+    {
+      "block_id": "B0049",
+      "old_hash": "b3808e2f9228",
+      "first_line_excerpt": "Within-block rotation reduces the absolute two-round AC contrasts by approximat\u2026"
+    },
+    {
+      "block_id": "B0050",
+      "old_hash": "3b75563730dc",
+      "first_line_excerpt": "The effect persists beyond the opening output blocks. In the initial separate c\u2026"
+    },
+    {
+      "block_id": "B0051",
+      "old_hash": "6999961b0892",
+      "first_line_excerpt": "Fresh resolution validation confirms positive Salsa20 gaps at all three widths \u2026"
+    },
+    {
+      "block_id": "B0052",
+      "old_hash": "1bfa577357c8",
+      "first_line_excerpt": "\\begin{figure}[t]"
+    },
+    {
+      "block_id": "B0053",
+      "old_hash": "b375c4d8ff6d",
+      "first_line_excerpt": "Figure~\\ref{fig:mechanisticextensions}a,b displays the observed and predicted A\u2026"
+    },
+    {
+      "block_id": "B0054",
+      "old_hash": "a825b32b03b9",
+      "first_line_excerpt": "\\section{Scope and Discussion}"
+    },
+    {
+      "block_id": "B0055",
+      "old_hash": "c8f9927b61f6",
+      "first_line_excerpt": "The direct benchmark detects the same large two-round departures: mean HW, aval\u2026"
+    },
+    {
+      "block_id": "B0056",
+      "old_hash": "1f440deb77c9",
+      "first_line_excerpt": "Ancillary studies delimit the diagnostic. The initial seven-cipher comparison (\u2026"
+    },
+    {
+      "block_id": "B0057",
+      "old_hash": "5a84a84cb392",
+      "first_line_excerpt": "An 80-key Trivium pilot used degree-$d$ derivatives ($d=2,4,6$) over 512 bits: \u2026"
+    },
+    {
+      "block_id": "B0058",
+      "old_hash": "0e26ecf693b2",
+      "first_line_excerpt": "A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits. The 20-\u2026"
+    },
+    {
+      "block_id": "B0059",
+      "old_hash": "e3d2f7e54494",
+      "first_line_excerpt": "The ARX results concern the tested masks, block-aligned widths, windows up to 8\u2026"
+    },
+    {
+      "block_id": "B0060",
+      "old_hash": "541005fd63e1",
+      "first_line_excerpt": "\\section{Conclusions}"
+    },
+    {
+      "block_id": "B0061",
+      "old_hash": "319cc02df19c",
+      "first_line_excerpt": "Exact identities explain a weak Salsa20/2 output-word response and show why equ\u2026"
+    },
+    {
+      "block_id": "B0062",
+      "old_hash": "26586ef0b07b",
+      "first_line_excerpt": "\\authorcontributions{Conceptualization, methodology, software, validation, form\u2026"
+    },
+    {
+      "block_id": "B0063",
+      "old_hash": "4142e6e2eda0",
+      "first_line_excerpt": "\\bibitem[Nir and Langley(2018)]{nir2018}"
+    },
+    {
+      "block_id": "B0064",
+      "old_hash": "d07965fb39fa",
+      "first_line_excerpt": "\\bibitem[Bernstein(2008)]{bernstein2008salsa}"
+    },
+    {
+      "block_id": "B0065",
+      "old_hash": "4a1a44ab7cb6",
+      "first_line_excerpt": "\\bibitem[Englund et~al.(2007)Englund, Johansson, and Turan]{englund2007}"
+    },
+    {
+      "block_id": "B0066",
+      "old_hash": "fb2b8ecca399",
+      "first_line_excerpt": "\\bibitem[Fischer et~al.(2008)Fischer, Khazaei, and Meier]{fischer2008}"
+    },
+    {
+      "block_id": "B0067",
+      "old_hash": "366e69af46ef",
+      "first_line_excerpt": "\\bibitem[Robshaw and Billet(2008)]{estream2008}"
+    },
+    {
+      "block_id": "B0068",
+      "old_hash": "e59b905f4fbd",
+      "first_line_excerpt": "\\bibitem[Bernstein(2008)]{bernstein2008chacha}"
+    },
+    {
+      "block_id": "B0069",
+      "old_hash": "6673d41bf590",
+      "first_line_excerpt": "\\bibitem[Maitra(2016)]{maitra2016}"
+    },
+    {
+      "block_id": "B0070",
+      "old_hash": "4b71e0cdcf62",
+      "first_line_excerpt": "\\bibitem[Biham and Shamir(1991)]{biham1991}"
+    },
+    {
+      "block_id": "B0071",
+      "old_hash": "086e64d1dc7d",
+      "first_line_excerpt": "\\bibitem[Aumasson et~al.(2008)Aumasson, Fischer, Khazaei, Meier, and"
+    },
+    {
+      "block_id": "B0072",
+      "old_hash": "b475d0d0d33a",
+      "first_line_excerpt": "\\bibitem[Choudhuri and Maitra(2016)]{choudhuri2016}"
+    },
+    {
+      "block_id": "B0073",
+      "old_hash": "26ce3f1a1ec5",
+      "first_line_excerpt": "\\bibitem[Dey and Sarkar(2017)]{dey2017}"
+    },
+    {
+      "block_id": "B0074",
+      "old_hash": "26a06f1aad0c",
+      "first_line_excerpt": "\\bibitem[Beierle et~al.(2020)Beierle, Leander, and Todo]{beierle2020}"
+    },
+    {
+      "block_id": "B0075",
+      "old_hash": "a83b40ea18be",
+      "first_line_excerpt": "\\bibitem[Coutinho et~al.(2023)Coutinho, Passos, {Grados V{\\'a}squez}, Sarkar,"
+    },
+    {
+      "block_id": "B0076",
+      "old_hash": "e331b6fa7536",
+      "first_line_excerpt": "\\bibitem[Ghafoori et~al.(2023)Ghafoori, Miyaji, Ito, and"
+    },
+    {
+      "block_id": "B0077",
+      "old_hash": "ce21defec804",
+      "first_line_excerpt": "\\bibitem[Dey et~al.(2024)Dey, Dey, Girme, and Sarkar]{dey2024salsa}"
+    },
+    {
+      "block_id": "B0078",
+      "old_hash": "ee2e4224518b",
+      "first_line_excerpt": "\\bibitem[Dey(2024)]{dey2024tit}"
+    },
+    {
+      "block_id": "B0079",
+      "old_hash": "a674adbbbd65",
+      "first_line_excerpt": "\\bibitem[Ghafoori and Miyaji(2024)]{ghafoori2024hodl}"
+    },
+    {
+      "block_id": "B0080",
+      "old_hash": "b0d29f224f6e",
+      "first_line_excerpt": "\\bibitem[Dey et~al.(2025)Dey, Maitra, Sarkar, and Sharma]{dey2025tosc}"
+    },
+    {
+      "block_id": "B0081",
+      "old_hash": "2050eeaa48f1",
+      "first_line_excerpt": "\\bibitem[Fl{\\'o}rez-Guti{\\'e}rrez and Todo(2025)]{florez2025}"
+    },
+    {
+      "block_id": "B0082",
+      "old_hash": "8c190e72b98f",
+      "first_line_excerpt": "\\bibitem[Liu et~al.(2026)Liu, Ren, Sun, Yu, and Li]{liu2026}"
+    },
+    {
+      "block_id": "B0083",
+      "old_hash": "65283b89bb6a",
+      "first_line_excerpt": "\\bibitem[Paul et~al.(2025)Paul, Kundu, and Chakrabarti]{paul2025}"
+    },
+    {
+      "block_id": "B0084",
+      "old_hash": "b20d82619333",
+      "first_line_excerpt": "\\bibitem[Webster and Tavares(1986)]{webster1986}"
+    },
+    {
+      "block_id": "B0085",
+      "old_hash": "b30166322b4f",
+      "first_line_excerpt": "\\bibitem[Castro et~al.(2005)Castro, Sierra, Seznec, Izquierdo, and"
+    },
+    {
+      "block_id": "B0086",
+      "old_hash": "5141af687069",
+      "first_line_excerpt": "\\bibitem[Madarro-Cap{\\'o} et~al.(2024)Madarro-Cap{\\'o}, {Ramos Pi{\\~n}{\\'o}n},"
+    },
+    {
+      "block_id": "B0087",
+      "old_hash": "ad041fef3dae",
+      "first_line_excerpt": "\\bibitem[{National Institute of Standards and Technology}(2010)]{nist2010}"
+    },
+    {
+      "block_id": "B0088",
+      "old_hash": "4744d8b65a21",
+      "first_line_excerpt": "\\bibitem[Powell and Percival(1979)]{powell1979}"
+    },
+    {
+      "block_id": "B0089",
+      "old_hash": "9b9554fe064e",
+      "first_line_excerpt": "\\bibitem[Inouye et~al.(1991)Inouye, Shinosaki, Sakamoto, Toi, Ukai, Iyama,"
+    },
+    {
+      "block_id": "B0090",
+      "old_hash": "3b9b83a000a7",
+      "first_line_excerpt": "\\bibitem[Zaccarelli et~al.(2013)Zaccarelli, Li, Petrosillo, and"
+    },
+    {
+      "block_id": "B0091",
+      "old_hash": "68e192480072",
+      "first_line_excerpt": "\\bibitem[Dai et~al.(2018)Dai, Zhang, Mao, and Shang]{dai2018}"
+    },
+    {
+      "block_id": "B0092",
+      "old_hash": "47ea900c9f29",
+      "first_line_excerpt": "\\bibitem[Mao et~al.(2018)Mao, Shang, Wang, and Ma]{mao2018}"
+    },
+    {
+      "block_id": "B0093",
+      "old_hash": "fa48c1b9f34e",
+      "first_line_excerpt": "\\bibitem[Kasyanov and Grishencev(2026)]{kasyanov2026}"
+    },
+    {
+      "block_id": "B0094",
+      "old_hash": "0d5af08987f3",
+      "first_line_excerpt": "\\bibitem[Saarinen and Aumasson(2015)]{saarinen2015}"
+    },
+    {
+      "block_id": "B0095",
+      "old_hash": "f4bb29a974a5",
+      "first_line_excerpt": "\\bibitem[{National Institute of Standards and Technology}(2015)]{nist2015sha3}"
+    },
+    {
+      "block_id": "B0096",
+      "old_hash": "43ce0f71ec53",
+      "first_line_excerpt": "\\bibitem[Oppenheim and Schafer(2010)]{oppenheim2010}"
+    },
+    {
+      "block_id": "B0097",
+      "old_hash": "258f778cdf11",
+      "first_line_excerpt": "\\bibitem[Field and Welsh(2007)]{field2007}"
+    },
+    {
+      "block_id": "B0098",
+      "old_hash": "ec98cc113997",
+      "first_line_excerpt": "\\bibitem[Holm(1979)]{holm1979}"
+    },
+    {
+      "block_id": "B0099",
+      "old_hash": "9c06f153461a",
+      "first_line_excerpt": "\\bibitem[Hell et~al.(2006)Hell, Johansson, Maximov, and Meier]{grain2006}"
+    },
+    {
+      "block_id": "B0100",
+      "old_hash": "6c0272be3fc8",
+      "first_line_excerpt": "\\bibitem[De~Canni{\\`e}re and Preneel(2008)]{trivium2006}"
+    },
+    {
+      "block_id": "B0101",
+      "old_hash": "5bad4bba7768",
+      "first_line_excerpt": "\\bibitem[Knellwolf et~al.(2011)Knellwolf, Meier, and"
+    },
+    {
+      "block_id": "B0102",
+      "old_hash": "2aaeeb4406d7",
+      "first_line_excerpt": "\\bibitem[Biryukov et~al.(2001)Biryukov, Shamir, and Wagner]{biryukov2000}"
+    },
+    {
+      "block_id": "B0103",
+      "old_hash": "954c34b123d7",
+      "first_line_excerpt": "\\end{thebibliography}"
+    },
+    {
+      "block_id": "B0104",
+      "old_hash": "ab466f5060e4",
+      "first_line_excerpt": "\\end{adjustwidth}"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "source_fidelity_correction_required",
+  "automatic_gates": "PASS",
+  "finding": "Synthesis R1 W2 changes 0.025 and 0.975 quantiles into 0.025 and 0.975 percentiles. These are not equivalent. Preserve the source meaning: 0.025 and 0.975 quantiles, or equivalently the 2.5th and 97.5th percentiles.",
+  "scope": [
+    "synthesis.md",
+    "revision_roadmap.json",
+    "review_report.json embedded roadmap"
+  ],
+  "decision_and_scores_change": false,
+  "reviewer_cards_change": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "author-adjudication-input/1.0",
+  "author_events": [
+    {
+      "event_id": "AUTHOR-EVENT-20261031-points-1-2",
+      "source": "explicit_session_user_message",
+      "actor_role": "author",
+      "input_sha256": "d3fd6fe12e984fa27fd1eb1de167a00c36356e8db05f032f161b25d7a8ec1675"
+    }
+  ],
+  "display_order": {
+    "mode": "source_traceability",
+    "item_ids": [
+      "REV-R1-W1",
+      "REV-R1-W2"
+    ],
+    "author_event_id": "AUTHOR-EVENT-20261031-points-1-2"
+  },
+  "author_adjudications": [
+    {
+      "item_id": "REV-R1-W1",
+      "author_event_id": "AUTHOR-EVENT-20261031-points-1-2",
+      "author_triage": "will_address",
+      "authorized_targets": [
+        {
+          "block_id": "B0043",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ],
+      "claim_strength_authorizations": []
+    },
+    {
+      "item_id": "REV-R1-W2",
+      "author_event_id": "AUTHOR-EVENT-20261031-points-1-2",
+      "author_triage": "will_address",
+      "authorized_targets": [
+        {
+          "block_id": "B0024",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        },
+        {
+          "block_id": "B0030",
+          "allowed_operations": [
+            "replace_block"
+          ]
+        }
+      ],
+      "claim_strength_authorizations": []
+    }
+  ],
+  "collateral_authorizations": []
+}

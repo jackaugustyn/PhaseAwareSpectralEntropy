@@ -1,0 +1,33 @@
+{
+  "completed_at_utc": "2026-10-31T11:55:45.306344+00:00",
+  "selected_items": [
+    "REV-R1-W1",
+    "REV-R1-W2"
+  ],
+  "status": "implemented_and_checked",
+  "source_sha256": "a133e974b1c758a7f0babb301d59b78e2d420a0eb4490d9ccfbf55628732046c",
+  "pdf_sha256": "38a4c3f6dff564816fbae2a8e8102c4852d367cce47750edd8984426a8c42972",
+  "latex_build": "PASS",
+  "latex_warnings": [],
+  "pdf_preflight": "PASS",
+  "page_count": 11,
+  "reference_count": 40,
+  "visually_inspected_pages": [
+    4,
+    5,
+    7
+  ],
+  "source_projection": "PASS",
+  "table_numerical_rows_unchanged": true,
+  "abstract_regenerated": false,
+  "abstract_consistency": "No new contradiction introduced; no abstract change required.",
+  "prior_review_manifest_integrity": "PASS",
+  "prior_manifest_changed_files": [
+    "README.md",
+    "doc_stream_ciphers/main.pdf",
+    "doc_stream_ciphers/main.tex"
+  ],
+  "prior_manifest_missing_files": [],
+  "acronym_check": "partial; same 31 advisory findings",
+  "full_panel_rereview_performed": false
+}

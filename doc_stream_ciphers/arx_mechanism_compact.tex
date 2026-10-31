@@ -1,0 +1,38 @@
+% Self-contained replacement for the mechanism and conditional-affinity texts.
+
+Tracing the round schedules~\citep{nir2018,bernstein2008salsa} distinguishes missing dependencies from weak responses: absent paths prove independence, whereas present paths specify neither HW nor differential probabilities. After two Salsa rounds, changing $x_6$ cannot affect output word 1; changing $x_7$ cannot affect words $0,1,2,3,6$. Modular feed-forward preserves these zeros. The asymmetry follows from quarter-round update order $b,c,d,a$: $x_6$ enters the column round as $d$, but $x_7$ enters as $c$, after the update of $b$. Words $4,5,6,7,11$ are also independent of the low counter $x_8$; their outputs and nonce-response HW remain constant as that counter varies with the high counter fixed.
+
+Let $u=x_7$, let $y$ be the state after the first column round, and let $\rho_j$ denote left rotation by $j$ bits. The two word-7 updates give $W_2[7]=u\oplus C$, where
+\[
+ z_6=y_6\oplus\rho_7(y_5+y_4),\qquad
+ C=\rho_9(y_3+x_{15})\oplus\rho_9(z_6+y_5).
+\]
+Here $z_6$ is the preceding update in row quarter round $(5,6,7,4)$; additions are modulo $2^{32}$. The first-round words $y_3,y_4,y_5,y_6$ are independent of $u$, and $x_{15}$ is the initial word, so $C$ is independent of $u$ with other inputs fixed. Modular feed-forward gives
+\begin{equation}
+ f_C(u)=((u\oplus C)+u)\bmod2^{32}
+       =C+2(u\mathbin{\&}\neg C)\pmod{2^{32}},
+ \label{eq:compactfC}
+\end{equation}
+with 32-bit complementation. This particular addition is XOR-affine in $u$.
+
+\paragraph{Conditional rank and response.}
+Let $A_C(u)=f_C(u)\oplus C$, and let $t(C)$ count trailing ones from the least significant bit, with $t(2^{32}-1)=32$. For every $C,u$,
+\begin{equation}
+\begin{aligned}
+ \operatorname{rank}_{\mathbb F_2}A_C
+   &=31-\operatorname{HW}(C\bmod2^{31}),\\
+ \frac1{32}\sum_{b=0}^{31}\operatorname{HW}\!\left(f_C(u\oplus2^b)\oplus f_C(u)\right)
+   &=\frac{\max(31-t(C),0)}{32}\leq\frac{31}{32}.
+\end{aligned}
+\label{eq:affinecorollary}
+\end{equation}
+
+\emph{Proof.} Define $L_b=f_C(2^b)\oplus C$. For $C_b=0$ and $b<31$, Equation~\eqref{eq:compactfC} adds $2^{b+1}$ to $C$. The carry flips consecutive ones above $b$ and the next zero, if present; overflow is discarded. Therefore $L_b$ has ones precisely from $b+1$ through the next zero position, or through 31 if none exists. All other columns, including $L_{31}$, vanish. Successive active intervals are disjoint: one ends at a zero, the next starts one bit above it. Their carries cannot interact, so
+\[
+ f_C(u)=C\oplus\bigoplus_{b=0}^{31}u_bL_b.
+\]
+The nonzero columns are independent and correspond exactly to zero bits of $C$ below bit 31, proving the rank. Each singleton difference equals $L_b$; their supports cover the suffix $t(C)+1,\ldots,31$, proving the HW identity. If the first zero is bit 31, or $C$ is all ones, every column vanishes. No distributional assumption is required.
+
+These ranks concern only the second nonce word's conditional output-word map. Changing another input can change $C$; joint affinity and full-cipher rank conclusions do not follow. Algebraically, $C=0$ and $C=2^{32}-2$ yield ranks 31 and 1 but the same mean singleton HW $31/32$; these are illustrative constants, not reported cipher states.
+
+All ChaCha20/2 output words have nonce paths. A cyclic column shift commutes with its round pair and feed-forward, mapping $x_{14}$ to $x_{15}$ and permuting output words. It preserves row sums but not the distribution of valid initial states, so it motivates local compensation without proving equal response distributions or an entropy gap.

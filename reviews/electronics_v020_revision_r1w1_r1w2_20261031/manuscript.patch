@@ -1,0 +1,34 @@
+--- main.tex before
++++ main.tex after
+@@ -102,7 +102,7 @@
+ 
+ Let $A_\tau$ average output-word-7 derivative HW over the 31 aligned cross-word pairs with offsets 0--30, four bases, and 16 blocks. The mixed interaction is $J=\Delta A_{\rm add}-\Delta A_{\rm none}$; offset 31 is descriptive because its two-round Salsa derivative cancels. For the round transition, $A_r^{\rm within}$ instead averages the two within-word pairs under none. The endpoints are $T_1=\Delta A_3^{\rm within}-\Delta A_2^{\rm within}$ and $T_2=\Delta F_{512,3}-\Delta F_{512,2}$ under add at 128-bit resolution. Round 3 is a column round in both experimental odd-round constructions. Spectra always use first-order HW trajectories.
+ 
+-The master key pair is the independent replicate; masks, bases, blocks, and interventions remain together in resampling. Pointwise 95\% whole-key bootstrap intervals~\citep{field2007} use 5000 resamples in the principal ARX cohorts, except 10,000 for the complete scan. For a key-level endpoint $d_i$, the target null is $\mathbb E[d_i]=0$. We compare $|\bar d|$ with $|n^{-1}\sum_i s_i d_i|$, using independent signs $s_i\in\{-1,1\}$ per key and $p=(e+1)/(R+1)$ for $e$ simulated statistics at least as extreme as observed. Finite-sample validity requires null sign-invariance; zero mean and reference coupling alone do not guarantee it, particularly across rounds or finalizations. Reported $p$ values are therefore assumption-dependent sign-flip calibrations, interpreted with effect sizes and bootstrap intervals.
++The master key pair is the independent replicate; masks, bases, blocks, and interventions remain together in resampling. Pointwise 95\% percentile bootstrap intervals~\citep{field2007} use the 0.025 and 0.975 quantiles of resampled whole-key means, with 5000 resamples in the principal ARX cohorts and 10,000 in the complete scan. For a key-level endpoint $d_i$, the target null is $\mathbb E[d_i]=0$. We compare $|\bar d|$ with $|n^{-1}\sum_i s_i d_i|$, using independent signs $s_i\in\{-1,1\}$ per key and $p=(e+1)/(R+1)$ for $e$ simulated statistics at least as extreme as observed. Finite-sample validity requires null sign-invariance; zero mean and reference coupling alone do not guarantee it, particularly across rounds or finalizations. Reported $p$ values are therefore assumption-dependent sign-flip calibrations, interpreted with effect sizes and bootstrap intervals.
+ 
+ There are $R=100{,}000$ sign draws, except 200,000 for alignment. Holm adjustment~\citep{holm1979}, conditional on valid endpoint calibration, uses separate fixed families: two scan, four feed-forward and two transition tests (Table~\ref{tab:primary}), five resolution tests (Section~\ref{sec:measurementresults}), and two alignment tests (below). Other profiles are descriptive; deterministic checks are not statistical replicates.
+ 
+@@ -120,7 +120,7 @@
+ \end{equation}
+ M1 averages four base-conditional powers within keys before averaging keys. Entropy of normalized expected power is not expected finite-sample entropy. We therefore simulate 4096 complete key pairs per model and apply the actual $Q=4$ estimator at all three widths, with independent $\operatorname{Binomial}(32,1/2)$ reference words. Specifications, fits, and predictions were frozen before generating the 80 evaluation key pairs.
+ 
+-We compare $G$, $\Delta F_{512}$, and mean AC spectra in all six cipher--width settings. For spectra, average four base powers within each key and mask, normalize over nonzero frequencies, then average the resulting vectors over masks and keys. Writing these means as $\bar q$, their distance is $D=\sum_{k>0}|\bar q_k^{\rm eval}-\bar q_k^{\rm model}|\in[0,2]$, without reference subtraction; the model mean uses the 4096 simulations. Whole-evaluation-key intervals condition on the fixed fit and Monte Carlo estimate. Separate Monte Carlo standard errors (MCSE) quantify simulation noise. Mean spectra can conceal compensating mask-level errors; these comparisons are not model-rejection tests or calibrated prediction intervals.
++We compare $G$, $\Delta F_{512}$, and mean AC spectra in all six cipher--width settings. For spectra, average four base powers within each key and mask, normalize over nonzero frequencies, then average the resulting vectors over masks and keys. Writing these means as $\bar q$, their distance is $D=\sum_{k>0}|\bar q_k^{\rm eval}-\bar q_k^{\rm model}|\in[0,2]$, without reference subtraction; the model mean uses the 4096 simulations. Whole-evaluation-key percentile intervals use the 0.025 and 0.975 quantiles of resampled means or recomputed distances and condition on the fixed fit and Monte Carlo estimate. Separate Monte Carlo standard errors (MCSE) quantify simulation noise. Mean spectra can conceal compensating mask-level errors; these comparisons are not model-rejection tests or calibrated prediction intervals.
+ 
+ \section{Results}
+ \subsection{Round Function: Recurring Structure and Conditional Rank}\label{sec:mechanism}
+@@ -140,11 +140,11 @@
+ The paired intervention cohort gives Salsa20/2 gaps $G_{\rm none}=0.72940$, $G_{\rm xor}=0.73896$, and $G_{\rm add}=0.78805$ bits at 128-bit resolution. The asymmetry already exists in the working output; modular addition increases it by 0.05865 bits (Table~\ref{tab:primary}). The planned ChaCha20 add-minus-none change remains unresolved ($p=0.108$). This result applies to 128-bit aggregation: descriptive changes at 32 and 64 bits are $-0.02289$ and $-0.00772$ bits, with pointwise intervals excluding zero.
+ 
+ \begin{table}[t]
+-\caption{Planned scan, feed-forward, and round-transition endpoints. Each group uses a separate 80-key-pair cohort and Holm family. All entropy endpoints use 128-bit segments; scan outputs have 4096 bits, other outputs 8192. Brackets give pointwise 95\% whole-key intervals. Small reported $p$ values reach the finite-simulation floor. $J$ and $T_1$ measure changed bits per 32-bit word; $T_2$ is dimensionless.\label{tab:primary}}
++\caption{Planned scan, feed-forward, and round-transition endpoints. Each group uses a separate 80-key-pair cohort and Holm family. All entropy endpoints use 128-bit segments; scan outputs have 4096 bits, other outputs 8192. Brackets give pointwise 95\% whole-key intervals. Holm-adjusted $p$ values are assumption-dependent sign-flip calibrations requiring null sign-invariance; small reported values reach the finite-simulation floor. $J$ and $T_1$ measure changed bits per 32-bit word; $T_2$ is dimensionless.\label{tab:primary}}
+ \small\setlength{\tabcolsep}{3pt}
+ \begin{tabularx}{\textwidth}{Xcc}
+ \toprule
+-\textbf{Endpoint} & \textbf{Mean [95\% CI]} & \textbf{Holm $p$}\\
++\textbf{Endpoint} & \textbf{Mean [95\% CI]} & \shortstack{\textbf{Holm-adjusted}\\\textbf{sign-flip $p$}}\\
+ \midrule
+ \multicolumn{3}{l}{\emph{Complete scan: two tests}}\\
+ Salsa20 $G_2$ (bits) & $0.79059\ [0.78404,0.79729]$ & $2\times10^{-5}$\\

@@ -1,0 +1,6 @@
+family,rounds,segment_bits,window,endpoint,n_keys,mean,ci95_low,ci95_high,predicted_sign,observed_sign,prediction_matches,sign_flip_extremes,replicates,p_two_sided_plus_one,p_holm_five,cohort
+Salsa20,2,32,full8192,word_gap_delta_hmp,80,1.099031338729453,1.091370651522018,1.1066464041908388,positive,positive,True,0,100000,9.99990000099999e-06,4.9999500004999955e-05,independent_validation
+Salsa20,2,64,full8192,word_gap_delta_hmp,80,0.9624918546007087,0.9554422102889274,0.9695182166973574,positive,positive,True,0,100000,9.99990000099999e-06,4.9999500004999955e-05,independent_validation
+Salsa20,2,128,full8192,word_gap_delta_hmp,80,0.7917243299559342,0.7866982240143668,0.7970886620601444,positive,positive,True,0,100000,9.99990000099999e-06,4.9999500004999955e-05,independent_validation
+ChaCha20,2,32,full8192,word_gap_delta_hmp,80,0.0338230124717288,0.022246751105860954,0.04508463303703997,positive,positive,True,0,100000,9.99990000099999e-06,4.9999500004999955e-05,independent_validation
+ChaCha20,2,64,full8192,word_gap_delta_hmp,80,-0.06128865237503258,-0.06895574501732489,-0.05368323814861726,negative,negative,True,0,100000,9.99990000099999e-06,4.9999500004999955e-05,independent_validation

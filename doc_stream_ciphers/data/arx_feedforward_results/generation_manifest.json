@@ -1,0 +1,1040 @@
+{
+  "protocol_sha256": "b416c7fb7b6697e26c4707b9e6c70981245f22eaecd243c480319ea393090ef8",
+  "source_sha256": {
+    "experiments/stream_rounds_study/arx_feedforward_study.py": "84cb7ad9d2f0ae5c5fcc81b4a5b08a51f53569c204a7d193aea67cb987cb22a2",
+    "experiments/stream_rounds_study/arx_mechanism_analysis.py": "6cdd3563617fcbce3aa3419d13989efef75451aa82b426aa9d9365bfef54f3fe",
+    "experiments/stream_rounds_study/analyze_arx_resolution.py": "348ab790ae28e553a7ca08abd814cd1ef7542687450b968cb93057227ab6244d",
+    "experiments/stream_rounds_study/arx_resolution_validation.py": "cc57c76ef2e61143bf230e0b6177bbec5bed3b3bfb177526b4f915191641854b",
+    "experiments/stream_rounds_study/extension_stream_cores.py": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5",
+    "experiments/stream_rounds_study/publication_study.py": "f4e115a80062f419d5b988ba475ad0c5843203c58b48c265a42a71fe2b44c26b",
+    "experiments/stream_rounds_study/literature_mask_followup.py": "458507268b8b8d91bed948bef6aec54de6b3a11b5bb67c5d684995f3b906812e",
+    "src/spectral_crypto_analyzer/primitives.py": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+  },
+  "key_indices": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
+    1039,
+    1040,
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1049,
+    1050,
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
+    1059,
+    1060,
+    1061,
+    1062,
+    1063,
+    1064,
+    1065,
+    1066,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071,
+    1072,
+    1073,
+    1074,
+    1075,
+    1076,
+    1077,
+    1078,
+    1079
+  ],
+  "seed": 20261030,
+  "families": [
+    "ChaCha20",
+    "Salsa20"
+  ],
+  "rounds": [
+    2,
+    4
+  ],
+  "variants": [
+    "add",
+    "none",
+    "xor"
+  ],
+  "panel": [
+    {
+      "name": "aligned_00",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        39
+      ]
+    },
+    {
+      "name": "aligned_01",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "bits_msb_first": [
+        6,
+        38
+      ]
+    },
+    {
+      "name": "aligned_02",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "bits_msb_first": [
+        5,
+        37
+      ]
+    },
+    {
+      "name": "aligned_03",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "bits_msb_first": [
+        4,
+        36
+      ]
+    },
+    {
+      "name": "aligned_04",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "bits_msb_first": [
+        3,
+        35
+      ]
+    },
+    {
+      "name": "aligned_05",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "bits_msb_first": [
+        2,
+        34
+      ]
+    },
+    {
+      "name": "aligned_06",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "bits_msb_first": [
+        1,
+        33
+      ]
+    },
+    {
+      "name": "aligned_07",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "bits_msb_first": [
+        0,
+        32
+      ]
+    },
+    {
+      "name": "aligned_08",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "bits_msb_first": [
+        15,
+        47
+      ]
+    },
+    {
+      "name": "aligned_09",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "bits_msb_first": [
+        14,
+        46
+      ]
+    },
+    {
+      "name": "aligned_10",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "bits_msb_first": [
+        13,
+        45
+      ]
+    },
+    {
+      "name": "aligned_11",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "bits_msb_first": [
+        12,
+        44
+      ]
+    },
+    {
+      "name": "aligned_12",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "bits_msb_first": [
+        11,
+        43
+      ]
+    },
+    {
+      "name": "aligned_13",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "bits_msb_first": [
+        10,
+        42
+      ]
+    },
+    {
+      "name": "aligned_14",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "bits_msb_first": [
+        9,
+        41
+      ]
+    },
+    {
+      "name": "aligned_15",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          15
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        8,
+        40
+      ]
+    },
+    {
+      "name": "aligned_16",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "bits_msb_first": [
+        23,
+        55
+      ]
+    },
+    {
+      "name": "aligned_17",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "bits_msb_first": [
+        22,
+        54
+      ]
+    },
+    {
+      "name": "aligned_18",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "bits_msb_first": [
+        21,
+        53
+      ]
+    },
+    {
+      "name": "aligned_19",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          19
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "bits_msb_first": [
+        20,
+        52
+      ]
+    },
+    {
+      "name": "aligned_20",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "bits_msb_first": [
+        19,
+        51
+      ]
+    },
+    {
+      "name": "aligned_21",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          21
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "bits_msb_first": [
+        18,
+        50
+      ]
+    },
+    {
+      "name": "aligned_22",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          22
+        ],
+        [
+          1,
+          22
+        ]
+      ],
+      "bits_msb_first": [
+        17,
+        49
+      ]
+    },
+    {
+      "name": "aligned_23",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          23
+        ]
+      ],
+      "bits_msb_first": [
+        16,
+        48
+      ]
+    },
+    {
+      "name": "aligned_24",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          24
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "bits_msb_first": [
+        31,
+        63
+      ]
+    },
+    {
+      "name": "aligned_25",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          25
+        ],
+        [
+          1,
+          25
+        ]
+      ],
+      "bits_msb_first": [
+        30,
+        62
+      ]
+    },
+    {
+      "name": "aligned_26",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          26
+        ]
+      ],
+      "bits_msb_first": [
+        29,
+        61
+      ]
+    },
+    {
+      "name": "aligned_27",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "bits_msb_first": [
+        28,
+        60
+      ]
+    },
+    {
+      "name": "aligned_28",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          28
+        ],
+        [
+          1,
+          28
+        ]
+      ],
+      "bits_msb_first": [
+        27,
+        59
+      ]
+    },
+    {
+      "name": "aligned_29",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          29
+        ],
+        [
+          1,
+          29
+        ]
+      ],
+      "bits_msb_first": [
+        26,
+        58
+      ]
+    },
+    {
+      "name": "aligned_30",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          30
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        25,
+        57
+      ]
+    },
+    {
+      "name": "aligned_31",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "bits_msb_first": [
+        24,
+        56
+      ]
+    },
+    {
+      "name": "offset_00_07",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        32
+      ]
+    },
+    {
+      "name": "offset_00_15",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        40
+      ]
+    },
+    {
+      "name": "offset_00_30",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        57
+      ]
+    },
+    {
+      "name": "offset_00_31",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        56
+      ]
+    },
+    {
+      "name": "within_00_15",
+      "kind": "within",
+      "word_bits_lsb": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        39,
+        40
+      ]
+    },
+    {
+      "name": "within_07_30",
+      "kind": "within",
+      "word_bits_lsb": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        32,
+        57
+      ]
+    }
+  ],
+  "raw_per_key_shapes": {
+    "observed_singleton": [
+      2,
+      2,
+      3,
+      64,
+      4,
+      16,
+      16
+    ],
+    "oracle_singleton": [
+      2,
+      2,
+      3,
+      64,
+      4,
+      16,
+      16
+    ],
+    "observed_d2": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16,
+      16
+    ],
+    "oracle_d2": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16,
+      16
+    ],
+    "observed_d2_word7": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16
+    ],
+    "oracle_d2_word7": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16
+    ],
+    "salsa2_singleton_word7": [
+      3,
+      64,
+      4,
+      16
+    ],
+    "salsa2_c": [
+      33,
+      4,
+      16
+    ]
+  },
+  "raw_axes": {
+    "singleton": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "mask_msb_first",
+      "base",
+      "block512",
+      "word32"
+    ],
+    "d2": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "panel_pair",
+      "base",
+      "block512",
+      "word32"
+    ],
+    "d2_word7": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "panel_pair",
+      "base",
+      "block512"
+    ],
+    "salsa2_singleton_word7": [
+      "key",
+      "variant",
+      "mask_msb_first",
+      "base",
+      "block512"
+    ],
+    "salsa2_c": [
+      "key",
+      "base_then_global_word0_masks_0_to_31",
+      "base",
+      "block512"
+    ]
+  },
+  "numpy_version": "1.22.0",
+  "python_version": "3.10.12",
+  "fingerprint": "3422ffbf4bf8cde7bb6fdc76ae1c2427536defd16963b4b66d6b4d201d9e47d6",
+  "status": "complete",
+  "smoke": false,
+  "reference": "SHAKE256 working stream per nonce; actual initial state shared across add/none/xor transformations",
+  "raw_sha256": "8a50f1d3dbe8c1ee724114815751db6ee3270b5a4bd24d8692ce4b2e01d316b7",
+  "checkpoint_sha256": {
+    "key_1000.npz": "3b246ac5ad4424740c34eef9aab994a5a21a7c85964be76c4aaa675eeb4a8181",
+    "key_1001.npz": "6d021d862f77a61a430fc40d90dd0c3d245611e894690cc4001a3745e0dbd3c6",
+    "key_1002.npz": "9998ba38d438b2e1e0a3f5b8df032296cf38f49926508a65a73d21b8734d21bc",
+    "key_1003.npz": "a96961e268dee7c1b4c70e9ceb02dde44941c02526b246a618c076e33d111cca",
+    "key_1004.npz": "3a8370b659929341ae3412ebc6850bf05939b6af0d0283ae42408c9c24234485",
+    "key_1005.npz": "d439dac0a13c414b94ae72132d3f89c5cf76e972d6da2a313a7afd201b5b1778",
+    "key_1006.npz": "3b942619eb35a38091163107ffb8cc6d183c176cedc7b04c24a1dd93c79d0c0c",
+    "key_1007.npz": "c241e154f0f1d4ac9e60ba91f4876989555b38351ee6488d9065564f2aee754b",
+    "key_1008.npz": "4a326a55ebd589e65751192f432dbd0f8bbd4a4a6aabebbc85f4dee2a4be5a7e",
+    "key_1009.npz": "b18266162f714ba610abc90093e8a3224cd56e1b9ac1e1dbaedd1428bc70899b",
+    "key_1010.npz": "bd823f34d38429c8303f763ec1ed974209a57952f71784da6b48033e298ccf61",
+    "key_1011.npz": "61d05041c81dade2e6cddd0e9259313532b5a13706ee64da43746ddcb11124d3",
+    "key_1012.npz": "4305f889cece06321ec4ca371840782d4e6fbe29f9c912fce0ad62bff1a5dfba",
+    "key_1013.npz": "ae87f0e0fd48cce3ded3c4fd94c781225aef7a2e53846db5ee90361577533b89",
+    "key_1014.npz": "9ff4713002ba31ed3b18fb38bfd8871714b32ca669033602a6bf9fc657e90820",
+    "key_1015.npz": "8fae6d685c787ee3866d6211c674bee0e7ec3345564dad4bd9f71ed0a493f500",
+    "key_1016.npz": "222aa8c030e41aa8c8c827957524c87eceb6ae5687200314e96f71e7a54916d0",
+    "key_1017.npz": "182ca6f4a7695bb7c4e63ff42ca4c617597ad3f295821a3184e8eff90c28b30f",
+    "key_1018.npz": "6c6ef45d085fd20209018c1e351a185e7829c5906f3068fec4fe00d454123556",
+    "key_1019.npz": "9a5b582fec5cf59122c2976d76bc93f0e42b2429b441cb1c3deaf932a6af7fb9",
+    "key_1020.npz": "dff5437be7e0ed4a79954e83ec534a8ae08e1f35ee13bcf61ba4051106088e00",
+    "key_1021.npz": "6fce379b2f395ccffc539bffcc6eff7afb753e5876c31c3d9cfb49d17e7c4bcd",
+    "key_1022.npz": "24ca35a72bad3f110dfbb225cdf0035bd07bdfa1595260ac8738877395e6f683",
+    "key_1023.npz": "d8a2cb316b79428952e35e698c30f95c496c62de0997c23015e4539f6b017bbc",
+    "key_1024.npz": "e127b0b2ca3bbf3a3846d0b8bea49ed72f5d546edbc5f3d08c3068c5eb140bd3",
+    "key_1025.npz": "f265f9ae981653c7b9b7a12a1a50ed7fe5478fb436b27e7216da150d57fa166c",
+    "key_1026.npz": "bc1a79b0f5a91c79b4991e0acbfeb2a85712a8c9e7760f06768a5dc37f4c42e6",
+    "key_1027.npz": "68e31bf09878744dbf32f20a6acf8a970382f1c6b666e4d0af7b3354740d9a15",
+    "key_1028.npz": "fe857f45292697f53e1142ce8310a95ef1cd697e5c4ac8ca7a549f8baa93dc09",
+    "key_1029.npz": "3c495d282f786da24bae65ded844f2f5cfbc2bbeeb69269780704ab69c4def8c",
+    "key_1030.npz": "49aa270c30e49cd059a0a009ba7ccc975f1a11576c12dd32732b5a5d336bd84c",
+    "key_1031.npz": "fcb6a3ff3f982ea9d4d9d82353c5867a3bac5782c949d0c1aa8236729b32c04f",
+    "key_1032.npz": "80368943eb87860fca928c2dd4a075ab407dedfeb3dc5443d7a640f9a83efb1c",
+    "key_1033.npz": "81250a31f31e8038daa8074539fd0269b5b2497264a457bab2136c23427b37d1",
+    "key_1034.npz": "70fd191dcc89436c21ede2a52aec0a7c5f29859b5fe095ecf2e26c497c7e75c4",
+    "key_1035.npz": "1605b343f1d7e9965cff5afbc80338c8ab844c742ac34954b293f593ddce82d0",
+    "key_1036.npz": "615d6ba9c5b3b3a52925906656e9ae76e3ec77e9051edce765b8bf3cfeb41eeb",
+    "key_1037.npz": "871eea0d781643bb3f58d709e0d8ab52a5c371f586b589ee593b817b2f69fc2c",
+    "key_1038.npz": "81835a6509e24caf28782f315ee75b2f1bef0bfedbf5a1390cc5243c32042a1c",
+    "key_1039.npz": "a46455e8a70454d9377d95ac91e0994784f422cb57441d0cbb1ab08866a02a36",
+    "key_1040.npz": "1942b9b5be23e475bd17ac39323eeb078dbe0ebd1add433e0bb3c5cc67949948",
+    "key_1041.npz": "fc1441e2cb721935d6bd19c2da01f50551acd5fcf3af601b8fbdfa8575dbefaa",
+    "key_1042.npz": "d94378ceb65bc0d07b5fc5add86d2adea66434a072447ed2f2ba7acae025ff32",
+    "key_1043.npz": "a16e69ace5e2daf7ff49135ab8d6349c8e2f78a4d86f15ab543cdcbffe56e7e7",
+    "key_1044.npz": "9afc3aa5a409c9b36c390e2c1bb8a3aa9410968a2b2a3d9c6a4b7596e5c5c997",
+    "key_1045.npz": "e8eb053d9dc9ec80c9ec482298dbf2ce3d348698cd80eca1fa686ad37b257dd4",
+    "key_1046.npz": "248470404bf9b99d26991ed791a57302ada591e098930a1b41dc316e8dedda45",
+    "key_1047.npz": "366d40826332ad911fdbc74ae802c73a9e5a8bc4fe15ba1b26fb9f58f317523a",
+    "key_1048.npz": "d5287e35c6d4cef2aac11b0737763ce27b38ca6e90c67f843877a09db064d105",
+    "key_1049.npz": "6b180be075bf6548aac0aa35e850676c7b79a0a2f81b4d8d22c543f34aecfe39",
+    "key_1050.npz": "bc1f4e7f82f366224e6d1c6129b3e98daf777b3139f9c677b224bf8bf51c1674",
+    "key_1051.npz": "bab6a58bab9a59a5b3c11e5b8dccf553397ffc3a1cddb0b7431b2c544348ef12",
+    "key_1052.npz": "82eaa433e0f202b8819fae0ef3409596339701698df7851051957fc53f8cbed3",
+    "key_1053.npz": "5cbce142369b2dd6117b79e9b89cce415fd8697f9129d335c5597ad4ed492ec4",
+    "key_1054.npz": "6f194ea8fd48e71ce6fc62da78889197c35de92101c53fc9502af0409ca6bbf4",
+    "key_1055.npz": "35943e552c53bbfbe1ee15b205d98f01b03f5519c17ed79c01daa402cd5df72d",
+    "key_1056.npz": "ce349fa206de42dbac4a5f32565961f8db83599657349cae798f4f03a2675fd4",
+    "key_1057.npz": "c59ab8967c8e30390bcc6ac11c33c5f8d631be370194a625a41c7d0dcad8a411",
+    "key_1058.npz": "4ed31b6f86dde82e6aeef938090b30adef56090cd4fde7166ea07ff1dd9edd3b",
+    "key_1059.npz": "edc8f147970b315537288971463a598e6289aa3b8798a60a4172b65f4f9b2ec8",
+    "key_1060.npz": "14cd2fd1462c9beb06e1ed408f83bb40357f18fd57ee890a0620c253818047f3",
+    "key_1061.npz": "e75d3f1301f962cbe8542270887384a18dc9df9a43ccb6a200173247b0cd04b7",
+    "key_1062.npz": "c7ca19537b4b31f16b1c3994721c3839b96cd864fe973783265eb08e435311e2",
+    "key_1063.npz": "d8d10567f1759cea62d7c42535de416aae1ecfafc06efa33dfbfb2e56cabb6c1",
+    "key_1064.npz": "5ad6026305dfbb59e57e740d38e4a8c464d532a9dda759eca7fe8b5c73088b0c",
+    "key_1065.npz": "4f95935adad564b6c168735c4dbb5dda7b960315f9bb9041a741568ac04c91c2",
+    "key_1066.npz": "f0b9773e899e64065c9bbf650a77eb1f9d1e0ff2c715b292ebc5a80967f80640",
+    "key_1067.npz": "31fef9e1b841a978da2080baabf1eff52ccfb3e799821ca159685f3130082aec",
+    "key_1068.npz": "85e8e4359578baf26f3e0297a1f75efc57cdb4181f28b7d60c6ade50fd5d9848",
+    "key_1069.npz": "4815dc1b35114348806a1fa251828bc81adba5d5033bb84d0dac5fcde0aa32c0",
+    "key_1070.npz": "69062557de0d05779347c601e1f4ea2886ddeec135699764917afe971c6fbe81",
+    "key_1071.npz": "b15d9027c114adaec0795c9c3c98b173cad3b34870e9d5a86124fe7a345da4d8",
+    "key_1072.npz": "36e0e73a3e2b7e74cd067c40555a4b72ed77a456b94176e98d3fb9c54a28c7bd",
+    "key_1073.npz": "8e077cc86290aefad7dcdfd746e9fa8ae61a9432932d9ef27fb6d1d6a591d7d9",
+    "key_1074.npz": "8bf08fed2211bb9196a67bcd2334b1cc74097dbf35faccd09c7dbe98ed753678",
+    "key_1075.npz": "a0b604f392eada1668c82689c4970c7537b4a9e561f760c9eacd1d969ef03aa2",
+    "key_1076.npz": "b1acf2cc4d0c18e76fed212d6a4d44fc39f8bc42a2b332971277f8e087706b76",
+    "key_1077.npz": "8293b66500000540604b25c2d98dcd3480f8ed064421fa8c787c639a8898e871",
+    "key_1078.npz": "696268e6a08afb09f4477160454990cb06a8815f03000bc7280134aea18cfc04",
+    "key_1079.npz": "c2c076ea5490ef17d47a93b2873e4527c8ab2d05dce63407f960c6366975353a"
+  },
+  "structural_checks": {
+    "observed_d2_none_equals_xor_all_words": {
+      "comparisons": 12451840,
+      "violations": 0
+    },
+    "oracle_d2_none_equals_xor_all_words": {
+      "comparisons": 12451840,
+      "violations": 0
+    },
+    "salsa2_c_independent_of_second_word": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_none_singleton_word7_exact_bit": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_xor_singleton_word7_zero": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_add_singleton_word7_lb": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_add_msb_singleton_word7_zero": {
+      "comparisons": 5120,
+      "violations": 0
+    },
+    "salsa2_mixed_d2_word7_none_xor_zero": {
+      "comparisons": 368640,
+      "violations": 0
+    },
+    "salsa2_mixed_add_d2_word7_conditional_lb": {
+      "comparisons": 184320,
+      "violations": 0
+    },
+    "salsa2_mixed_msb_add_d2_word7_zero": {
+      "comparisons": 10240,
+      "violations": 0
+    },
+    "salsa2_within_second_word_d2_word7_all_variants_zero": {
+      "comparisons": 30720,
+      "violations": 0
+    }
+  },
+  "generation_elapsed_seconds": 68.63714673800041
+}

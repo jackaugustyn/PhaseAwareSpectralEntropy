@@ -1,0 +1,1090 @@
+{
+  "protocol_sha256": "b416c7fb7b6697e26c4707b9e6c70981245f22eaecd243c480319ea393090ef8",
+  "source_sha256": {
+    "experiments/stream_rounds_study/arx_feedforward_study.py": "84cb7ad9d2f0ae5c5fcc81b4a5b08a51f53569c204a7d193aea67cb987cb22a2",
+    "experiments/stream_rounds_study/arx_mechanism_analysis.py": "6cdd3563617fcbce3aa3419d13989efef75451aa82b426aa9d9365bfef54f3fe",
+    "experiments/stream_rounds_study/analyze_arx_resolution.py": "348ab790ae28e553a7ca08abd814cd1ef7542687450b968cb93057227ab6244d",
+    "experiments/stream_rounds_study/arx_resolution_validation.py": "cc57c76ef2e61143bf230e0b6177bbec5bed3b3bfb177526b4f915191641854b",
+    "experiments/stream_rounds_study/extension_stream_cores.py": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5",
+    "experiments/stream_rounds_study/publication_study.py": "f4e115a80062f419d5b988ba475ad0c5843203c58b48c265a42a71fe2b44c26b",
+    "experiments/stream_rounds_study/literature_mask_followup.py": "458507268b8b8d91bed948bef6aec54de6b3a11b5bb67c5d684995f3b906812e",
+    "src/spectral_crypto_analyzer/primitives.py": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+  },
+  "key_indices": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
+    1039,
+    1040,
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1049,
+    1050,
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
+    1059,
+    1060,
+    1061,
+    1062,
+    1063,
+    1064,
+    1065,
+    1066,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071,
+    1072,
+    1073,
+    1074,
+    1075,
+    1076,
+    1077,
+    1078,
+    1079
+  ],
+  "seed": 20261030,
+  "families": [
+    "ChaCha20",
+    "Salsa20"
+  ],
+  "rounds": [
+    2,
+    4
+  ],
+  "variants": [
+    "add",
+    "none",
+    "xor"
+  ],
+  "panel": [
+    {
+      "name": "aligned_00",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        39
+      ]
+    },
+    {
+      "name": "aligned_01",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "bits_msb_first": [
+        6,
+        38
+      ]
+    },
+    {
+      "name": "aligned_02",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "bits_msb_first": [
+        5,
+        37
+      ]
+    },
+    {
+      "name": "aligned_03",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "bits_msb_first": [
+        4,
+        36
+      ]
+    },
+    {
+      "name": "aligned_04",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "bits_msb_first": [
+        3,
+        35
+      ]
+    },
+    {
+      "name": "aligned_05",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "bits_msb_first": [
+        2,
+        34
+      ]
+    },
+    {
+      "name": "aligned_06",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "bits_msb_first": [
+        1,
+        33
+      ]
+    },
+    {
+      "name": "aligned_07",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "bits_msb_first": [
+        0,
+        32
+      ]
+    },
+    {
+      "name": "aligned_08",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "bits_msb_first": [
+        15,
+        47
+      ]
+    },
+    {
+      "name": "aligned_09",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "bits_msb_first": [
+        14,
+        46
+      ]
+    },
+    {
+      "name": "aligned_10",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "bits_msb_first": [
+        13,
+        45
+      ]
+    },
+    {
+      "name": "aligned_11",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "bits_msb_first": [
+        12,
+        44
+      ]
+    },
+    {
+      "name": "aligned_12",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "bits_msb_first": [
+        11,
+        43
+      ]
+    },
+    {
+      "name": "aligned_13",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "bits_msb_first": [
+        10,
+        42
+      ]
+    },
+    {
+      "name": "aligned_14",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "bits_msb_first": [
+        9,
+        41
+      ]
+    },
+    {
+      "name": "aligned_15",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          15
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        8,
+        40
+      ]
+    },
+    {
+      "name": "aligned_16",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          16
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "bits_msb_first": [
+        23,
+        55
+      ]
+    },
+    {
+      "name": "aligned_17",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "bits_msb_first": [
+        22,
+        54
+      ]
+    },
+    {
+      "name": "aligned_18",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "bits_msb_first": [
+        21,
+        53
+      ]
+    },
+    {
+      "name": "aligned_19",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          19
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "bits_msb_first": [
+        20,
+        52
+      ]
+    },
+    {
+      "name": "aligned_20",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "bits_msb_first": [
+        19,
+        51
+      ]
+    },
+    {
+      "name": "aligned_21",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          21
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "bits_msb_first": [
+        18,
+        50
+      ]
+    },
+    {
+      "name": "aligned_22",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          22
+        ],
+        [
+          1,
+          22
+        ]
+      ],
+      "bits_msb_first": [
+        17,
+        49
+      ]
+    },
+    {
+      "name": "aligned_23",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          23
+        ],
+        [
+          1,
+          23
+        ]
+      ],
+      "bits_msb_first": [
+        16,
+        48
+      ]
+    },
+    {
+      "name": "aligned_24",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          24
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "bits_msb_first": [
+        31,
+        63
+      ]
+    },
+    {
+      "name": "aligned_25",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          25
+        ],
+        [
+          1,
+          25
+        ]
+      ],
+      "bits_msb_first": [
+        30,
+        62
+      ]
+    },
+    {
+      "name": "aligned_26",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          26
+        ],
+        [
+          1,
+          26
+        ]
+      ],
+      "bits_msb_first": [
+        29,
+        61
+      ]
+    },
+    {
+      "name": "aligned_27",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          27
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "bits_msb_first": [
+        28,
+        60
+      ]
+    },
+    {
+      "name": "aligned_28",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          28
+        ],
+        [
+          1,
+          28
+        ]
+      ],
+      "bits_msb_first": [
+        27,
+        59
+      ]
+    },
+    {
+      "name": "aligned_29",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          29
+        ],
+        [
+          1,
+          29
+        ]
+      ],
+      "bits_msb_first": [
+        26,
+        58
+      ]
+    },
+    {
+      "name": "aligned_30",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          30
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        25,
+        57
+      ]
+    },
+    {
+      "name": "aligned_31",
+      "kind": "aligned",
+      "word_bits_lsb": [
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "bits_msb_first": [
+        24,
+        56
+      ]
+    },
+    {
+      "name": "offset_00_07",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        32
+      ]
+    },
+    {
+      "name": "offset_00_15",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        40
+      ]
+    },
+    {
+      "name": "offset_00_30",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        57
+      ]
+    },
+    {
+      "name": "offset_00_31",
+      "kind": "offset",
+      "word_bits_lsb": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "bits_msb_first": [
+        7,
+        56
+      ]
+    },
+    {
+      "name": "within_00_15",
+      "kind": "within",
+      "word_bits_lsb": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "bits_msb_first": [
+        39,
+        40
+      ]
+    },
+    {
+      "name": "within_07_30",
+      "kind": "within",
+      "word_bits_lsb": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "bits_msb_first": [
+        32,
+        57
+      ]
+    }
+  ],
+  "raw_per_key_shapes": {
+    "observed_singleton": [
+      2,
+      2,
+      3,
+      64,
+      4,
+      16,
+      16
+    ],
+    "oracle_singleton": [
+      2,
+      2,
+      3,
+      64,
+      4,
+      16,
+      16
+    ],
+    "observed_d2": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16,
+      16
+    ],
+    "oracle_d2": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16,
+      16
+    ],
+    "observed_d2_word7": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16
+    ],
+    "oracle_d2_word7": [
+      2,
+      2,
+      3,
+      38,
+      4,
+      16
+    ],
+    "salsa2_singleton_word7": [
+      3,
+      64,
+      4,
+      16
+    ],
+    "salsa2_c": [
+      33,
+      4,
+      16
+    ]
+  },
+  "raw_axes": {
+    "singleton": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "mask_msb_first",
+      "base",
+      "block512",
+      "word32"
+    ],
+    "d2": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "panel_pair",
+      "base",
+      "block512",
+      "word32"
+    ],
+    "d2_word7": [
+      "key",
+      "cipher",
+      "round",
+      "variant",
+      "panel_pair",
+      "base",
+      "block512"
+    ],
+    "salsa2_singleton_word7": [
+      "key",
+      "variant",
+      "mask_msb_first",
+      "base",
+      "block512"
+    ],
+    "salsa2_c": [
+      "key",
+      "base_then_global_word0_masks_0_to_31",
+      "base",
+      "block512"
+    ]
+  },
+  "numpy_version": "1.22.0",
+  "python_version": "3.10.12",
+  "status": "completed_independent_followup",
+  "generation_manifest_sha256": "f5c6333ec6dc36c35e17dd9f2d91e2f819a0fbca446c389e35e4f11f5a247716",
+  "raw_sha256": "8a50f1d3dbe8c1ee724114815751db6ee3270b5a4bd24d8692ce4b2e01d316b7",
+  "power_estimator": "Mean of Q=4 complete Fourier powers per singleton mask before normalization",
+  "window": "full8192",
+  "segment_bits": [
+    32,
+    64,
+    128
+  ],
+  "contrast_order": "observed minus reference; G second nonce word minus first, matching bit positions",
+  "intervention_reference": "Same random working R(vertex), three actual-X finalizations; R reused across shared vertices",
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 2026103002,
+    "unit": "whole master-key pair",
+    "interval": "pointwise percentile 95%; shared draws across all variants and metrics"
+  },
+  "sign_flip": {
+    "replicates": 100000,
+    "seed": 2026103001,
+    "unit": "whole master-key pair",
+    "statistic": "absolute mean",
+    "roundoff_tolerance": "1e-12 * max(1,abs(mean))",
+    "pvalue": "(extremes+1)/(replicates+1)",
+    "holm_family": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ]
+  },
+  "planned_endpoints": [
+    "Salsa20 G_none",
+    "Salsa20 G_add minus G_none",
+    "ChaCha20 G_add minus G_none",
+    "Salsa20 mixed output-word-7 interaction J"
+  ],
+  "d2_groups": {
+    "aligned_all32": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "aligned_nonmsb31": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "offset4": [
+      32,
+      33,
+      34,
+      35
+    ],
+    "within2": [
+      36,
+      37
+    ]
+  },
+  "structural_checks": {
+    "observed_d2_none_equals_xor_all_words": {
+      "comparisons": 12451840,
+      "violations": 0
+    },
+    "oracle_d2_none_equals_xor_all_words": {
+      "comparisons": 12451840,
+      "violations": 0
+    },
+    "salsa2_c_independent_of_second_word": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_none_singleton_word7_exact_bit": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_xor_singleton_word7_zero": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_add_singleton_word7_lb": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_add_msb_singleton_word7_zero": {
+      "comparisons": 5120,
+      "violations": 0
+    },
+    "salsa2_mixed_d2_word7_none_xor_zero": {
+      "comparisons": 368640,
+      "violations": 0
+    },
+    "salsa2_mixed_add_d2_word7_conditional_lb": {
+      "comparisons": 184320,
+      "violations": 0
+    },
+    "salsa2_mixed_msb_add_d2_word7_zero": {
+      "comparisons": 10240,
+      "violations": 0
+    },
+    "salsa2_within_second_word_d2_word7_all_variants_zero": {
+      "comparisons": 30720,
+      "violations": 0
+    }
+  },
+  "output_rows": {
+    "per_key": 2880,
+    "summary": 36,
+    "planned": 4,
+    "d2_profiles_per_key": 61440
+  },
+  "output_sha256": {
+    "arx_feedforward_paired_per_key.csv": "71ed620956ee7d9868e8bc2785bf329073f0a4ac137772f76a0522a669fc3523",
+    "arx_feedforward_paired_summary.csv": "0168aaa841e46e33f8e84db528c2a0169ef12073fa6ab7da69d75f3f96e6c900",
+    "arx_feedforward_per_key.csv": "c6b2f37dab433f9ea64b664a12c5269024b7192b6bbe0f04dc36412d76fbe2b0",
+    "arx_feedforward_planned_tests.csv": "d26a9852614ad79acf4e4f87918bc02d8552a79b843167ea5e74baf1ef8b5c75",
+    "arx_feedforward_summary.csv": "c52cc27afe1027c7697c0c7798fda34657baa04ff888b97f797f582702e4d3b9",
+    "d2_profiles_summary.csv": "13db0511bc2e4213a48952ce8fb5525d2c9f98891a9c89666caa7c8a30b05026",
+    "d2_word7_pairs_summary.csv": "93feffe70a9e21a2b9c1a9b230f4e813b6206094468c29f2b5c6c447160f0187",
+    "interaction_per_key.csv": "1d06ea0a6292579e46b123780451de04d2d409b258fb8ed289c85f30bd0923ea",
+    "interaction_summary.csv": "96d06e7d166957dd765bfa5c74ffee4fb08bb7614563a70a380f7d52ba6b690a",
+    "per_key_d2_profiles.csv": "411d78e28d9dc1939e918161257fd9618778a8ac06a77742fe1761c0397dc49d",
+    "per_key_d2_word7_pairs.csv": "1edf94d11a787a8c84d26ea80b420a0b23f0ddf99f9ece436d8e1c1a2432f399",
+    "per_key_singleton_profiles.csv": "b2735c22da219f9d1748310df1b6a87dc21ea78d6228cdb289997bbc57cdd2d6",
+    "singleton_profiles_summary.csv": "19c095c2593ca07ecd127df1f4ab8843a00e58079b7da6ec6688fbf408b840e0"
+  }
+}

@@ -1,0 +1,1197 @@
+{
+  "editorial_decision": "Minor Revision",
+  "reviewer_reports": [
+    {
+      "reviewer_id": "EIC",
+      "role": "eic",
+      "criterion_judgements": [
+        {
+          "criterion_id": "D1",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The eic role is not eligible to assess D1 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D2",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The eic role is not eligible to assess D2 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D3",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The eic role is not eligible to assess D3 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D4",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The eic role is not eligible to assess D4 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D5",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "warn",
+          "evidence_anchors": [
+            {
+              "anchor_type": "text",
+              "locator": "Section 4.4, final paragraph, \"Both models predict all six entropy-gap signs.\" and \"However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps.\"",
+              "quote": "However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Section 5, ancillary-study paragraphs, \"Ancillary studies delimit the diagnostic.\" and \"A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits.\"",
+              "quote": "A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits."
+            }
+          ],
+          "rationale": "The six-setting model comparison is compressed and ancillary protocol details interrupt the focused discussion; both are localized Minor presentation issues.",
+          "uncertainty_or_scope_limit": "Complete supplied LaTeX and bibliography read; two figures and two tables visually inspected in the compiled PDF. D6 concerns assessable scholarly substance and positioning. No current venue-criteria alignment, independently verified full-text novelty, or specialist technical certification is claimed.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D5 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        },
+        {
+          "criterion_id": "D6",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "pass",
+          "evidence_anchors": [
+            {
+              "anchor_type": "text",
+              "locator": "Section 2, final paragraph",
+              "quote": "we claim no novelty for weak two-round diffusion or higher-order differences themselves."
+            },
+            {
+              "anchor_type": "equation",
+              "locator": "Section 4.1, eq:compactfC and eq:affinecorollary, with the following proof and scope paragraph."
+            },
+            {
+              "anchor_type": "table",
+              "locator": "Table 1, Principal cohorts, including the resolution-training and frozen-evaluation rows."
+            },
+            {
+              "anchor_type": "figure",
+              "locator": "Figures 1 and 2, compiled PDF pages 5 and 8."
+            }
+          ],
+          "rationale": "The contribution is specifically delimited, self-contained, and supported by the cohort overview and figures within the assessable scholarly scope.",
+          "uncertainty_or_scope_limit": "Complete supplied LaTeX and bibliography read; two figures and two tables visually inspected in the compiled PDF. D6 concerns assessable scholarly substance and positioning. No current venue-criteria alignment, independently verified full-text novelty, or specialist technical certification is claimed.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D6 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        }
+      ],
+      "strengths": [
+        {
+          "description": "The contribution has a specific and appropriately limited identity\n\nThe paper identifies its contribution as connecting conditional word-7 identities, paired finalization effects, and spectral reconstruction on fresh keys. It distinguishes that contribution from familiar weak low-round diffusion and from improvements in attack complexity. This makes the proposed addition assessable without requiring the manuscript to become a new attack paper. The abstract and conclusion maintain the same diagnostic scope.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Section 2, final paragraph",
+            "quote": "we claim no novelty for weak two-round diffusion or higher-order differences themselves."
+          }
+        },
+        {
+          "description": "The central local result is developed within the article\n\nThe conditional map, rank formula, singleton-response identity, and proof are present in the main text. The subsequent explanation distinguishes conditional behavior of one word from joint affinity or a full-cipher rank statement. From an editorial perspective, this is useful self-contained exposition: readers can inspect the claimed local contribution without consulting a supplementary manuscript.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Section 4.1, eq:compactfC and eq:affinecorollary, with the following proof and scope paragraph."
+          }
+        },
+        {
+          "description": "The cohort overview supports navigation across experiments\n\nThe overview makes the changes in output length, pooling, rounds, and cohort purpose visible before the detailed measurements. Its explicit training reuse statement helps readers distinguish new-key evaluation from additional observations of the earlier cohort. This is particularly valuable in a paper containing several related experimental stages.",
+          "evidence_anchor": {
+            "anchor_type": "table",
+            "locator": "Table 1, Principal cohorts, including the resolution-training and frozen-evaluation rows."
+          }
+        },
+        {
+          "description": "The figures expose the main observable distinctions\n\nThe rendered panels and captions are legible and organize the results around position, rotation, spectral prediction, and the round transition. Figure 2 separates the unfinalized derivative response from the fundamental-power contrast under modular finalization. Figure 1 distinguishes a four-position profile from an output-word contrast. These distinctions support the paper's emphasis on what each measurement actually summarizes.",
+          "evidence_anchor": {
+            "anchor_type": "figure",
+            "locator": "Figures 1 and 2, compiled PDF pages 5 and 8."
+          }
+        }
+      ],
+      "weaknesses": [
+        {
+          "description": "The six-setting model comparison is overly compressed\n\nThe paper reports spectrum-error ranges across resolutions and gives selected numerical predictions at 128 bits. This makes the stated tradeoff between spectrum reconstruction and entropy-gap accuracy harder to inspect for the other two widths. Figure 2 also displays only the 128-bit spectra. Replace part of the numerical paragraph with a compact comparison indexed by cipher and width, or use clearly labelled triples, showing the existing observed/predicted gaps and spectrum errors. The purpose is to make the reported six-setting comparison visible in the article; no additional simulation or hypothesis test is needed. This affects clarity rather than the stated contribution.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Section 4.4, final paragraph, \"Both models predict all six entropy-gap signs.\" and \"However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps.\"",
+            "quote": "However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps."
+          },
+          "severity": "minor",
+          "confidence": 5,
+          "competence_basis": "direct inspection of the result paragraph and Figure 2.",
+          "type": "writing"
+        },
+        {
+          "description": "Ancillary study details interrupt the focused discussion\n\nThree consecutive paragraphs introduce the seven-cipher comparison, Grain replication, Trivium pilot, and A5/1 studies with numerous protocol details and test results. Their contextual purpose is stated, but this creates a dense second experimental narrative after the principal ARX results. Condense these paragraphs around the two relevant lessons: initialization transients differ from recurring block structure, and quiet diagnostics do not establish security. Retain the minimum numerical evidence and citations needed for those lessons. This can preserve a single short article without a supplementary manuscript or new experiments, while giving the discussion more room to interpret the main mechanisms.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Section 5, ancillary-study paragraphs, \"Ancillary studies delimit the diagnostic.\" and \"A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits.\"",
+            "quote": "A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits."
+          },
+          "severity": "minor",
+          "confidence": 4,
+          "competence_basis": "editorial assessment of the discussion's sequence and information density.",
+          "type": "writing"
+        }
+      ],
+      "questions": [],
+      "calibration_status": "NOT_CALIBRATED"
+    },
+    {
+      "reviewer_id": "R1",
+      "role": "methodology",
+      "criterion_judgements": [
+        {
+          "criterion_id": "D1",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "warn",
+          "evidence_anchors": [
+            {
+              "anchor_type": "table",
+              "locator": "Table 1, Principal cohorts, together with the key-pair resampling specification in Materials and Methods, Paired Interventions and Inference."
+            },
+            {
+              "anchor_type": "equation",
+              "locator": "Equations labeled eq:entropy, eq:identity, and eq:gapfundamental in Direct and Spectral Measurements."
+            },
+            {
+              "anchor_type": "dataset",
+              "locator": "doc_stream_ciphers/data/arx_spectral_prediction/compact_summary.csv and spectral_errors.csv, M0/M1 rows for both ciphers at 32, 64, and 128 bits."
+            },
+            {
+              "anchor_type": "table",
+              "locator": "Table 2, Planned scan, feed-forward, and round-transition endpoints, Holm p column and caption."
+            },
+            {
+              "anchor_type": "absence",
+              "locator": "Materials and Methods, Paired Interventions and Inference and Frozen Empirical Spectrum Models",
+              "absence_scope": "the bootstrap interval construction",
+              "check_performed": "Checked the complete Methods text, Table 2 caption, and both figure captions."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Data Availability Statement",
+              "quote": "The package has not been publicly deposited and has no public DOI."
+            }
+          ],
+          "rationale": "Paired construction interventions, explicit estimators, whole-key resampling, conditional algebra, and new-key evaluation support the central design; table calibration wording, interval construction, and durable access need localized reporting repairs.",
+          "uncertainty_or_scope_limit": "Complete manuscript plus bounded read-only inspection of permitted scientific code and stored data. Cohorts and full simulations were not regenerated; historical timing of protocol freezes and the complete implementation were not independently certified. Arithmetic receipts report boundary limits, not arithmetic mismatches.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D1 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        },
+        {
+          "criterion_id": "D2",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The methodology role is not eligible to assess D2 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D3",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "pass",
+          "evidence_anchors": [
+            {
+              "anchor_type": "equation",
+              "locator": "Equations labeled eq:compactfC and eq:affinecorollary, with the conditional-rank proof and Third Round: Affinity Loss with Persistent Block Structure."
+            },
+            {
+              "anchor_type": "dataset",
+              "locator": "doc_stream_ciphers/data/arx_spectral_prediction/compact_summary.csv and spectral_errors.csv, M0/M1 rows for both ciphers at 32, 64, and 128 bits."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Scope and Discussion, \"no calibrated detector-power advantage was established.\"; Frozen Empirical Spectrum Models, \"these comparisons are not model-rejection tests or calibrated prediction intervals.\"",
+              "quote": "these comparisons are not model-rejection tests or calibrated prediction intervals."
+            }
+          ],
+          "rationale": "Conclusions distinguish diagnostics from superiority, equivalence, and security claims; the conditional algebra, transition, and nonlinear estimator support the appropriately local argument.",
+          "uncertainty_or_scope_limit": "Complete manuscript plus bounded read-only inspection of permitted scientific code and stored data. Cohorts and full simulations were not regenerated; historical timing of protocol freezes and the complete implementation were not independently certified. Arithmetic receipts report boundary limits, not arithmetic mismatches.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D3 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        },
+        {
+          "criterion_id": "D4",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The methodology role is not eligible to assess D4 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D5",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The methodology role is not eligible to assess D5 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D6",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The methodology role is not eligible to assess D6 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        }
+      ],
+      "strengths": [
+        {
+          "description": "The independent unit matches the design and resampling\n\nEach principal analysis retains 80 key pairs as independent replicates and keeps masks, bases, blocks, and interventions within those pairs. The paper distinguishes fresh-key cohorts from repeated analysis of existing trajectories and explicitly identifies reuse of the resolution cohort for model training. The inspected analysis code resamples whole rows of key-level endpoints, preserving the relevant within-key dependencies. This avoids treating the many masks, blocks, deterministic checkpoints, or simulated pseudo-keys as additional experimental key replicates.",
+          "evidence_anchor": {
+            "anchor_type": "table",
+            "locator": "Table 1, Principal cohorts, together with the key-pair resampling specification in Materials and Methods, Paired Interventions and Inference."
+          }
+        },
+        {
+          "description": "The measurement definitions support interpretable comparisons\n\nThe order of power averaging, normalization, and entropy calculation is explicit, as are changes in pooling between alignment and complete scans. The DC/AC decomposition explains why entropy is not monotonic in mean diffusion strength. Defining the fundamental fraction separately from the sum of block harmonics also makes the round-transition endpoint interpretable. The rotation control preserves the HW multiset and DC share, providing a useful intervention on the measurement while leaving the cipher unchanged.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Equations labeled eq:entropy, eq:identity, and eq:gapfundamental in Direct and Spectral Measurements."
+          }
+        },
+        {
+          "description": "The algebra and transition experiment support appropriately local conclusions\n\nThe proof identifies disjoint active column supports and explains both the rank formula and the bounded mean singleton response. Its assumptions concern a fixed remaining state and one output-word map; the prose explicitly prevents extrapolation to joint affinity or full-cipher rank. The third-round experiment then checks nonzero within-word second derivatives of the unfinalized map, while the persistent block-scale observable comes from standard output. These are distinct measurements, and the conclusion preserves that distinction. As a stored-data consistency check, the 80 Salsa20 round-three, unfinalized key-level rows average to the reported raw response at the displayed precision; this does not turn 10,240 repeated evaluations into 10,240 independent keys.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Equations labeled eq:compactfC and eq:affinecorollary, with the conditional-rank proof and Third Round: Affinity Loss with Persistent Block Structure."
+          }
+        },
+        {
+          "description": "The predictive comparison uses the actual nonlinear estimator and reports counterexamples to uniform improvement\n\nThe model implementation samples the stated M0 marginals and M1 key/base-conditional distributions, then applies the same finite-sample estimator used for evaluation. It does not replace expected entropy by the entropy of expected power. The inspected summaries agree with the manuscript's six-cell sign agreement, smaller M1 mean-spectrum errors, and the opposing entropy-gap rankings for ChaCha20 and Salsa20. Separate Monte Carlo errors and the explicit conditioning of evaluation intervals on the fixed fit prevent simulated sample size from being presented as training-cohort precision. The manuscript also acknowledges that mean spectra can conceal mask-level errors and does not present these intervals as model-rejection tests.",
+          "evidence_anchor": {
+            "anchor_type": "dataset",
+            "locator": "doc_stream_ciphers/data/arx_spectral_prediction/compact_summary.csv and spectral_errors.csv, M0/M1 rows for both ciphers at 32, 64, and 128 bits."
+          }
+        },
+        {
+          "description": "The strength of the conclusions tracks the strength of the evidence\n\nThe direct benchmark is identified as following the original spectral findings, rather than as a prospective power comparison. Pointwise intervals that include zero are not treated as equivalence, and small higher-round departures are not converted into a security conclusion. The feed-forward and conditional-affinity results are likewise restricted to the tested constructions and observables. These limitations leave a coherent, narrower mechanistic contribution.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Scope and Discussion, \"no calibrated detector-power advantage was established.\"; Frozen Empirical Spectrum Models, \"these comparisons are not model-rejection tests or calibrated prediction intervals.\"",
+            "quote": "these comparisons are not model-rejection tests or calibrated prediction intervals."
+          }
+        }
+      ],
+      "weaknesses": [
+        {
+          "description": "The main endpoint table should carry the calibration qualification\n\nThe Methods correctly state that zero mean does not imply sign-invariance and that Holm adjustment is conditional on valid endpoint calibration. The central table labels its column simply as Holm p and mentions the simulation floor, but omits the assumption-dependent interpretation. A reader using the table alone could therefore mistake these values for established distribution-free tests of the stated mean-zero null. Relabel the column as a Holm-adjusted sign-flip calibration and add a short caption qualification referring to the sign-invariance assumption. This is a presentation repair: the large reported effects, whole-key intervals, deterministic identities, and explicit Methods caveat do not warrant a major methodological penalty. Stronger unconditional testing claims would require their own justification or analysis, but the present article need not make those claims.",
+          "evidence_anchor": {
+            "anchor_type": "table",
+            "locator": "Table 2, Planned scan, feed-forward, and round-transition endpoints, Holm p column and caption."
+          },
+          "severity": "minor",
+          "confidence": 5,
+          "competence_basis": "direct comparison of the table with the stated random-sign null assumptions.",
+          "type": "methodology"
+        },
+        {
+          "description": "The bootstrap interval construction is omitted from the article\n\nThe text specifies whole-key resampling and the number of draws, but does not say whether the displayed limits are percentile, basic, studentized, or bias-corrected intervals. The relevant analysis functions use the 0.025 and 0.975 quantiles of resampled key means, and the spectral-distance limits use the same percentile construction. Add percentile to the bootstrap description and retain the existing conditional-uncertainty qualification for prediction comparisons. This small addition makes the interval calculation reproducible from the article without requiring another manuscript or a rerun.",
+          "evidence_anchor": {
+            "anchor_type": "absence",
+            "locator": "Materials and Methods, Paired Interventions and Inference and Frozen Empirical Spectrum Models",
+            "absence_scope": "the bootstrap interval construction",
+            "check_performed": "Checked the complete Methods text, Table 2 caption, and both figure captions."
+          },
+          "severity": "minor",
+          "confidence": 5,
+          "competence_basis": "the manuscript names the resampling unit and counts while the inspected code supplies the omitted interval rule.",
+          "type": "methodology"
+        },
+        {
+          "description": "Durable access to the existing research package remains unresolved\n\nThe named archive, version, hashes, and reproduction commands provide useful review-stage traceability. However, the article does not yet identify a durable route by which later readers can obtain that specific package. Before publication, archive the existing code and data at a stable public location, or state a durable access arrangement and its terms, and update the availability statement. A DOI is one solution rather than an independently established venue requirement. The existing code/data archive is the appropriate artifact for this step.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Data Availability Statement",
+            "quote": "The package has not been publicly deposited and has no public DOI."
+          },
+          "severity": "minor",
+          "confidence": 5,
+          "competence_basis": "explicit availability statement and successful inspection of the supplied local scientific files.",
+          "type": "methodology"
+        }
+      ],
+      "questions": [],
+      "calibration_status": "NOT_CALIBRATED"
+    },
+    {
+      "reviewer_id": "R2",
+      "role": "domain",
+      "criterion_judgements": [
+        {
+          "criterion_id": "D1",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The domain role is not eligible to assess D1 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D2",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "pass",
+          "evidence_anchors": [
+            {
+              "anchor_type": "equation",
+              "locator": "Results, Round Function: Recurring Structure and Conditional Rank, eq:compactfC and eq:affinecorollary"
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Materials and Methods, Paired Interventions and Inference",
+              "quote": "Since $D^2X=0$, none and xor derivatives agree exactly for either core at every round."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Results, Third Round: Affinity Loss with Persistent Block Structure",
+              "quote": "Nonzero witnesses refute conditional affinity of the unfinalized word-7 map for those settings;"
+            },
+            {
+              "anchor_type": "equation",
+              "locator": "Materials and Methods, Direct and Spectral Measurements, eq:entropy, eq:identity, and eq:gapfundamental"
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Results, Measurement: Alignment, Resolution, and Prediction",
+              "quote": "However, M0 is closer to all three ChaCha20 entropy gaps;"
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Scope and Discussion",
+              "quote": "These measurements suggest positions and differences for further analysis but provide no key hypothesis, attack complexity, or attack advantage."
+            }
+          ],
+          "rationale": "The conditional map, rank proof, dependency/finalization identities, transition inference, spectral definitions, model claims, and cryptographic scope are technically sound on the inspected evidence.",
+          "uncertainty_or_scope_limit": "Complete manuscript and bibliography, round schedules, permitted scientific code, and selected saved summaries examined. No experiments or archived audits were rerun. Full cited-source texts were unavailable; literature characterization, completeness, and priority of the conditional identities were not independently verified. This is an assessment limit, not an additional weakness.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D2 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        },
+        {
+          "criterion_id": "D3",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The domain role is not eligible to assess D3 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D4",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The domain role is not eligible to assess D4 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D5",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The domain role is not eligible to assess D5 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D6",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The domain role is not eligible to assess D6 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        }
+      ],
+      "strengths": [
+        {
+          "description": "The conditional Salsa20 word map and its rank are correctly derived\n\nThe two word-7 updates yield a map of the form W2[7] = u XOR C with C independent of the second nonce word when the remaining state is fixed. The displayed expression for C follows the column and row update order. For the finalized map, each active input bit produces the carry interval beginning one position above that bit and ending at the next zero of C, or at the word boundary. Those intervals are disjoint. This supports both the affine representation over F2 and the count of independent columns, including the inactive most significant input bit. Their union also gives the stated mean singleton HW bound and the trailing-ones formula. The manuscript properly limits the rank to this conditional output-word map and identifies its contrasting constants as algebraic examples. The inspected corollary code and saved summary are consistent with this derivation; the reported deterministic checks are supporting records rather than a substitute for the proof.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Results, Round Function: Recurring Structure and Conditional Rank, eq:compactfC and eq:affinecorollary"
+          }
+        },
+        {
+          "description": "The dependency and finalization statements preserve the relevant distinctions\n\nThe stated Salsa20 missing paths agree with the two-round schedule, and adding the initial state does not reintroduce the missing nonce dependencies in the listed output words. The none/xor second-derivative equality follows directly from the affine dependence of the initial state on the nonce. For word 7, conditional affinity in the second nonce word does not prevent a mixed derivative when the first nonce word changes C; the displayed difference of L_b columns correctly captures that distinction. The saved interaction summary matches the reported raw response and reference-adjusted interaction. The manuscript also correctly avoids interpreting ChaCha's cyclic state symmetry as invariance of the distribution of valid initialized states.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Materials and Methods, Paired Interventions and Inference",
+            "quote": "Since $D^2X=0$, none and xor derivatives agree exactly for either core at every round."
+          }
+        },
+        {
+          "description": "The third-round observation has the correct logical scope\n\nThe inspected round evaluator places the before/after checkpoints around the c update of quarter round (15,3,7,11), which is the sole write to word 7 in that round. The saved checkpoint summaries agree with the reported zero-to-nonzero transition for the two selected within-word pairs. A nonzero second derivative is sufficient to refute affinity for the corresponding fixed context. The text explicitly confines that conclusion to the unfinalized map and does not extrapolate it to all contexts, the finalized map, or the earliest nonlinear operation elsewhere. Comparing that local witness with a remaining standard-output spectral signal is therefore a defensible comparison of two different observables.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Results, Third Round: Affinity Loss with Persistent Block Structure",
+            "quote": "Nonzero witnesses refute conditional affinity of the unfinalized word-7 map for those settings;"
+          }
+        },
+        {
+          "description": "Spectral entropy is interpreted as a measurement of difference trajectories\n\nThe definitions distinguish entropy of the pooled power spectrum from entropy of keystream bits. The DC/AC decomposition and the Parseval expression explain why a higher full-spectrum entropy need not imply stronger diffusion. Frequency B = W/512 identifies the 512-bit fundamental under the stated sampling convention, and the manuscript distinguishes that fraction from a sum over harmonics. It also treats segment aggregation as a change of observable. These qualifications make the reported resolution-dependent entropy gaps and the weaker mean response with higher entropy scientifically interpretable without assigning an unjustified security ordering.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Materials and Methods, Direct and Spectral Measurements, eq:entropy, eq:identity, and eq:gapfundamental"
+          }
+        },
+        {
+          "description": "The prediction claims match the empirical models and reported errors\n\nThe independent-residual expected-power formula is appropriate for the stated conditional models, and the code implements the distinct pooling in M0 and conditioning in M1. The manuscript correctly separates normalized expected power from the expected finite-sample entropy and uses simulated outputs for the latter comparison. The inspected compact summary supports the reported 128-bit fundamental contrasts, Salsa20 gap, and MCSE. Crucially, the text reports the settings where M1 does not improve the entropy gap and acknowledges that averaged spectra can hide mask-level discrepancies. Thus the conclusion concerns reconstruction of selected summaries, without claiming a complete generative model of the cipher responses.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Results, Measurement: Alignment, Resolution, and Prediction",
+            "quote": "However, M0 is closer to all three ChaCha20 entropy gaps;"
+          }
+        },
+        {
+          "description": "Cryptographic implications remain proportionate to the evidence\n\nThe study distinguishes fixed-key nonce-response diagnostics from a key-recovery attack and does not infer full-round security or insecurity from these observables. It acknowledges that direct diagnostics detect the same large reduced-round departures and that no calibrated detector-power advantage was established. Its express limitation of novelty concerning weak two-round diffusion and higher-order differences is appropriate to the claims actually advanced. These boundaries permit the algebraic and experimental results to stand as diagnostic findings without an unsupported claim of cryptanalytic improvement.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Scope and Discussion",
+            "quote": "These measurements suggest positions and differences for further analysis but provide no key hypothesis, attack complexity, or attack advantage."
+          }
+        }
+      ],
+      "weaknesses": [],
+      "questions": [],
+      "calibration_status": "NOT_CALIBRATED",
+      "coverage_receipt": {
+        "covers": "weaknesses",
+        "rows": [
+          {
+            "dimension": "D1: methodology_rigor",
+            "checked": "Outside this role's scoring remit; no absence-of-weakness judgment is made.",
+            "basis": "Outside this role's scoring remit; no absence-of-weakness judgment is made."
+          },
+          {
+            "dimension": "D2: domain_accuracy",
+            "checked": "Checked round schedules, nonce-word dependencies, conditional affine algebra, derivative identities, spectral interpretation, selected saved results, and the stated cryptographic scope. No factual contradiction or unsupported extension was identified. Literature content and priority were not independently verified.",
+            "basis": "No concrete D2 weakness was established within the available evidence; missing full source texts remain an assessment limit."
+          },
+          {
+            "dimension": "D3: argumentative_coherence",
+            "checked": "Outside this role's scoring remit; no absence-of-weakness judgment is made.",
+            "basis": "Outside this role's scoring remit; no absence-of-weakness judgment is made."
+          },
+          {
+            "dimension": "D4: cross_disciplinary_relevance",
+            "checked": "Outside this role's scoring remit; no absence-of-weakness judgment is made.",
+            "basis": "Outside this role's scoring remit; no absence-of-weakness judgment is made."
+          },
+          {
+            "dimension": "D5: writing_and_structure",
+            "checked": "Outside this role's scoring remit; no absence-of-weakness judgment is made.",
+            "basis": "Outside this role's scoring remit; no absence-of-weakness judgment is made."
+          },
+          {
+            "dimension": "D6: venue_fit_and_contribution",
+            "checked": "Outside this role's scoring remit; no absence-of-weakness judgment is made.",
+            "basis": "Outside this role's scoring remit; no absence-of-weakness judgment is made."
+          }
+        ]
+      }
+    },
+    {
+      "reviewer_id": "R3",
+      "role": "perspective",
+      "criterion_judgements": [
+        {
+          "criterion_id": "D1",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The perspective role is not eligible to assess D1 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D2",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The perspective role is not eligible to assess D2 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D3",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The perspective role is not eligible to assess D3 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D4",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "warn",
+          "evidence_anchors": [
+            {
+              "anchor_type": "equation",
+              "locator": "Section 3.2, Equations (1)–(2), manuscript p. 3."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Section 3.3",
+              "quote": "It changes measurement order, not cipher operations."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "Section 4.1",
+              "quote": "joint affinity and full-cipher rank conclusions do not follow."
+            },
+            {
+              "anchor_type": "figure",
+              "locator": "Figure 2(a,b), manuscript p. 8, interpreted in Section 4.4."
+            },
+            {
+              "anchor_type": "table",
+              "locator": "Table 1 and its caption, manuscript p. 2."
+            },
+            {
+              "anchor_type": "equation",
+              "locator": "Section 4.1, Equations (7)–(8) and their accompanying explanation, manuscript p. 6."
+            }
+          ],
+          "rationale": "The observable, interventions, and limitations are accessible overall; the central conditional-affinity and rank comparison needs a brief operational explanation for adjacent-field readers.",
+          "uncertainty_or_scope_limit": "Supplied manuscript and bibliography and rendered figures examined from the perspective of mathematically trained adjacent-field readers; no additional reference is proposed. No publication-target alignment is certified.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D4 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        },
+        {
+          "criterion_id": "D5",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The perspective role is not eligible to assess D5 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D6",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The perspective role is not eligible to assess D6 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        }
+      ],
+      "strengths": [
+        {
+          "description": "The entropy observable and its interpretation are clearly separated\n\nThe paper specifies that the signal consists of segmentwise Hamming weights of nonce-induced output differences. Its decomposition of full-spectrum entropy into DC share and normalized AC entropy gives a useful explanation of why a larger reported entropy need not mean a stronger diffusion response. Section 4.4 makes the implication concrete through the Salsa20 example with fewer changed bits but higher entropy. This is a substantive bridge between the language of entropy in signal analysis and the meaning of diffusion in cryptography.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Section 3.2, Equations (1)–(2), manuscript p. 3."
+          }
+        },
+        {
+          "description": "The alignment intervention has an interpretable and bounded purpose\n\nPreserving the Hamming-weight multiset, mean, variance, and DC share while rotating samples within blocks makes the measurement intervention understandable without knowledge of the detailed cipher schedule. Figure 1 connects the positional profile to the loss of AC contrast under rotation. The text also prevents readers from treating the reported 96% and 94% reductions as security margins. The direct benchmark and discussion explicitly limit the contribution to explaining an already detectable response rather than asserting a detector-power advantage.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Section 3.3",
+            "quote": "It changes measurement order, not cipher operations."
+          }
+        },
+        {
+          "description": "Local algebraic conclusions retain their proper scope\n\nThe discussion distinguishes the conditional map of one output word from a joint map over the full state, and identifies the constants used to compare ranks as illustrations rather than observed cipher states. Section 4.3 similarly separates nonzero derivative witnesses for the unfinalized word from block-scale structure in finalized output. These qualifications help readers understand why a local loss of affinity and a persistent spectral feature can coexist, and why neither supplies a secure-round threshold.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "Section 4.1",
+            "quote": "joint affinity and full-cipher rank conclusions do not follow."
+          }
+        },
+        {
+          "description": "The model comparison exposes the limits of spectral reconstruction\n\nThe observed and predicted spectra provide a direct visual connection between positional modeling and frequency-domain structure. The caption identifies conjugate-bin folding, DC omission, Nyquist treatment, and the absence of reference subtraction. The methods distinguish entropy of expected power from expected finite-sample entropy, while the results acknowledge that M1's better mean spectra do not make it better for every entropy gap. Reporting the Monte Carlo error separately from the residual prediction error further helps readers distinguish simulation precision from model adequacy.",
+          "evidence_anchor": {
+            "anchor_type": "figure",
+            "locator": "Figure 2(a,b), manuscript p. 8, interpreted in Section 4.4."
+          }
+        },
+        {
+          "description": "The units of evidence are made accessible across disciplines\n\nThe cohort table separates output length, pooling, and round count, and identifies the training cohort's reuse. The accompanying explanations distinguish fresh keys from independent investigators, preserve the whole key as the resampling unit, and state that deterministic checkpoints and simulations do not enlarge the empirical cohorts. These details make the numerical evidence easier to interpret for readers accustomed to different meanings of replication.",
+          "evidence_anchor": {
+            "anchor_type": "table",
+            "locator": "Table 1 and its caption, manuscript p. 2."
+          }
+        }
+      ],
+      "weaknesses": [
+        {
+          "description": "Add a plain-language interpretation of conditional affinity and rank\n\nThe proof specifies the affine map and its independent columns, but the prose moves directly from XOR-affinity to finite-field rank without explaining what either quantity means operationally. Because the rank-versus-mean comparison is a central contribution, a signal-processing or statistics reader should not have to infer that connection solely from the proof. Add two brief sentences explaining that, with the other inputs fixed, XOR-affinity means a constant output offset plus a linear combination over binary arithmetic, and that rank counts independent output-change directions generated by the input bits. Then state explicitly that the average number of changed bits measures a different property, which is why the equal-mean example can have different ranks. The existing equations, proof, and restrictions can remain; this is an explanatory repair rather than a request to expand the study.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "Section 4.1, Equations (7)–(8) and their accompanying explanation, manuscript p. 6."
+          },
+          "severity": "minor",
+          "confidence": 4,
+          "competence_basis": "interpretation of finite-field linear maps for mathematically trained adjacent-field readers.",
+          "type": "writing"
+        }
+      ],
+      "questions": [],
+      "calibration_status": "NOT_CALIBRATED"
+    },
+    {
+      "reviewer_id": "DA",
+      "role": "da",
+      "criterion_judgements": [
+        {
+          "criterion_id": "D1",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The da role is not eligible to assess D1 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D2",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The da role is not eligible to assess D2 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D3",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "pass",
+          "evidence_anchors": [
+            {
+              "anchor_type": "equation",
+              "locator": "§4.1, eq:compactfC and eq:affinecorollary, including the disjoint-support proof."
+            },
+            {
+              "anchor_type": "table",
+              "locator": "Table 2 (tab:primary), Salsa20 working-output gap, add-minus-none gap, and mixed word-7 interaction rows."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "§4.3",
+              "quote": "Nonzero witnesses refute conditional affinity of the unfinalized word-7 map for those settings"
+            },
+            {
+              "anchor_type": "dataset",
+              "locator": "doc_stream_ciphers/data/arx_spectral_prediction/compact_summary.csv and doc_stream_ciphers/data/arx_spectral_prediction/spectral_errors.csv, all six cipher-width settings."
+            },
+            {
+              "anchor_type": "text",
+              "locator": "§3.3",
+              "quote": "Finite-sample validity requires null sign-invariance; zero mean and reference coupling alone do not guarantee it"
+            }
+          ],
+          "rationale": "The argument survived challenges to the disjoint-support proof, finalization contrasts, transition scope, model comparisons, and assumption-dependent calibration; no warning or blocking trigger was established.",
+          "uncertainty_or_scope_limit": "D3 only; supplied manuscript and bibliography and the two named prediction summaries inspected read-only. No external source verification, experiment rerun, model simulation, complete data-pipeline validation, or publication-target alignment is claimed.",
+          "decision_bearing": true,
+          "decision_bearing_reason": "Eligible assessed D3 value is transported unchanged to the role-scoped contract evaluation; confidence supplies no weight."
+        },
+        {
+          "criterion_id": "D4",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The da role is not eligible to assess D4 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D5",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The da role is not eligible to assess D5 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        },
+        {
+          "criterion_id": "D6",
+          "criterion_source": "reviewer/reviewer_full/v2",
+          "judgement_scale": "sprint_contract",
+          "judgement": "not_assessed",
+          "evidence_anchors": [],
+          "rationale": "The da role is not eligible to assess D6 under the contract.",
+          "uncertainty_or_scope_limit": "Outside this seat's scoring remit; not an absence-of-defect judgment.",
+          "decision_bearing": false,
+          "decision_bearing_reason": "Ineligible not_assessed value is excluded from both numerator and denominator."
+        }
+      ],
+      "strengths": [
+        {
+          "description": "The most consequential possible counterexample would be a carry interaction that invalidates the claimed conditional affinity. The proof addresses this: each active input bit induces an interval ending at the next zero of the fixed constant, and successive active intervals are disjoint. Their independence supports the rank formula, while the union of their supports supports the singleton-HW formula. The manuscript also prevents an invalid extrapolation from this conditional map to joint affinity or full-cipher rank. The constants illustrating equal means with different ranks are explicitly presented as algebraic examples, so their use does not require demonstrating their occurrence among sampled cipher states.",
+          "evidence_anchor": {
+            "anchor_type": "equation",
+            "locator": "§4.1, eq:compactfC and eq:affinecorollary, including the disjoint-support proof."
+          },
+          "confidence": 4,
+          "competence_basis": "direct algebraic inspection of the stated conditional map."
+        },
+        {
+          "description": "The finalization argument distinguishes an existing asymmetry from an added interaction. The positive working-output gap and the positive add-minus-none increment are different endpoints, and the manuscript does not infer that modular addition created the whole gap. Reusing the working state makes the intervention interpretable within these constructions. The mixed word-7 derivative is likewise distinguished from restoration of a reference-sized response, so a small nonzero interaction is not presented as adequate diffusion.",
+          "evidence_anchor": {
+            "anchor_type": "table",
+            "locator": "Table 2 (tab:primary), Salsa20 working-output gap, add-minus-none gap, and mixed word-7 interaction rows."
+          },
+          "confidence": 4,
+          "competence_basis": "comparison of paired endpoints with the conclusions drawn from them."
+        },
+        {
+          "description": "The third-round result avoids another potentially invalid implication. A nonzero second derivative disproves affinity for the sampled unfinalized maps, but does not by itself establish the corresponding property after modular finalization or identify the first nonlinear operation in the entire state. Those restrictions appear in the manuscript itself. The simultaneous spectral observation is expressly taken from standard output; the conclusion reports coexistence of these two observations rather than claiming they are the same observable.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "§4.3",
+            "quote": "Nonzero witnesses refute conditional affinity of the unfinalized word-7 map for those settings"
+          },
+          "confidence": 4,
+          "competence_basis": "logical scope of Boolean second-derivative witnesses."
+        },
+        {
+          "description": "The prediction claims also survive comparison with the supplied summaries. M1 has smaller mean-spectrum distances and smaller absolute fundamental-fraction errors in all six settings. M0 nevertheless has smaller absolute entropy-gap errors in all three ChaCha20 settings, as the manuscript states. Consequently, the argument does not silently turn improvement of a mean spectrum into improvement of every nonlinear summary. The reported Salsa20 128-bit residual also exceeds its simulation MCSE, and is disclosed rather than absorbed into a claim of exact reconstruction. These checks corroborate the reported comparisons; they do not independently validate the frozen fits or the complete data pipeline.",
+          "evidence_anchor": {
+            "anchor_type": "dataset",
+            "locator": "doc_stream_ciphers/data/arx_spectral_prediction/compact_summary.csv and doc_stream_ciphers/data/arx_spectral_prediction/spectral_errors.csv, all six cipher-width settings."
+          },
+          "confidence": 5,
+          "competence_basis": "direct comparison of the reported claims with the supplied numerical summaries."
+        },
+        {
+          "description": "The sign-flip probabilities cannot be read as assumption-free tests of an unrestricted zero-mean null. The manuscript states that limitation and makes its calibration conditional. Within D3, the exact identities and reported effect sizes therefore carry argumentative weight independently of treating the smallest probabilities as unconditional guarantees. Similarly, unresolved higher-round results are not used to establish equivalence or security.",
+          "evidence_anchor": {
+            "anchor_type": "text",
+            "locator": "§3.3",
+            "quote": "Finite-sample validity requires null sign-invariance; zero mean and reference coupling alone do not guarantee it"
+          },
+          "confidence": 4,
+          "competence_basis": "distinction between a mean-null claim and sign-invariant calibration."
+        }
+      ],
+      "weaknesses": [],
+      "questions": [],
+      "calibration_status": "NOT_CALIBRATED",
+      "coverage_receipt": {
+        "covers": "weaknesses",
+        "rows": [
+          {
+            "dimension": "D3: argumentative_coherence",
+            "checked": "Challenged the conditional-affinity proof, the finalization contrast, the round-transition inference, the model-comparison claims, and the stated inferential scope.",
+            "basis": "No confirmed Critical or Major argumentative weakness was identified. None of the Phase 1 D3 warning or blocking triggers is established by the inspected evidence."
+          }
+        ]
+      }
+    }
+  ],
+  "consensus": "CONSENSUS-4",
+  "revision_roadmap": {
+    "schema_version": "revision-roadmap/1.0",
+    "revision_round": 1,
+    "base_draft_sha256": "9cf702dd74ac412e5d2bb8fc88999960fae5087b05e072e3172e690f3bbd02e6",
+    "block_manifest_sha256": "385998f2360012cf9d212f5ed82f89cccb3fb6e74fd4cf8fb7129fde4321ddc7",
+    "items": [
+      {
+        "id": "REV-EIC-W1",
+        "source_refs": [
+          {
+            "seat": "EIC",
+            "channel": "finding",
+            "ordinal": 1,
+            "subclaim_ordinal": 0
+          }
+        ],
+        "description": "The six-setting model comparison is overly compressed",
+        "reviewer": "EIC",
+        "sub_claim_ids": [
+          "SC-EIC-W1"
+        ],
+        "obligation_class": "should_fix",
+        "severity": "minor",
+        "evidence_anchor": {
+          "anchor_type": "text",
+          "locator": "Section 4.4, final paragraph, \"Both models predict all six entropy-gap signs.\" and \"However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps.\"",
+          "quote": "However, M0 is closer to all three ChaCha20 entropy gaps; M1 is closer to all three Salsa20 gaps."
+        },
+        "confidence": 5,
+        "competence_basis": "direct inspection of the result paragraph and Figure 2.",
+        "cost_scope": {
+          "kind": "section",
+          "locator": "Section 4.4, final model-comparison paragraph"
+        },
+        "consequence_if_unaddressed": {
+          "code": "reader_traceability_reduced",
+          "target": {
+            "kind": "section",
+            "locator": "Section 4.4, six-setting model comparison"
+          }
+        },
+        "target_section": "Section 4.4, six-setting model comparison",
+        "suggested_action": "Replace part of the numerical paragraph with a compact cipher-by-width comparison or clearly labelled triples of the existing observed/M0/M1 entropy gaps and spectrum errors. Preserve the reported model tradeoff; use existing results without new simulation or testing. Editorial obligation basis: Suggested for inspectability of the six-setting comparison; the source finding does not undermine the stated contribution.",
+        "consensus_level": "SINGLE-VERIFIER",
+        "verification_criteria": "All six cipher-width settings expose the existing observed and predicted entropy gaps and spectrum errors, and retain that M0 is closer for the three ChaCha20 gaps while M1 is closer for the three Salsa20 gaps.",
+        "proposed_targets": [
+          {
+            "block_id": "B0053",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "REV-EIC-W2",
+        "source_refs": [
+          {
+            "seat": "EIC",
+            "channel": "finding",
+            "ordinal": 2,
+            "subclaim_ordinal": 0
+          }
+        ],
+        "description": "Ancillary study details interrupt the focused discussion",
+        "reviewer": "EIC",
+        "sub_claim_ids": [
+          "SC-EIC-W2"
+        ],
+        "obligation_class": "should_fix",
+        "severity": "minor",
+        "evidence_anchor": {
+          "anchor_type": "text",
+          "locator": "Section 5, ancillary-study paragraphs, \"Ancillary studies delimit the diagnostic.\" and \"A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits.\"",
+          "quote": "A5/1 used 80 keys, four frames, 22 singleton masks and 114 output bits."
+        },
+        "confidence": 4,
+        "competence_basis": "editorial assessment of the discussion's sequence and information density.",
+        "cost_scope": {
+          "kind": "section",
+          "locator": "Section 5, three ancillary-study paragraphs"
+        },
+        "consequence_if_unaddressed": {
+          "code": "reader_traceability_reduced",
+          "target": {
+            "kind": "section",
+            "locator": "Scope and Discussion, ancillary studies"
+          }
+        },
+        "target_section": "Scope and Discussion, ancillary studies",
+        "suggested_action": "Condense the three ancillary-study paragraphs around initialization transients versus recurring block structure and the fact that quiet diagnostics do not establish security; retain the minimum numerical evidence and citations for those lessons. Editorial obligation basis: Suggested to improve the discussion's focus and information density; no new experiment or supplementary manuscript is required.",
+        "consensus_level": "SINGLE-VERIFIER",
+        "verification_criteria": "The ancillary account directly supports those two stated lessons, retains their essential numerical evidence and citations, and avoids a second dense experimental narrative.",
+        "proposed_targets": [
+          {
+            "block_id": "B0056",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          },
+          {
+            "block_id": "B0057",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          },
+          {
+            "block_id": "B0058",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "REV-R1-W1",
+        "source_refs": [
+          {
+            "seat": "R1",
+            "channel": "finding",
+            "ordinal": 1,
+            "subclaim_ordinal": 0
+          }
+        ],
+        "description": "The main endpoint table should carry the calibration qualification",
+        "reviewer": "R1",
+        "sub_claim_ids": [
+          "SC-R1-W1"
+        ],
+        "obligation_class": "must_fix",
+        "severity": "minor",
+        "evidence_anchor": {
+          "anchor_type": "table",
+          "locator": "Table 2, Planned scan, feed-forward, and round-transition endpoints, Holm p column and caption."
+        },
+        "confidence": 5,
+        "competence_basis": "direct comparison of the table with the stated random-sign null assumptions.",
+        "cost_scope": {
+          "kind": "sentence",
+          "locator": "Table 2, calibration column heading and caption"
+        },
+        "consequence_if_unaddressed": {
+          "code": "interpretive_ambiguity_remains",
+          "target": {
+            "kind": "table",
+            "locator": "Table 2, Holm calibration heading and caption"
+          }
+        },
+        "target_section": "Table 2, Holm calibration heading and caption",
+        "suggested_action": "Relabel the Holm p column as Holm-adjusted sign-flip calibration and add a short caption qualification referring to null sign-invariance and its assumption-dependent interpretation. Preserve the existing endpoints and values. Editorial obligation basis: Required because the central table must communicate the assumptions needed to interpret its inferential values when read on its own.",
+        "consensus_level": "SINGLE-VERIFIER",
+        "verification_criteria": "Table 2 identifies the values as Holm-adjusted sign-flip calibrations and explicitly states their dependence on null sign-invariance, consistently with Methods.",
+        "proposed_targets": [
+          {
+            "block_id": "B0043",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "REV-R1-W2",
+        "source_refs": [
+          {
+            "seat": "R1",
+            "channel": "finding",
+            "ordinal": 2,
+            "subclaim_ordinal": 0
+          }
+        ],
+        "description": "The bootstrap interval construction is omitted from the article",
+        "reviewer": "R1",
+        "sub_claim_ids": [
+          "SC-R1-W2"
+        ],
+        "obligation_class": "must_fix",
+        "severity": "minor",
+        "evidence_anchor": {
+          "anchor_type": "absence",
+          "locator": "Materials and Methods, Paired Interventions and Inference and Frozen Empirical Spectrum Models",
+          "absence_scope": "the bootstrap interval construction",
+          "check_performed": "Checked the complete Methods text, Table 2 caption, and both figure captions."
+        },
+        "confidence": 5,
+        "competence_basis": "the manuscript names the resampling unit and counts while the inspected code supplies the omitted interval rule.",
+        "cost_scope": {
+          "kind": "sentence",
+          "locator": "Sections 3.3 and 3.4, bootstrap interval descriptions"
+        },
+        "consequence_if_unaddressed": {
+          "code": "method_reproducibility_unresolved",
+          "target": {
+            "kind": "section",
+            "locator": "Materials and Methods, bootstrap interval construction"
+          }
+        },
+        "target_section": "Materials and Methods, bootstrap interval construction",
+        "suggested_action": "State that the bootstrap limits use the 0.025 and 0.975 percentiles of whole-key resampled means, including spectral-distance intervals. Retain the prediction intervals' conditioning on the fixed fit and Monte Carlo estimate. Editorial obligation basis: Required so the article identifies the interval construction used by the existing analysis, without requiring readers to infer it from code.",
+        "consensus_level": "SINGLE-VERIFIER",
+        "verification_criteria": "Methods explicitly identifies percentile bootstrap limits at 0.025 and 0.975 for the reported whole-key means and spectral distances, while retaining the existing conditional-uncertainty qualification.",
+        "proposed_targets": [
+          {
+            "block_id": "B0024",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          },
+          {
+            "block_id": "B0030",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "REV-R1-W3",
+        "source_refs": [
+          {
+            "seat": "R1",
+            "channel": "finding",
+            "ordinal": 3,
+            "subclaim_ordinal": 0
+          }
+        ],
+        "description": "Durable access to the existing research package remains unresolved",
+        "reviewer": "R1",
+        "sub_claim_ids": [
+          "SC-R1-W3"
+        ],
+        "obligation_class": "must_fix",
+        "severity": "minor",
+        "evidence_anchor": {
+          "anchor_type": "text",
+          "locator": "Data Availability Statement",
+          "quote": "The package has not been publicly deposited and has no public DOI."
+        },
+        "confidence": 5,
+        "competence_basis": "explicit availability statement and successful inspection of the supplied local scientific files.",
+        "cost_scope": {
+          "kind": "other",
+          "locator": "Existing version 0.20.0 code/data package and Data Availability Statement",
+          "surface_id": "research_package_access"
+        },
+        "consequence_if_unaddressed": {
+          "code": "method_reproducibility_unresolved",
+          "target": {
+            "kind": "dataset",
+            "locator": "iv_diffusion_research_review_v0.20.0.zip"
+          }
+        },
+        "target_section": "iv_diffusion_research_review_v0.20.0.zip",
+        "suggested_action": "Before publication, deposit the existing versioned package at a stable public location or state a durable access arrangement and its terms; update only the dataavailability declaration within B0062. Preserve the version, hashes, and reproduction-command linkage. A DOI is an option, not a verified venue requirement. Editorial obligation basis: Required before publication because review-stage local access does not supply later readers with a durable route to the research package.",
+        "consensus_level": "SINGLE-VERIFIER",
+        "verification_criteria": "The Data Availability Statement supplies a durable route and any access terms for the specific versioned code/data package, retaining its version and integrity/reproduction references; an author assertion of a deposit alone is not evidence of access.",
+        "proposed_targets": [
+          {
+            "block_id": "B0062",
+            "allowed_operations": [
+              "replace_block"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "REV-R3-W1",
+        "source_refs": [
+          {
+            "seat": "R3",
+            "channel": "finding",
+            "ordinal": 1,
+            "subclaim_ordinal": 0
+          }
+        ],
+        "description": "Add a plain-language interpretation of conditional affinity and rank",
+        "reviewer": "R3",
+        "sub_claim_ids": [
+          "SC-R3-W1"
+        ],
+        "obligation_class": "should_fix",
+        "severity": "minor",
+        "evidence_anchor": {
+          "anchor_type": "equation",
+          "locator": "Section 4.1, Equations (7)–(8) and their accompanying explanation, manuscript p. 6."
+        },
+        "confidence": 4,
+        "competence_basis": "interpretation of finite-field linear maps for mathematically trained adjacent-field readers.",
+        "cost_scope": {
+          "kind": "sentence",
+          "locator": "Section 4.1, conditional rank explanation"
+        },
+        "consequence_if_unaddressed": {
+          "code": "interpretive_ambiguity_remains",
+          "target": {
+            "kind": "section",
+            "locator": "Section 4.1, conditional affinity and rank"
+          }
+        },
+        "target_section": "Section 4.1, conditional affinity and rank",
+        "suggested_action": "Insert a brief explanation after the rank/mean equations: with the other inputs fixed, XOR-affinity is a constant output offset plus a binary-linear combination, rank counts independent output-change directions generated by input bits, and mean changed-bit count measures a different property. Preserve the equations, proof, and conditional scope. Editorial obligation basis: Suggested to make the central rank-versus-mean example accessible across disciplines; the proof and central argument remain assessable in the source review.",
+        "consensus_level": "SINGLE-VERIFIER",
+        "verification_criteria": "Adjacent-field readers are told the operational meanings of conditional XOR-affinity, rank, and mean singleton changed-bit count, including why equal means can accompany different ranks.",
+        "proposed_targets": [
+          {
+            "block_id": "B0037",
+            "allowed_operations": [
+              "insert_after"
+            ]
+          }
+        ]
+      }
+    ],
+    "total_items": 6,
+    "obligation_counts": {
+      "must_fix": 3,
+      "should_fix": 3,
+      "consider": 0
+    },
+    "editorial_decision": "Minor Revision",
+    "consensus_summary": "CONSENSUS-4 applies only to the four non-DA reviewers' agreement on the contribution's appropriately local diagnostic scope (EIC S1-S2, R1 S3-S5, R2 S1/S6, R3 S2-S3). Each of the six revision findings is separately SINGLE-VERIFIER: EIC W1-W2, R1 W1-W3, and R3 W1. Silence from another role is neither corroboration nor disagreement. No conflict in existence, remedy, or severity was identified; DA recorded no Critical or Major issue. The decision comes solely from contract condition F5, not from this descriptive consensus label.",
+    "dissenting_opinions": []
+  },
+  "calibration_status": "NOT_CALIBRATED",
+  "review_panel_provenance": {
+    "artifact_path": "artifacts/panel_provenance.json",
+    "artifact_sha256": "7520da8e593b7ee946bf59974d9f29dc38b14d0e986c2363e659e46fe7342872",
+    "axes": {
+      "blind_to_peer_outputs": "unknown",
+      "fresh_context": true,
+      "human_distinct": false,
+      "model_family_distinct": "unknown",
+      "provider_distinct": "unknown",
+      "role_separated": true
+    },
+    "execution_topology_sha256": "6f0fb039379f2b635cf4b3036c3e5ec02fdd1b2235c546e8b27cae4ffac9b5ac",
+    "fresh_context_scope": "within_panel_attempt_only",
+    "normalized_manifest_sha256": "47d987ff83c8174c554b98cd553cb213da95dfe330d3c0568bbbb9a818be48b6",
+    "review_mode": "reviewer_full",
+    "schema_version": "review-panel-provenance-carrier/1.0",
+    "status": "valid"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "analysis_type": "deterministic corollary audit of existing observations",
+  "new_cipher_cohort_generated": false,
+  "new_significance_tests": false,
+  "scope": "Rank of the linear part of the conditional 32-bit map u -> ((u XOR C)+u), not the full cipher",
+  "provenance": {
+    "existing_hashes_verified": 25,
+    "raw_sha256": "8a50f1d3dbe8c1ee724114815751db6ee3270b5a4bd24d8692ce4b2e01d316b7",
+    "existing_cohort_indices": [
+      1000,
+      1079
+    ]
+  },
+  "small_word_exhaustive_audit": {
+    "widths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "constants_checked": 510,
+    "input_constant_pairs_checked": 87380,
+    "image_cardinalities_checked": 510,
+    "violations": 0
+  },
+  "retained_c_contexts": 168960,
+  "unique_c_elimination_checks": 10560,
+  "base_nonce_block_contexts": 5120,
+  "stored_singleton_columns_checked": 163840,
+  "stored_singleton_rank_elimination_checks": 5120,
+  "stored_singleton_mean_hw_checks": 5120,
+  "violations": 0,
+  "observed_mean_singleton_hw": 0.93291015625,
+  "formula_mean_singleton_hw": 0.93291015625,
+  "conditional_rank_range_base_contexts": [
+    9,
+    24
+  ],
+  "universal_mean_singleton_hw_upper_bound": 0.96875,
+  "algebraic_examples": [
+    {
+      "c_hex": "00000000",
+      "rank": 31,
+      "mean_singleton_hw": 0.96875,
+      "status": "Algebraic illustration, not a reported cipher observation"
+    },
+    {
+      "c_hex": "fffffffe",
+      "rank": 1,
+      "mean_singleton_hw": 0.96875,
+      "status": "Algebraic illustration, not a reported cipher observation"
+    }
+  ],
+  "interpretation": "No distribution for C or u is assumed. Repeated C values and nonce/block contexts are deterministic checks, not independent statistical replicates."
+}

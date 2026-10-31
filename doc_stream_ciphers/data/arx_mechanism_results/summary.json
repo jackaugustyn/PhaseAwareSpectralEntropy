@@ -1,0 +1,187 @@
+{
+  "ChaCha20": {
+    "nonce_word_1": {
+      "input_state_word": 14,
+      "absent_paths_after_two_rounds": [],
+      "all_zero_words_in_archive": [],
+      "observations_per_output_word": 81920,
+      "mean_output_word_hw": [
+        7.99393310546875,
+        15.0242431640625,
+        4.54932861328125,
+        5.6661376953125,
+        11.17763671875,
+        12.10433349609375,
+        15.73162841796875,
+        13.25557861328125,
+        10.45106201171875,
+        9.084375,
+        8.8820068359375,
+        15.68486328125,
+        13.9279296875,
+        6.9736572265625,
+        8.41087646484375,
+        9.20009765625
+      ],
+      "mean_128bit_position_hw": [
+        33.233642578125,
+        52.26917724609375,
+        44.10230712890625,
+        38.51256103515625
+      ]
+    },
+    "nonce_word_2": {
+      "input_state_word": 15,
+      "absent_paths_after_two_rounds": [],
+      "all_zero_words_in_archive": [],
+      "observations_per_output_word": 81920,
+      "mean_output_word_hw": [
+        5.69658203125,
+        8.0915283203125,
+        15.06177978515625,
+        4.54837646484375,
+        13.21767578125,
+        11.1209228515625,
+        12.11072998046875,
+        15.7230224609375,
+        15.6973388671875,
+        10.39356689453125,
+        9.06456298828125,
+        8.8102783203125,
+        8.18594970703125,
+        13.900341796875,
+        7.790380859375,
+        8.438134765625
+      ],
+      "mean_128bit_position_hw": [
+        33.3982666015625,
+        52.17235107421875,
+        43.9657470703125,
+        38.31480712890625
+      ]
+    },
+    "descriptive_column_shift_comparison": [
+      {
+        "column_shift": 0,
+        "mean_profile_rms_word_hw": 4.662851610410572,
+        "mean_profile_mean_absolute_word_hw": 3.6022377014160156
+      },
+      {
+        "column_shift": 1,
+        "mean_profile_rms_word_hw": 0.3281259418513768,
+        "mean_profile_mean_absolute_word_hw": 0.14521102905273436
+      },
+      {
+        "column_shift": 2,
+        "mean_profile_rms_word_hw": 4.542441521392232,
+        "mean_profile_mean_absolute_word_hw": 3.53819808959961
+      },
+      {
+        "column_shift": 3,
+        "mean_profile_rms_word_hw": 5.002733147056671,
+        "mean_profile_mean_absolute_word_hw": 4.1945137023925785
+      }
+    ],
+    "second_minus_first_128bit_hw": [
+      0.1646240234375,
+      -0.096826171875,
+      -0.13656005859375,
+      -0.19775390625
+    ]
+  },
+  "Salsa20": {
+    "nonce_word_1": {
+      "input_state_word": 6,
+      "absent_paths_after_two_rounds": [
+        1
+      ],
+      "all_zero_words_in_archive": [
+        1
+      ],
+      "observations_per_output_word": 81920,
+      "mean_output_word_hw": [
+        7.06668701171875,
+        0.0,
+        2.947021484375,
+        3.369482421875,
+        10.8912109375,
+        15.19970703125,
+        6.70087890625,
+        7.42578125,
+        14.772119140625,
+        15.39517822265625,
+        16.04481201171875,
+        10.14970703125,
+        2.89854736328125,
+        3.381201171875,
+        7.50323486328125,
+        10.24769287109375
+      ],
+      "mean_128bit_position_hw": [
+        13.38319091796875,
+        40.217578125,
+        56.36181640625,
+        24.03067626953125
+      ]
+    },
+    "nonce_word_2": {
+      "input_state_word": 7,
+      "absent_paths_after_two_rounds": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "all_zero_words_in_archive": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "observations_per_output_word": 81920,
+      "mean_output_word_hw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.42646484375,
+        5.25302734375,
+        0.0,
+        0.9341796875,
+        2.511279296875,
+        5.3284423828125,
+        8.97196044921875,
+        2.39248046875,
+        6.25565185546875,
+        12.07486572265625,
+        13.927783203125,
+        16.0142578125
+      ],
+      "mean_128bit_position_hw": [
+        0.0,
+        8.613671875,
+        19.20416259765625,
+        48.27255859375
+      ]
+    },
+    "low_counter_independent_output_words": [
+      4,
+      5,
+      6,
+      7,
+      11
+    ],
+    "counter_invariance_checked_word_values": 819200,
+    "input_x7_msb_output_x7_zero_observations": 2560,
+    "input_x7_mean_output_x7_hw": 0.9341796875
+  },
+  "status": "Descriptive mechanism audit of archived data; no new key cohort and no inferential test.",
+  "checks": {
+    "archived_nonce_pair_trajectories_checked": 256,
+    "instrumented_blocks_equal_production": 2048,
+    "chacha_state_rotation_identity_checks": 128,
+    "salsa_feedforward_msb_identity_checks": 128
+  }
+}

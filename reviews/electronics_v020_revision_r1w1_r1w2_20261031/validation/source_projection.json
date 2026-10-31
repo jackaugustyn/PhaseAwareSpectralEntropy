@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "applied_blocks": [
+    "B0024",
+    "B0030",
+    "B0043"
+  ],
+  "projection_matches_deterministically_applied_draft": true,
+  "table_data_rows_unchanged": true,
+  "citation_commands_unchanged": true,
+  "abstract_unchanged_not_regenerated": true,
+  "source_before_sha256": "48590e14bc4dca9317a170eec24c259812df2228d1d782068dd1b8736d8fcb45",
+  "source_after_sha256": "a133e974b1c758a7f0babb301d59b78e2d420a0eb4490d9ccfbf55628732046c",
+  "semantic_inspection": "Changes specify existing percentile-bootstrap computations and repeat existing null sign-invariance assumptions in Table 2. No result values, inferential claims, model fitting, or conclusions changed. Spectral-distance intervals are correctly described as recomputed distances against a fixed model mean.",
+  "unregistered_claim_drift_found": false,
+  "stage45_full_integrity_audit": false
+}

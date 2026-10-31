@@ -1,0 +1,10 @@
+{
+  "suggested_reference_check": "not_run_not_requested",
+  "reviewer_claim_check": "not_run_host_isolation_unavailable",
+  "acronym_check_exit_code": 0,
+  "acronym_report_bytes": 1822,
+  "letter_core_sha256": "6ce222566a643e4a767b238361388876fc5d0c01b6e260d372ead88837056ac6",
+  "final_letter_sha256": "41820d72955339a0a3d83ff76761acfbd80b6e9d89e4e72a32204ee44774751f",
+  "acronym_is_last_write": true,
+  "influences_decision_or_roadmap": false
+}

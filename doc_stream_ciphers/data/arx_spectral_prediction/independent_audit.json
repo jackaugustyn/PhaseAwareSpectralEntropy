@@ -1,0 +1,312 @@
+{
+  "status": "passed",
+  "auditor_source_sha256": "4362f3109665f1706e599bcb755cae6bc18d25750a81ca2bf7034338d39893a2",
+  "independent_core_source_sha256": "8abd5c923783d5d53de12e1baa731eb6f0324b62b411a817b4deffc8f93fb262",
+  "provenance": {
+    "checked_source_and_artifact_hashes": 21,
+    "training_raw_sha256": "ef78f1baa47f4f716c673bca01d54cd4278420977b8887a6fbfd5f40a980546c",
+    "evaluation_raw_sha256": "dc3e70454c99b735af41dc46ec28b23a608945a22c8ab93a82bc3b9e22a5031a",
+    "prediction_manifest_sha256": "c34df65364aca4e2009129fe9df722aebfc0380e394f1078db30a21f0fc88f37",
+    "evaluation_manifest_sha256": "70ac2c126cd27724e37a90c20312be8e63a446b17949a2e83e35d0a5c575659c",
+    "analysis_manifest_sha256": "de3b76445cd6f4f6a814ee677886dff089efa0c8de239dcb7b8674b4ef765929",
+    "training_evaluation_key_overlap": 0,
+    "checkpoint_fingerprints_verified": 80
+  },
+  "fixtures": {
+    "exact_residual_configurations_enumerated": 16
+  },
+  "fit_and_expected_power": {
+    "moment_max_absolute_errors": {
+      "m0_mean": 0.0,
+      "m0_variance": 3.836930773104541e-13,
+      "m1_mean": 0.0,
+      "m1_variance": 0.0
+    },
+    "m0_histogram_cells_checked": 67584,
+    "expected_power_max_absolute_error": 3.725290298461914e-09,
+    "normalized_expected_power_max_absolute_error": 5.551115123125783e-17,
+    "expected_power_method": "DFT of one mean block embedded at k=16*l, plus flat variance power; conditional M1 powers averaged before normalization."
+  },
+  "mode": "read_only unless --write requests this new audit report",
+  "audit_runtime": {
+    "python": "3.10.12",
+    "numpy": "1.22.0"
+  },
+  "evaluation_regeneration": {
+    "regenerated_key_indices": [
+      1200,
+      1279
+    ],
+    "cipher_streams": 1040,
+    "cipher_blocks": 16640,
+    "reference_streams": 1040,
+    "cipher_reference_pair_trajectories": 2048
+  },
+  "evaluation_statistics": {
+    "six_evaluation_cells_and_two_models_checked": true,
+    "per_key_scalar_max_absolute_error": 4.440892098500626e-16,
+    "per_key_spectrum_max_absolute_error": 4.440892098500626e-16,
+    "summary_max_absolute_error": 4.440892098500626e-16,
+    "ci_max_absolute_error": 8.881784197001252e-16,
+    "scalar_mcse_max_absolute_error": 0.0,
+    "spectral_l1_max_absolute_error": 1.1102230246251565e-16,
+    "conditional_interval_scope": "5000 whole-evaluation-key draws, fixed training fit and fixed MC estimate; training/MC uncertainty is not included in these intervals. MCSE is checked separately.",
+    "hypothesis_tests": "None; L1 distances and their intervals are descriptive.",
+    "compact_findings": [
+      {
+        "model": "M0",
+        "family": "ChaCha20",
+        "segment_bits": 32,
+        "metric": "F512_delta",
+        "observed": 0.1329285794620639,
+        "prediction": 0.11159857124052644,
+        "error": 0.021330008221537466
+      },
+      {
+        "model": "M0",
+        "family": "ChaCha20",
+        "segment_bits": 32,
+        "metric": "G",
+        "observed": 0.025903365118899728,
+        "prediction": 0.0332155170527758,
+        "error": -0.00731215193387607
+      },
+      {
+        "model": "M1",
+        "family": "ChaCha20",
+        "segment_bits": 32,
+        "metric": "F512_delta",
+        "observed": 0.1329285794620639,
+        "prediction": 0.1383838648203772,
+        "error": -0.0054552853583133
+      },
+      {
+        "model": "M1",
+        "family": "ChaCha20",
+        "segment_bits": 32,
+        "metric": "G",
+        "observed": 0.025903365118899728,
+        "prediction": 0.034920680387374836,
+        "error": -0.009017315268475108
+      },
+      {
+        "model": "M0",
+        "family": "ChaCha20",
+        "segment_bits": 64,
+        "metric": "F512_delta",
+        "observed": 0.31514307085136184,
+        "prediction": 0.26335578361664064,
+        "error": 0.0517872872347212
+      },
+      {
+        "model": "M0",
+        "family": "ChaCha20",
+        "segment_bits": 64,
+        "metric": "G",
+        "observed": -0.065985149835783,
+        "prediction": -0.06808493047411923,
+        "error": 0.0020997806383362266
+      },
+      {
+        "model": "M1",
+        "family": "ChaCha20",
+        "segment_bits": 64,
+        "metric": "F512_delta",
+        "observed": 0.31514307085136184,
+        "prediction": 0.3245194118085118,
+        "error": -0.009376340957149953
+      },
+      {
+        "model": "M1",
+        "family": "ChaCha20",
+        "segment_bits": 64,
+        "metric": "G",
+        "observed": -0.065985149835783,
+        "prediction": -0.05981133693140727,
+        "error": -0.006173812904375735
+      },
+      {
+        "model": "M0",
+        "family": "ChaCha20",
+        "segment_bits": 128,
+        "metric": "F512_delta",
+        "observed": 0.5385001825921496,
+        "prediction": 0.4230277608453363,
+        "error": 0.11547242174681333
+      },
+      {
+        "model": "M0",
+        "family": "ChaCha20",
+        "segment_bits": 128,
+        "metric": "G",
+        "observed": 0.005234534415120382,
+        "prediction": 0.005264710236106569,
+        "error": -3.0175820986186493e-05
+      },
+      {
+        "model": "M1",
+        "family": "ChaCha20",
+        "segment_bits": 128,
+        "metric": "F512_delta",
+        "observed": 0.5385001825921496,
+        "prediction": 0.5525183463551482,
+        "error": -0.014018163762998581
+      },
+      {
+        "model": "M1",
+        "family": "ChaCha20",
+        "segment_bits": 128,
+        "metric": "G",
+        "observed": 0.005234534415120382,
+        "prediction": 0.00693077587094866,
+        "error": -0.0016962414558282773
+      },
+      {
+        "model": "M0",
+        "family": "Salsa20",
+        "segment_bits": 32,
+        "metric": "F512_delta",
+        "observed": 0.36207739190816607,
+        "prediction": 0.33270322488597404,
+        "error": 0.029374167022192033
+      },
+      {
+        "model": "M0",
+        "family": "Salsa20",
+        "segment_bits": 32,
+        "metric": "G",
+        "observed": 1.1063927334702577,
+        "prediction": 1.2072493910876987,
+        "error": -0.100856657617441
+      },
+      {
+        "model": "M1",
+        "family": "Salsa20",
+        "segment_bits": 32,
+        "metric": "F512_delta",
+        "observed": 0.36207739190816607,
+        "prediction": 0.3629025331816537,
+        "error": -0.0008251412734876507
+      },
+      {
+        "model": "M1",
+        "family": "Salsa20",
+        "segment_bits": 32,
+        "metric": "G",
+        "observed": 1.1063927334702577,
+        "prediction": 1.0985893349919995,
+        "error": 0.007803398478258172
+      },
+      {
+        "model": "M0",
+        "family": "Salsa20",
+        "segment_bits": 64,
+        "metric": "F512_delta",
+        "observed": 0.4428474151864041,
+        "prediction": 0.41330501717847273,
+        "error": 0.029542398007931348
+      },
+      {
+        "model": "M0",
+        "family": "Salsa20",
+        "segment_bits": 64,
+        "metric": "G",
+        "observed": 0.9735246765072866,
+        "prediction": 1.0453075833269903,
+        "error": -0.07178290681970367
+      },
+      {
+        "model": "M1",
+        "family": "Salsa20",
+        "segment_bits": 64,
+        "metric": "F512_delta",
+        "observed": 0.4428474151864041,
+        "prediction": 0.4435590241476439,
+        "error": -0.0007116089612398402
+      },
+      {
+        "model": "M1",
+        "family": "Salsa20",
+        "segment_bits": 64,
+        "metric": "G",
+        "observed": 0.9735246765072866,
+        "prediction": 0.9649210353532973,
+        "error": 0.008603641153989261
+      },
+      {
+        "model": "M0",
+        "family": "Salsa20",
+        "segment_bits": 128,
+        "metric": "F512_delta",
+        "observed": 0.8008182390484648,
+        "prediction": 0.7686033798233024,
+        "error": 0.03221485922516243
+      },
+      {
+        "model": "M0",
+        "family": "Salsa20",
+        "segment_bits": 128,
+        "metric": "G",
+        "observed": 0.8013215099431321,
+        "prediction": 0.8557431026306548,
+        "error": -0.05442159268752267
+      },
+      {
+        "model": "M1",
+        "family": "Salsa20",
+        "segment_bits": 128,
+        "metric": "F512_delta",
+        "observed": 0.8008182390484648,
+        "prediction": 0.8045223379945713,
+        "error": -0.00370409894610646
+      },
+      {
+        "model": "M1",
+        "family": "Salsa20",
+        "segment_bits": 128,
+        "metric": "G",
+        "observed": 0.8013215099431321,
+        "prediction": 0.7946508248298033,
+        "error": 0.0066706851133288
+      }
+    ]
+  },
+  "monte_carlo_regeneration": [
+    {
+      "model": "M0",
+      "family": "ChaCha20",
+      "pseudo_keys": 4096,
+      "scalar_max_absolute_error": 4.440892098500626e-16,
+      "spectrum_mean_max_absolute_error": 2.9976021664879227e-15,
+      "spectrum_mcse_max_absolute_error": 1.6598356604540486e-13,
+      "sampling": "int16 PCG64 draws in batches of 32, independent coordinate decoding; one shared M1 key-index array."
+    },
+    {
+      "model": "M0",
+      "family": "Salsa20",
+      "pseudo_keys": 4096,
+      "scalar_max_absolute_error": 8.881784197001252e-16,
+      "spectrum_mean_max_absolute_error": 1.1102230246251565e-15,
+      "spectrum_mcse_max_absolute_error": 3.680719288316997e-14,
+      "sampling": "int16 PCG64 draws in batches of 32, independent coordinate decoding; one shared M1 key-index array."
+    },
+    {
+      "model": "M1",
+      "family": "ChaCha20",
+      "pseudo_keys": 4096,
+      "scalar_max_absolute_error": 4.440892098500626e-16,
+      "spectrum_mean_max_absolute_error": 2.9976021664879227e-15,
+      "spectrum_mcse_max_absolute_error": 1.6598356604540486e-13,
+      "sampling": "int16 PCG64 draws in batches of 32, independent coordinate decoding; one shared M1 key-index array."
+    },
+    {
+      "model": "M1",
+      "family": "Salsa20",
+      "pseudo_keys": 4096,
+      "scalar_max_absolute_error": 8.881784197001252e-16,
+      "spectrum_mean_max_absolute_error": 1.5543122344752192e-15,
+      "spectrum_mcse_max_absolute_error": 3.680719288316997e-14,
+      "sampling": "int16 PCG64 draws in batches of 32, independent coordinate decoding; one shared M1 key-index array."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "review_version": "0.20.0",
+  "pdf_pages": 11,
+  "bibliography_entries": 40,
+  "submission_members": 13,
+  "research_payload_files": 893,
+  "research_manifest_members": 1,
+  "research_archive_sha256": "baab66caf271873e572cd16c389e97dda87eb73521644f9b680d55f6726834ba",
+  "research_archive_crc": "PASS",
+  "research_archive_file_hashes": "PASS",
+  "archive_vs_workspace": "all 893 payload files identical",
+  "supplementary_manuscript": false,
+  "read_only": true
+}

@@ -40,7 +40,7 @@ def run(*args: str, cwd: Path = ROOT) -> None:
 
 
 def main() -> None:
-    """Dispatch vectors, archived-data audits, PDF build, or ZIP packaging."""
+    """Dispatch vectors, archived-data audits, the article PDF build, or ZIP packaging."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("vectors", "audits", "verify", "build", "package"))
     args = parser.parse_args()
@@ -50,10 +50,14 @@ def main() -> None:
         for name in AUDITS:
             run(sys.executable, str(EXPERIMENTS / name))
         run(sys.executable, str(ROOT / "tools" / "audit_followups.py"))
+        run(sys.executable, str(ROOT / "tools" / "audit_arx_extensions.py"))
+        run(sys.executable, str(ROOT / "tools" / "audit_arx_feedforward.py"))
+        run(sys.executable, str(EXPERIMENTS / "arx_affine_corollary.py"))
+        run(sys.executable, str(ROOT / "tools" / "audit_arx_spectral_prediction.py"))
+        run(sys.executable, str(ROOT / "tools" / "audit_arx_round_transition.py"))
     if args.command == "verify":
         run(sys.executable, str(ROOT / "verify_package.py"))
     elif args.command == "build":
-        run(sys.executable, str(PAPER / "make_integrated_mask_figure.py"))
         run("latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error", "-silent", "main.tex", cwd=PAPER)
     elif args.command == "package":
         run(sys.executable, str(PAPER / "build_submission_package.py"))

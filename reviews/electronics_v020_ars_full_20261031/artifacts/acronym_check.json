@@ -1,0 +1,326 @@
+{
+  "checker": "ars-acronym-check/1.0",
+  "input": "reviews/electronics_v020_ars_full_20261031/manuscript.txt",
+  "input_sha256": "6df871750b322afb7e383ff9cc80a8eec30ff1bee361d931859606c75432e8f8",
+  "status": "partial",
+  "allowlist": {
+    "default": 29,
+    "user": []
+  },
+  "coverage": {
+    "body": "checked",
+    "abstract_en": "not_in_input",
+    "abstract_zh": "not_in_input"
+  },
+  "scope_lines": {
+    "body": [
+      [
+        1,
+        1096
+      ]
+    ]
+  },
+  "unread_sections": [],
+  "coverage_limits": [
+    {
+      "scope": "body",
+      "line": 57,
+      "acronym": "XOR",
+      "reason": "unconfirmed_definition"
+    },
+    {
+      "scope": "body",
+      "line": 171,
+      "acronym": "MSB",
+      "reason": "unconfirmed_definition"
+    },
+    {
+      "scope": "body",
+      "line": 173,
+      "acronym": "LSB",
+      "reason": "unconfirmed_definition"
+    }
+  ],
+  "findings": [
+    {
+      "scope": "body",
+      "line": 4,
+      "rule": "defined_after_use",
+      "acronym": "IV",
+      "expansion": "initialization vector",
+      "occurrences": 8
+    },
+    {
+      "scope": "body",
+      "line": 57,
+      "rule": "undefined",
+      "acronym": "OR",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 59,
+      "rule": "undefined",
+      "acronym": "ARX",
+      "expansion": null,
+      "occurrences": 6
+    },
+    {
+      "scope": "body",
+      "line": 83,
+      "rule": "undefined",
+      "acronym": "BY",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 83,
+      "rule": "undefined",
+      "acronym": "CC",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 119,
+      "rule": "undefined",
+      "acronym": "NIST",
+      "expansion": null,
+      "occurrences": 3
+    },
+    {
+      "scope": "body",
+      "line": 184,
+      "rule": "undefined",
+      "acronym": "ZK",
+      "expansion": null,
+      "occurrences": 2
+    },
+    {
+      "scope": "body",
+      "line": 208,
+      "rule": "undefined",
+      "acronym": "HMP",
+      "expansion": null,
+      "occurrences": 6
+    },
+    {
+      "scope": "body",
+      "line": 215,
+      "rule": "undefined",
+      "acronym": "AC",
+      "expansion": null,
+      "occurrences": 11
+    },
+    {
+      "scope": "body",
+      "line": 215,
+      "rule": "undefined",
+      "acronym": "DC",
+      "expansion": null,
+      "occurrences": 3
+    },
+    {
+      "scope": "body",
+      "line": 219,
+      "rule": "undefined",
+      "acronym": "HnoDC",
+      "expansion": null,
+      "occurrences": 5
+    },
+    {
+      "scope": "body",
+      "line": 237,
+      "rule": "undefined",
+      "acronym": "PB",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 237,
+      "rule": "undefined",
+      "acronym": "PT",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 815,
+      "rule": "undefined",
+      "acronym": "HC",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 815,
+      "rule": "undefined",
+      "acronym": "MICKEY",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 903,
+      "rule": "undefined",
+      "acronym": "README",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 915,
+      "rule": "undefined",
+      "acronym": "IETF",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 915,
+      "rule": "undefined",
+      "acronym": "RFC",
+      "expansion": null,
+      "occurrences": 2
+    },
+    {
+      "scope": "body",
+      "line": 937,
+      "rule": "undefined",
+      "acronym": "ID",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 937,
+      "rule": "undefined",
+      "acronym": "SASC",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 945,
+      "rule": "undefined",
+      "acronym": "DES",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 947,
+      "rule": "undefined",
+      "acronym": "CRYPTO",
+      "expansion": null,
+      "occurrences": 3
+    },
+    {
+      "scope": "body",
+      "line": 951,
+      "rule": "undefined",
+      "acronym": "FSE",
+      "expansion": null,
+      "occurrences": 2
+    },
+    {
+      "scope": "body",
+      "line": 955,
+      "rule": "undefined",
+      "acronym": "IACR",
+      "expansion": null,
+      "occurrences": 2
+    },
+    {
+      "scope": "body",
+      "line": 975,
+      "rule": "undefined",
+      "acronym": "IEICE",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 979,
+      "rule": "undefined",
+      "acronym": "IEEE",
+      "expansion": null,
+      "occurrences": 5
+    },
+    {
+      "scope": "body",
+      "line": 1029,
+      "rule": "undefined",
+      "acronym": "SP",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1035,
+      "rule": "undefined",
+      "acronym": "EEG",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1061,
+      "rule": "undefined",
+      "acronym": "BLAKE2",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1065,
+      "rule": "undefined",
+      "acronym": "SHA",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1067,
+      "rule": "undefined",
+      "acronym": "FIPS",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1067,
+      "rule": "undefined",
+      "acronym": "PUB",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1087,
+      "rule": "undefined",
+      "acronym": "KATAN",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1089,
+      "rule": "undefined",
+      "acronym": "SAC",
+      "expansion": null,
+      "occurrences": 1
+    },
+    {
+      "scope": "body",
+      "line": 1093,
+      "rule": "undefined",
+      "acronym": "PC",
+      "expansion": null,
+      "occurrences": 1
+    }
+  ]
+}

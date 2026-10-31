@@ -1,0 +1,130 @@
+{
+  "file_count": 25,
+  "files": [
+    {
+      "path": "REVISION_LOG.md",
+      "bytes": 2849,
+      "sha256": "730fd7d650c74675ad15f251bbd7b810d3f6da699c97e1155d4d7b5cd16efcee"
+    },
+    {
+      "path": "author_adjudication.json",
+      "bytes": 1283,
+      "sha256": "f1c44983f9030df1a6e5e67a9a7c0d93aa5c94f4c9412d1e7bfe12c79f567090"
+    },
+    {
+      "path": "author_choices.json",
+      "bytes": 1388,
+      "sha256": "a276bc729f71770f5053d4b646aa1690a8f6bdfd6c67026de2b02671aea26061"
+    },
+    {
+      "path": "base.md",
+      "bytes": 49256,
+      "sha256": "9cf702dd74ac412e5d2bb8fc88999960fae5087b05e072e3172e690f3bbd02e6"
+    },
+    {
+      "path": "block_manifest.json",
+      "bytes": 17934,
+      "sha256": "385998f2360012cf9d212f5ed82f89cccb3fb6e74fd4cf8fb7129fde4321ddc7"
+    },
+    {
+      "path": "claim_surface_manifest.json",
+      "bytes": 303,
+      "sha256": "6ee815a5990736755dfd1e7f386691b81d1609944fd909abbc98383e640fec3b"
+    },
+    {
+      "path": "draft.rev1.md",
+      "bytes": 49552,
+      "sha256": "bcd706eac27ac6398b7f84ecb6d386e8a79042e908a4f92c22eb7ba75620949a"
+    },
+    {
+      "path": "draft.rev1.md.apply-report.json",
+      "bytes": 2206,
+      "sha256": "a574558b087859d41597dac2ea9f1b2dde165478a38ce17e7fd9b80c183cb91a"
+    },
+    {
+      "path": "main.after.tex",
+      "bytes": 27624,
+      "sha256": "a133e974b1c758a7f0babb301d59b78e2d420a0eb4490d9ccfbf55628732046c"
+    },
+    {
+      "path": "main.before.tex",
+      "bytes": 27328,
+      "sha256": "48590e14bc4dca9317a170eec24c259812df2228d1d782068dd1b8736d8fcb45"
+    },
+    {
+      "path": "manuscript.patch",
+      "bytes": 6901,
+      "sha256": "b5637e5246cfc7f7969826dcb3ddcc783b8de632995e64ecf0ed71a419ec6cab"
+    },
+    {
+      "path": "phase6_revision/revision_patch_round1.json",
+      "bytes": 4883,
+      "sha256": "bd1071955694cd843c4835e42f8ff1bd05ef1f9741eb899fc115971d68bc28dd"
+    },
+    {
+      "path": "roadmap.json",
+      "bytes": 5321,
+      "sha256": "629b80aeae8939560a5258440737369cad3e0e54fb9ec623dd1bf6cdb5ae79a7"
+    },
+    {
+      "path": "scope_selection.json",
+      "bytes": 837,
+      "sha256": "ef9a184a4ddefa7242848a6cd993361e36df4d85b2dfea6bccb317c8796aca62"
+    },
+    {
+      "path": "user_request.txt",
+      "bytes": 39,
+      "sha256": "d3fd6fe12e984fa27fd1eb1de167a00c36356e8db05f032f161b25d7a8ec1675"
+    },
+    {
+      "path": "validation/acronyms_after.json",
+      "bytes": 5720,
+      "sha256": "4cd9afbb83828047cc664053824a50c3f25cf1ecba9364a728e7f37f3829ce0f"
+    },
+    {
+      "path": "validation/acronyms_after.txt",
+      "bytes": 1656,
+      "sha256": "0a3fe4d7d905aace2fb2a417a448783817db741d18ac9262c078f33f7bca4d77"
+    },
+    {
+      "path": "validation/acronyms_before.json",
+      "bytes": 5714,
+      "sha256": "ed0822b2f223681da770558b7dc6ed9a69a686c66094d9302664fb9dadf27121"
+    },
+    {
+      "path": "validation/acronyms_before.txt",
+      "bytes": 1656,
+      "sha256": "0a3fe4d7d905aace2fb2a417a448783817db741d18ac9262c078f33f7bca4d77"
+    },
+    {
+      "path": "validation/code_evidence.json",
+      "bytes": 1167,
+      "sha256": "f8f793381a9550029d06bbef6b5fa6b46226e7234af686a06a3843744500bd2e"
+    },
+    {
+      "path": "validation/compiled_text.txt",
+      "bytes": 41773,
+      "sha256": "eeee1c2fc23b5bf9116fedf9ad81bcc929fa80006c1794bc9c668bc2dff674f4"
+    },
+    {
+      "path": "validation/completion.json",
+      "bytes": 1015,
+      "sha256": "8f03cfd4b5e3b3b9c840f3fc81fb9c92734c46092adf3dd3ad7f78acf67c797d"
+    },
+    {
+      "path": "validation/pdf_preflight.json",
+      "bytes": 378,
+      "sha256": "5ce1fe45d3b4bb506851243b916bee698f562e3a1bf4cd5756a495513ba518d2"
+    },
+    {
+      "path": "validation/source_projection.json",
+      "bytes": 876,
+      "sha256": "637c91bf356305beec88482385ec56f8446c3a276e0a21de3ebe73187b72aa6d"
+    },
+    {
+      "path": "writer_bindings.json",
+      "bytes": 538,
+      "sha256": "07c2bfdb7674d3e3a3cbed740c18723e112b38d954fc4183b666db39836d5a4e"
+    }
+  ]
+}

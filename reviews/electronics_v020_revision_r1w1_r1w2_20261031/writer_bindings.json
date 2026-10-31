@@ -1,0 +1,12 @@
+{
+  "base_draft_hash": "9cf702dd74ac",
+  "roadmap_sha256": "629b80aeae8939560a5258440737369cad3e0e54fb9ec623dd1bf6cdb5ae79a7",
+  "author_adjudication_sha256": "f1c44983f9030df1a6e5e67a9a7c0d93aa5c94f4c9412d1e7bfe12c79f567090",
+  "author_decision_digest": "1e16efcc6725574aadfdb4f163ad1fbad6c85c02306322c2a58416ef7825a40a",
+  "claim_surface_manifest_sha256": "6ee815a5990736755dfd1e7f386691b81d1609944fd909abbc98383e640fec3b",
+  "block_hashes": {
+    "B0024": "9be068e6e314",
+    "B0030": "67d6cd8f638e",
+    "B0043": "32d92276f0ee"
+  }
+}

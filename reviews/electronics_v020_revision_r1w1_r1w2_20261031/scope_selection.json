@@ -1,0 +1,19 @@
+{
+  "source_roadmap": "reviews/electronics_v020_ars_full_20261031/revision_roadmap.json",
+  "source_roadmap_sha256": "dc4c00dd927291f5b83fabf065deb9bcccf53a0e7bc8c0c136c1bb33ad25fb32",
+  "selected_items": [
+    "REV-R1-W1",
+    "REV-R1-W2"
+  ],
+  "unselected_items": [
+    "REV-EIC-W1",
+    "REV-EIC-W2",
+    "REV-R1-W3",
+    "REV-R3-W1"
+  ],
+  "selection_source": "Exact user request refers to numbered points in preceding assistant final answer; point 1 is Table 2 calibration and point 2 is percentile bootstrap.",
+  "source_items_preserved": true,
+  "registered_claim_scope": "No prior Claim Intent Manifest is available; empty registry does not assert complete claim protection. The exact before/after text requires semantic inspection.",
+  "stage45_integrity_pass_available": false,
+  "stage45_or_formal_rereview_claimed": false
+}

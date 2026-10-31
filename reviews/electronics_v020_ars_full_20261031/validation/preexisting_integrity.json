@@ -1,0 +1,8 @@
+{
+  "prior_manifest": "PACKAGE_MANIFEST.json",
+  "prior_record_count": 954,
+  "checked": "SHA-256 of every previously listed file",
+  "changed_preexisting_files": [],
+  "missing_preexisting_files": [],
+  "status": "PASS"
+}

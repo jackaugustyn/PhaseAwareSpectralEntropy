@@ -1,0 +1,29 @@
+{
+  "source_sha256": "02d6d54a23ed354fdb4c1ad1baa98f91b9451467129450acfd12df4fe041b525",
+  "pdf_sha256": "52c95bc7ad821ce41a80d05a78fd62e2106bb331a95b10862ea92c26b5f609ce",
+  "input_sha256": {
+    "doc_stream_ciphers/data/arx_spectral_prediction/compact_summary.csv": "43349e2315743b8ecd8cd9876b1f7f4d0f2dfd2f50e01fdcabd4ddae77029345",
+    "doc_stream_ciphers/data/arx_round_transition/within_word_summary.csv": "7f2a5911a0f79fa17eec1fda098b57bc77bb0fc84975359d997c3559791aeff4",
+    "doc_stream_ciphers/data/arx_round_transition/singleton_summary.csv": "762979dc9be6c912567fedefcc6f22af14ae60e89418f86400a6b67c7cdc0fae"
+  },
+  "prediction_training_indices": [
+    840,
+    919
+  ],
+  "prediction_evaluation_indices": [
+    1200,
+    1279
+  ],
+  "transition_indices": [
+    1400,
+    1479
+  ],
+  "model_intervals_shown": false,
+  "observed_intervals": "pointwise 95% whole-key bootstrap",
+  "panels": [
+    "G: fixed M0/M1 and independent observations",
+    "DeltaF512: fixed M0/M1 and independent observations",
+    "Raw within-x7 D2 word7 HW, none",
+    "DeltaF512 of singleton HW, add, 128-bit segments"
+  ]
+}

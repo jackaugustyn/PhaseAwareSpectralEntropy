@@ -1,0 +1,670 @@
+{
+  "source_sha256": "83654246cc267321aa9c08af68c519fe33f6f56d171c427553249a3e069ca155",
+  "input_sha256": "411d78e28d9dc1939e918161257fd9618778a8ac06a77742fe1761c0397dc49d",
+  "pdf_sha256": "9c5e4a2f64ece926c257a2355c01b6ea35e01eb4f35a7f493a72d7e1bf25d7d1",
+  "cohort_indices": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
+    1039,
+    1040,
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1049,
+    1050,
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
+    1059,
+    1060,
+    1061,
+    1062,
+    1063,
+    1064,
+    1065,
+    1066,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071,
+    1072,
+    1073,
+    1074,
+    1075,
+    1076,
+    1077,
+    1078,
+    1079
+  ],
+  "mask_group": "aligned_nonmsb31",
+  "rounds": 2,
+  "bootstrap_seed": 2026103002,
+  "bootstrap_replicates": 5000,
+  "intervals": "pointwise whole-key 95% percentile bootstrap",
+  "profiles": [
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 0,
+      "mean": 1.8524004536290313,
+      "ci_low": 1.7753484122983871,
+      "ci_high": 1.9315936869959673,
+      "reference_mean": 16.007724294354837
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 1,
+      "mean": 5.510704385080647,
+      "ci_low": 5.430772429435483,
+      "ci_high": 5.594067067792339,
+      "reference_mean": 15.99044228830645
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 2,
+      "mean": 3.165272177419355,
+      "ci_low": 3.124375945060484,
+      "ci_high": 3.205528288810485,
+      "reference_mean": 15.987991431451613
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 3,
+      "mean": 0.6620904737903227,
+      "ci_low": 0.6439262537802418,
+      "ci_high": 0.6800797001008068,
+      "reference_mean": 15.99698210685484
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 4,
+      "mean": 4.491903981854838,
+      "ci_low": 4.441840977822583,
+      "ci_high": 4.54113013482863,
+      "reference_mean": 15.996282762096774
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 5,
+      "mean": 5.1046055947580635,
+      "ci_low": 5.005626260080645,
+      "ci_high": 5.205697139616935,
+      "reference_mean": 15.99659148185484
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 6,
+      "mean": 9.595085685483872,
+      "ci_low": 9.527109059979843,
+      "ci_high": 9.663444745463709,
+      "reference_mean": 16.01530997983871
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 7,
+      "mean": 8.73686995967742,
+      "ci_low": 8.636838930191528,
+      "ci_high": 8.836134702620967,
+      "reference_mean": 16.005834173387097
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 8,
+      "mean": 7.85994203629032,
+      "ci_low": 7.77652075982863,
+      "ci_high": 7.940174521169355,
+      "reference_mean": 16.000107106854834
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 9,
+      "mean": 4.365064264112901,
+      "ci_low": 4.318836473034273,
+      "ci_high": 4.410374716481854,
+      "reference_mean": 16.012512600806453
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 10,
+      "mean": 4.209671118951613,
+      "ci_low": 4.1323933656754015,
+      "ci_high": 4.291296307963708,
+      "reference_mean": 15.994329637096774
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 11,
+      "mean": 8.344795866935485,
+      "ci_low": 8.27478058845766,
+      "ci_high": 8.420615076864921,
+      "reference_mean": 16.002589465725805
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 12,
+      "mean": 5.510704385080647,
+      "ci_low": 5.430772429435483,
+      "ci_high": 5.594067067792339,
+      "reference_mean": 15.992231602822581
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 13,
+      "mean": 3.8113659274193536,
+      "ci_low": 3.748728736139112,
+      "ci_high": 3.8743894909274186,
+      "reference_mean": 15.994203629032256
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 14,
+      "mean": 0.6620904737903227,
+      "ci_low": 0.6439262537802418,
+      "ci_high": 0.6800797001008068,
+      "reference_mean": 16.003855846774194
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "none",
+      "word": 15,
+      "mean": 1.8524004536290313,
+      "ci_low": 1.7753484122983871,
+      "ci_high": 1.9315936869959673,
+      "reference_mean": 15.996074848790323
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 0,
+      "mean": 1.8802104334677423,
+      "ci_low": 1.8099455015120964,
+      "ci_high": 1.9544677734375002,
+      "reference_mean": 16.010137348790323
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 1,
+      "mean": 5.511611643145162,
+      "ci_low": 5.439421307963711,
+      "ci_high": 5.58661873109879,
+      "reference_mean": 16.000516633064514
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 2,
+      "mean": 3.1955015120967736,
+      "ci_low": 3.1526362462197595,
+      "ci_high": 3.2376704259072584,
+      "reference_mean": 15.994260332661293
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 3,
+      "mean": 0.683852066532258,
+      "ci_low": 0.6644090221774193,
+      "ci_high": 0.7036370652721775,
+      "reference_mean": 16.020596018145163
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 4,
+      "mean": 7.1817162298387105,
+      "ci_low": 7.101468623991937,
+      "ci_high": 7.263709834929435,
+      "reference_mean": 16.013772681451616
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 5,
+      "mean": 7.1560105846774205,
+      "ci_low": 7.05280730216734,
+      "ci_high": 7.26068154611895,
+      "reference_mean": 16.006287802419354
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 6,
+      "mean": 11.369487147177416,
+      "ci_low": 11.291279454385075,
+      "ci_high": 11.451053742439521,
+      "reference_mean": 16.014396421370968
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 7,
+      "mean": 10.939610635080644,
+      "ci_low": 10.853275264616938,
+      "ci_high": 11.026389553931452,
+      "reference_mean": 16.003792842741937
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 8,
+      "mean": 7.873998235887099,
+      "ci_low": 7.788643838205645,
+      "ci_high": 7.957366116431453,
+      "reference_mean": 15.998172883064516
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 9,
+      "mean": 4.3772303427419335,
+      "ci_low": 4.332779422883064,
+      "ci_high": 4.421824596774192,
+      "reference_mean": 16.006798135080643
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 10,
+      "mean": 4.179120463709678,
+      "ci_low": 4.103036164314517,
+      "ci_high": 4.255129473286293,
+      "reference_mean": 16.011725050403225
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 11,
+      "mean": 8.375346522177415,
+      "ci_low": 8.301687563004036,
+      "ci_high": 8.447840221774193,
+      "reference_mean": 16.002192540322582
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 12,
+      "mean": 5.8756678427419375,
+      "ci_low": 5.790970892137097,
+      "ci_high": 5.9628849546370954,
+      "reference_mean": 15.99114793346774
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 13,
+      "mean": 3.8113659274193536,
+      "ci_low": 3.748728736139112,
+      "ci_high": 3.8743894909274186,
+      "reference_mean": 15.994203629032256
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 14,
+      "mean": 2.5383001512096772,
+      "ci_low": 2.511226373487902,
+      "ci_high": 2.5651527847782254,
+      "reference_mean": 16.005594758064518
+    },
+    {
+      "family": "ChaCha20",
+      "variant": "add",
+      "word": 15,
+      "mean": 3.2252079133064506,
+      "ci_low": 3.1222941343245973,
+      "ci_high": 3.3301631804435474,
+      "reference_mean": 16.00518523185484
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 0,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.989931955645165
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 1,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 16.003030493951613
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 2,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.997133316532256
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 3,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 16.005342741935483
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 4,
+      "mean": 1.2466733870967743,
+      "ci_low": 1.2139087701612898,
+      "ci_high": 1.2807459677419355,
+      "reference_mean": 15.995375504032257
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 5,
+      "mean": 2.8973790322580646,
+      "ci_low": 2.839012096774193,
+      "ci_high": 2.9625,
+      "reference_mean": 16.010294858870967
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 6,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.99493447580645
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 7,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.988199344758067
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 8,
+      "mean": 1.423891129032258,
+      "ci_low": 1.3824596774193552,
+      "ci_high": 1.4671421370967745,
+      "reference_mean": 15.997668850806452
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 9,
+      "mean": 4.073418598790322,
+      "ci_low": 4.0106221648185505,
+      "ci_high": 4.136022082913307,
+      "reference_mean": 16.003528225806452
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 10,
+      "mean": 6.908360635080645,
+      "ci_low": 6.824676631804436,
+      "ci_high": 6.990203818044353,
+      "reference_mean": 16.009028477822582
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 11,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.99204889112903
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 12,
+      "mean": 0.0834677419354839,
+      "ci_low": 0.06875000000000002,
+      "ci_high": 0.10080897177419351,
+      "reference_mean": 15.998368195564519
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 13,
+      "mean": 0.6798387096774199,
+      "ci_low": 0.6460326360887099,
+      "ci_high": 0.7160052293346776,
+      "reference_mean": 15.997013608870969
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 14,
+      "mean": 3.3200667842741938,
+      "ci_low": 3.2607396673387097,
+      "ci_high": 3.380242250504032,
+      "reference_mean": 16.001795614919356
+    },
+    {
+      "family": "Salsa20",
+      "variant": "none",
+      "word": 15,
+      "mean": 7.226776713709677,
+      "ci_low": 7.158676600302423,
+      "ci_high": 7.300210118447582,
+      "reference_mean": 15.984935735887097
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 0,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 16.004158266129032
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 1,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 16.007289566532258
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 2,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.992206401209677
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 3,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 16.00267137096774
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 4,
+      "mean": 1.75695564516129,
+      "ci_low": 1.7160257056451602,
+      "ci_high": 1.7989944556451616,
+      "reference_mean": 16.004712701612902
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 5,
+      "mean": 3.939717741935483,
+      "ci_low": 3.862091733870968,
+      "ci_high": 4.017142137096775,
+      "reference_mean": 16.00933089717742
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 6,
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "reference_mean": 15.994928175403226
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 7,
+      "mean": 0.7241935483870967,
+      "ci_low": 0.7020161290322582,
+      "ci_high": 0.7460685483870966,
+      "reference_mean": 16.00272177419355
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 8,
+      "mean": 1.5513104838709673,
+      "ci_low": 1.5094254032258068,
+      "ci_high": 1.5937537802419357,
+      "reference_mean": 16.00434097782258
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 9,
+      "mean": 4.073418598790322,
+      "ci_low": 4.0106221648185505,
+      "ci_high": 4.136022082913307,
+      "reference_mean": 16.003528225806452
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 10,
+      "mean": 8.077236643145161,
+      "ci_low": 8.002776587701609,
+      "ci_high": 8.152446919102822,
+      "reference_mean": 16.017546622983872
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 11,
+      "mean": 1.1536290322580645,
+      "ci_low": 1.11320564516129,
+      "ci_high": 1.1940549395161293,
+      "reference_mean": 15.997574344758064
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 12,
+      "mean": 0.19739793346774195,
+      "ci_low": 0.17631489415322582,
+      "ci_high": 0.21876323084677418,
+      "reference_mean": 15.999609375
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 13,
+      "mean": 1.1404674899193552,
+      "ci_low": 1.0936862084173384,
+      "ci_high": 1.1886655745967742,
+      "reference_mean": 16.000415826612905
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 14,
+      "mean": 4.945848034274194,
+      "ci_low": 4.858116651965726,
+      "ci_high": 5.03528572328629,
+      "reference_mean": 15.99168976814516
+    },
+    {
+      "family": "Salsa20",
+      "variant": "add",
+      "word": 15,
+      "mean": 8.546906502016125,
+      "ci_low": 8.483895066784275,
+      "ci_high": 8.610401965725808,
+      "reference_mean": 15.991450352822579
+    }
+  ]
+}

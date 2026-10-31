@@ -1,0 +1,39 @@
+{
+  "fingerprint": "dcd854be67607baf44dee52dbbb2b622c7fe47075bfd60722a500adf4989c228",
+  "key_index": 1462,
+  "raw_sha256": "6430fbbde8ddd8142ee2aa686507202a8cf2ccff116ab2965e288ec2e51421aa",
+  "structural_checks": {
+    "observed_ChaCha20_d2_none_equals_xor_all_words": {
+      "comparisons": 116736,
+      "violations": 0
+    },
+    "oracle_ChaCha20_d2_none_equals_xor_all_words": {
+      "comparisons": 116736,
+      "violations": 0
+    },
+    "observed_Salsa20_d2_none_equals_xor_all_words": {
+      "comparisons": 116736,
+      "violations": 0
+    },
+    "oracle_Salsa20_d2_none_equals_xor_all_words": {
+      "comparisons": 116736,
+      "violations": 0
+    },
+    "salsa2_within_second_word_word7_zero_all_variants": {
+      "comparisons": 384,
+      "violations": 0
+    },
+    "salsa3_checkpoint_before_c_equals_round2_word7": {
+      "comparisons": 6592,
+      "violations": 0
+    },
+    "salsa3_checkpoint_after_c_equals_round3_word7": {
+      "comparisons": 6592,
+      "violations": 0
+    },
+    "salsa3_within_second_word_d2_before_c_zero": {
+      "comparisons": 128,
+      "violations": 0
+    }
+  }
+}

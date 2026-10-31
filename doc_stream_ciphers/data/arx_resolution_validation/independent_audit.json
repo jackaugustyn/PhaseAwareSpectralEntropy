@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "auditor_source_sha256": "943f497a0885286c7c41c12c5ed49fd9f0bb9b68fa8e13335b9d8843720b0936",
+  "archived_hash_checks": {
+    "verified_archived_source_input_output_hashes": 15,
+    "mechanism_manifest_sha256": "e8cdb8fe7dc9f8f4af696cb7e7207035c5cac3203af0d32f104481645c3f61ae",
+    "resolution_manifest_sha256": "46a5f05ceb46e8b8dacf5efb682d09c55f851e7a65dbfb140a31f17a739c280d"
+  },
+  "audited_manifest_sha256": "92c528714f7951ff4b3ad3a3a2ae34e1b62a68089c787ceeab8d4f4a83d7ea04",
+  "independent_estimator": "weighted real FFT with mirrored-bin weights; separate strided-word aggregation",
+  "verified_per_key_endpoints": [
+    "actual_hmp",
+    "control_hmp",
+    "delta_hmp",
+    "word_gap_delta_hmp",
+    "actual_hnodc",
+    "control_hnodc",
+    "delta_hnodc",
+    "word_gap_delta_hnodc",
+    "actual_block_harmonic_share",
+    "control_block_harmonic_share",
+    "delta_block_harmonic_share",
+    "word_gap_delta_block_harmonic_share",
+    "actual_block_fundamental_share",
+    "control_block_fundamental_share",
+    "delta_block_fundamental_share",
+    "word_gap_delta_block_fundamental_share"
+  ],
+  "configurations": 36,
+  "keys": 80,
+  "max_absolute_errors": {
+    "per_key": 8.881784197001252e-16,
+    "mean": 4.440892098500626e-16,
+    "ci": 4.440892098500626e-16
+  },
+  "inference": "5000 whole-key bootstrap draws, all five 100000-replicate two-sided sign-flip counts, plus-one p and five-test Holm reproduced",
+  "raw_structural_violations": {
+    "zero_output_word_checks": [
+      0,
+      0,
+      0
+    ],
+    "counter_independent_difference_hw": 0
+  },
+  "direct_emitted_word_check_limit": "raw archives retain HW only; direct emitted-word equality counts are checked in generation metadata, not reconstructed here"
+}

@@ -1,0 +1,220 @@
+{
+  "status": "completed_independent_validation",
+  "protocol_sha256": "01421b276761aa61f8ab69b1339e83c8a5492615d5fa5f3d632e844295a7032b",
+  "source_sha256": {
+    "experiments/stream_rounds_study/arx_resolution_validation.py": "cc57c76ef2e61143bf230e0b6177bbec5bed3b3bfb177526b4f915191641854b",
+    "experiments/stream_rounds_study/analyze_arx_resolution.py": "348ab790ae28e553a7ca08abd814cd1ef7542687450b968cb93057227ab6244d",
+    "experiments/stream_rounds_study/extension_stream_cores.py": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5",
+    "experiments/stream_rounds_study/publication_study.py": "f4e115a80062f419d5b988ba475ad0c5843203c58b48c265a42a71fe2b44c26b",
+    "src/spectral_crypto_analyzer/primitives.py": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+  },
+  "generation_manifest_sha256": "8d49cd24d2427d04ec3ea77a8eb3e30402a3b511572dc1b4b37920e9a7ac4e49",
+  "raw_sha256": "ef78f1baa47f4f716c673bca01d54cd4278420977b8887a6fbfd5f40a980546c",
+  "raw_shape": [
+    80,
+    2,
+    2,
+    64,
+    4,
+    16,
+    16
+  ],
+  "key_indices": [
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919
+  ],
+  "seed": 20261029,
+  "raw_axes": [
+    "key",
+    "cipher",
+    "round",
+    "nonce_mask",
+    "base_nonce",
+    "block512",
+    "word32"
+  ],
+  "families": [
+    "ChaCha20",
+    "Salsa20"
+  ],
+  "rounds": [
+    2,
+    4
+  ],
+  "segment_bits": [
+    32,
+    64,
+    128
+  ],
+  "windows_blocks_start_stop_exclusive": {
+    "full8192": [
+      0,
+      16
+    ],
+    "first4096": [
+      0,
+      8
+    ],
+    "last4096": [
+      8,
+      16
+    ]
+  },
+  "power_averaging": "Q=4 base-nonce DFT powers averaged per mask before normalization",
+  "gap": "mean_b[(observed-control)(32+b)-(observed-control)(b)], b=0..31",
+  "resampling_unit": "entire key pair; same resamples/signs across endpoints",
+  "sign_flip_test": {
+    "replicates": 100000,
+    "seed": 2026102901,
+    "statistic": "absolute whole-key mean",
+    "pvalue": "(1+count(abs(permuted_mean)>=abs(observed_mean)))/(B+1)",
+    "roundoff_tolerance": "1e-12 * max(1,abs(observed_mean))",
+    "multiplicity": "Holm across exactly five planned two-sided endpoints"
+  },
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 2026102902,
+    "interval": "pointwise whole-key percentile 95%"
+  },
+  "planned_endpoints": [
+    [
+      "Salsa20",
+      32,
+      "positive"
+    ],
+    [
+      "Salsa20",
+      64,
+      "positive"
+    ],
+    [
+      "Salsa20",
+      128,
+      "positive"
+    ],
+    [
+      "ChaCha20",
+      32,
+      "positive"
+    ],
+    [
+      "ChaCha20",
+      64,
+      "negative"
+    ]
+  ],
+  "descriptive": "all other endpoints, rounds and windows; no significance tests",
+  "structural_checks": {
+    "salsa2_first_nonce_word_output1_zero": {
+      "comparisons": 163840,
+      "violations": 0
+    },
+    "salsa2_second_nonce_word_outputs0_1_2_3_6_zero": {
+      "comparisons": 819200,
+      "violations": 0
+    },
+    "salsa2_second_nonce_msb_mask56_output7_zero": {
+      "comparisons": 5120,
+      "violations": 0
+    },
+    "salsa2_nonce_difference_hw_counter_independence": {
+      "comparisons": 1536000,
+      "violations": 0
+    },
+    "salsa2_emitted_counter_independence": {
+      "comparisons": 1560000,
+      "violations": 0
+    }
+  },
+  "numpy_version": "1.22.0",
+  "python_version": "3.10.12",
+  "output_rows": {
+    "per_key": 2880,
+    "summary": 36,
+    "planned_tests": 5
+  },
+  "output_sha256": {
+    "arx_resolution_validation_compact.csv": "c13facaefce79dd33c198f4828fa7db14f2f4e345ba0c671b7ea5812983da033",
+    "arx_resolution_validation_per_key.csv": "dd71c879d2055fd1fc9e16c9b8baf5e3b4a3319dce319be051752ee453019350",
+    "arx_resolution_validation_planned_tests.csv": "636202ba86e3ec75ed9d931bef136fffe0f112c9b4109374d1c1d4c0e64953ce",
+    "arx_resolution_validation_summary.csv": "20989db42d224bab53669eeffa2e4685f6de6248d3b864e20d41812576e34c54"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "advisory_review_complete_formal_ars_aborted",
+  "source_version": "0.19.0",
+  "manuscript_unchanged": true,
+  "formal_ars": "aborted_before_panel_contract_validation",
+  "calibration_status": "NOT_CALIBRATED",
+  "reviews": {
+    "methodology_advisory.md": "a4ba1c5340ddcd3e954810d400193c65e84fb5ea8ccb29d43f1593412c8b54ac",
+    "cryptography_advisory.md": "6980d50582943ddf516149f30ef10d1e299d1350ff60af9160133d9183287e8a",
+    "spectrum_advisory.md": "29d82718c35c52711912225b5d13d55f50c681da6e481aad95c538983cb2fcdd",
+    "editorial_advisory.md": "9c23971f8506beb974ce06dd3d489683dd7b20910e5b67c155b9757675d2667a",
+    "counterargument_advisory.md": "a60a39e27992ee3ab1b7691b226e3471ad357b2e7cdcfdc23930fe8a318f389c",
+    "REVIEW_PL.md": "e84da98146e73afa2424154a5d33f6c89513ccb646c40b92390f423d92b100a2"
+  },
+  "scope": "Five separate advisory review contexts; no peer-output sharing before commitment; one model family; no externally verified journal criteria; no acceptance probability."
+}

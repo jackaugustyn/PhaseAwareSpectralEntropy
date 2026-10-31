@@ -1,0 +1,46 @@
+{
+  "observed_d2_none_equals_xor_all_words": {
+    "comparisons": 12451840,
+    "violations": 0
+  },
+  "oracle_d2_none_equals_xor_all_words": {
+    "comparisons": 12451840,
+    "violations": 0
+  },
+  "salsa2_c_independent_of_second_word": {
+    "comparisons": 163840,
+    "violations": 0
+  },
+  "salsa2_none_singleton_word7_exact_bit": {
+    "comparisons": 163840,
+    "violations": 0
+  },
+  "salsa2_xor_singleton_word7_zero": {
+    "comparisons": 163840,
+    "violations": 0
+  },
+  "salsa2_add_singleton_word7_lb": {
+    "comparisons": 163840,
+    "violations": 0
+  },
+  "salsa2_add_msb_singleton_word7_zero": {
+    "comparisons": 5120,
+    "violations": 0
+  },
+  "salsa2_mixed_d2_word7_none_xor_zero": {
+    "comparisons": 368640,
+    "violations": 0
+  },
+  "salsa2_mixed_add_d2_word7_conditional_lb": {
+    "comparisons": 184320,
+    "violations": 0
+  },
+  "salsa2_mixed_msb_add_d2_word7_zero": {
+    "comparisons": 10240,
+    "violations": 0
+  },
+  "salsa2_within_second_word_d2_word7_all_variants_zero": {
+    "comparisons": 30720,
+    "violations": 0
+  }
+}

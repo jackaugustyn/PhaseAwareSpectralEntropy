@@ -1,0 +1,32 @@
+{
+  "status": "checked_against_source",
+  "sources": [
+    {
+      "file": "experiments/stream_rounds_study/analyze_literature_mask_followup.py",
+      "line": 32,
+      "supports": "Whole-key bootstrap means; complete scan."
+    },
+    {
+      "file": "experiments/stream_rounds_study/arx_feedforward_study.py",
+      "line": 338,
+      "supports": "Percentile intervals for key means and paired contrasts."
+    },
+    {
+      "file": "experiments/stream_rounds_study/arx_round_transition.py",
+      "line": 439,
+      "supports": "Percentile intervals for transition key means."
+    },
+    {
+      "file": "experiments/stream_rounds_study/arx_spectral_prediction.py",
+      "line": 384,
+      "supports": "Shared resampled whole-key indices; 0.025/0.975 quantiles of scalar means."
+    },
+    {
+      "file": "experiments/stream_rounds_study/arx_spectral_prediction.py",
+      "line": 407,
+      "supports": "Recomputed L1 distances for each bootstrap mean spectrum against a fixed model mean; frequency-wise mean-spectrum intervals."
+    }
+  ],
+  "experiments_rerun": false,
+  "scope": "Existing code inspection for the two authorized reporting clarifications."
+}

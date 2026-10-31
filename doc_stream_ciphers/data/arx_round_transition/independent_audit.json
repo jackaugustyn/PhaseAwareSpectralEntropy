@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "auditor_source_sha256": "275ff6ef9719eacc89095691e97c2decf065e5d476d1f8f5f545ee62625febf5",
+  "protocol_sha256": "88a8b1812f32af7904c6a5b656350a047bac87804ca7209a551ae99360a6f6b1",
+  "manifest_sha256": "ba18d66734b4a968c67c1c163a31f492ed113f85c9558f0f6c95056a1acc7d5c",
+  "raw_sha256": "5e8b4ea9a39419bc8e173fc53a5291d1c0420bf65af32b0fc064e3279278de6b",
+  "keys": 80,
+  "independent_core_and_checkpoint_audit": {
+    "cipher_blocks_regenerated_through_four_single_rounds": 26368,
+    "reference_blocks_regenerated": 79104,
+    "singleton_arrays_verified": 2048,
+    "second_derivative_arrays_verified": 1216,
+    "checkpoint_words_verified": 512,
+    "regenerated_none_xor_uint32_equalities": 933888,
+    "observed_full_cohort_none_xor_word7_equalities": 1167360,
+    "oracle_full_cohort_none_xor_word7_equalities": 1167360,
+    "checkpoint_before_zero": 10240,
+    "checkpoint_after_zero": 0,
+    "checkpoint_before_after_contexts_each": 10240,
+    "regenerated_key_indices": [
+      1400,
+      1479
+    ]
+  },
+  "statistics": {
+    "max_absolute_errors": {
+      "per_key": 2.6645352591003757e-15,
+      "mean": 3.3306690738754696e-16,
+      "interval": 1.7763568394002505e-14
+    },
+    "tables": {
+      "singleton": {
+        "per_key_rows": 4320,
+        "summary_rows": 54
+      },
+      "d2_profiles": {
+        "per_key_rows": 92160,
+        "summary_rows": 1152
+      },
+      "d2_word7_pairs": {
+        "per_key_rows": 54720,
+        "summary_rows": 684
+      },
+      "within_word": {
+        "per_key_rows": 1440,
+        "summary_rows": 18
+      },
+      "interaction": {
+        "per_key_rows": 480,
+        "summary_rows": 6
+      },
+      "transition": {
+        "per_key_rows": 4320,
+        "summary_rows": 54
+      },
+      "operation_checkpoint": {
+        "per_key_rows": 320,
+        "summary_rows": 4
+      }
+    },
+    "planned_means": [
+      15.8193359375,
+      -0.5228689903608104
+    ],
+    "planned_holm_p": [
+      1.999980000199998e-05,
+      1.999980000199998e-05
+    ],
+    "planned_sign_flip_extremes": [
+      0,
+      0
+    ],
+    "method": "Weighted one-sided FFT; independently reconstructed raw means, seven table families, count-weighted paired bootstrap and two-test Holm sign flips."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": {
+    "doc_stream_ciphers/main.tex": true,
+    "doc_stream_ciphers/main.pdf": true,
+    "doc_stream_ciphers/biblio.bib": true,
+    "doc_stream_ciphers/related_work_comparison.tex": true,
+    "doc_stream_ciphers/arx_mechanism_compact.tex": true,
+    "doc_stream_ciphers/publication_unified_mask_followup.pdf": true,
+    "doc_stream_ciphers/publication_reviewed_spectrum.pdf": true,
+    "doc_stream_ciphers/iv_diffusion_research_review_v0.20.0_manifest.json": true,
+    "phase1/eic.md": true,
+    "phase1/methodology.md": true,
+    "phase1/domain.md": true,
+    "phase1/perspective.md": true,
+    "phase1/da.md": true,
+    "phase2/eic.md": true,
+    "phase2/domain.md": true,
+    "phase2/perspective.md": true,
+    "phase2/methodology.md": true,
+    "phase2/da.md": true
+  }
+}

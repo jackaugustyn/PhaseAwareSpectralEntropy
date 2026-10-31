@@ -1,0 +1,1621 @@
+{
+  "release": "iv_diffusion_research_review_v0.15.0",
+  "status": "local_reviewer_candidate_no_public_doi",
+  "primary_dataset": "experimental IV-diffusion diagnostics centered on reduced ChaCha20 and Salsa20: matched-nonce phase intervention, same-stream benchmark, independent 64-mask ARX follow-up, operation-graph and feed-forward analysis, archived 32/64/128-bit resolution reanalysis, and completed independent 8192-bit validation on 80 fresh key pairs; supporting appendix studies retain the wider seven-cipher ordinary-IV/nonce comparison, retrospective per-mask profiles, Grain/Trivium follow-ups, and auxiliary A5/1 frame-difference tests",
+  "inference_status": "original six standard HMP and three replication tests locked before indices 280--359; Salsa20 three-test transfer locked before indices 360--439; two matched-nonce phase tests locked before indices 440--519; two matched 64-mask ARX tests locked before indices 520--599; one Grain validation and a 12-cell Trivium maxT pilot locked before indices 600--679; A5/1 20-clock endpoint and 44-cell standard search locked before indices 680--759; selected zero-clock A5/1 bit contrast locked before independent indices 760--839; five two-sided ARX resolution endpoints fixed before new indices 840--919 and jointly Holm-corrected; same-stream comparison, older mask scan, output-word profiles, archived resolution/window reanalysis, nonprimary validation endpoints, and zero-prefix lengths are descriptive; exact structural checks have no p values",
+  "extension_status": "v0.15.0 preserves earlier raw arrays and fixed protocols; adds three separate result directories including all 80 resumable validation checkpoints and source/protocol hashes",
+  "literature_scope": "comparison of already cited methodological and ARX studies; current external primary-source verification was blocked, so no comprehensive literature review or priority claim is asserted",
+  "python": "3.10.12",
+  "packages": {
+    "numpy": "1.22.0",
+    "matplotlib": "3.5.1",
+    "cryptography": "46.0.5",
+    "pytest": "8.4.2"
+  },
+  "file_count": 320,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 18089,
+      "sha256": "c54d6c568a1b98709bb301aaedb7bc886c65a30490028d5e7327d22abdb5c423"
+    },
+    {
+      "path": "doc_stream_ciphers/A51_KNOWN_WEAKNESS_PROTOCOL.txt",
+      "bytes": 3501,
+      "sha256": "2f00329bdf90452681009e848e4a1452fec84e816b1269b4caec9f8037278131"
+    },
+    {
+      "path": "doc_stream_ciphers/A51_LOADING_VALIDATION_PROTOCOL.txt",
+      "bytes": 1636,
+      "sha256": "fe157a9053944c37110991f2902a8b82cd7c856f4659d6df8494ea6c99517316"
+    },
+    {
+      "path": "doc_stream_ciphers/ARX_MECHANISM_NOTES.md",
+      "bytes": 7509,
+      "sha256": "ddedc25899f27e5206a819dc06725641fcb61223b9670e3c02a31ff19776715a"
+    },
+    {
+      "path": "doc_stream_ciphers/ARX_RESOLUTION_VALIDATION_PROTOCOL.txt",
+      "bytes": 5304,
+      "sha256": "01421b276761aa61f8ab69b1339e83c8a5492615d5fa5f3d632e844295a7032b"
+    },
+    {
+      "path": "doc_stream_ciphers/COVER_LETTER.md",
+      "bytes": 3753,
+      "sha256": "2f9a93e4f24a85b401afecf3d39e55af3346f013c6beee687854ef0b44f14f63"
+    },
+    {
+      "path": "doc_stream_ciphers/DEPOSIT_METADATA_DRAFT.json",
+      "bytes": 3429,
+      "sha256": "834924c2bc4338a0691e16a4bf5825d23ef617a8dbfe3a5d9dcbe920ca4721a6"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/journalnames.tex",
+      "bytes": 108413,
+      "sha256": "f4944f272ae0bfaccedb926f4da5ce40c0dabead50482afae191989430fb66dc"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "bytes": 13161,
+      "sha256": "faaff877128bb8000b5c706121547aba1246305e4aff1c638ff7d48fd4f78be9"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/logo-mdpi.eps",
+      "bytes": 563678,
+      "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/mdpi.bst",
+      "bytes": 23683,
+      "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/mdpi.cls",
+      "bytes": 63307,
+      "sha256": "62979fe0fe0f72a57adc1ad683add9b0138f1dae635d1da4ae48a4d811159e40"
+    },
+    {
+      "path": "doc_stream_ciphers/ELECTRONICS_REVISION.md",
+      "bytes": 4929,
+      "sha256": "b7a02cf5f59132195cdb92cf27ae981ca5b7661e0d5b453cf33ac56a1d8ca18d"
+    },
+    {
+      "path": "doc_stream_ciphers/MASK_LITERATURE_FOLLOWUP_PROTOCOL.txt",
+      "bytes": 5412,
+      "sha256": "52b0625471ef51d49066bb0c0976d879a9afc84cdab09b0b91c4301839a9359e"
+    },
+    {
+      "path": "doc_stream_ciphers/MATCHED_NONCE_PHASE_PROTOCOL.txt",
+      "bytes": 4914,
+      "sha256": "807ffd4c488a77c422bc06e185356788bc798a6d72c7813864850f0a7753aeda"
+    },
+    {
+      "path": "doc_stream_ciphers/RELATED_WORK_NOTES.md",
+      "bytes": 4408,
+      "sha256": "f0b94a86f8373cc736af6a8819993548fce0383f6583da91a35ea115f57f8b1a"
+    },
+    {
+      "path": "doc_stream_ciphers/RESEARCH_EXTENSION_STATUS.md",
+      "bytes": 4678,
+      "sha256": "1faa4b49e0a2abbe6f1d5845f16e4be6e62590bb6ae112c53b1fd83638ffb3ea"
+    },
+    {
+      "path": "doc_stream_ciphers/SALSA20_TRANSFER_PROTOCOL.txt",
+      "bytes": 4062,
+      "sha256": "fcc4184fbc957c3a3a3a1a1e283114031d65e7c420c99d7fe5bae2b0b9d72ec0"
+    },
+    {
+      "path": "doc_stream_ciphers/SAME_DATA_DIAGNOSTIC_BENCHMARK.txt",
+      "bytes": 3537,
+      "sha256": "0c92d0c770a2e91dc70b17ac00766d1cf00a4f85e5fd420478b2c075c3908c77"
+    },
+    {
+      "path": "doc_stream_ciphers/SIX_CIPHER_UNIFIED_PROTOCOL.txt",
+      "bytes": 5189,
+      "sha256": "178fbe5deac31dc419842c8c7f63eeaaa1545ad2de3de1a8548ead5c42159de1"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_manifest.json",
+      "bytes": 1961,
+      "sha256": "81db88bda410e9f8a11821b3c1fe94430fcbfe8783b2d999139cda09b0bfbf30"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_per_key.csv",
+      "bytes": 8228544,
+      "sha256": "cce9a0db8970c8a5b7890b003c8cf7976162f2a5d12c5e974146125bd7139e21"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_profile_comparisons.csv",
+      "bytes": 10454,
+      "sha256": "78944e36a56ea2e2da9ea8aee54f31444b3e80385feee3ac398b8db132a6bd73"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_profile_manifest.json",
+      "bytes": 670,
+      "sha256": "f41bb7638849f3f8f4d0f2e21340f54aa6839ab6eda249addcc96e2b959d87b1"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_small_effect_max_t.csv",
+      "bytes": 31643,
+      "sha256": "499c0f67b4284304322755c1afa7667da167c489bdd49952afad4e3da68e85a6"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_standard_max_t.csv",
+      "bytes": 16846,
+      "sha256": "ed06bf9ecfdb02aa143d2276d1166c83aaf8d480ecb944be897436b02a5de454"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_summary.csv",
+      "bytes": 174904,
+      "sha256": "7f730d401031b8fc5a355177676f3bc300606f77c236f43611b9e7f5292acc78"
+    },
+    {
+      "path": "doc_stream_ciphers/arx_mechanism.tex",
+      "bytes": 3966,
+      "sha256": "1a6987c3219d63f0c5102ceae2842c1db6b0c4a338db6d2c4dcc6d715c2f0b78"
+    },
+    {
+      "path": "doc_stream_ciphers/arx_resolution_methods.tex",
+      "bytes": 3875,
+      "sha256": "3a14d4e9fcafe795eeb0ccc4b05428f68cb7c444faa4dc12fe2e671ed389c05f"
+    },
+    {
+      "path": "doc_stream_ciphers/arx_resolution_results.tex",
+      "bytes": 4181,
+      "sha256": "4150ede112a07b37ca0a0ccdd8f607c3528f7d13cf9b51e5f65885a4f4975274"
+    },
+    {
+      "path": "doc_stream_ciphers/biblio.bib",
+      "bytes": 15468,
+      "sha256": "b8879a012823a752cbf1de10422ecfa9c83ad385c6b5f317e98c9d58bfd56d93"
+    },
+    {
+      "path": "doc_stream_ciphers/build_research_release.py",
+      "bytes": 11568,
+      "sha256": "dafc11d55f48996bec42f9ed47f18177ec4e48a2aeb8398dbc54d1cc069d02c4"
+    },
+    {
+      "path": "doc_stream_ciphers/build_submission_package.py",
+      "bytes": 2117,
+      "sha256": "d42d1be14a8f3b9356dfd804c39ad6bd674a3967cdcb7ae7bdc66a91a63b49bd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_frame_raw.npz",
+      "bytes": 1060675,
+      "sha256": "a6b63e5c287be49f0cdbe7c0cb1e7f896f30ae9c63dc3cfe3f4c6475484502f8"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_manifest.json",
+      "bytes": 446,
+      "sha256": "e77c3bf972bbc58be841a39d36ed80244ff1673c66e6f8647e990a49fa80a4e5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_per_key.csv",
+      "bytes": 3817,
+      "sha256": "2f5488807545491b14bd9547b100f96d78532e8b8a8d437792a7132b55b90fb2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_raw.npz",
+      "bytes": 41380,
+      "sha256": "2be727ed9ecc05140b9f5fd2c84f181c8d3a20cf9188996425c515dee1e62767"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_summary.json",
+      "bytes": 745,
+      "sha256": "761c1b2444ae488c0e68771d0e35abbc4b8278aaebaee6773bc7c7ef6e8db363"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_per_key.csv",
+      "bytes": 1214658,
+      "sha256": "b4530b1f6520f6cad9d62f1d2f435faa7ef2c14f33dc086b7d561f00517d147a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_planned_test.csv",
+      "bytes": 229,
+      "sha256": "364dbd4f2e646df096cc9eaec101dee887f71cab549129ee23efbd4b63249555"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_standard_mask_scan.csv",
+      "bytes": 3942,
+      "sha256": "f907734e9da729c54199d54d4c42bcc30d11e11cc9af1b9d1b4b2a3c1c74e6a6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_summary.csv",
+      "bytes": 3005,
+      "sha256": "171cb94bd62da45c1cd4ee852d29f62e43e9675225bd606546ac89897e33f208"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/analysis_manifest.json",
+      "bytes": 1208,
+      "sha256": "891b23dc613f2debbe3fb8a4b885a24c1fe41ab364dcc2d81bcdab685b701d3d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/analysis_summary.json",
+      "bytes": 6995,
+      "sha256": "cef5286a289eb12813537b9fc90bf457ff500f4709583f2494ade029f3876429"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/manifest.json",
+      "bytes": 516,
+      "sha256": "afbb98a197cb22bd558bf22e2e48bab1b3a03528035fcd3bb16bb56aca3b629f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_mechanism_results/chacha_column_shift.csv",
+      "bytes": 234,
+      "sha256": "442b81c56a302766205c12c2b0a63d9ac3131e32bcbed1559e34c1edfc0ac410"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_mechanism_results/dependency_support.csv",
+      "bytes": 725,
+      "sha256": "04acb33ac020e56e12e64c9ff3decc4549fd0482949d01f6cdc110e77ae2252b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_mechanism_results/manifest.json",
+      "bytes": 1074,
+      "sha256": "e8cdb8fe7dc9f8f4af696cb7e7207035c5cac3203af0d32f104481645c3f61ae"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_mechanism_results/summary.json",
+      "bytes": 4605,
+      "sha256": "63b2ae200ba0f238d2d57eaccb882a67f7caa4955986daf364865efd465d0aa6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_mechanism_results/word_response_mechanism.csv",
+      "bytes": 4110,
+      "sha256": "7463f6ef6be632a73bf014879fdcbb985e9a075c303cedd12f012170e5a4216c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_results/README.md",
+      "bytes": 5922,
+      "sha256": "f0e7ea503700272a21af2830570215abedf4b1736c5429e68ac13c54162dd30f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_results/arx_resolution_compact.csv",
+      "bytes": 36716,
+      "sha256": "abcfdff1a27558b2bc070bcd2f91e54d392a73512d3de8b1c69914dd055acfe2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_results/arx_resolution_manifest.json",
+      "bytes": 3512,
+      "sha256": "46a5f05ceb46e8b8dacf5efb682d09c55f851e7a65dbfb140a31f17a739c280d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_results/arx_resolution_per_key.csv",
+      "bytes": 4337015,
+      "sha256": "ece827cdf53f883f6dc78e4d91b7f527c3651bb1ca7c6cd3722e1f638bb2d3ce"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_results/arx_resolution_summary.csv",
+      "bytes": 163124,
+      "sha256": "1ecc4a199b44508f836d1426af1c5deff1053fff74000fdcd87113b42821c774"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/README.md",
+      "bytes": 2011,
+      "sha256": "b7d33dc993cb7187573c1825ac4ce81504aefcacc5c3421dfde1e4034e7faa5a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_compact.csv",
+      "bytes": 13310,
+      "sha256": "c13facaefce79dd33c198f4828fa7db14f2f4e345ba0c671b7ea5812983da033"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_manifest.json",
+      "bytes": 4571,
+      "sha256": "92c528714f7951ff4b3ad3a3a2ae34e1b62a68089c787ceeab8d4f4a83d7ea04"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_per_key.csv",
+      "bytes": 1735440,
+      "sha256": "dd71c879d2055fd1fc9e16c9b8baf5e3b4a3319dce319be051752ee453019350"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_planned_tests.csv",
+      "bytes": 1208,
+      "sha256": "636202ba86e3ec75ed9d931bef136fffe0f112c9b4109374d1c1d4c0e64953ce"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_raw.npz",
+      "bytes": 21113455,
+      "sha256": "ef78f1baa47f4f716c673bca01d54cd4278420977b8887a6fbfd5f40a980546c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_structural_checks.json",
+      "bytes": 510,
+      "sha256": "f32f6ef49402312fd7afe243798b70694b6acd2cf1b8136038a218a58a600518"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/arx_resolution_validation_summary.csv",
+      "bytes": 66017,
+      "sha256": "20989db42d224bab53669eeffa2e4685f6de6248d3b864e20d41812576e34c54"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_840.json",
+      "bytes": 347,
+      "sha256": "3c6710ec29657cf2526e2abb191fc8145e48ff75aa644f1b17bd4ad1d8fdfe6b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_840.npz",
+      "bytes": 263735,
+      "sha256": "33295596314845014ef441891612adead7c1448a1fd41bb2fb17285538eb0b7c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_841.json",
+      "bytes": 347,
+      "sha256": "34440b3e1d9b7cdae36045649037a0337f76ebb67ccc2381de649415f94d9bb2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_841.npz",
+      "bytes": 264000,
+      "sha256": "b25a2417896c3c5cdeea7b59fc75cd0fa7da217d6a49f216168da352701f7e09"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_842.json",
+      "bytes": 347,
+      "sha256": "21584a4054d77c4f26555864d5fe548ab8812a59f0bfd8b1ab931c2e0dd3774f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_842.npz",
+      "bytes": 264349,
+      "sha256": "e8633dfc1cac6e73d8bf70d645b1c84ad45880d6c83bc214cb7724fba786c480"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_843.json",
+      "bytes": 347,
+      "sha256": "79991706481c96ff88b4e5f37d6983590aae208f5eacf9c4782c4b389387aae6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_843.npz",
+      "bytes": 263681,
+      "sha256": "7a604c9a621485eb1796e034e5520b12a62d7577f29950aea96866dbb49a5c1d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_844.json",
+      "bytes": 347,
+      "sha256": "97208e6fdde9b3a6ed09847ba547e87c78d18144b70187775c4f0ffb775ae4d6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_844.npz",
+      "bytes": 263603,
+      "sha256": "d08626aeab0d7e0d6e53b7d010e7c5711e8cb188450941463ba308b101af4a68"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_845.json",
+      "bytes": 347,
+      "sha256": "bb875ef1289424a1147d422ac1dab01f3625b6d9e709bd362d881a6bdb8696af"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_845.npz",
+      "bytes": 264021,
+      "sha256": "12a162fcc11d1e286c151898a19d822be31939ef5a912efd7ba40ed32b21cffe"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_846.json",
+      "bytes": 347,
+      "sha256": "c1e012266b691bceca1c6534a351f185b913b441ea5cc42c8d6017d582719b15"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_846.npz",
+      "bytes": 263687,
+      "sha256": "c623170bafab1744255f61481139ebaba2f278d72940d0384ba1587578a09f79"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_847.json",
+      "bytes": 347,
+      "sha256": "f0420fae5ff074ba0de5d5f9513f1576cc16385d0469a8c92c657a79b91c3265"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_847.npz",
+      "bytes": 264140,
+      "sha256": "3863cc4ed043fbd0168b77e48bfcb54e6e3123d108bd225233301573561acfec"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_848.json",
+      "bytes": 347,
+      "sha256": "41f10e95df7e2b7c1b15e3261b22bfe193ed00c4b7b0603b68856dd2967fa17c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_848.npz",
+      "bytes": 264173,
+      "sha256": "cd2b43c8234f9465f1616b60b0cb2d7c16f4deceab4750b46ec72f36866291cf"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_849.json",
+      "bytes": 347,
+      "sha256": "fbf679875b0fa2b9a771ed76a6b6ca87c82d09e8c0eaf569880bef56aa39667a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_849.npz",
+      "bytes": 263872,
+      "sha256": "b543fa6591f60e7625c1020f10413b6ed42fb8ba4a51034c15a1fdea2f481dee"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_850.json",
+      "bytes": 347,
+      "sha256": "bd62c0c4e7eea9362617affe4893478a7eea3f81264232b71d7862ab5e515fd8"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_850.npz",
+      "bytes": 263976,
+      "sha256": "1f80e334c1f8e4e8a3dd293b169dbe9634f512b8f21df7096e8b81b4951cd418"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_851.json",
+      "bytes": 347,
+      "sha256": "f52acef54d4a7d7e9c2ef154643850467be5e5d36bb75572c6501abd2641f40a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_851.npz",
+      "bytes": 263540,
+      "sha256": "dc2b45304e9dd886a265451d400b7bd3dfafa0fb39c44dfccef215ddb125444d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_852.json",
+      "bytes": 347,
+      "sha256": "1ef000cd31500d76d85355fbdfc838c6ef3294cb8c1af511f3b9d8686fc56239"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_852.npz",
+      "bytes": 264357,
+      "sha256": "d72d422cb149b8dd99f801473cc980b80339605ea742a9658e58b49568bd5d28"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_853.json",
+      "bytes": 347,
+      "sha256": "13b7f077325052c9b232797295bdaad5a8361b1ed663c5ce216dd20f0a3d8210"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_853.npz",
+      "bytes": 264134,
+      "sha256": "76b167a60a279bfc8f9416d7b0ae3a83da3b8a363803bdc48f2ec833f7c09a33"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_854.json",
+      "bytes": 347,
+      "sha256": "662b8dc61cfb0e3edb52492fddb9efed26d352d421274898090675be81133838"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_854.npz",
+      "bytes": 264133,
+      "sha256": "3f976163b9469aa38410ecd3b6b6baf03b2a247073428522476f38648cad3fb2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_855.json",
+      "bytes": 347,
+      "sha256": "40d6c12f8558a7646b506f56ddd37edb8840e0e1ac6bddbe3b24720c8adcc18c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_855.npz",
+      "bytes": 263773,
+      "sha256": "bcf7183e2215dc5457fe1d89caa17f50c4c0eca974a967577b274a8c0ff94f19"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_856.json",
+      "bytes": 347,
+      "sha256": "450ccbb21d5959d57d532fb7db9fa271f18c253f0ce9e49041ca5084f1c10ca1"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_856.npz",
+      "bytes": 264381,
+      "sha256": "b5b84e1aad3e34cf16f5dac36422dae132e44beeff81266140209f3d0004e2d0"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_857.json",
+      "bytes": 347,
+      "sha256": "a1d4b8f65c3584d541f31b3fa31eef091a2cb6dc603ad8ecc5dad4faee2cc0ed"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_857.npz",
+      "bytes": 263817,
+      "sha256": "c5aa9a15dc143a49135bfc087077503d3cc1e00b3f14ae277aa87ff10300f440"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_858.json",
+      "bytes": 347,
+      "sha256": "f3c63f1d135d3a8e1fc4a938a3e45b618f2b17f47a04274d888734ecc7bb7b30"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_858.npz",
+      "bytes": 263755,
+      "sha256": "3ecc4fa4b0f899b82a2a6df06959122d972005bf08e5d0201b37943e509faf47"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_859.json",
+      "bytes": 347,
+      "sha256": "666f4cc905da64f19409413e85fd863722ddcdebe23d2c6733be22b98583c186"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_859.npz",
+      "bytes": 263653,
+      "sha256": "d17cb9b7956234fb67cc93ff56cc8ee08e5eb6e57690dbd7735a84b6fda6834d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_860.json",
+      "bytes": 347,
+      "sha256": "4c848d31436572cada70790b3c596580d7efadca715cf5d2b1ef6f1e2a5d59f9"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_860.npz",
+      "bytes": 264340,
+      "sha256": "00dc5b3fae425a72a0900f961a50dfacf96f91602cfc61a57f45b12ae74c1997"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_861.json",
+      "bytes": 347,
+      "sha256": "8dca5e03bcc98e11d4c5bd02dcccee90ebdcf5ed11f3bcab50f3c8ee3ec7dab5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_861.npz",
+      "bytes": 263571,
+      "sha256": "ee8773888c39b89e6f86fad13f35a607c296d228a996d8759ab6223d1583f782"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_862.json",
+      "bytes": 347,
+      "sha256": "27a598e2b022a19b03d6f7836975857a587108cb18f08fda40f2b031497f601c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_862.npz",
+      "bytes": 263520,
+      "sha256": "1ef26974b2b77c3cb833ed2c63a788051643c6c3eb5975a07a71ae174f6b04d1"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_863.json",
+      "bytes": 347,
+      "sha256": "2415cd5fe1644c4b5ba066ee1baac74c97804493f0920b0979eb6b46691301c1"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_863.npz",
+      "bytes": 264539,
+      "sha256": "df0c3ae449ee30152af7a1c4f40e39917dba2d5e375521caef56eb47c92b8ee2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_864.json",
+      "bytes": 347,
+      "sha256": "f612cf48ec57dede692e72d7850dcf39b6959e3122ca532468523595b25e511c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_864.npz",
+      "bytes": 264061,
+      "sha256": "fc0704757213ed91fe5c07c341d6bff41035ba597c2628dcec5ab235da50656d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_865.json",
+      "bytes": 347,
+      "sha256": "6e36803652023d7705c6c689a64802d7e73fe33019f370465fb74026d9abbcaf"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_865.npz",
+      "bytes": 264938,
+      "sha256": "a609f5795e0e37ab164323b6401a2776697a6f51af24504ec706f26aae777fd4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_866.json",
+      "bytes": 347,
+      "sha256": "d2bbc9524d8a9a1deea4bc98fa47e9bdbce1d599e752ebf77c8b3f88fd67a718"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_866.npz",
+      "bytes": 264473,
+      "sha256": "c25c91c5820a803257dc17025b72c889051f8fc8be2006d47a6d336a6c9e0a9b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_867.json",
+      "bytes": 347,
+      "sha256": "967bb790ad76750d85ae371b0dcb0909d7ee7da7ca334d055838b9c797953a30"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_867.npz",
+      "bytes": 263660,
+      "sha256": "39caa7dc41b9b509f4433979c906b86429680a4456280c3229b34d76d98f3b43"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_868.json",
+      "bytes": 347,
+      "sha256": "0f7e2480e8746f12b35050124ca22f15cd9a15cce990bafcb58d03253e76cd25"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_868.npz",
+      "bytes": 263945,
+      "sha256": "02d64e0168808ef580d4521232b583619f1bcd72b9aaff553073efb3e5b1634e"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_869.json",
+      "bytes": 347,
+      "sha256": "6f12057d2bd549cd481ae89777e7b9cb77bb082a41e87131f479fc1b4bdcfc7b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_869.npz",
+      "bytes": 264016,
+      "sha256": "e5e242343f9b8c01b108503550a0d7aef00f35e3d03b39903881542d7f314f44"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_870.json",
+      "bytes": 347,
+      "sha256": "50e3b73474a82226e2c3f1705cea1e1c5909a1065230c7a419b67a568f449c21"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_870.npz",
+      "bytes": 263647,
+      "sha256": "adaee036c2b0f41b8a5d65cc268d0933ef708957bcffe22f0ee240ce16cb6fc4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_871.json",
+      "bytes": 347,
+      "sha256": "024ad3ffb9b0bf6de4253543715c90bb33ac78455b4c94e05619b184b1a40c94"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_871.npz",
+      "bytes": 264040,
+      "sha256": "5a2927bcc90e5bbab4e3226214e627fca6808cb8da91600636a738320fdc7736"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_872.json",
+      "bytes": 347,
+      "sha256": "68d9d1d043cabb3f19b0342c555a1575c3b66c53ccfe6a93e08c5e88f90dbe0d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_872.npz",
+      "bytes": 263338,
+      "sha256": "32d3f51b7d064fba39f1c032f47bef5e1a0b493c2aa777a75d3747d28b6ce24e"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_873.json",
+      "bytes": 347,
+      "sha256": "6efcd8779cdc93c87df3debdf11fc9cb5273602a6a867c612097e04129eea4f3"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_873.npz",
+      "bytes": 262963,
+      "sha256": "bbcc3adce7952d99e559a2c116b9caecd2f8a150341be2eaa89c0bba085df6e5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_874.json",
+      "bytes": 347,
+      "sha256": "f4ef45fefeb7b450083a3104b25ebedc7267c8b950ab09d1a99c3699f7a59096"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_874.npz",
+      "bytes": 264295,
+      "sha256": "9628cfc8546bc0c87a4c08d19d14c5065d27d5c641e72ddbe71e3f0411e3288b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_875.json",
+      "bytes": 347,
+      "sha256": "2458532f05821f11984e62be8918922e45539f4fd94e86e91cfe2cf521422b1b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_875.npz",
+      "bytes": 263982,
+      "sha256": "db4fa936ce89823db5ea481f266248d840b9f4454b65830693d0346a0bc7aec8"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_876.json",
+      "bytes": 347,
+      "sha256": "9cc78193305d672b53daebb05c9a9ce0ac4c9df39cfa84568b7f0d9e5cbd4e2f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_876.npz",
+      "bytes": 264375,
+      "sha256": "655153c8ec46e3c6eea7b6aa1a68b9043609aa8a0a1445ffba25663cdc806273"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_877.json",
+      "bytes": 347,
+      "sha256": "78451166bc6532e006c7fb0346017a318a41a2b22bc3b9085fdd69df84e6b885"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_877.npz",
+      "bytes": 264208,
+      "sha256": "b37110540723ceea6aab63d62afe5d5241bd9b8d73ce7634725362a87cfa3cb3"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_878.json",
+      "bytes": 347,
+      "sha256": "a56be3e64018fced7c4fffa6fa67f69756a5c22b069c32e09dea5fa5dfc7d92a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_878.npz",
+      "bytes": 264250,
+      "sha256": "11d1b6e16417b49fec5c36d182a23173f3945cb6b4392500a7e32fc5d8a7ad5c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_879.json",
+      "bytes": 347,
+      "sha256": "4a966b132ecbf1a2e043d425177a111d138fdb96ee1894146bbd7b5b8aa8862d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_879.npz",
+      "bytes": 264550,
+      "sha256": "0d7e947a3df977f5d4151af101e3b4dc53ad8c4e418eb276c9347a5e3e7058ef"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_880.json",
+      "bytes": 347,
+      "sha256": "a6da1cfa4c30b99f1aeb11c29520250f8e9e2ab61f9870f0c5f2e69d4c028b8d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_880.npz",
+      "bytes": 264572,
+      "sha256": "c68d51562c3eb7bb1e3ffa92e8310fe48a456da3b1da4b937d000e9a793ed1af"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_881.json",
+      "bytes": 347,
+      "sha256": "656bf1625e94317658b7303de131aca7ff0413b8ca298b7cc84bb822b0c74825"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_881.npz",
+      "bytes": 264501,
+      "sha256": "63e77ba7b3ab7c56a46405993bd5774d9dd167842a449ced63f8e3ca8af53610"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_882.json",
+      "bytes": 347,
+      "sha256": "24167807234c37e055c7291de7af52b9a101094dc55aa35c8de4c87a155631b9"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_882.npz",
+      "bytes": 264743,
+      "sha256": "32ce5fe6683cc6b9ff412f8d302bbc4e556db1352ba070064bb1a62c82e4b315"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_883.json",
+      "bytes": 347,
+      "sha256": "f0707167577a341b1d685491be26c8c2fa7379be6e73f782ee4e02b1bd878bff"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_883.npz",
+      "bytes": 264411,
+      "sha256": "a80b29f1e5c2503568352ff04de19d04dc85ed23472be31cc0132137e042f87f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_884.json",
+      "bytes": 347,
+      "sha256": "5b47c20a40aab31df2b0eb92dceb35e2eb90da9624cbc6dd4e98de9f203bfc8d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_884.npz",
+      "bytes": 263363,
+      "sha256": "7e4613740d584a46cbac6f805649587ac5700808a96d0c034dbc14e660dc4102"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_885.json",
+      "bytes": 347,
+      "sha256": "ac7081bfe5a865cdc6a1d01a4063d4168aec4f96c012805492d0d1564ae80bc9"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_885.npz",
+      "bytes": 264871,
+      "sha256": "f3a633d4cec1c1185c92a0f711566527997c1025a0366fc84bdea62d0c87c127"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_886.json",
+      "bytes": 347,
+      "sha256": "07506d5e0fac41c27a02253cdeb49b1b5f61e2e1a4e552d032c74517b542aec5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_886.npz",
+      "bytes": 263656,
+      "sha256": "8e1dc32789160f9fe8b964fba6c07b31e2aeabad6d2a36a42937f6984923a445"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_887.json",
+      "bytes": 347,
+      "sha256": "382963da9e6c54e58ac3748dd6d45b22dcafe65993fab755290f56e1320fa25e"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_887.npz",
+      "bytes": 264192,
+      "sha256": "1432e25efcae31265889a710c293b6b65ab58a53ef872e7e8fdef6a6c27085dd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_888.json",
+      "bytes": 347,
+      "sha256": "8162b53815c6eb69f2f01ca883b2c27d4d6c0232e4a2a13d1e04ccb13617a5ca"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_888.npz",
+      "bytes": 264142,
+      "sha256": "5405c9aa6a085ba74d2c4052cfdfe107b7a3a1ec489691476de550c2519816be"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_889.json",
+      "bytes": 347,
+      "sha256": "813d3d247f780e259886e09a9ea796aa48e4b193c6ce8e1bc11c00effe505ffe"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_889.npz",
+      "bytes": 263966,
+      "sha256": "099f97c30ccbf591bed4259ebb899e67eb86e1a22732b9b4a1ffa0b15adf414c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_890.json",
+      "bytes": 347,
+      "sha256": "24136915c6f28ad07afabe34cd6694f67f1bf554c6556876e09bde941dde5cf7"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_890.npz",
+      "bytes": 263812,
+      "sha256": "0029361897207a73235d14294185472c48f1f9b8a67c181a5ad8bdd309fe4a20"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_891.json",
+      "bytes": 347,
+      "sha256": "6fd2ae9bf6791fba5169b4f49a54c5be08d36aa76b2f543ebbde1c5d09429480"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_891.npz",
+      "bytes": 264121,
+      "sha256": "7f2ad519183aa600fb28a0217485aa1a94c9e38d91dadcf3c6f91caa38d75f21"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_892.json",
+      "bytes": 347,
+      "sha256": "84e6e826ec50df017b1a0a79a6cc44a28cbdb3a69e3207f7120b77ad9582f618"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_892.npz",
+      "bytes": 264024,
+      "sha256": "44edf4be90b0151b0870d114ffa495f34cfa782a91850ca05fe9765d8196913d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_893.json",
+      "bytes": 347,
+      "sha256": "de83e2628a912c06d2e4eabaaec42727c8e1e5568efe7d82631cf5a8a06c38ad"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_893.npz",
+      "bytes": 264201,
+      "sha256": "5380aee897ea913562a1495be9e3aea2f91460bb530b00617d5ae8c0a4160a97"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_894.json",
+      "bytes": 347,
+      "sha256": "9fa742451c4d9c2148e36d7579c6960bb85f9ef7d4abcdca8d8804981ee5f555"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_894.npz",
+      "bytes": 264276,
+      "sha256": "e5fa47d983376aa2579c29de23ae988d314018154db6fb00cfe37555c24cc498"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_895.json",
+      "bytes": 347,
+      "sha256": "a810defe8ef150ed869b97bf42111240642e11560b0c239e8830d75f034adb46"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_895.npz",
+      "bytes": 263455,
+      "sha256": "4db56099a129568f7ce6b440def32476db0cbcae352b4ba657f9bb40e062e623"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_896.json",
+      "bytes": 347,
+      "sha256": "4a73c221ebde464f8cfe05e9b4f10068fdc3b5c19b039a85d287e6b4d7499040"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_896.npz",
+      "bytes": 264304,
+      "sha256": "f897698bd3224b11e7f59ffdac0c46be8aec6742c254a525f6ea7933f00adabe"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_897.json",
+      "bytes": 347,
+      "sha256": "f907213414e16b7fb02ae818aa7fa21e7bd2b35d58036d5abb479648fce32d71"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_897.npz",
+      "bytes": 264049,
+      "sha256": "51cd5b396a5e75cf4464a25080ab3da0168719d2ae169426168cd9b90704bc48"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_898.json",
+      "bytes": 347,
+      "sha256": "f4db9dd258ed0509478403c98d6fb602c079578f1ba2907414bb07c28d8b2ccb"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_898.npz",
+      "bytes": 264336,
+      "sha256": "fb6aa1c5e4e0d93a5606bbbe7a6fd27337ba82920ee6fe3681682eae7e24f0e4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_899.json",
+      "bytes": 347,
+      "sha256": "e518581509f8f5b67f7ed56542475d146dfd5bd0c08b45a7f2273aa846a969e0"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_899.npz",
+      "bytes": 264633,
+      "sha256": "5f48271c2e10084d7a8fa10bdc2050b7df052652f225507ecf48f84667b9a8e7"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_900.json",
+      "bytes": 347,
+      "sha256": "89066a7554107ec4118f538c64018c7185478949f912776ac5dbe78183907047"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_900.npz",
+      "bytes": 263820,
+      "sha256": "8c92d20056d930d1c7c4507db6b4f82eb19abc0c62cf5509bd4192c58e975a6a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_901.json",
+      "bytes": 347,
+      "sha256": "439f9ad7c5e802413da1f4337a992cde39cd6cfcd1e14d5031222f24bcae687c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_901.npz",
+      "bytes": 263484,
+      "sha256": "7e435743083d82ea24e7edea81869e9192323fb787e4eaeb4836bf8a2494dad3"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_902.json",
+      "bytes": 347,
+      "sha256": "4766614b3477fb8b4f398b33bce3fb07c52c45029db5f80898dde5744ea90d10"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_902.npz",
+      "bytes": 264441,
+      "sha256": "be5675b2233c4b0b45684b691fc5d3f1371ef496e0b7eabc87011d0eccddf4e2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_903.json",
+      "bytes": 347,
+      "sha256": "3c7e1a78ba5af0729c0edffc9984d7e33e1a134c455c895cf3c8d42c2ebfadbd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_903.npz",
+      "bytes": 264146,
+      "sha256": "8657671ba4beba4a7d6c8309c24c8750466a0996f50bd0d142dfcdf8a1be9bd3"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_904.json",
+      "bytes": 347,
+      "sha256": "a83f8ca2f01573d27d4679d3c61e8794e24b7f56dfe3a6ff4ec3db5c5d16429b"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_904.npz",
+      "bytes": 263945,
+      "sha256": "c4839f4ede252ca5756eb762024852f284e632bac3ed09573f1f40184eafcc55"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_905.json",
+      "bytes": 347,
+      "sha256": "c1e880498caf1c37b869d77a233351b64a893083235206f9531ccfcf221120d3"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_905.npz",
+      "bytes": 264469,
+      "sha256": "22db740c93347329fe9ccdf5c39b49047f3be9ebe19d488eee6389b20c58bad1"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_906.json",
+      "bytes": 347,
+      "sha256": "fd36c28ccc27adada9fba4e7779df8c3058c3b669470ad66e616326e1e542485"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_906.npz",
+      "bytes": 264022,
+      "sha256": "d8a0f93ead56bd89f56c626e801e3765ceb4d568ebac1a5beed500927c8be8c5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_907.json",
+      "bytes": 347,
+      "sha256": "e134365ad27a20c34a9656dd7674a02b38f297d3e97e6195dace309419fd6f00"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_907.npz",
+      "bytes": 263849,
+      "sha256": "eb97ec6c4cbd22adb97cbb6a483ed9d9f156d25d36c1f270274f4e141e55add6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_908.json",
+      "bytes": 347,
+      "sha256": "70c4f54cba5daea842f404caae0d60504d126ac5cd490938e824ebe28d9d438a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_908.npz",
+      "bytes": 263536,
+      "sha256": "cb383428430905a69da644cf4a5210583d09bad26f9038922e74f5a19138e87c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_909.json",
+      "bytes": 347,
+      "sha256": "10a1867b78b755e8f7bc83053a71f9aa8c53a80c3ea7b4939ccf9acdbe86b073"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_909.npz",
+      "bytes": 264253,
+      "sha256": "533a5e1fd262617b8ae1f4f8b19fa3b0809f7a5a589f46122f5552c6b8fc4b29"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_910.json",
+      "bytes": 347,
+      "sha256": "f9dbdffec185ea581e52ef5c24338d2285703e5c9cf73fda21c75b957e88c815"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_910.npz",
+      "bytes": 264016,
+      "sha256": "a3f4c8060862b67d01b01bf594a4e7cadd1f5308632b60a5c77ef6bcab561a4d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_911.json",
+      "bytes": 347,
+      "sha256": "d8fe29174764a6d1aa01f5ac08033fe138350ecbbf20ed40201acaea2fb3a617"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_911.npz",
+      "bytes": 263509,
+      "sha256": "07a2c8e4181dd6ab502dc6c83279600cf410a85dd3c153a8f261cc58b6999813"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_912.json",
+      "bytes": 347,
+      "sha256": "2188d175f6d0a225262d4af065b28a0810ddc4d1ac0c086fed24aa737d04e9c1"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_912.npz",
+      "bytes": 263639,
+      "sha256": "d5c87f86521933b0906eb7ab28699a71f7cf2001bc6d13c268e0bffdfe526971"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_913.json",
+      "bytes": 347,
+      "sha256": "d253ba87bd825137d201233cdf929c602ef4c1f6422129a16a34200a592c69db"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_913.npz",
+      "bytes": 263978,
+      "sha256": "e3e16b308bd0326eb35a23c9742a4fc468c890cdf5517a89d8b52dc5d9efeddf"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_914.json",
+      "bytes": 347,
+      "sha256": "bdc5ef474d6e6e52e5ca94affa4e3193103e44cf1f913a79a4248a9a2c2add86"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_914.npz",
+      "bytes": 263996,
+      "sha256": "58c09d910c59f0a277b2925ff95ccd21b07783c6499343712158bd888d479819"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_915.json",
+      "bytes": 347,
+      "sha256": "7dc6f804fa4b090c3d0d776ba87f90a41f1ef8aadf5599241151e63998557b70"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_915.npz",
+      "bytes": 264144,
+      "sha256": "ce2c6debce063942b9f30da81dcd92820f9c4a460361eef9837c03ccfd37d182"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_916.json",
+      "bytes": 347,
+      "sha256": "62dbafa9cce6c641fb8d6b64dd4a25e77d82df81c4ef5740c186a6068a0f19e6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_916.npz",
+      "bytes": 264126,
+      "sha256": "d360fd322d18ce62df8554858e073aba45e72e70da620a52e55da46be6adec3c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_917.json",
+      "bytes": 347,
+      "sha256": "b0b6f694e8375b88161c50b2844efb59f0972f8052a2a4e511579b9edca242fe"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_917.npz",
+      "bytes": 263924,
+      "sha256": "f29551f52bd581145890f885ec350931e4b4351ba19269292c130bcf929097fb"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_918.json",
+      "bytes": 347,
+      "sha256": "7423dd4891d474975e5d45c8b8183e195a2bb837a65e27d4a590f6aa3b91fe47"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_918.npz",
+      "bytes": 263717,
+      "sha256": "973baf3ccbed991c84ca20862765bea12a15430b8c69949e2e83f351896b9d39"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_919.json",
+      "bytes": 347,
+      "sha256": "eb4596409e09f96e5daa152fc0a0d78491d2a0ea37876ec7047a4b355fb236eb"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/checkpoints/key_919.npz",
+      "bytes": 263827,
+      "sha256": "f82b7d1b762070d731e178ee72d3a6c0ad97dbf1b404977234a8e7cb2f6ff970"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/generation_manifest.json",
+      "bytes": 9440,
+      "sha256": "8d49cd24d2427d04ec3ea77a8eb3e30402a3b511572dc1b4b37920e9a7ac4e49"
+    },
+    {
+      "path": "doc_stream_ciphers/data/arx_resolution_validation/independent_audit.json",
+      "bytes": 1762,
+      "sha256": "a9cf623978ff53caef4bc8e2f548b19dc75a3de1d85e8547388c791a44311613"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/analysis_manifest.json",
+      "bytes": 1790,
+      "sha256": "843ff9f5cfc202a3c249f07012367f61aeb6db20798d2e6edade9b5ec1248aba"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/analysis_summary.json",
+      "bytes": 34817,
+      "sha256": "21c57c10281fc2541c706fc3a43968666332b23c9b5e7e60112fffca9548b2d2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_all_64_masks.csv",
+      "bytes": 117722,
+      "sha256": "f3ab92210e460506312a2c137fc20487bed5c4ac3bd1edca397a81c42b864f57"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_literature_input_positions.csv",
+      "bytes": 2731,
+      "sha256": "fe871e102d2d42e168734789d533071c32e49cdd298dda08375f53b36047114c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_output_profile_magnitude.csv",
+      "bytes": 930,
+      "sha256": "9484429f4f6b09bc01b1509887f1cd55a019772a2d19959da0b0127638853975"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_output_word_gap.csv",
+      "bytes": 11316,
+      "sha256": "5b742080b522c7ad20297d8e2b2f33184b55952bdbb6a5e0b6ed456816866e5d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_output_word_profiles.csv",
+      "bytes": 23136,
+      "sha256": "a3e1a57b0537e4dd61d092f2b541314a4cc8455ea7c965f851b233ea187075f4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_planned_tests.csv",
+      "bytes": 388,
+      "sha256": "e7313d62c638cd7ba1f5533ab07f607207c6bc07799ae256b480f69328087748"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_raw.npz",
+      "bytes": 26816477,
+      "sha256": "95129cc08ef61ee6272600e479542158bc40594677f222ad83b03407514877b5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_word_gap_by_round.csv",
+      "bytes": 3115,
+      "sha256": "8ffc7350c985ded90938abe216e08a283303a41e1ab41accf76f34f56b5cb8da"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/grain_locality_masks.csv",
+      "bytes": 6351,
+      "sha256": "aaba55eb7ecf6f1375b9285ffdea4e5d7fb275eeee42957f9df9ec05bed4c649"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/grain_planned_test.csv",
+      "bytes": 197,
+      "sha256": "6c284efb9d8628ec659f092200c90e5b972fb517a8c016d6cf53bd3c61ff6c12"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/grain_raw.npz",
+      "bytes": 314824,
+      "sha256": "3450648453b8740cbc98e79cbc5c7b808b55ff3c60370c872d7cf6067700800f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/manifest.json",
+      "bytes": 988,
+      "sha256": "0b1c0a536884f769ebae4dc677b9c897d3df625f92c3754ca67db964d8f3ec12"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/trivium_raw.npz",
+      "bytes": 397577,
+      "sha256": "2d1e1f950f916f510f435347c9df5770e35919bc1e7383430bffd891e9fa943a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/trivium_subcube_summary.csv",
+      "bytes": 2084,
+      "sha256": "7e74e94a387cb0f15a8a9a441f8b9c43fb0a2b6cfd7c1f6645b29356f78b1e59"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_cross_core.csv",
+      "bytes": 3098,
+      "sha256": "cb08b4fc6da76bb302b4b84a065d5a624004285f7098b7e923c2cc71be727a2a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_manifest.json",
+      "bytes": 2394,
+      "sha256": "cbd51bba34afacc777ff2e2238bd484941fdbc8ed5726a9ca360c1a4908d2a55"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_per_key.csv",
+      "bytes": 523824,
+      "sha256": "62d8fd9a95d9a816dbad105d0f0f7e97425362fb9108a721d13798a8a7924aa4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_planned_tests.csv",
+      "bytes": 391,
+      "sha256": "feb0a7573648020a248171cd8128529872397d0f034c18e69bae6c0e18c2b2d9"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_summary.csv",
+      "bytes": 24542,
+      "sha256": "397c7197fcca6f7c5d21b37a0d464896e51b29780345599f0361e97644f3e6b4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_phase_chacha20_raw.npz",
+      "bytes": 2629589,
+      "sha256": "bcc3eeca35e41ccf72f9f67b4a9071a0f4091874f9ce6f8420322c1a628345c7"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_phase_salsa20_raw.npz",
+      "bytes": 2626292,
+      "sha256": "4c078b164f49cfcb17ab5cf2b6c9d5a3915de71c8a82d6b3bd0bf1412c9d4fee"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_manifest.json",
+      "bytes": 2738,
+      "sha256": "8b65c11a383f1f4497c8fd8b51b369692be77aea696b92feba1a1708b68ae437"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_per_key.csv",
+      "bytes": 821107,
+      "sha256": "2d01158c62b8cb9daeace7fb3d433afa38b815f18e88750e57f8c709e6c8688c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_phase_per_key.csv",
+      "bytes": 83384,
+      "sha256": "b704b4115ac033278815ba5e2982c9ec5bd92cb77df58f484c0fcc1ec9b3e57d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_phase_summary.csv",
+      "bytes": 5344,
+      "sha256": "68f2f047c0a3dff845750954421ced09b9c87f9fb9b359e8a05324340d52f67f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_planned_tests.csv",
+      "bytes": 514,
+      "sha256": "4580fc54a5b2d44a87a6f3a623d878d14a2c9cd43473bba9065341e61765e357"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_raw.npz",
+      "bytes": 644202,
+      "sha256": "4a5333b278541f916e97a6fa47de8d98333a7d9c34ed4e6a82dc065d6c69aa3d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_summary.csv",
+      "bytes": 32766,
+      "sha256": "47f30e9be5d0b8b929674f1bef49660f7f1a203c3e60e2bc1b58eb7031342140"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_bit_counts.npz",
+      "bytes": 327746,
+      "sha256": "ebcd280cb5fb34c2ae94f4590f1a6fe215f9b9de99c41e23535f10d2cd4ed325"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_manifest.json",
+      "bytes": 1597,
+      "sha256": "1f5bc0ead6b6f6c4ea38072f2fcd3bd9c2f1152f142dfa6dede17bfe02b8cf63"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_per_key.csv",
+      "bytes": 194071,
+      "sha256": "26e6749ac421ac5fb68843cffa8fa1d22ce021407eb8506587cc8590b30b8d66"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_summary.csv",
+      "bytes": 3184,
+      "sha256": "a962f95f06948d01a37e1bf78eef327d37f1b4321ee871ed21664489a547d4fd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_chacha20_raw.npz",
+      "bytes": 645039,
+      "sha256": "f3be2a5f9b12ca3ff3b503061c4ad8d949332742962682799b51532224837a68"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_grain_128_raw.npz",
+      "bytes": 627163,
+      "sha256": "5bb2fed4fb7eb25b7151685265a9ae8edd4e2d3f0a089616d3366e84ac996845"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_hc_128_raw.npz",
+      "bytes": 520298,
+      "sha256": "fb2e359ee25ed98385e882f2a14ac436880849e1c9fafce1a96c41fdc4b51d88"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_manifest.json",
+      "bytes": 5967,
+      "sha256": "6c5e3dfd40ac4f6bc8bca04a8e9b12403cc231505abeedd7fe03db87461fbf7a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_mickey_2.0_raw.npz",
+      "bytes": 520311,
+      "sha256": "d23dd414b23411d648ac9436b52babb7584f57574b1ef283990a5823dbf21440"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_per_key.csv",
+      "bytes": 4762649,
+      "sha256": "2745d46baf12b5aaeb24849ed430a516fa10b2a1e1a8a4ed2b7fd86fd77f64cf"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_phase_per_key.csv",
+      "bytes": 83799,
+      "sha256": "13de28a7b5c5e5d3e605a659d485a8bf4df19b214d632e852ba9017ff60cf31f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_phase_summary.csv",
+      "bytes": 5431,
+      "sha256": "8d7306f69a011a66dad40ae0375494b3c32040712a57e2b29e79fb9f82bea08c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_planned_tests.csv",
+      "bytes": 1335,
+      "sha256": "31fa267d3f1e19831292716610c91e3532b8bc47b835a9b390c9b9132d334691"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_rabbit_raw.npz",
+      "bytes": 338279,
+      "sha256": "cf6417d72a7cc8c2b38a97af560470fe3f6c0174a9725efef00554cb069a58fd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_summary.csv",
+      "bytes": 177187,
+      "sha256": "4b8ad870f203ea916f540f66a81f54ef1852cd951df2679d13011944ad5b672a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_trivium_raw.npz",
+      "bytes": 522119,
+      "sha256": "a63219d32d592a73666a1efdf93ed1781788a7c2ad06d32bfb03e57ce8b60e9b"
+    },
+    {
+      "path": "doc_stream_ciphers/main.pdf",
+      "bytes": 258268,
+      "sha256": "ac86adea42f6c430a34ef9cdd3575bd582206ca53104072b572bf8e39e20f56b"
+    },
+    {
+      "path": "doc_stream_ciphers/main.tex",
+      "bytes": 53019,
+      "sha256": "b5b12bc0c7e2d047fe78259cdf483f6a5c39d0c194c672fb505bbb1378e3579e"
+    },
+    {
+      "path": "doc_stream_ciphers/make_integrated_mask_figure.py",
+      "bytes": 5895,
+      "sha256": "172e3bcb72a3797848b0b3aa1009e23ebda3972caba05628996f4949fc2283da"
+    },
+    {
+      "path": "doc_stream_ciphers/publication_unified_mask_followup.pdf",
+      "bytes": 23392,
+      "sha256": "2024245f1358008f402d4a82cdaf0cd6c6f5f102674639ed574c7db379b4ac4b"
+    },
+    {
+      "path": "doc_stream_ciphers/related_work_comparison.tex",
+      "bytes": 3480,
+      "sha256": "6b88731136b3437ac4a773c90a95f030de62d301b2e07416d4a173f61d3a9903"
+    },
+    {
+      "path": "experiments/stream_rounds_study/a51_frame_followup.py",
+      "bytes": 5901,
+      "sha256": "d0dedf298b311c132b8849ba297fb675f8ad00fb5c5e590d0bd9956dccfa6b36"
+    },
+    {
+      "path": "experiments/stream_rounds_study/a51_loading_validation.py",
+      "bytes": 4450,
+      "sha256": "1df93c249b412e92c11eaad5c931ea736764e7581c94c65d0657450f5c658b33"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_a51_frame_followup.py",
+      "bytes": 9226,
+      "sha256": "7a7bad5f1afc992b55c0f09e8d979f8fe857494697cbdbc9680b1310b6be787f"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_arx_resolution.py",
+      "bytes": 13198,
+      "sha256": "348ab790ae28e553a7ca08abd814cd1ef7542687450b968cb93057227ab6244d"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_literature_mask_followup.py",
+      "bytes": 16084,
+      "sha256": "a637eef6e4cc2756308c3e03934df4ec0f3a8c981d021c52ee0c6fbb29e44627"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_mask_profiles.py",
+      "bytes": 10511,
+      "sha256": "89e35163d878e29d583fbb84e18f343df2ea035dfb4f605e995e2942bb30ec83"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_spectral_added_value.py",
+      "bytes": 16423,
+      "sha256": "9f3afc9703d808682613a909de708b06c680f9c8fdc2fe63f725f3baa41a2c40"
+    },
+    {
+      "path": "experiments/stream_rounds_study/arx_mechanism_analysis.py",
+      "bytes": 12755,
+      "sha256": "6cdd3563617fcbce3aa3419d13989efef75451aa82b426aa9d9365bfef54f3fe"
+    },
+    {
+      "path": "experiments/stream_rounds_study/arx_resolution_validation.py",
+      "bytes": 22153,
+      "sha256": "cc57c76ef2e61143bf230e0b6177bbec5bed3b3bfb177526b4f915191641854b"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_mask_profiles.py",
+      "bytes": 6187,
+      "sha256": "2907979bdaf67627eea0c95211b604e3867638d0868178da4bcaf133b14cced0"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_matched_nonce_phase.py",
+      "bytes": 8417,
+      "sha256": "daadb04f1ac14d402defcb000158b483e94e0b94dbe661115ef97c3714188e0c"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_salsa20_transfer.py",
+      "bytes": 6783,
+      "sha256": "812bf150e61a7e89171f2b1f9e45321a7cc82a666ffd22c846183bd6e94cc8d7"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_same_data_benchmark.py",
+      "bytes": 8037,
+      "sha256": "1a8d6a8230cbce3ee4f5742bb191c3df6509da13307e4745a148c4a7cbdff5fa"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_unified_six_results.py",
+      "bytes": 8547,
+      "sha256": "182dcdc0621b6462d28b11fb06150ffeb4b667d0cc62a388fd9e5c9d47ab3eca"
+    },
+    {
+      "path": "experiments/stream_rounds_study/explore_mask_spectral_entropy.py",
+      "bytes": 12994,
+      "sha256": "04bb7a13833cbab1dce72c7379aceb1bed0667cf928688960a53583d90a7f77a"
+    },
+    {
+      "path": "experiments/stream_rounds_study/extension_stream_cores.py",
+      "bytes": 12712,
+      "sha256": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5"
+    },
+    {
+      "path": "experiments/stream_rounds_study/literature_mask_followup.py",
+      "bytes": 11568,
+      "sha256": "458507268b8b8d91bed948bef6aec54de6b3a11b5bb67c5d684995f3b906812e"
+    },
+    {
+      "path": "experiments/stream_rounds_study/matched_nonce_phase_study.py",
+      "bytes": 17338,
+      "sha256": "78febc845a94e24cb2367d2281c29832a61a51424ba34deb7d38809919ea884e"
+    },
+    {
+      "path": "experiments/stream_rounds_study/publication_study.py",
+      "bytes": 22066,
+      "sha256": "f4e115a80062f419d5b988ba475ad0c5843203c58b48c265a42a71fe2b44c26b"
+    },
+    {
+      "path": "experiments/stream_rounds_study/salsa20_transfer_study.py",
+      "bytes": 14874,
+      "sha256": "7cde3add1622057dc1c63af914789dd429563b5091b5a456c36656a0f56af171"
+    },
+    {
+      "path": "experiments/stream_rounds_study/same_data_diagnostic_benchmark.py",
+      "bytes": 10790,
+      "sha256": "2095719692184b2b4011fd5698620d42bf5eccfdeb08a4cfd4c050a1f40ff6e7"
+    },
+    {
+      "path": "experiments/stream_rounds_study/standard_iv_validation.py",
+      "bytes": 13106,
+      "sha256": "7ee41fe58c463f3c6e98f8755d3e492c150409dbc1b72a88d34f9a9320213cdd"
+    },
+    {
+      "path": "experiments/stream_rounds_study/unified_six_cipher_iv_study.py",
+      "bytes": 21355,
+      "sha256": "a4ca1b0193f7cc5ce942adcf0a13ff3b0143841a84be45a55f2bc6d94af914b8"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 68,
+      "sha256": "8cb12841c28eec7f35bb701446a7bb2923696163f5159eee5f9a432d72b5a099"
+    },
+    {
+      "path": "run.py",
+      "bytes": 2533,
+      "sha256": "08c435842e23ed7b89dcb1f068b2cff7dcc8ae0e440bf1f54950839b9d32fd7f"
+    },
+    {
+      "path": "src/spectral_crypto_analyzer/__init__.py",
+      "bytes": 235,
+      "sha256": "e370c883a32c7fd1658f0f1a110a026629453fe9d352db7b79e08d11d697474b"
+    },
+    {
+      "path": "src/spectral_crypto_analyzer/block_reduced.py",
+      "bytes": 15415,
+      "sha256": "7d5a36b22537cdd240f8c3afc0780f84b59e7fcc4c8fcfb42cf31e9f5690b71f"
+    },
+    {
+      "path": "src/spectral_crypto_analyzer/primitives.py",
+      "bytes": 81031,
+      "sha256": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+    },
+    {
+      "path": "tests/test_arx_resolution.py",
+      "bytes": 3597,
+      "sha256": "05f58561484a41db08c25a6527b3cf70b1c01879d1116f3c3d3a329ddcd23783"
+    },
+    {
+      "path": "tests/test_arx_resolution_validation.py",
+      "bytes": 3346,
+      "sha256": "9f46def4efa7b043327059a1df8e8fcb543226125bbfe63d5ae39165883f905a"
+    },
+    {
+      "path": "tests/test_extension_stream_vectors.py",
+      "bytes": 3776,
+      "sha256": "29dec8a4b658e74f7e49796abc079321965025ad0c634f79f73b7f13a35a4ef0"
+    },
+    {
+      "path": "tests/test_grain128_independent_reference.py",
+      "bytes": 2340,
+      "sha256": "4ca9b50837b6c0eee5d3c385190931bec88aaecad8b3b502da652b7c076b9d81"
+    },
+    {
+      "path": "tests/test_matched_nonce_phase.py",
+      "bytes": 1641,
+      "sha256": "532db9e1b385a60299604fb05a7d198a84c4660fd621a5cb638d1240575e88a8"
+    },
+    {
+      "path": "tests/test_mickey20_independent_reference.py",
+      "bytes": 4062,
+      "sha256": "6456095b9d5366e0ea0be530be30d9866c58a92d986c910aaff1f95d45740a30"
+    },
+    {
+      "path": "tests/test_salsa20_vectors.py",
+      "bytes": 2802,
+      "sha256": "5c6809ff6f2f8883f784c7cd177d57f143acfde96991393dcf5ec3ca7a70d53a"
+    },
+    {
+      "path": "tests/test_stream_cipher_vectors.py",
+      "bytes": 1332,
+      "sha256": "9f765cc064e7872492848939317668102e3220a41fac1830dd3d672dc8bc2354"
+    },
+    {
+      "path": "tests/vectors/extension/hc128_wu_estream.txt",
+      "bytes": 804,
+      "sha256": "25701afcac7bb699a1a0677d4a283c3510a2599256d172b8e20c4053fc42878f"
+    },
+    {
+      "path": "tests/vectors/extension/mickey20_asecuritysite.txt",
+      "bytes": 674,
+      "sha256": "040aa04a97e776457983da5f14559c9546a9020208655b395105e165e956ae36"
+    },
+    {
+      "path": "tests/vectors/extension/rabbit_estream_cryptopp.txt",
+      "bytes": 1652,
+      "sha256": "06a6ac07e89f199329b623cfdfd7f770cc8cb94119bd78e0dd75baa6124be9f6"
+    },
+    {
+      "path": "tests/vectors/extension/salsa20_libsodium.json",
+      "bytes": 1075,
+      "sha256": "49b69b0be1c32b70f1e0ae88812a2824799926cc38a799de9594ec170b02f1a0"
+    },
+    {
+      "path": "tools/audit_arx_extensions.py",
+      "bytes": 10851,
+      "sha256": "943f497a0885286c7c41c12c5ed49fd9f0bb9b68fa8e13335b9d8843720b0936"
+    },
+    {
+      "path": "tools/audit_followups.py",
+      "bytes": 3307,
+      "sha256": "1e7497257783e40a729a17dd9f890015528c957bce8306b8a44ccdab964975b3"
+    },
+    {
+      "path": "tools/check_vectors.py",
+      "bytes": 1705,
+      "sha256": "b255356ea87d38eaefebe2448bab877d357b52ba804eb4eaef18e99c08ea2e64"
+    },
+    {
+      "path": "verify_package.py",
+      "bytes": 3318,
+      "sha256": "9afca49849ed224dcb9cb772c6ccdb1c1cee1f94ce782ac6dd960c793ed99341"
+    }
+  ],
+  "archive_path": "iv_diffusion_research_review_v0.15.0.zip",
+  "archive_bytes": 89766241,
+  "archive_sha256": "647e222578e2b93a1f823aa071bc5db265dc3e65e53516dd6193dfbccb18a1f7"
+}

@@ -1,0 +1,17 @@
+{
+  "formal_mode_requested": "re-review",
+  "formal_mode_executed": false,
+  "formal_input_status": "Prior advisory round did not produce the immutable revision-roadmap/1.0, author-adjudication/1.0, revision-evidence-bundle/1.0 and current patch/apply-report chain required for contract re-review.",
+  "runtime_check": {
+    "jsonschema_version": "3.2.0",
+    "Draft202012Validator_available": false
+  },
+  "fallback": "advisory verification using inherited v0.19 criteria; not ARS legacy mode and not a validated contract replay",
+  "new_network_or_approval_attempt": false,
+  "public_source_access": "No callable web capability; full cited Dey text not located by filename search under home or previously inspected project/temp caches. No current journal-rules validation.",
+  "external_model_transmission": false,
+  "manuscript_revision": false,
+  "bibliography_identical_to_v019": true,
+  "protocol_reference": "ars/academic-paper-reviewer/references/re_review_mode_protocol.md, inputs 1-10 and Decision Derivation G0",
+  "skill_version": "3.24.0"
+}

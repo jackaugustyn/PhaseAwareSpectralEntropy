@@ -1,0 +1,51 @@
+{
+  "status": "advisory_re_review_complete_formal_contract_unavailable",
+  "source_version": "0.20.0",
+  "baseline_version": "0.19.0",
+  "target_venue": "Electronics",
+  "calibration_status": "NOT_CALIBRATED",
+  "manuscript_inputs_unchanged": true,
+  "no_scientific_file_edits": true,
+  "criterion_results": {
+    "N1": "partly_addressed",
+    "N2": "addressed",
+    "N3": "addressed",
+    "N4": "addressed",
+    "N5": "addressed",
+    "N6": "addressed",
+    "N7": "addressed",
+    "N8": "addressed",
+    "N9": "addressed"
+  },
+  "N3_scope": "Identifiable local reviewer archive prepared; actual submission and public deposition not asserted.",
+  "residual_material_issue": "N1: source-backed comparison with closest two-round criteria remains incomplete.",
+  "new_material_defects_found": false,
+  "author_response_consistency": "Explicit partial status of closest-source priority in REVIEW_RESPONSE_V020.md agrees with this verification; other checked revision claims are supported by manuscript/data evidence. No verdict changed solely on an author assertion.",
+  "provenance": {
+    "root": "Has revision and response context; participated in manuscript editing.",
+    "specialist_contexts": [
+      "/root/v020_rereview_crypto",
+      "/root/v020_rereview_methods",
+      "/root/v020_rereview_spectrum"
+    ],
+    "fresh_contexts": 3,
+    "peer_reports_shared_before_commitment": false,
+    "response_file_read_by_specialists_before_commitment": false,
+    "incidental_author_material": "Methodology reader inspected archive metadata including author change description.",
+    "model_family": "Codex primary family; exact model identifier not separately attested",
+    "cross_model_review": false,
+    "independent_error_processes_established": false
+  },
+  "files": {
+    "cryptography_verification.md": "bfd059da85f5ce23eea7ef50d70f82e3e0dddd0b415f745373373ae2e8cc4587",
+    "methodology_verification.md": "64dca73a7e094c4a11c4b0001d0e4a547d534760130b86bd40bba4baca98bcfd",
+    "spectrum_verification.md": "edcf562df4a50852f864956fa5e636b1d809d108e5e67ffc422393620a797386",
+    "REVIEW_PL.md": "50d1068bdffab09ab35e6205b019e69759f3abca2bbaca65cc89f08e39671186",
+    "artifact_checks.json": "27c1114f63b522fb8de053699d92f1891fcc690377567562b3420d1174e97d27",
+    "inherited_criteria.md": "bc4ff74ea0a8f2985eb121bbd70146fecc6627ad898dd34fa0087de21a4b39be",
+    "runtime_status.json": "4baf093e686b688c598a3b518b3c1a10515b6c6f7e82ddd7a193ddde770bdd75",
+    "manuscript.tex": "0e3945f2aac8e249ebac164398760222ecd77acaea7e71b739d43a277419af8b",
+    "manuscript_diff.patch": "a186fa2b827d0a330ac4dfde4d280e44cd8e565df6bd0fd8fde90d92a5ce8aa0",
+    "manuscript_pdf.txt": "6df871750b322afb7e383ff9cc80a8eec30ff1bee361d931859606c75432e8f8"
+  }
+}

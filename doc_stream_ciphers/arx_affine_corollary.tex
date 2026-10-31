@@ -1,0 +1,13 @@
+\paragraph{Conditional rank and mean response.}
+
+The affine form yields an exact quantitative corollary. Let $A_C(u)=f_C(u)\oplus C$ be its linear part, and let $t(C)$ count trailing ones from the least significant bit, with $t(2^{32}-1)=32$. For every fixed $C$ and every $u$,
+\begin{equation}
+\begin{aligned}
+ \operatorname{rank}_{\mathbb F_2} A_C
+   &=31-\operatorname{HW}(C\bmod 2^{31}),\\
+ \frac{1}{32}\sum_{b=0}^{31}\operatorname{HW}\!\left(f_C(u\oplus2^b)\oplus f_C(u)\right)
+   &=\frac{\max(31-t(C),0)}{32}\leq\frac{31}{32}.
+\end{aligned}
+\label{eq:affinecorollary}
+\end{equation}
+Nonzero derivative columns have disjoint supports, whose union is the suffix after the first zero of $C$; the Supplementary Materials give the proof and deterministic audit. No distribution for $C$ is assumed. The algebraic examples $C=0$ and $C=2^{32}-2$ have the same mean singleton HW, $31/32$, but ranks 31 and 1. They illustrate what averaging can hide, rather than reporting sampled cipher states. These ranks concern one conditional output-word map, not the complete cipher.

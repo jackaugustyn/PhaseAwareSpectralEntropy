@@ -1,0 +1,648 @@
+{
+  "release": "iv_diffusion_research_review_v0.14.0",
+  "status": "local_reviewer_candidate_no_public_doi",
+  "primary_dataset": "experimental IV-diffusion diagnostics centered on reduced ChaCha20 and Salsa20: matched-nonce phase intervention, same-stream benchmark, and independent 64-mask ARX follow-up; supporting appendix studies retain the wider seven-cipher ordinary-IV/nonce comparison, retrospective per-mask profiles, Grain/Trivium follow-ups, and auxiliary A5/1 frame-difference tests",
+  "inference_status": "original six standard HMP and three replication tests locked before indices 280--359; Salsa20 three-test transfer locked before indices 360--439; two matched-nonce phase tests locked before indices 440--519; two matched 64-mask ARX tests locked before indices 520--599; one Grain validation and a 12-cell Trivium maxT pilot locked before indices 600--679; A5/1 20-clock endpoint and 44-cell standard search locked before indices 680--759; selected zero-clock A5/1 bit contrast locked before independent indices 760--839; same-stream comparison, older mask scan, output-word profiles, and zero-prefix lengths are descriptive",
+  "python": "3.10.12",
+  "packages": {
+    "numpy": "1.22.0",
+    "matplotlib": "3.5.1",
+    "cryptography": "46.0.5"
+  },
+  "file_count": 126,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 12755,
+      "sha256": "1386343dba6eaadf06fdea1181d5af57da1642d44326186c9104e291acd346ae"
+    },
+    {
+      "path": "doc_stream_ciphers/A51_KNOWN_WEAKNESS_PROTOCOL.txt",
+      "bytes": 3501,
+      "sha256": "2f00329bdf90452681009e848e4a1452fec84e816b1269b4caec9f8037278131"
+    },
+    {
+      "path": "doc_stream_ciphers/A51_LOADING_VALIDATION_PROTOCOL.txt",
+      "bytes": 1636,
+      "sha256": "fe157a9053944c37110991f2902a8b82cd7c856f4659d6df8494ea6c99517316"
+    },
+    {
+      "path": "doc_stream_ciphers/COVER_LETTER.md",
+      "bytes": 2557,
+      "sha256": "72f95d566a4bd93b8e204fdfab7afe2bd955849daf535c3b74e4f3b8bd61479c"
+    },
+    {
+      "path": "doc_stream_ciphers/DEPOSIT_METADATA_DRAFT.json",
+      "bytes": 2848,
+      "sha256": "e5924d10e5bf41f31d8169d7cbbd58ab4fdfdef42ccbbea1a0f8bf4a0f259609"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/journalnames.tex",
+      "bytes": 108413,
+      "sha256": "f4944f272ae0bfaccedb926f4da5ce40c0dabead50482afae191989430fb66dc"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/logo-mdpi-eps-converted-to.pdf",
+      "bytes": 13161,
+      "sha256": "faaff877128bb8000b5c706121547aba1246305e4aff1c638ff7d48fd4f78be9"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/logo-mdpi.eps",
+      "bytes": 563678,
+      "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/mdpi.bst",
+      "bytes": 23683,
+      "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680"
+    },
+    {
+      "path": "doc_stream_ciphers/Definitions/mdpi.cls",
+      "bytes": 63307,
+      "sha256": "62979fe0fe0f72a57adc1ad683add9b0138f1dae635d1da4ae48a4d811159e40"
+    },
+    {
+      "path": "doc_stream_ciphers/ELECTRONICS_REVISION.md",
+      "bytes": 4734,
+      "sha256": "434c0e17c2b24ffd4f8d31621a68627c987bcdf2b9f1aa9cedeef941f32078b4"
+    },
+    {
+      "path": "doc_stream_ciphers/MASK_LITERATURE_FOLLOWUP_PROTOCOL.txt",
+      "bytes": 5412,
+      "sha256": "52b0625471ef51d49066bb0c0976d879a9afc84cdab09b0b91c4301839a9359e"
+    },
+    {
+      "path": "doc_stream_ciphers/MATCHED_NONCE_PHASE_PROTOCOL.txt",
+      "bytes": 4914,
+      "sha256": "807ffd4c488a77c422bc06e185356788bc798a6d72c7813864850f0a7753aeda"
+    },
+    {
+      "path": "doc_stream_ciphers/SALSA20_TRANSFER_PROTOCOL.txt",
+      "bytes": 4062,
+      "sha256": "fcc4184fbc957c3a3a3a1a1e283114031d65e7c420c99d7fe5bae2b0b9d72ec0"
+    },
+    {
+      "path": "doc_stream_ciphers/SAME_DATA_DIAGNOSTIC_BENCHMARK.txt",
+      "bytes": 3537,
+      "sha256": "0c92d0c770a2e91dc70b17ac00766d1cf00a4f85e5fd420478b2c075c3908c77"
+    },
+    {
+      "path": "doc_stream_ciphers/SIX_CIPHER_UNIFIED_PROTOCOL.txt",
+      "bytes": 5189,
+      "sha256": "178fbe5deac31dc419842c8c7f63eeaaa1545ad2de3de1a8548ead5c42159de1"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_manifest.json",
+      "bytes": 1961,
+      "sha256": "81db88bda410e9f8a11821b3c1fe94430fcbfe8783b2d999139cda09b0bfbf30"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_per_key.csv",
+      "bytes": 8228544,
+      "sha256": "cce9a0db8970c8a5b7890b003c8cf7976162f2a5d12c5e974146125bd7139e21"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_profile_comparisons.csv",
+      "bytes": 10454,
+      "sha256": "78944e36a56ea2e2da9ea8aee54f31444b3e80385feee3ac398b8db132a6bd73"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_profile_manifest.json",
+      "bytes": 670,
+      "sha256": "f41bb7638849f3f8f4d0f2e21340f54aa6839ab6eda249addcc96e2b959d87b1"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_small_effect_max_t.csv",
+      "bytes": 31643,
+      "sha256": "499c0f67b4284304322755c1afa7667da167c489bdd49952afad4e3da68e85a6"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_standard_max_t.csv",
+      "bytes": 16846,
+      "sha256": "ed06bf9ecfdb02aa143d2276d1166c83aaf8d480ecb944be897436b02a5de454"
+    },
+    {
+      "path": "doc_stream_ciphers/analysis/mask_scan_results/mask_scan_summary.csv",
+      "bytes": 174904,
+      "sha256": "7f730d401031b8fc5a355177676f3bc300606f77c236f43611b9e7f5292acc78"
+    },
+    {
+      "path": "doc_stream_ciphers/biblio.bib",
+      "bytes": 15468,
+      "sha256": "b8879a012823a752cbf1de10422ecfa9c83ad385c6b5f317e98c9d58bfd56d93"
+    },
+    {
+      "path": "doc_stream_ciphers/build_research_release.py",
+      "bytes": 9222,
+      "sha256": "b3d9e8ba11de6da5754dd1be10c621b22a60f2cd2e9ccb8b6ca4048e1a44b128"
+    },
+    {
+      "path": "doc_stream_ciphers/build_submission_package.py",
+      "bytes": 1997,
+      "sha256": "348e363cb22e78c5cc5826c2234a2dfe346484feb11fa0ac56235640a7f32f41"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_frame_raw.npz",
+      "bytes": 1060675,
+      "sha256": "a6b63e5c287be49f0cdbe7c0cb1e7f896f30ae9c63dc3cfe3f4c6475484502f8"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_manifest.json",
+      "bytes": 446,
+      "sha256": "e77c3bf972bbc58be841a39d36ed80244ff1673c66e6f8647e990a49fa80a4e5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_per_key.csv",
+      "bytes": 3817,
+      "sha256": "2f5488807545491b14bd9547b100f96d78532e8b8a8d437792a7132b55b90fb2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_raw.npz",
+      "bytes": 41380,
+      "sha256": "2be727ed9ecc05140b9f5fd2c84f181c8d3a20cf9188996425c515dee1e62767"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_loading_validation_summary.json",
+      "bytes": 745,
+      "sha256": "761c1b2444ae488c0e68771d0e35abbc4b8278aaebaee6773bc7c7ef6e8db363"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_per_key.csv",
+      "bytes": 1214658,
+      "sha256": "b4530b1f6520f6cad9d62f1d2f435faa7ef2c14f33dc086b7d561f00517d147a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_planned_test.csv",
+      "bytes": 229,
+      "sha256": "364dbd4f2e646df096cc9eaec101dee887f71cab549129ee23efbd4b63249555"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_standard_mask_scan.csv",
+      "bytes": 3942,
+      "sha256": "f907734e9da729c54199d54d4c42bcc30d11e11cc9af1b9d1b4b2a3c1c74e6a6"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/a51_summary.csv",
+      "bytes": 3005,
+      "sha256": "171cb94bd62da45c1cd4ee852d29f62e43e9675225bd606546ac89897e33f208"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/analysis_manifest.json",
+      "bytes": 1208,
+      "sha256": "891b23dc613f2debbe3fb8a4b885a24c1fe41ab364dcc2d81bcdab685b701d3d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/analysis_summary.json",
+      "bytes": 6995,
+      "sha256": "cef5286a289eb12813537b9fc90bf457ff500f4709583f2494ade029f3876429"
+    },
+    {
+      "path": "doc_stream_ciphers/data/a51_frame_followup/manifest.json",
+      "bytes": 516,
+      "sha256": "afbb98a197cb22bd558bf22e2e48bab1b3a03528035fcd3bb16bb56aca3b629f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/analysis_manifest.json",
+      "bytes": 1790,
+      "sha256": "843ff9f5cfc202a3c249f07012367f61aeb6db20798d2e6edade9b5ec1248aba"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/analysis_summary.json",
+      "bytes": 34817,
+      "sha256": "21c57c10281fc2541c706fc3a43968666332b23c9b5e7e60112fffca9548b2d2"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_all_64_masks.csv",
+      "bytes": 117722,
+      "sha256": "f3ab92210e460506312a2c137fc20487bed5c4ac3bd1edca397a81c42b864f57"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_literature_input_positions.csv",
+      "bytes": 2731,
+      "sha256": "fe871e102d2d42e168734789d533071c32e49cdd298dda08375f53b36047114c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_output_profile_magnitude.csv",
+      "bytes": 930,
+      "sha256": "9484429f4f6b09bc01b1509887f1cd55a019772a2d19959da0b0127638853975"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_output_word_gap.csv",
+      "bytes": 11316,
+      "sha256": "5b742080b522c7ad20297d8e2b2f33184b55952bdbb6a5e0b6ed456816866e5d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_output_word_profiles.csv",
+      "bytes": 23136,
+      "sha256": "a3e1a57b0537e4dd61d092f2b541314a4cc8455ea7c965f851b233ea187075f4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_planned_tests.csv",
+      "bytes": 388,
+      "sha256": "e7313d62c638cd7ba1f5533ab07f607207c6bc07799ae256b480f69328087748"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_raw.npz",
+      "bytes": 26816477,
+      "sha256": "95129cc08ef61ee6272600e479542158bc40594677f222ad83b03407514877b5"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/arx_word_gap_by_round.csv",
+      "bytes": 3115,
+      "sha256": "8ffc7350c985ded90938abe216e08a283303a41e1ab41accf76f34f56b5cb8da"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/grain_locality_masks.csv",
+      "bytes": 6351,
+      "sha256": "aaba55eb7ecf6f1375b9285ffdea4e5d7fb275eeee42957f9df9ec05bed4c649"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/grain_planned_test.csv",
+      "bytes": 197,
+      "sha256": "6c284efb9d8628ec659f092200c90e5b972fb517a8c016d6cf53bd3c61ff6c12"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/grain_raw.npz",
+      "bytes": 314824,
+      "sha256": "3450648453b8740cbc98e79cbc5c7b808b55ff3c60370c872d7cf6067700800f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/manifest.json",
+      "bytes": 988,
+      "sha256": "0b1c0a536884f769ebae4dc677b9c897d3df625f92c3754ca67db964d8f3ec12"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/trivium_raw.npz",
+      "bytes": 397577,
+      "sha256": "2d1e1f950f916f510f435347c9df5770e35919bc1e7383430bffd891e9fa943a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/literature_mask_followup/trivium_subcube_summary.csv",
+      "bytes": 2084,
+      "sha256": "7e74e94a387cb0f15a8a9a441f8b9c43fb0a2b6cfd7c1f6645b29356f78b1e59"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_cross_core.csv",
+      "bytes": 3098,
+      "sha256": "cb08b4fc6da76bb302b4b84a065d5a624004285f7098b7e923c2cc71be727a2a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_manifest.json",
+      "bytes": 2394,
+      "sha256": "cbd51bba34afacc777ff2e2238bd484941fdbc8ed5726a9ca360c1a4908d2a55"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_per_key.csv",
+      "bytes": 523824,
+      "sha256": "62d8fd9a95d9a816dbad105d0f0f7e97425362fb9108a721d13798a8a7924aa4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_planned_tests.csv",
+      "bytes": 391,
+      "sha256": "feb0a7573648020a248171cd8128529872397d0f034c18e69bae6c0e18c2b2d9"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_nonce_phase_summary.csv",
+      "bytes": 24542,
+      "sha256": "397c7197fcca6f7c5d21b37a0d464896e51b29780345599f0361e97644f3e6b4"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_phase_chacha20_raw.npz",
+      "bytes": 2629589,
+      "sha256": "bcc3eeca35e41ccf72f9f67b4a9071a0f4091874f9ce6f8420322c1a628345c7"
+    },
+    {
+      "path": "doc_stream_ciphers/data/matched_nonce_phase_results/matched_phase_salsa20_raw.npz",
+      "bytes": 2626292,
+      "sha256": "4c078b164f49cfcb17ab5cf2b6c9d5a3915de71c8a82d6b3bd0bf1412c9d4fee"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_manifest.json",
+      "bytes": 2738,
+      "sha256": "8b65c11a383f1f4497c8fd8b51b369692be77aea696b92feba1a1708b68ae437"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_per_key.csv",
+      "bytes": 821107,
+      "sha256": "2d01158c62b8cb9daeace7fb3d433afa38b815f18e88750e57f8c709e6c8688c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_phase_per_key.csv",
+      "bytes": 83384,
+      "sha256": "b704b4115ac033278815ba5e2982c9ec5bd92cb77df58f484c0fcc1ec9b3e57d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_phase_summary.csv",
+      "bytes": 5344,
+      "sha256": "68f2f047c0a3dff845750954421ced09b9c87f9fb9b359e8a05324340d52f67f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_planned_tests.csv",
+      "bytes": 514,
+      "sha256": "4580fc54a5b2d44a87a6f3a623d878d14a2c9cd43473bba9065341e61765e357"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_raw.npz",
+      "bytes": 644202,
+      "sha256": "4a5333b278541f916e97a6fa47de8d98333a7d9c34ed4e6a82dc065d6c69aa3d"
+    },
+    {
+      "path": "doc_stream_ciphers/data/salsa20_transfer_results/salsa20_transfer_summary.csv",
+      "bytes": 32766,
+      "sha256": "47f30e9be5d0b8b929674f1bef49660f7f1a203c3e60e2bc1b58eb7031342140"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_bit_counts.npz",
+      "bytes": 327746,
+      "sha256": "ebcd280cb5fb34c2ae94f4590f1a6fe215f9b9de99c41e23535f10d2cd4ed325"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_manifest.json",
+      "bytes": 1597,
+      "sha256": "1f5bc0ead6b6f6c4ea38072f2fcd3bd9c2f1152f142dfa6dede17bfe02b8cf63"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_per_key.csv",
+      "bytes": 194071,
+      "sha256": "26e6749ac421ac5fb68843cffa8fa1d22ce021407eb8506587cc8590b30b8d66"
+    },
+    {
+      "path": "doc_stream_ciphers/data/same_data_benchmark_results/same_data_benchmark_summary.csv",
+      "bytes": 3184,
+      "sha256": "a962f95f06948d01a37e1bf78eef327d37f1b4321ee871ed21664489a547d4fd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_chacha20_raw.npz",
+      "bytes": 645039,
+      "sha256": "f3be2a5f9b12ca3ff3b503061c4ad8d949332742962682799b51532224837a68"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_grain_128_raw.npz",
+      "bytes": 627163,
+      "sha256": "5bb2fed4fb7eb25b7151685265a9ae8edd4e2d3f0a089616d3366e84ac996845"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_hc_128_raw.npz",
+      "bytes": 520298,
+      "sha256": "fb2e359ee25ed98385e882f2a14ac436880849e1c9fafce1a96c41fdc4b51d88"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_manifest.json",
+      "bytes": 5967,
+      "sha256": "6c5e3dfd40ac4f6bc8bca04a8e9b12403cc231505abeedd7fe03db87461fbf7a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_mickey_2.0_raw.npz",
+      "bytes": 520311,
+      "sha256": "d23dd414b23411d648ac9436b52babb7584f57574b1ef283990a5823dbf21440"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_per_key.csv",
+      "bytes": 4762649,
+      "sha256": "2745d46baf12b5aaeb24849ed430a516fa10b2a1e1a8a4ed2b7fd86fd77f64cf"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_phase_per_key.csv",
+      "bytes": 83799,
+      "sha256": "13de28a7b5c5e5d3e605a659d485a8bf4df19b214d632e852ba9017ff60cf31f"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_phase_summary.csv",
+      "bytes": 5431,
+      "sha256": "8d7306f69a011a66dad40ae0375494b3c32040712a57e2b29e79fb9f82bea08c"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_planned_tests.csv",
+      "bytes": 1335,
+      "sha256": "31fa267d3f1e19831292716610c91e3532b8bc47b835a9b390c9b9132d334691"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_rabbit_raw.npz",
+      "bytes": 338279,
+      "sha256": "cf6417d72a7cc8c2b38a97af560470fe3f6c0174a9725efef00554cb069a58fd"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_summary.csv",
+      "bytes": 177187,
+      "sha256": "4b8ad870f203ea916f540f66a81f54ef1852cd951df2679d13011944ad5b672a"
+    },
+    {
+      "path": "doc_stream_ciphers/data/unified_six_results/unified_six_trivium_raw.npz",
+      "bytes": 522119,
+      "sha256": "a63219d32d592a73666a1efdf93ed1781788a7c2ad06d32bfb03e57ce8b60e9b"
+    },
+    {
+      "path": "doc_stream_ciphers/main.pdf",
+      "bytes": 238549,
+      "sha256": "7968f8177aa81a02c09add1206424ca9835fc917995308416462b0cc77d75cad"
+    },
+    {
+      "path": "doc_stream_ciphers/main.tex",
+      "bytes": 51856,
+      "sha256": "5279098fb14ce094ff9117bc612fb990b144c1212e6a5dd68624441908b89f55"
+    },
+    {
+      "path": "doc_stream_ciphers/make_integrated_mask_figure.py",
+      "bytes": 5895,
+      "sha256": "172e3bcb72a3797848b0b3aa1009e23ebda3972caba05628996f4949fc2283da"
+    },
+    {
+      "path": "doc_stream_ciphers/publication_unified_mask_followup.pdf",
+      "bytes": 23392,
+      "sha256": "2024245f1358008f402d4a82cdaf0cd6c6f5f102674639ed574c7db379b4ac4b"
+    },
+    {
+      "path": "experiments/stream_rounds_study/a51_frame_followup.py",
+      "bytes": 5901,
+      "sha256": "d0dedf298b311c132b8849ba297fb675f8ad00fb5c5e590d0bd9956dccfa6b36"
+    },
+    {
+      "path": "experiments/stream_rounds_study/a51_loading_validation.py",
+      "bytes": 4450,
+      "sha256": "1df93c249b412e92c11eaad5c931ea736764e7581c94c65d0657450f5c658b33"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_a51_frame_followup.py",
+      "bytes": 9226,
+      "sha256": "7a7bad5f1afc992b55c0f09e8d979f8fe857494697cbdbc9680b1310b6be787f"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_literature_mask_followup.py",
+      "bytes": 16084,
+      "sha256": "a637eef6e4cc2756308c3e03934df4ec0f3a8c981d021c52ee0c6fbb29e44627"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_mask_profiles.py",
+      "bytes": 10511,
+      "sha256": "89e35163d878e29d583fbb84e18f343df2ea035dfb4f605e995e2942bb30ec83"
+    },
+    {
+      "path": "experiments/stream_rounds_study/analyze_spectral_added_value.py",
+      "bytes": 16423,
+      "sha256": "9f3afc9703d808682613a909de708b06c680f9c8fdc2fe63f725f3baa41a2c40"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_mask_profiles.py",
+      "bytes": 6187,
+      "sha256": "2907979bdaf67627eea0c95211b604e3867638d0868178da4bcaf133b14cced0"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_matched_nonce_phase.py",
+      "bytes": 8417,
+      "sha256": "daadb04f1ac14d402defcb000158b483e94e0b94dbe661115ef97c3714188e0c"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_salsa20_transfer.py",
+      "bytes": 6783,
+      "sha256": "812bf150e61a7e89171f2b1f9e45321a7cc82a666ffd22c846183bd6e94cc8d7"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_same_data_benchmark.py",
+      "bytes": 8037,
+      "sha256": "1a8d6a8230cbce3ee4f5742bb191c3df6509da13307e4745a148c4a7cbdff5fa"
+    },
+    {
+      "path": "experiments/stream_rounds_study/audit_unified_six_results.py",
+      "bytes": 8547,
+      "sha256": "182dcdc0621b6462d28b11fb06150ffeb4b667d0cc62a388fd9e5c9d47ab3eca"
+    },
+    {
+      "path": "experiments/stream_rounds_study/explore_mask_spectral_entropy.py",
+      "bytes": 12994,
+      "sha256": "04bb7a13833cbab1dce72c7379aceb1bed0667cf928688960a53583d90a7f77a"
+    },
+    {
+      "path": "experiments/stream_rounds_study/extension_stream_cores.py",
+      "bytes": 12712,
+      "sha256": "18aab573406d66910ac119380eb71350a3053c6f8d2f1d98f287003a15f97dc5"
+    },
+    {
+      "path": "experiments/stream_rounds_study/literature_mask_followup.py",
+      "bytes": 11568,
+      "sha256": "458507268b8b8d91bed948bef6aec54de6b3a11b5bb67c5d684995f3b906812e"
+    },
+    {
+      "path": "experiments/stream_rounds_study/matched_nonce_phase_study.py",
+      "bytes": 17338,
+      "sha256": "78febc845a94e24cb2367d2281c29832a61a51424ba34deb7d38809919ea884e"
+    },
+    {
+      "path": "experiments/stream_rounds_study/publication_study.py",
+      "bytes": 22066,
+      "sha256": "f4e115a80062f419d5b988ba475ad0c5843203c58b48c265a42a71fe2b44c26b"
+    },
+    {
+      "path": "experiments/stream_rounds_study/salsa20_transfer_study.py",
+      "bytes": 14874,
+      "sha256": "7cde3add1622057dc1c63af914789dd429563b5091b5a456c36656a0f56af171"
+    },
+    {
+      "path": "experiments/stream_rounds_study/same_data_diagnostic_benchmark.py",
+      "bytes": 10790,
+      "sha256": "2095719692184b2b4011fd5698620d42bf5eccfdeb08a4cfd4c050a1f40ff6e7"
+    },
+    {
+      "path": "experiments/stream_rounds_study/standard_iv_validation.py",
+      "bytes": 13106,
+      "sha256": "7ee41fe58c463f3c6e98f8755d3e492c150409dbc1b72a88d34f9a9320213cdd"
+    },
+    {
+      "path": "experiments/stream_rounds_study/unified_six_cipher_iv_study.py",
+      "bytes": 21355,
+      "sha256": "a4ca1b0193f7cc5ce942adcf0a13ff3b0143841a84be45a55f2bc6d94af914b8"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 55,
+      "sha256": "585a6d625ef3c58ae5d9a4f14e9df14ef5ad5353a7b8bd3a412a183c4a612df1"
+    },
+    {
+      "path": "run.py",
+      "bytes": 2456,
+      "sha256": "e826730779b5cccd1832d1d7e09beecdc33d9e4cc10f85d1bec8987af9188ce9"
+    },
+    {
+      "path": "src/spectral_crypto_analyzer/__init__.py",
+      "bytes": 235,
+      "sha256": "e370c883a32c7fd1658f0f1a110a026629453fe9d352db7b79e08d11d697474b"
+    },
+    {
+      "path": "src/spectral_crypto_analyzer/block_reduced.py",
+      "bytes": 15415,
+      "sha256": "7d5a36b22537cdd240f8c3afc0780f84b59e7fcc4c8fcfb42cf31e9f5690b71f"
+    },
+    {
+      "path": "src/spectral_crypto_analyzer/primitives.py",
+      "bytes": 81031,
+      "sha256": "e0726d960b94bd08adbb4fdcb23a067fbdff3b46fd5cdd7a0c9ed4fc85cbcec8"
+    },
+    {
+      "path": "tests/test_extension_stream_vectors.py",
+      "bytes": 3776,
+      "sha256": "29dec8a4b658e74f7e49796abc079321965025ad0c634f79f73b7f13a35a4ef0"
+    },
+    {
+      "path": "tests/test_grain128_independent_reference.py",
+      "bytes": 2340,
+      "sha256": "4ca9b50837b6c0eee5d3c385190931bec88aaecad8b3b502da652b7c076b9d81"
+    },
+    {
+      "path": "tests/test_matched_nonce_phase.py",
+      "bytes": 1641,
+      "sha256": "532db9e1b385a60299604fb05a7d198a84c4660fd621a5cb638d1240575e88a8"
+    },
+    {
+      "path": "tests/test_mickey20_independent_reference.py",
+      "bytes": 4062,
+      "sha256": "6456095b9d5366e0ea0be530be30d9866c58a92d986c910aaff1f95d45740a30"
+    },
+    {
+      "path": "tests/test_salsa20_vectors.py",
+      "bytes": 2802,
+      "sha256": "5c6809ff6f2f8883f784c7cd177d57f143acfde96991393dcf5ec3ca7a70d53a"
+    },
+    {
+      "path": "tests/test_stream_cipher_vectors.py",
+      "bytes": 1332,
+      "sha256": "9f765cc064e7872492848939317668102e3220a41fac1830dd3d672dc8bc2354"
+    },
+    {
+      "path": "tests/vectors/extension/hc128_wu_estream.txt",
+      "bytes": 804,
+      "sha256": "25701afcac7bb699a1a0677d4a283c3510a2599256d172b8e20c4053fc42878f"
+    },
+    {
+      "path": "tests/vectors/extension/mickey20_asecuritysite.txt",
+      "bytes": 674,
+      "sha256": "040aa04a97e776457983da5f14559c9546a9020208655b395105e165e956ae36"
+    },
+    {
+      "path": "tests/vectors/extension/rabbit_estream_cryptopp.txt",
+      "bytes": 1652,
+      "sha256": "06a6ac07e89f199329b623cfdfd7f770cc8cb94119bd78e0dd75baa6124be9f6"
+    },
+    {
+      "path": "tests/vectors/extension/salsa20_libsodium.json",
+      "bytes": 1075,
+      "sha256": "49b69b0be1c32b70f1e0ae88812a2824799926cc38a799de9594ec170b02f1a0"
+    },
+    {
+      "path": "tools/audit_followups.py",
+      "bytes": 3307,
+      "sha256": "1e7497257783e40a729a17dd9f890015528c957bce8306b8a44ccdab964975b3"
+    },
+    {
+      "path": "tools/check_vectors.py",
+      "bytes": 1705,
+      "sha256": "d1a14570042a2676bcd9b32f7da63302fa2a44d05c7fc145892ed9945899c089"
+    },
+    {
+      "path": "verify_package.py",
+      "bytes": 3318,
+      "sha256": "12cb1c8639ebc8b8384f04dc5a2b01b1d59ae0d5442bba90581af0d0ada9c14c"
+    }
+  ],
+  "archive_path": "iv_diffusion_research_review_v0.14.0.zip",
+  "archive_bytes": 44833215,
+  "archive_sha256": "b085fb4d69ce431494bb35403bcdbde3ca044e711d2dfeb5093fceb98f94dacc"
+}

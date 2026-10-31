@@ -1,0 +1,85 @@
+# Fresh-key validation of ARX resolution and block-position predictions
+
+Written on 2026-10-29 after inspecting the existing 520--599 ARX cohort and
+its 32/64/128-bit resolution reanalysis, before generating any validation
+cohort data. This is a locally fixed follow-up protocol, not a public
+preregistration. Archive this file's SHA-256 before generation and record it
+in the output manifest. Do not edit it after generation begins.
+
+## Cohort and measurement
+
+- Use 80 new master indices 840--919, seed 20261029. Prior experiment indices
+  end at 839. Derive master material with publication_study._key_material;
+  derive independent 256-bit keys and control secrets for each cipher with
+  BLAKE2b domains resolution-validation-key-v1:<family>: and
+  resolution-validation-secret-v1:<family>:.
+- Four common 64-bit base nonces per master index come from SHAKE256 using
+  resolution-validation-nonces-v1: plus master material. Flip all 64 bits,
+  numbered MSB-first in bytes. Check that the four 65-vertex nonce stars are
+  disjoint. Salsa20 uses the shared nonce; IETF ChaCha20 uses 0^32 || nonce.
+- Generate emitted streams at 2 and 4 rounds, counters 0--15, 1024 bytes
+  (8192 bits) per nonce. Use the existing vector-checked cipher cores without
+  modifying their round functions. Four rounds is a descriptive comparator.
+- For each cipher, key and round, map each nonce vertex to one SHAKE256
+  stream of equal length using a separate secret and the domain
+  resolution-validation-oracle-v1:<family>:. Reuse streams at shared vertices.
+- Retain observed and control HW for every successive 32-bit output word:
+  key x cipher x rounds x 64 masks x four bases x 16 blocks x 16 words.
+  Do not overwrite the existing ARX raw files or processed results.
+
+## Fixed inference
+
+- Sum adjacent 32-bit HW values to form 32-, 64- and 128-bit segments. For
+  each mask, average the four complete two-sided Fourier power vectors before
+  normalization (Q=4); compute full-spectrum entropy in bits. Subtract the
+  matched control before calculating the second-minus-first nonce-word gap
+  G = mean_b[Delta H_MP(32+b)-Delta H_MP(b)], pairing the 32 bit offsets.
+- Five planned two-sided endpoints use the full 8192-bit window at 2 rounds:
+  Salsa20 G at segment widths 32, 64 and 128 bits, and ChaCha20 G at segment
+  widths 32 and 64 bits. The archived-data predictions are respectively
+  positive, positive, positive, positive, and negative. Report observed signs
+  even if they disagree with these predictions.
+- Use 100000 whole-key sign-flip replicates, plus-one two-sided p values, and
+  Holm adjustment across these five endpoints. Use 5000 whole-key percentile
+  bootstrap resamples for pointwise 95% intervals. Seed 2026102901 for sign
+  flips and 2026102902 for bootstrap sampling. Retain paired key indices for
+  every cross-cipher or within-key comparison. Do not treat masks, bases,
+  blocks, or word HW values as independent statistical replicates.
+- The ChaCha20 128-bit gap is descriptive. An interval containing zero is not
+  equivalence and must not be described as universal nonce-word symmetry.
+- At both rounds, all three widths and full8192/first4096/last4096 windows,
+  report descriptive G, normalized AC-entropy contrast, and block-period
+  measures. For T samples and P=512/segment_bits positions per block, measure
+  the fraction of AC power at k=m*T/P (m=1..P-1), and separately at the pair
+  k=T/P and T-T/P (the 512-bit fundamental). Aggregate masks within each key
+  before bootstrap. Compare each quantity with its matched control. The
+  harmonic fraction alone does not establish a fundamental period.
+
+## Exact structural checks, not stochastic significance tests
+
+At two Salsa20 rounds the operation graph predicts:
+- First-word nonce changes (x6): output word 1 is unchanged.
+- Second-word nonce changes (x7): output words 0,1,2,3,6 are unchanged.
+- Second-word state bit 31 (MSB-first nonce mask 56): output word 7 is also
+  unchanged, from the feed-forward form (x7 XOR C)+x7 modulo 2^32, with C
+  independent of x7.
+- With fixed key and nonce, output words 4,5,6,7,11 are independent of the
+  low counter word x8 and therefore repeat across counters 0--15 when the
+  high counter word stays zero. Their nonce-difference HW must repeat too.
+Count all violations on the new raw arrays. These are implementation checks
+of algebraic predictions, not p-value endpoints. Do not infer that every
+graph-reachable output changes for every key or that dependency support
+determines expected HW, entropy, or an attack's advantage.
+
+## Implementation validation and reporting
+
+- A smoke run may use indices 920--921 only and write outside the final
+  cohort directory. Do not inspect a subset of 840--919 before fixing this
+  protocol. Generation may be resumed from complete per-key checkpoints;
+  protocol and source hashes must agree across checkpoints.
+- Check aggregation against a direct reference, and sign-flip/Holm logic
+  against simple known cases. Preserve generator/analysis source hashes,
+  raw hashes, key indices, seeds, and software versions in manifests.
+- This cohort tests predictions selected using earlier data. It does not
+  establish novelty over the literature, reproduce a key-recovery attack,
+  or compare detector power at a calibrated false-positive rate.

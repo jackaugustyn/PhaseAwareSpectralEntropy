@@ -1,0 +1,21 @@
+\subsection{Round Function: Local and Block-Scale Transitions}\label{sec:roundtransitionresults}
+
+The fresh cohort separates two transitions. For the two within-$x_7$ pairs, unfinalized Salsa20 output-word-7 derivative HW rises from exactly zero at two rounds to a raw mean of 15.84033 changed bits at three rounds. The planned reference-adjusted increase is $T_1=15.81934$ bits (Table~\ref{tab:roundtransition}). Nevertheless, the three-round derivative retains a descriptive cipher-minus-reference deficit of $-0.17061$ bits [$-0.25206$, $-0.08750$]; its proximity to 16 does not establish reference equivalence.
+
+\begin{table}[H]
+\caption{Planned two-to-three-round Salsa20 transitions on 80 new key pairs. $T_1$ is in changed bits per 32-bit output word; $T_2$ is a dimensionless power-fraction change at 128-bit resolution. Both contrasts are reference-adjusted and paired within keys. Intervals are pointwise 95\% bootstrap intervals. The two-test Holm values reach the finite-simulation floor.\label{tab:roundtransition}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash}XCC}
+\toprule
+\textbf{Test} & \textbf{Endpoint} & \textbf{Mean [95\% CI]} & \textbf{Holm $p$}\\
+\midrule
+$T_1$ & Within-$x_7$ word-7 derivative, none & \shortstack{$+15.81934$\\$[15.72011,15.92031]$} & $2.0\times10^{-5}$\\
+\addlinespace[3pt]
+$T_2$ & Fundamental block-power fraction, add & \shortstack{$-0.52287$\\$[-0.52559,-0.52020]$} & $2.0\times10^{-5}$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All 10,240 sampled checkpoint derivatives are zero before the named $c=w_7$ update and nonzero afterward. The checkpoint equalities pass exactly, locating the observed loss of within-word affinity at this update of word 7. This neither identifies the first nonlinear operation elsewhere in the state nor replaces the algebraic two-round argument with a significance test.
+
+The block-scale response declines but remains substantial at three rounds. For Salsa20 with additive finalization at 128-bit resolution, $\Delta F_{512}$ is 0.80054, 0.27767, and 0.00041 at two, three, and four rounds, respectively (Figure~\ref{fig:mechanisticextensions}c,d). The three-round pointwise interval is [0.27518, 0.28011]; the four-round interval is [$-0.00012$, 0.00094]. Thus the planned $T_2$ reduction accompanies a persistent block-pattern signal, even after the selected local derivative ceases to vanish. The mixed-interaction change $J_3-J_2=-0.16999$ [$-0.21580$, $-0.12344$] is descriptive. The universal none--xor derivative identity still holds for both cores at all tested rounds. These results concern different observables and do not establish a common round threshold for secure diffusion.

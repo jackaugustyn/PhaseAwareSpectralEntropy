@@ -1,38 +1,54 @@
 {
   "status": "draft_for_author_review_not_publicly_deposited",
   "target_repository": "Zenodo",
-  "version": "0.13.1",
+  "version": "0.20.0",
   "resource_type": "dataset_and_software",
-  "title": "Phase-Aware Spectral Entropy as a Diagnostic of Stream-Cipher IV Diffusion — Data and Code",
+  "title": "Block-Position Structure in Reduced ChaCha20 and Salsa20: Experimental Diagnostics of IV Diffusion — Data and Code",
   "creators": [
     {
       "name": "Augustynowicz, Paweł",
       "affiliation": "Faculty of Cybernetics, Military University of Technology, Warsaw, Poland"
     }
   ],
-  "publication_date": "2026-10-13",
-  "description": "Raw arrays, per-key and summary results, fixed protocols, code, vector checks, and the twelve-page Entropy manuscript on phase-aware spectral entropy as a diagnostic of stream-cipher IV response. A common 4096-bit output protocol covers Grain-128, Trivium, MICKEY 2.0, HC-128, Rabbit, ChaCha20, and Salsa20 in separately fixed cohorts (indices 280–439). A matched-nonce phase intervention uses fresh keys 440–519 and paired rotations; a descriptive benchmark compares direct and spectral statistics on those exact streams. A separately locked all-64-mask ARX study on indices 520–599 confirms the two-round Salsa20 nonce-word contrast and resolves compensating output-word responses in ChaCha20. Fresh-key Grain and Trivium probes on indices 600–679 validate an early IV-region gradient and investigate a short-initialization higher-order subcube front. An auxiliary A5/1 frame study uses standard 114-bit frame output, all 22 frame masks, and keys 680–759; an independent validation uses keys 760–839. It confirms a zero-clock loading gradient but detects no standard 100-clock signal in a corrected 44-cell search. The A5/1 test does not reproduce known state-recovery attacks. Graph-matched SHAKE256 controls and whole-key uncertainty calculations accompany each experiment. No result estimates keystream Shannon entropy or attack advantage.",
+  "publication_date": null,
+  "version_date": "2026-10-31",
+  "target_journal": "Electronics",
+  "description": "Data and code for experimental diagnostics of IV diffusion in reduced ChaCha20 and Salsa20. Version 0.20.0 revises the single-article v0.19.0 manuscript after an advisory review, without a supplementary manuscript. It distinguishes the loss of conditional affinity in the unfinalized word-7 map from block-scale structure in the standard additive output, clarifies the null hypotheses and sign-flip assumptions and the order of spectrum normalization and averaging, and displays observed and frozen-model mean AC spectra using retained data. The contribution is positioned as a connection between conditional identities, paired finalization effects and empirical spectral reconstruction; no unverified priority claim is added. The models retain training keys 840–919, 4096 Monte Carlo key pairs per model, and evaluation keys 1200–1279; the single-round cohort retains keys 1400–1479. This release generates no new cipher observations or model simulations. Earlier raw arrays, protocols, numerical results, scientific code and the reference database remain unchanged. Historical figures and exact corollary documentation inputs remain in the research archive alongside the new plot and its provenance. The archive is prepared for reviewers; it has not been submitted or publicly deposited. The advisory review was not a formally validated ARS panel. The results establish neither detector superiority nor a full-round weakness or attack advantage.",
   "keywords": [
-    "spectral entropy",
-    "stream ciphers",
-    "Trivium",
-    "Grain-128",
-    "MICKEY 2.0",
-    "HC-128",
-    "Rabbit",
-    "ChaCha20",
-    "Hamming weight",
-    "initialization vectors",
+    "experimental cryptanalysis",
     "IV diffusion",
+    "stream ciphers",
+    "ChaCha20",
+    "Salsa20",
+    "ARX ciphers",
+    "nonce-word response",
+    "block-position structure",
+    "measurement resolution",
+    "feed-forward",
+    "Hamming weight",
+    "spectral diagnostics",
+    "spectral entropy",
+    "initialization vectors",
     "statistical testing",
     "reproducible research",
-    "Salsa20",
-    "IV mask profiles",
-    "A5/1"
+    "mixed nonce derivatives",
+    "controlled feed-forward interventions",
+    "conditional affine rank",
+    "frozen spectral prediction",
+    "single-round diffusion transition"
   ],
-  "archive_file": "stream_spectral_entropy_review_v0.13.1.zip",
+  "archive_file": "iv_diffusion_research_review_v0.20.0.zip",
   "license": null,
   "license_note": "The author must choose and approve the public data and code license before upload.",
   "doi": null,
-  "doi_note": "Insert the actual assigned DOI in main.tex only after the public record exists."
+  "doi_note": "Insert the actual assigned DOI in main.tex only after the public record exists.",
+  "compiled_documents": [
+    {
+      "source": "main.tex",
+      "pdf": "main.pdf",
+      "pages": 11,
+      "bibliography_entries": 40,
+      "build_status": "verified_clean_build_11_pages_40_references_no_warnings"
+    }
+  ]
 }

@@ -1,0 +1,51 @@
+{
+  "fingerprint": "3422ffbf4bf8cde7bb6fdc76ae1c2427536defd16963b4b66d6b4d201d9e47d6",
+  "key_index": 1039,
+  "raw_sha256": "a46455e8a70454d9377d95ac91e0994784f422cb57441d0cbb1ab08866a02a36",
+  "structural_checks": {
+    "observed_d2_none_equals_xor_all_words": {
+      "comparisons": 155648,
+      "violations": 0
+    },
+    "oracle_d2_none_equals_xor_all_words": {
+      "comparisons": 155648,
+      "violations": 0
+    },
+    "salsa2_c_independent_of_second_word": {
+      "comparisons": 2048,
+      "violations": 0
+    },
+    "salsa2_none_singleton_word7_exact_bit": {
+      "comparisons": 2048,
+      "violations": 0
+    },
+    "salsa2_xor_singleton_word7_zero": {
+      "comparisons": 2048,
+      "violations": 0
+    },
+    "salsa2_add_singleton_word7_lb": {
+      "comparisons": 2048,
+      "violations": 0
+    },
+    "salsa2_add_msb_singleton_word7_zero": {
+      "comparisons": 64,
+      "violations": 0
+    },
+    "salsa2_mixed_d2_word7_none_xor_zero": {
+      "comparisons": 4608,
+      "violations": 0
+    },
+    "salsa2_mixed_add_d2_word7_conditional_lb": {
+      "comparisons": 2304,
+      "violations": 0
+    },
+    "salsa2_mixed_msb_add_d2_word7_zero": {
+      "comparisons": 128,
+      "violations": 0
+    },
+    "salsa2_within_second_word_d2_word7_all_variants_zero": {
+      "comparisons": 384,
+      "violations": 0
+    }
+  }
+}

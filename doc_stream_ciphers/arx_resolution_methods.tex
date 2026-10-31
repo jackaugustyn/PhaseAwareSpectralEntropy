@@ -1,0 +1,19 @@
+\subsection{Resolution and Output-Window Checks}\label{sec:resolutionmethods}
+
+We reanalyzed the complete nonce-scan cohort at segment widths $s=32,64,128$ bits and over the full 4096-bit output and its first and last 2048-bit halves. Adjacent archived 32-bit HW values are added to form each segment, preserving the original stream order and matched control. All segment origins and windows are aligned to 512-bit output blocks. The three resolutions therefore retain 16, eight, and four positions per block. This is a descriptive analysis of previously inspected data, with pointwise intervals from 5000 whole-key bootstrap resamples; it is not an independent replication. The original 128-bit planned tests retain their original intervals and multiplicity correction.
+
+At each width and window, we retain the per-mask $Q=4$ averaged-power estimator. Write $G_{r,s,W}$ for the nonce-word gap defined in Section~\ref{sec:nonce} when the core has $r$ rounds, segments contain $s$ bits, and the observed window contains $W$ bits. Entropy values at different resolutions or window lengths are not interchangeable. To test whether a response follows the cipher's block scale, let $M=512/s$ be the positions per block, $B=W/512$ the number of blocks, and $T=MB$ the trajectory length. We calculate
+\begin{equation}
+ F_{512}=\frac{P_B+P_{T-B}}{\sum_{k=1}^{T-1}P_k},\qquad
+ R_{512}=\frac{\sum_{m=1}^{M-1}P_{mB}}{\sum_{k=1}^{T-1}P_k}.
+ \label{eq:blockpower}
+\end{equation}
+The first fraction isolates the conjugate frequency pair corresponding to one cycle per 512 bits; the second includes its nonzero harmonics. A shorter subperiod can contribute to $R_{512}$, so the fundamental $F_{512}$ is reported separately. Each quantity is computed per mask, contrasted with its matched control, and then averaged over masks within a key. Matching the control is necessary because the reference power fractions depend on $T$ and $M$. All reported trajectories have nonzero AC power.
+
+\subsection{Fresh-Key Validation of Resolution and Structural Predictions}\label{sec:resolutionvalidation}
+
+After reanalysis, a fixed protocol generated 80 new matched key pairs (indices 840--919, separate derivation domains). Each pair uses four shared 64-bit nonces, all 64 singleton masks, and the previous nonce mapping and reference. At two and four rounds, 8192 output bits cover counters 0--15; every 32-bit word HW is retained.
+
+Five planned two-sided endpoints concern the full 8192-bit window at two rounds: the Salsa20 nonce-word gap at all three segment widths and the ChaCha20 gap at 32 and 64 bits. The archived-data predictions are positive for all three Salsa20 endpoints, positive for ChaCha20 at 32 bits, and negative at 64 bits. Tests use 100,000 whole-key sign flips and Holm correction across these five endpoints; pointwise intervals use 5000 whole-key bootstrap resamples. The ChaCha20 128-bit gap, the first and last 4096-bit halves, four-round comparisons, and block-power measures are descriptive. Within each resample, the paired key index is retained across ciphers and settings.
+
+We check every nonce pair and block against the Salsa20 identities in Section~\ref{sec:mechanism}: absent paths, $x_7$ bit-31 cancellation, and five counter-independent words. Counter invariance is checked on emitted words before HW reduction. These deterministic checks do not increase the statistical replication count.

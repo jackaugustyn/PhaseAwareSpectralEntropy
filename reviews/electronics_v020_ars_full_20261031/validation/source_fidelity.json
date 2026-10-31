@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "checked": [
+    "30 role-scoped categorical score rows and exact contract sources",
+    "finding counts and source severity/confidence",
+    "typed finding anchors and empty-list coverage receipts",
+    "six single-verifier roadmap items and embedded core equality",
+    "unchanged provenance carrier and exact disclosure",
+    "corrected quantile/percentile terminology"
+  ],
+  "scope": "Local transport and artifact consistency check; not an independent scientific or claim audit."
+}

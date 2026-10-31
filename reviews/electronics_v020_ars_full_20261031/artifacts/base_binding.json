@@ -1,0 +1,9 @@
+{
+  "source": "full_manuscript.tex",
+  "source_sha256": "5de148eab231b2d24086d6a81f0dcdfc83a944f74052522251c489bc8cd67147",
+  "anchored_base": "artifacts/review_base.md",
+  "base_sha256": "9cf702dd74ac412e5d2bb8fc88999960fae5087b05e072e3172e690f3bbd02e6",
+  "block_manifest_sha256": "385998f2360012cf9d212f5ed82f89cccb3fb6e74fd4cf8fb7129fde4321ddc7",
+  "block_count": 104,
+  "scope": "Review snapshot of the complete expanded LaTeX plus bibliography. Markers are added only to this review copy, never to manuscript source files; roadmap scopes are proposals, not write authorization."
+}

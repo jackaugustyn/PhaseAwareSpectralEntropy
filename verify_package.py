@@ -11,8 +11,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 MANIFEST = ROOT / "PACKAGE_MANIFEST.json"
+REVIEWER_MANIFEST = ROOT / "SHA256SUMS.json"
 GENERATED_SUFFIXES = {".aux", ".bbl", ".blg", ".fls", ".log", ".out", ".toc", ".pyc"}
-GENERATED_NAMES = {"main.fdb_latexmk", "main.synctex.gz"}
+GENERATED_NAMES = {"main.fdb_latexmk", "main.synctex.gz",
+                   "supplementary.fdb_latexmk", "supplementary.synctex.gz"}
 SKIP_DIRECTORIES = {".git", ".venv", ".cache", "__pycache__", ".pytest_cache"}
 
 
@@ -21,7 +23,7 @@ def package_files() -> list[Path]:
     return sorted(
         (path for path in ROOT.rglob("*")
          if path.is_file()
-         and path != MANIFEST
+         and path not in {MANIFEST, REVIEWER_MANIFEST}
          and not any(part in SKIP_DIRECTORIES for part in path.relative_to(ROOT).parts)
          and path.suffix not in GENERATED_SUFFIXES
          and path.name not in GENERATED_NAMES),
@@ -54,15 +56,17 @@ def main() -> None:
     args = parser.parse_args()
     current = records()
     if args.write:
-        document = {"package": "PhaseAwareSpectralEntropy", "version": "0.13.1",
+        document = {"package": "PhaseAwareSpectralEntropy", "version": "0.20.0",
                     "file_count": len(current), "files": current}
         MANIFEST.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n",
                             encoding="utf-8")
         print(f"Recorded {len(current)} files in {MANIFEST.name}")
         return
-    if not MANIFEST.is_file():
-        parser.error("PACKAGE_MANIFEST.json is missing; use --write after assembling the package")
-    expected = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    source_manifest = MANIFEST if MANIFEST.is_file() else REVIEWER_MANIFEST
+    if not source_manifest.is_file():
+        parser.error("PACKAGE_MANIFEST.json or reviewer SHA256SUMS.json is missing; "
+                     "use --write after assembling the package")
+    expected = json.loads(source_manifest.read_text(encoding="utf-8"))
     if expected["files"] != current or expected["file_count"] != len(current):
         old = {record["path"]: record for record in expected["files"]}
         new = {record["path"]: record for record in current}

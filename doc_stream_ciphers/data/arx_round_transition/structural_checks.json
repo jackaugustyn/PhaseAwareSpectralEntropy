@@ -1,0 +1,34 @@
+{
+  "observed_ChaCha20_d2_none_equals_xor_all_words": {
+    "comparisons": 9338880,
+    "violations": 0
+  },
+  "oracle_ChaCha20_d2_none_equals_xor_all_words": {
+    "comparisons": 9338880,
+    "violations": 0
+  },
+  "observed_Salsa20_d2_none_equals_xor_all_words": {
+    "comparisons": 9338880,
+    "violations": 0
+  },
+  "oracle_Salsa20_d2_none_equals_xor_all_words": {
+    "comparisons": 9338880,
+    "violations": 0
+  },
+  "salsa2_within_second_word_word7_zero_all_variants": {
+    "comparisons": 30720,
+    "violations": 0
+  },
+  "salsa3_checkpoint_before_c_equals_round2_word7": {
+    "comparisons": 527360,
+    "violations": 0
+  },
+  "salsa3_checkpoint_after_c_equals_round3_word7": {
+    "comparisons": 527360,
+    "violations": 0
+  },
+  "salsa3_within_second_word_d2_before_c_zero": {
+    "comparisons": 10240,
+    "violations": 0
+  }
+}

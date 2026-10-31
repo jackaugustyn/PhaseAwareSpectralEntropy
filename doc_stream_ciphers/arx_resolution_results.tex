@@ -1,0 +1,29 @@
+\subsection{Measured Response: Aggregation}\label{sec:resolutionresults}
+
+The archived-data reanalysis retains substantial 512-bit structure when each block is represented by 16, eight, or four HW samples. Across the three widths, the full-window fundamental-power contrasts $\Delta F_{512}$ are $0.12946$, $0.30934$, and $0.52740$ for ChaCha20/2, and $0.35479$, $0.42781$, and $0.77081$ for Salsa20/2. Their pointwise intervals exclude zero at every width and in both 2048-bit halves. The four-position description therefore identifies the original measurement resolution; the recurring structure is associated with the 512-bit output block. The different power fractions are not a ranking of measurement quality.
+
+Table~\ref{tab:resolution} separates the descriptive archived reanalysis from fresh-key validation. Salsa20 retains a positive nonce-word gap at all widths and windows; ChaCha20 changes sign between 32 and 64 bits.
+
+\begin{table}[H]
+\caption{Two-round nonce-word entropy gaps $G_{2,s,W}$ under different segment widths. The archived column reanalyzes the 80-key-pair, 4096-bit cohort descriptively. The independent column uses 80 new key pairs and 8192 output bits; brackets give pointwise 95\% whole-key bootstrap intervals. Its five planned endpoints all have Holm-adjusted $p=5.0\times10^{-5}$, the five-test simulation floor; the ChaCha20 128-bit row is descriptive. Width and window length change the estimator, so numerical equality across columns or rows is not expected.\label{tab:resolution}}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{lcCC}
+\toprule
+\textbf{Core} & \textbf{Segment bits} & \textbf{Archived $G$, bits} & \textbf{Independent $G$ [95\% CI], bits}\\
+\midrule
+ChaCha20/2 & 32 & $+0.03171$ & $+0.03382$ [$+0.02225$, $+0.04508$]\\
+ChaCha20/2 & 64 & $-0.06778$ & $-0.06129$ [$-0.06896$, $-0.05368$]\\
+ChaCha20/2 & 128 & $-0.00036$ & $+0.00596$ [$+0.00269$, $+0.00927$]\\
+\addlinespace[3pt]
+Salsa20/2 & 32 & $+1.09099$ & $+1.09903$ [$+1.09137$, $+1.10665$]\\
+Salsa20/2 & 64 & $+0.95845$ & $+0.96249$ [$+0.95544$, $+0.96952$]\\
+Salsa20/2 & 128 & $+0.79059$ & $+0.79172$ [$+0.78670$, $+0.79709$]\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The fresh cohort confirms all five planned directions, also retained descriptively in each 4096-bit half. Its small positive ChaCha20 128-bit gap excludes zero pointwise, so the original unresolved result does not establish nonce-word symmetry. The new fundamental-power contrasts remain positive at all widths and windows: for the full 8192 bits they are $0.13629$, $0.32012$, and $0.54329$ in ChaCha20/2, and $0.36243$, $0.44241$, and $0.80163$ in Salsa20/2. All corresponding pointwise intervals exclude zero.
+
+The new data also satisfy every structural prediction of Section~\ref{sec:mechanism}: zero HW in all 163,840 observations per absent-path word and nonce-word group, cancellation in all 5120 selected $x_7$ bit-31 observations, and constancy of the five counter-independent Salsa20 words across counters 0--15.
+
+At four rounds, all six full-window nonce-word-gap intervals in the fresh cohort include zero. Across its resolutions and windows, the largest absolute mean fundamental-power contrast is 0.00122. The corresponding archived-data maxima are 0.00229 at four rounds and 0.00185 at 20 rounds. Some small pointwise block-power intervals exclude zero, so these comparisons show a large reduction of the two-round effects rather than simultaneous equivalence to the control. All resolution tests use block-aligned segment origins; arbitrary offsets and sub-32-bit segmentation remain outside this analysis.

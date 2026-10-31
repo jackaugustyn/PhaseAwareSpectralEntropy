@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Three-panel article figure joining phase attribution with the fresh mask scan."""
+"""Plot archived IV-diffusion profiles, rotations, and nonce-word localization.
+
+Panels (a) and (b) use the same 80-key matched-nonce cohort.  Position means
+and pointwise 95% intervals come directly from the archived phase summary:
+each key averages 16 nonce pairs and eight 512-bit output blocks, and the
+summary uses 5000 whole-key percentile bootstrap resamples.  Panel (c) keeps
+the separate, descriptive 80-key full-mask output-word profile.
+"""
 
 from __future__ import annotations
 
@@ -13,7 +20,7 @@ import numpy as np
 
 
 HERE = Path(__file__).resolve().parent
-BLUE, ORANGE, GREEN, GRAY = "#0072B2", "#D55E00", "#009E73", "#555555"
+BLUE, ORANGE, GRAY = "#0072B2", "#D55E00", "#555555"
 
 
 def rows(relative: str) -> list[dict[str, str]]:
@@ -34,7 +41,7 @@ def err(values: list[tuple[float, float, float]]) -> np.ndarray:
 
 
 def main() -> None:
-    """Render the article's DC/AC, rotation, and output-word panels."""
+    """Render the article's position, rotation, and output-word panels."""
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.8,
                          "axes.titlesize": 9.2, "axes.labelsize": 8.5,
                          "xtick.labelsize": 7.7, "ytick.labelsize": 7.7,
@@ -46,31 +53,37 @@ def main() -> None:
     b = fig.add_subplot(grid[0, 1])
     c = fig.add_subplot(grid[1, :])
 
-    old = rows("unified_six_results/unified_six_summary.csv")
-    cha = next(row for row in old if row["family"] == "ChaCha20" and
-               row["configuration"] == "2" and row["scenario"] == "single_bit" and
-               row["window"] == "full32")
-    sal = next(row for row in rows("salsa20_transfer_results/salsa20_transfer_summary.csv")
-               if row["configuration"] == "2" and row["scenario"] == "single_bit" and
-               row["window"] == "full32")
-    for i, row in enumerate((cha, sal)):
-        a.barh(i - 0.16, float(row["dc_attribution_mean"]), height=0.3,
-               color=BLUE, label="DC" if i == 0 else None)
-        a.barh(i + 0.16, float(row["ac_attribution_mean"]), height=0.3,
-               color=ORANGE, label="AC" if i == 0 else None)
-    a.axvline(0, color=GRAY, linewidth=0.7)
-    a.set_yticks((0, 1), ("ChaCha20/2", "Salsa20/2"))
-    a.invert_yaxis()
-    a.set_xlim(-0.62, 1.95)
-    a.set_xlabel(r"Contribution to $\Delta H_{\rm MP}$ (bits)")
-    a.set_title("(a) Exact DC/AC attribution")
-    a.legend(frameon=False, loc="lower right", ncol=2)
-
     matched = rows("matched_nonce_phase_results/matched_nonce_phase_summary.csv")
     mcha = next(row for row in matched if row["family"] == "ChaCha20" and
                 row["configuration"] == "2" and row["scenario"] == "single_bit")
     msal = next(row for row in matched if row["family"] == "Salsa20" and
                 row["configuration"] == "2" and row["scenario"] == "single_bit")
+    positions = np.arange(1, 5)
+    for row, color, marker, control_style in (
+        (mcha, BLUE, "o", "--"), (msal, ORANGE, "s", ":"),
+    ):
+        actual = [three(row, f"actual_position_{p}_mean_hw") for p in positions]
+        control = [three(row, f"control_position_{p}_mean_hw") for p in positions]
+        a.errorbar(positions, [v[0] for v in actual], yerr=err(actual),
+                   color=color, marker=marker, markersize=3.1, linewidth=1.2,
+                   elinewidth=0.8, capsize=1.8, label=row["family"] + "/2")
+        a.errorbar(positions, [v[0] for v in control], yerr=err(control),
+                   color=GRAY, marker=marker, markerfacecolor="white",
+                   markersize=2.7, linestyle=control_style, linewidth=0.8,
+                   elinewidth=0.7, capsize=1.8,
+                   label="Matched controls" if row is mcha else None)
+    a.set_xticks(positions)
+    a.set_xlim(0.8, 4.2)
+    a.set_ylim(0, 70)
+    a.set_yticks((0, 16, 32, 48, 64))
+    a.set_xlabel("128-bit position (1–4)")
+    a.set_ylabel("Mean HW (bits)")
+    a.set_title("(a) Four-position response")
+    handles, labels = a.get_legend_handles_labels()
+    a.legend([handles[i] for i in (0, 2, 1)], [labels[i] for i in (0, 2, 1)],
+             frameon=False, loc="lower right", handlelength=1.8,
+             borderaxespad=0.3, labelspacing=0.25)
+
     x = np.arange(2)
     for offset, label, color, field in (
         (-0.17, "Aligned", BLUE, "delta_hnodc_original"),

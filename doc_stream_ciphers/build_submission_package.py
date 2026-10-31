@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package and verify the current single-file Entropy submission draft."""
+"""Package and verify the current Electronics submission draft."""
 
 from __future__ import annotations
 
@@ -9,10 +9,13 @@ import zipfile
 
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "entropy_submission_seven_cipher_v0.13.1.zip"
+OUT = HERE / "electronics_iv_diffusion_submission_v0.20.0.zip"
 SINGLES = (
     "main.tex", "main.pdf", "biblio.bib",
+    "related_work_comparison.tex", "arx_mechanism_compact.tex",
     "publication_unified_mask_followup.pdf",
+    "publication_reviewed_spectrum.pdf",
+    "COVER_LETTER.md",
 )
 
 
@@ -25,7 +28,7 @@ def main() -> None:
     with zipfile.ZipFile(OUT, "w", allowZip64=True) as archive:
         for path in sorted(files, key=lambda item: item.relative_to(HERE).as_posix()):
             relative = path.relative_to(HERE).as_posix()
-            info = zipfile.ZipInfo(relative, date_time=(2026, 10, 13, 0, 0, 0))
+            info = zipfile.ZipInfo(relative, date_time=(2026, 10, 31, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             archive.writestr(info, path.read_bytes())
